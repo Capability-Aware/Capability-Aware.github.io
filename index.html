@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Capability-Aware 的 GitHub Pages 测试页面。">
+  <title>Capability-Aware · 测试页面</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #f3f6fb; color: #19263a; font-family: system-ui, sans-serif; }
+    main { width: min(100%, 680px); padding: clamp(28px, 6vw, 60px); background: white; border: 1px solid #e1e7f0; border-radius: 24px; box-shadow: 0 20px 60px #19263a0b; }
+    .label { color: #2563eb; font-weight: 600; letter-spacing: .08em; font-size: 13px; }
+    h1 { font-size: clamp(28px, 6vw, 44px); letter-spacing: -.04em; margin: 20px 0; overflow-wrap: anywhere; }
+    p { color: #536177; line-height: 1.8; }
+    .button { display: inline-block; margin-top: 16px; padding: 13px 22px; border-radius: 10px; color: white; background: #2563eb; text-decoration: none; font-weight: 600; }
+    .button:hover { background: #1d4ed8; }
+    a:focus-visible { outline: 3px solid #e99b17; outline-offset: 4px; }
+    footer { border-top: 1px solid #e1e7f0; margin-top: 36px; padding-top: 22px; color: #536177; font-size: 13px; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="label">GITHUB PAGES · 测试页面</div>
+    <h1>Capability-Aware</h1>
+    <p>你好！如果你能看到这个页面，说明网站首页已经可以正常访问。</p>
+    <p>点击下方按钮，下载一个小型文本文件，测试文件下载功能。</p>
+    <a class="button" href="test.txt" download="capability-aware-test.txt">下载测试文件 ↓</a>
+    <footer>项目仓库：<a href="https://github.com/Capability-Aware/Capability-Aware.github.io">Capability-Aware.github.io</a></footer>
+  </main>
+</body>
+</html>
