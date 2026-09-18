@@ -1,42 +1,54 @@
-# Capability-Aware.github.io
+# Capability-Aware research website
 
-研究主页：https://capability-aware.github.io/
+Live hub: https://capability-aware.github.io/
 
-汇总 Capability-Aware 系列论文的静态学术主页，无需安装依赖或构建。
+This is a working demonstration of a multi-paper research website. Nerfies and HyperNeRF are existing papers by their original authors, **not Capability-Aware publications**. All demo pages say so and retain attribution.
 
-## 发布
+## Pages
 
-在仓库 Settings → Pages 中，将 Source 设为 Deploy from a branch，选择 main 分支和 / (root) 目录并保存。
+| Page | URL | Source |
+|---|---|---|
+| Research hub | https://capability-aware.github.io/ | `index.html` |
+| Nerfies demo | https://capability-aware.github.io/demo-nerfies/ | `demo-nerfies/index.html` |
+| HyperNeRF demo | https://capability-aware.github.io/demo-hypernerf/ | `demo-hypernerf/index.html` |
 
-## 本地预览
+Navigation includes the project menu, thumbnail/title links, paper/code/video links, a return-to-hub link, and a next-project link. Project pages include an MP4 player, original presentation embed, figures, and a copyable BibTeX citation. Core content and navigation work without JavaScript; only the copy button uses JavaScript.
 
-运行 `python3 -m http.server 8000`，然后访问 http://localhost:8000。
+## Edit and publish
 
-首页：`index.html`。
+Edit `projects.json`, then run:
 
-## 多论文主页（待填入真实论文）
-
-`templates/research-home.html` 是独立编写的学术项目汇总页模板，参考 Project Instinct 的“总主页 + 论文项目入口”组织方式。没有复用其论文、作者、图片或源码。根目录 `index.html` 已采用该结构。
-
-将确认的论文信息填入 `index.html` 中 `id="papers"` 的 JSON 数组，每篇包含以下字段（按数组顺序显示）：
-
-```json
-{
-  "title": "论文完整标题",
-  "authors": "作者列表",
-  "venue": "会议或期刊与年份；未发表时填写真实状态",
-  "summary": "一句话介绍，可省略",
-  "image": "预览图网址或相对路径，可省略",
-  "imageAlt": "预览图的文字描述",
-  "links": {
-    "Project": "论文项目页的完整网址",
-    "Paper": "论文或 arXiv 的完整网址",
-    "Code": "代码仓库的完整网址",
-    "Video": "演示视频的完整网址"
-  }
-}
+```sh
+python3 scripts/build_site.py
+python3 scripts/check_site.py
+git add index.html projects.json assets demo-nerfies demo-hypernerf scripts README.md CREDITS.md .gitignore .nojekyll
+git commit -m "Update research projects"
+git push origin main
 ```
 
-没有对应资源时删除该链接字段。修改首页后提交并推送到 main 分支即可发布。图片路径按发布后的根目录解析。JSON 文本中不要使用原始 `</script>` 字符串，应将 `<` 写成 `\u003c`。
+Shared styling: `assets/site.css`. Page structure: `scripts/build_site.py`. GitHub Pages publishes `main` / repository root; no Actions workflow or dependency installation is required. Generated HTML is committed, so GitHub does not run Python.
 
-每篇论文可以链接到现有外部网站，也可以在本仓库建立 `论文简称/index.html`，网址即 `https://capability-aware.github.io/论文简称/`。不需要为每篇论文注册新的 GitHub 账号。
+Local preview: `python3 -m http.server 8000`, then visit http://localhost:8000/.
+
+## Separate project repositories
+
+The currently published demos are **subdirectories in this repository**, not separate GitHub repositories. The existing token could upload files but the API rejected repository creation with HTTP 403. No independent demo repositories were created.
+
+The same public paths can also be served by separate repositories named `demo-nerfies` and `demo-hypernerf` under the `Capability-Aware` account, each with its own GitHub Pages configuration. A project repository does not need `.github.io` in its name.
+
+To prepare a self-contained project repository:
+
+```sh
+python3 scripts/export_project.py demo-nerfies
+python3 scripts/export_project.py demo-hypernerf
+```
+
+Each `_export/<project>/` includes a standalone `index.html`, local assets, citation, and media credits. Navigation uses absolute URLs back to the hub and sibling project; styles and local media live inside that export. After creating the matching GitHub repository, push the exported folder and enable Pages from `main` / root. The exports are ignored by the main repository.
+
+When an independent Pages site is working, remove the corresponding generated subdirectory from the hub repository and adjust the generator to stop generating it, avoiding two sources for the same public path. Keep the hub's link unchanged.
+
+## Media
+
+See [CREDITS.md](CREDITS.md). Nerfies' CC BY-SA assets are hosted here; HyperNeRF assets and the original YouTube presentations load from their respective providers. External playback depends on visitor network access. The MP4 players and direct-video links provide an alternative to YouTube embeds.
+
+The old empty template remains at `templates/research-home.html` as a reference. The production site uses `projects.json` and the generator above.

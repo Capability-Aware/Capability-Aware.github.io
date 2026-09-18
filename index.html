@@ -1,106 +1,24 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Capability-Aware research projects, publications, and code.">
-  <title>Capability-Aware</title>
-  <style>
-    :root { color-scheme: light; --ink: #262b34; --muted: #616875; --accent: #1768b5; --line: #e5e8ec; }
-    * { box-sizing: border-box; }
-    body { margin: 0; color: var(--ink); background: #fff; font: 16px/1.7 system-ui, -apple-system, sans-serif; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
-    .container { width: min(960px, calc(100% - 40px)); margin-inline: auto; }
-    nav { padding: 20px 0; border-bottom: 1px solid var(--line); }
-    nav .container { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-    nav strong { font-size: 16px; letter-spacing: -.03em; }
-    nav a { font-size: 14px; }
-    header { padding: 74px 0 54px; text-align: center; }
-    h1 { margin: 0 0 20px; font-size: clamp(36px, 7vw, 58px); line-height: 1.15; letter-spacing: -.05em; }
-    .intro { max-width: 680px; margin: 0 auto 24px; color: var(--muted); font-size: 19px; }
-    .pill { display: inline-block; border: 1px solid var(--line); padding: 6px 17px; border-radius: 30px; font-size: 14px; }
-    h2 { font-size: 28px; letter-spacing: -.03em; margin: 0; }
-    .section-heading { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
-    .project { display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: start; padding: 32px 0; border-bottom: 1px solid var(--line); }
-    .project.no-image { grid-template-columns: 1fr; }
-    .project img { width: 100%; height: auto; border-radius: 8px; }
-    h3 { margin: 0 0 9px; font-size: 22px; line-height: 1.4; letter-spacing: -.02em; }
-    .authors, .venue, .summary { margin: 6px 0; }
-    .authors { color: var(--muted); }
-    .venue { font-size: 14px; font-weight: 600; }
-    .links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 15px; }
-    .empty { color: var(--muted); padding: 30px 0 70px; }
-    footer { margin-top: 70px; padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-    @media (max-width: 640px) { header { padding: 48px 0 40px; } .project { grid-template-columns: 1fr; gap: 18px; } }
-  </style>
-</head>
-<body>
-  <nav aria-label="Main navigation"><div class="container"><strong>Capability-Aware</strong><a href="#research">Research projects</a></div></nav>
-  <header class="container">
-    <h1>Capability-Aware</h1>
-    <p class="intro">Research projects, publications, and open-source code.</p>
-    <!-- Add the confirmed team description, author links, and affiliations here. -->
-    <a class="pill" href="https://github.com/Capability-Aware">GitHub ↗</a>
-  </header>
-  <main class="container" id="research">
-    <div class="section-heading"><h2>Research Projects</h2></div>
-    <div id="projects"><p class="empty">Publications will be listed here.</p></div>
-    <noscript><p>Enable JavaScript to view the publication list.</p></noscript>
-  </main>
-  <footer><div class="container">Capability-Aware · <a href="https://github.com/Capability-Aware/Capability-Aware.github.io">Website source</a></div></footer>
-  <script id="papers" type="application/json">[]</script>
-  <script>
-    // Add confirmed publications to the JSON list above; see README.md for the schema.
-    const papers = JSON.parse(document.getElementById('papers').textContent);
-    const root = document.getElementById('projects');
-    const safeURL = value => {
-      if (!value) return null;
-      const url = new URL(value, document.baseURI);
-      return ['https:', 'http:'].includes(url.protocol) ? url.href : null;
-    };
-    function text(tag, value, className) {
-      const element = document.createElement(tag);
-      element.textContent = value;
-      if (className) element.className = className;
-      return element;
-    }
-    if (papers.length) root.replaceChildren();
-    for (const paper of papers) {
-      const row = text('article', '', 'project');
-      const thumbnail = safeURL(paper.image);
-      if (thumbnail) {
-        const image = document.createElement('img');
-        image.src = thumbnail;
-        image.alt = paper.imageAlt || paper.title;
-        image.loading = 'lazy';
-        row.append(image);
-      } else row.classList.add('no-image');
-      const details = document.createElement('div');
-      const heading = text('h3', paper.title);
-      const projectURL = safeURL(paper.links?.Project);
-      if (projectURL) {
-        const link = text('a', paper.title);
-        link.href = projectURL;
-        heading.replaceChildren(link);
-      }
-      details.append(heading);
-      for (const key of ['authors', 'venue', 'summary']) {
-        if (paper[key]) details.append(text('p', paper[key], key));
-      }
-      const links = text('div', '', 'links');
-      for (const [label, value] of Object.entries(paper.links || {})) {
-        const url = safeURL(value);
-        if (!url) continue;
-        const link = text('a', label, 'pill');
-        link.href = url;
-        links.append(link);
-      }
-      details.append(links);
-      row.append(details);
-      root.append(row);
-    }
-  </script>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capability-Aware | Research Projects</title><meta name="description" content="Capability-Aware research project website demonstration.">
+<link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><nav class="container nav" aria-label="Main navigation">
+<a class="brand" href="./">Capability-Aware</a><div class="nav-right">
+<a href="./#research">Research</a>
+<details><summary>Projects</summary><div class="menu"><a href="demo-nerfies/">Nerfies <small>· demo</small></a><a href="demo-hypernerf/">HyperNeRF <small>· demo</small></a></div></details>
+<a class="github-nav" href="https://github.com/Capability-Aware">GitHub ↗</a></div></nav></div>
+<header class="container hero"><div class="eyebrow">Research projects</div><h1>Capability-Aware</h1>
+<p class="intro">A home for papers, project pages, and open-source research.</p>
+<div class="buttons"><a class="button" href="#research">Explore projects</a><a class="button secondary" href="https://github.com/Capability-Aware">GitHub ↗</a></div></header>
+<main id="main" class="container"><aside class="notice"><strong>Framework demo / 框架演示</strong> — Two published papers are used here to demonstrate navigation and media. They are not Capability-Aware publications.</aside>
+<section id="research" aria-labelledby="research-title"><div class="heading"><h2 id="research-title">Research Projects</h2><span>2 demonstration pages</span></div><article class="project">
+<a class="thumbnail" href="demo-nerfies/"><img src="assets/nerfies-start.jpg" alt="A reference portrait from the Nerfies interpolation demonstration" width="660" height="430"><span class="image-label">Explore project ↗</span></a>
+<div><span class="badge">DEMO PROJECT</span><h3><a href="demo-nerfies/">Nerfies: Deformable Neural Radiance Fields</a></h3>
+<p class="authors">Keunhong Park, Utkarsh Sinha, Jonathan T. Barron, Sofien Bouaziz, Dan B Goldman, Steven M. Seitz, Ricardo Martin-Brualla</p><p class="venue">ICCV 2021</p><p>Turning casually captured videos into portraits that can be viewed from new angles. Nerfies models a moving subject using a deformation field and a neural radiance field.</p><div class="buttons"><a class="button" href="demo-nerfies/">Project page ↗</a><a class="button secondary" href="https://arxiv.org/abs/2011.12948">Paper</a><a class="button secondary" href="https://github.com/google/nerfies">Code</a><a class="button secondary" href="https://www.youtube.com/watch?v=MrKrnHhk8IA">Video</a></div></div></article><article class="project">
+<a class="thumbnail" href="demo-hypernerf/"><img src="https://hypernerf.github.io/static/figures/architecture.svg" alt="The HyperNeRF architecture diagram from the original project website" width="660" height="430"><span class="image-label">Explore project ↗</span></a>
+<div><span class="badge">DEMO PROJECT</span><h3><a href="demo-hypernerf/">HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields</a></h3>
+<p class="authors">Keunhong Park, Utkarsh Sinha, Peter Hedman, Jonathan T. Barron, Sofien Bouaziz, Dan B Goldman, Ricardo Martin-Brualla, Steven M. Seitz</p><p class="venue">ACM Transactions on Graphics · 2021</p><p>Modeling dynamic scenes whose shapes and connections change over time. HyperNeRF adds higher-dimensional coordinates to represent changes that are difficult to capture with a continuous deformation alone.</p><div class="buttons"><a class="button" href="demo-hypernerf/">Project page ↗</a><a class="button secondary" href="https://arxiv.org/abs/2106.13228">Paper</a><a class="button secondary" href="https://github.com/google/hypernerf">Code</a><a class="button secondary" href="https://www.youtube.com/watch?v=qzgdE_ghkaI">Video</a></div></div></article></section></main>
+<footer><div class="container"><p>Capability-Aware · Research website demo</p>
+<p>Example research belongs to its original authors. <a href="CREDITS.md">Media credits</a> · <a href="https://github.com/Capability-Aware/Capability-Aware.github.io">Website source</a></p></div></footer>
+</body></html>

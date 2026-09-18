@@ -1,0 +1,45 @@
+[
+  {
+    "slug": "demo-nerfies",
+    "name": "Nerfies",
+    "title": "Nerfies: Deformable Neural Radiance Fields",
+    "authors": "Keunhong Park, Utkarsh Sinha, Jonathan T. Barron, Sofien Bouaziz, Dan B Goldman, Steven M. Seitz, Ricardo Martin-Brualla",
+    "affiliations": "University of Washington · Google Research",
+    "venue": "ICCV 2021",
+    "summary": "Turning casually captured videos into portraits that can be viewed from new angles. Nerfies models a moving subject using a deformation field and a neural radiance field.",
+    "image": "assets/nerfies-start.jpg",
+    "imageAlt": "A reference portrait from the Nerfies interpolation demonstration",
+    "video": "assets/nerfies-teaser.mp4",
+    "videoCaption": "Original Nerfies teaser: novel views of deforming scenes.",
+    "youtube": "MrKrnHhk8IA",
+    "paper": "https://arxiv.org/abs/2011.12948",
+    "code": "https://github.com/google/nerfies",
+    "original": "https://nerfies.github.io/",
+    "figures": [
+      {"src": "assets/nerfies-start.jpg", "alt": "Nerfies interpolation start reference", "caption": "Start reference frame"},
+      {"src": "assets/nerfies-end.jpg", "alt": "Nerfies interpolation end reference", "caption": "End reference frame"}
+    ],
+    "bibtex": "@inproceedings{park2021nerfies,\n  title={Nerfies: Deformable Neural Radiance Fields},\n  author={Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},\n  booktitle={ICCV},\n  year={2021}\n}"
+  },
+  {
+    "slug": "demo-hypernerf",
+    "name": "HyperNeRF",
+    "title": "HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields",
+    "authors": "Keunhong Park, Utkarsh Sinha, Peter Hedman, Jonathan T. Barron, Sofien Bouaziz, Dan B Goldman, Ricardo Martin-Brualla, Steven M. Seitz",
+    "affiliations": "University of Washington · Google Research",
+    "venue": "ACM Transactions on Graphics · 2021",
+    "summary": "Modeling dynamic scenes whose shapes and connections change over time. HyperNeRF adds higher-dimensional coordinates to represent changes that are difficult to capture with a continuous deformation alone.",
+    "image": "https://hypernerf.github.io/static/figures/architecture.svg",
+    "imageAlt": "The HyperNeRF architecture diagram from the original project website",
+    "video": "https://hypernerf.github.io/static/videos/espresso_rgb.mp4",
+    "videoCaption": "Original HyperNeRF result: the espresso scene rendered from a stabilized viewpoint.",
+    "youtube": "qzgdE_ghkaI",
+    "paper": "https://arxiv.org/abs/2106.13228",
+    "code": "https://github.com/google/hypernerf",
+    "original": "https://hypernerf.github.io/",
+    "figures": [
+      {"src": "https://hypernerf.github.io/static/figures/architecture.svg", "alt": "HyperNeRF architecture", "caption": "Architecture figure from the original HyperNeRF website"}
+    ],
+    "bibtex": "@article{park2021hypernerf,\n  title={HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields},\n  author={Park, Keunhong and Sinha, Utkarsh and Hedman, Peter and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Martin-Brualla, Ricardo and Seitz, Steven M.},\n  journal={ACM Transactions on Graphics},\n  volume={40},\n  number={6},\n  year={2021}\n}"
+  }
+]
