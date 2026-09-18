@@ -2,7 +2,13 @@
 
 Live hub: https://capability-aware.github.io/
 
-This is a working demonstration of a multi-paper research website. Nerfies and HyperNeRF are existing papers by their original authors, **not Capability-Aware publications**. All demo pages say so and retain attribution.
+The homepage introduces Capability-Aware's research agenda: embodied consequence prediction, visual priors beyond prior experience, and planning grounded in predicted capabilities. These are research directions; no publication, benchmark result, safety guarantee, author roster, or affiliation is claimed.
+
+The expandable website demo section preserves Nerfies and HyperNeRF as examples by their original authors, **not Capability-Aware publications**. All demo pages retain their attribution.
+
+## Brand
+
+GitHub avatar: `assets/brand/capability-aware-avatar.png` (opaque white background). Transparent mark: `assets/brand/capability-aware-transparent.png`. Both are square PNGs. Design rationale and image-generation prompts are in `assets/brand/README.md`.
 
 ## Pages
 

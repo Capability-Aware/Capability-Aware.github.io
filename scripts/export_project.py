@@ -20,6 +20,7 @@ html = html.replace('href="../', 'href="https://capability-aware.github.io/')
 shutil.copyfile(ROOT/'CREDITS.md', out/'CREDITS.md')
 shutil.copyfile(ROOT/slug/'citation.bib', out/'citation.bib')
 (out/'assets').mkdir(exist_ok=True)
+shutil.copytree(ROOT/'assets'/'brand', out/'assets'/'brand', dirs_exist_ok=True)
 for name in ['site.css','site.js']:
     shutil.copyfile(ROOT/'assets'/name,out/'assets'/name)
 for asset in [project['image'], project['video']] + [f['src'] for f in project['figures']]:
