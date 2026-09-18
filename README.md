@@ -2,13 +2,13 @@
 
 Live hub: https://capability-aware.github.io/
 
-The homepage introduces Capability-Aware's research agenda: embodied consequence prediction, visual priors beyond prior experience, and planning grounded in predicted capabilities. These are research directions; no publication, benchmark result, safety guarantee, author roster, or affiliation is claimed.
+The homepage presents a long-term physical intelligence agenda: understanding physical task boundaries, composing capabilities, acting autonomously, and advancing achievable performance. Locomotion and navigation are the current starting point. FDM, MPPI, RL, WAMs, and VLA models are methods within the agenda, not the definition of the initiative. The copy distinguishes research ambitions from current work.
 
 The expandable website demo section preserves Nerfies and HyperNeRF as examples by their original authors, **not Capability-Aware publications**. All demo pages retain their attribution.
 
 ## Brand
 
-GitHub avatar: `assets/brand/capability-aware-avatar.png` (opaque white background). Transparent mark: `assets/brand/capability-aware-transparent.png`. Both are square PNGs. Design rationale and image-generation prompts are in `assets/brand/README.md`.
+Current GitHub avatar: `assets/brand/capability-aware-frontier.png` (light geometric mark on an opaque dark background). The earlier blue C-and-arrow files are retained as previous versions. Design rationale and the new generation prompt are in `assets/brand/FRONTIER.md`.
 
 ## Pages
 
