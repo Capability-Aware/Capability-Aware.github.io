@@ -1,0 +1,15 @@
+# Capability-Aware — Interwoven capability triad
+
+`capability-aware-triad.png` is the current square GitHub-avatar asset. It represents locomotion (top), navigation (left), and manipulation (right) as three equally important, mutually interacting capabilities. The website uses the same image in its identity and in the labelled capability diagram.
+
+The design continues the earlier logo's angular architectural language, while replacing separate forms with intertwined structures. It is a conceptual brand symbol, not a claim of a specific mathematical knot topology or robot architecture.
+
+Generated and refined with the built-in image_gen tool. The GitHub profile avatar itself has not been changed.
+
+## Initial prompt
+
+Use case: logo-brand / style-transfer. Use the reference ONLY for its bold architectural black-and-white visual language. Redesign its structure into EXACTLY THREE visibly interwoven closed angular ribbon loops for Capability-Aware, a physical intelligence research initiative uniting LOCOMOTION, NAVIGATION, MANIPULATION. The three equal-status loops should pass over and under one another, inseparably composing one compact triangular spatial emblem; three clear lobes and a small central triangular aperture. Each of the three loops should be individually traceable, with crisp deliberate black gaps at crossings. Favor angular hexagonal ribbon turns, architectural rigor and substantial strokes over soft decorative knots. Exactly THREE interacting components, not six-fold petals, no generic OpenAI-style six-lobed knot. Concept: moving the body, finding a way, and transforming the world continuously constrain and enable each other. Strong iconic silhouette, balanced 120-degree organization, tactile sense of dimensional interlocking achieved through negative space ONLY, flat vector-like forms with no rendered shading. White and two close cool light gray solid fills on a full opaque near-black #0b0d10 background; high contrast. Center mark, approximately 62 percent of square width, with generous margins suitable for a circular GitHub avatar. Simple enough to remain identifiable at 32 pixels. No lettering, no labels, no arrows, no literal robot parts, no globe, no orbit, no gradients, no glow, no metal, no texture, no shadows, no mockup. One final square PNG emblem only.
+
+## Final refinement prompt
+
+Preserve this exact three-component interwoven angular emblem, all its crossings, proportions, and centered placement. Make a production logo master: REMOVE every trace of outer glow, bloom, halo, texture, gradient, metallic shading and transparency. Flat solid fills only: top component off-white, left component pale cool gray, right component light silver gray. All three must remain bright and high contrast. Fill the whole square with completely opaque uniform #0b0d10, including every negative space; no transparent pixels. Razor-sharp vector-like edges with normal antialiasing only. Do not change geometry, add text, add objects or make a mockup. Single square PNG for GitHub avatar.

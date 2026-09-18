@@ -1,4 +1,6 @@
-# Capability-Aware logo
+# Capability-Aware logo — archived first concept
+
+For the current interwoven locomotion/navigation/manipulation identity, use [capability-aware-triad.png](capability-aware-triad.png) and see [TRIAD.md](TRIAD.md). The design below is the original concept and is no longer used on the website.
 
 The blue C-shaped envelope represents capability in context. The forward path inside it represents choosing actions based on predicted consequences. The mark is designed to remain legible as a small, circular GitHub avatar.
 

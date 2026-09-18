@@ -1,8 +1,10 @@
 # Capability-Aware — Frontier identity
 
+This is a previous concept. The current logo evolves its geometric language into three interwoven capabilities; see [TRIAD.md](TRIAD.md).
+
 The mark combines interdependent geometric forms into an open spatial structure. The parts represent composable capabilities; the central negative space and interrupted outer boundary represent the frontier of achievable physical tasks. The identity is intentionally broader than locomotion, trajectory prediction, or any specific learning method.
 
-Current asset: `capability-aware-frontier.png`. Use this square PNG for the GitHub avatar. The dark background is intentional; the mark has generous margins for circular cropping. The website uses the same mark. The earlier blue C-and-arrow identity remains in this directory as an archived design.
+Original asset filename: `capability-aware-frontier.png`. The dark background and circular-crop margins informed the subsequent interwoven design. The website now uses `capability-aware-triad.png`.
 
 Generated with the built-in image_gen tool as a new raster logo, not an edit of the previous logo. No GitHub profile settings were changed.
 
