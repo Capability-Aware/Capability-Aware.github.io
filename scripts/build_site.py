@@ -19,7 +19,7 @@ def shell(title, body, prefix='', description='Capability-Aware pursues physical
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}">
 <link rel="icon" type="image/png" href="{prefix}assets/brand/capability-aware-frontier.png">
-<link rel="stylesheet" href="{prefix}assets/site.css"><script src="{prefix}assets/site.js" defer></script></head>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=frontier-v2"><script src="{prefix}assets/site.js" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <div class="topbar"><nav class="container nav" aria-label="Main navigation">
 <a class="brand" href="{prefix or './'}"><img src="{prefix}assets/brand/capability-aware-frontier.png" width="32" height="32" alt="">Capability-Aware</a><div class="nav-right">
