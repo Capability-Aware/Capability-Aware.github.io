@@ -27,3 +27,7 @@ Nerfies and HyperNeRF are existing research by their respective authors. They ar
 ## Site structure
 
 The hub → project page → paper/code/video navigation is inspired by https://project-instinct.github.io/. The HTML, CSS, JavaScript, and page generator in this demo were independently written.
+
+## BasicLoco videos
+
+The seven homepage videos and their extracted preview frames in `assets/videos/` were provided by Hao Zhang from BasicLoco v3 for publication on this website. They are separate from the archived third-party demo media listed above.

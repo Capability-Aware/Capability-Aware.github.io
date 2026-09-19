@@ -11,7 +11,7 @@ A minimal academic showcase: Research Projects dropdown, centered title and auth
 - `assets/site.css` and `assets/site.js`: shared layout and dropdown/carousel behavior.
 - `projects.json`: archived Nerfies and HyperNeRF demonstration content. These are not Capability Aware publications.
 
-The homepage teaser and two Demo Video buttons currently use clearly attributed sample media. Replace these with your own videos when available. The black project previews link to placeholder pages; they do not claim to contain research videos yet.
+The homepage uses seven user-provided BasicLoco videos in `assets/videos/`, configured in `videos.json`. Clicking a thumbnail switches the main player; without JavaScript each thumbnail opens the MP4 directly. Real World and Simulation buttons also open local videos. Original source videos are unchanged. Paper 1/2/3 remain placeholders in the research menu and list.
 
 ```sh
 python3 scripts/build_site.py

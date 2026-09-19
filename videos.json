@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Large Rocks",
+    "src": "assets/videos/large-rocks.mp4",
+    "poster": "assets/videos/large-rocks.png"
+  },
+  {
+    "title": "Stairs",
+    "src": "assets/videos/stairs.mp4",
+    "poster": "assets/videos/stairs.png"
+  },
+  {
+    "title": "Sand",
+    "src": "assets/videos/sand.mp4",
+    "poster": "assets/videos/sand.png"
+  },
+  {
+    "title": "Gravel to Platform",
+    "src": "assets/videos/gravel-platform.mp4",
+    "poster": "assets/videos/gravel-platform.png"
+  },
+  {
+    "title": "Platform Traversal",
+    "src": "assets/videos/platform.mp4",
+    "poster": "assets/videos/platform.png"
+  },
+  {
+    "title": "Gravel & Grass",
+    "src": "assets/videos/gravel-grass.mp4",
+    "poster": "assets/videos/gravel-grass.png"
+  },
+  {
+    "title": "Simulation",
+    "src": "assets/videos/simulation.mp4",
+    "poster": "assets/videos/simulation.png"
+  }
+]

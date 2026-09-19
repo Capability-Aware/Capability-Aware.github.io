@@ -21,7 +21,7 @@ class Page(HTMLParser):
         if tag == 'video':
             self.videos += 1
             assert 'controls' in attrs and 'playsinline' in attrs
-        for key in ['href', 'src']:
+        for key in ['href', 'src', 'poster', 'data-video', 'data-poster']:
             if attrs.get(key):
                 self.links.append(attrs[key])
 
@@ -29,7 +29,7 @@ papers = json.loads((ROOT/'papers.json').read_text())
 paths = [ROOT/'index.html'] + [ROOT/p['slug']/'index.html' for p in projects + papers]
 pages = {p.resolve(): Page(p) for p in paths}
 for path, page in pages.items():
-    if path.parent.name not in [p['slug'] for p in papers]:
+    if path.parent.name in [p['slug'] for p in projects]:
         assert 'demo' in path.read_text().lower(), 'Missing demo disclosure'
     for link in page.links:
         url = urlsplit(link)

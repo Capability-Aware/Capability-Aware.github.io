@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS = json.loads((ROOT / 'projects.json').read_text())
 PAPERS = json.loads((ROOT / 'papers.json').read_text())
+VIDEOS = json.loads((ROOT / 'videos.json').read_text())
 e = escape
 
 def asset(url, prefix):
@@ -18,7 +19,7 @@ def shell(title, body, prefix='', description='Locomotion, navigation, and manip
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}">
-<link rel="stylesheet" href="{prefix}assets/site.css?v=simple-v1"><script src="{prefix}assets/site.js" defer></script></head>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=local-videos-v1"><script src="{prefix}assets/site.js?v=local-videos-v1" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <nav class="topnav" aria-label="Main navigation"><a class="home" href="{prefix or './'}" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v9h5v-6h4v6h5v-9h3L12 3z"/></svg></a><details class="project-menu"><summary>Research Projects <span aria-hidden="true">⌄</span></summary><div class="menu">{menu}</div></details></nav>
 {body}
@@ -26,19 +27,20 @@ def shell(title, body, prefix='', description='Locomotion, navigation, and manip
 </body></html>'''
 
 def build_home():
-    cards = ''.join(f'<a class="video-card" href="{p["slug"]}/"><span class="play" aria-hidden="true">▷</span><span>{e(p["name"])}</span><small>Coming soon</small></a>' for p in PAPERS)
+    cards = ''.join(f'<a class="video-card footage-card" href="{v["src"]}" data-video="{v["src"]}" data-poster="{v["poster"]}" data-title="{e(v["title"])}"><img src="{v["poster"]}" alt="{e(v["title"])} video preview" loading="lazy"><span class="clip-label">▷ {e(v["title"])}</span></a>' for v in VIDEOS)
+    first = VIDEOS[0]
     papers = ''.join(f'<article class="paper-entry"><h3><a href="{p["slug"]}/">{e(p["name"])}</a></h3><p>Coming soon.</p></article>' for p in PAPERS)
     links = ''.join(button(label, url) for label,url in [
         ('GitHub', 'https://github.com/Capability-Aware'),
         ('Hao Zhang', 'https://haozhangrobotics.github.io/'),
         ('Website Code', 'https://github.com/Capability-Aware/Capability-Aware.github.io'),
-        ('▷ Demo Video 1', 'https://www.youtube.com/watch?v=MrKrnHhk8IA'),
-        ('▷ Demo Video 2', 'https://www.youtube.com/watch?v=qzgdE_ghkaI')])
+        ('▷ Real World', 'assets/videos/large-rocks.mp4'),
+        ('▷ Simulation', 'assets/videos/simulation.mp4')])
     body = f'''<main id="main">
 <header class="hero container"><h1>Capability Aware</h1>
 <p class="authors"><a href="https://haozhangrobotics.github.io/">Hao Zhang</a></p><p class="affiliations">Westlake University</p>
 <div class="buttons">{links}</div></header>
-<figure class="teaser container"><video controls playsinline muted loop preload="metadata" aria-label="Nerfies sample video"><source src="assets/nerfies-teaser.mp4" type="video/mp4"><a href="assets/nerfies-teaser.mp4">Open demo video</a></video><figcaption>Demo footage: <a href="https://nerfies.github.io/">Nerfies</a>, original authors. Our research videos are coming soon.</figcaption></figure>
+<figure class="teaser container" id="videos"><video id="showcase-video" controls playsinline muted loop preload="metadata" poster="{first['poster']}" aria-label="{e(first['title'])}"><source src="{first['src']}" type="video/mp4"><a href="{first['src']}">Open video</a></video><figcaption><span id="video-title">{e(first['title'])}</span> · <a id="video-direct" href="{first['src']}">Open video ↗</a></figcaption></figure>
 <section class="video-strip" aria-label="Project previews"><div class="carousel"><button class="carousel-arrow" data-scroll="-1" aria-label="Previous projects">‹</button><div class="video-track">{cards}</div><button class="carousel-arrow" data-scroll="1" aria-label="Next projects">›</button></div></section>
 <section class="text-section" id="abstract"><h2>Abstract</h2><p>Capability Aware explores physical intelligence across locomotion, navigation, and manipulation. We study how robots can understand their capability boundaries, compose skills, and autonomously decide where to go and how to act—pushing the limits of what they can achieve in the physical world.</p></section>
 <section class="text-section research" id="projects"><h2>Research Projects</h2>{papers}</section>
