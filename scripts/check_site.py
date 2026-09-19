@@ -25,10 +25,12 @@ class Page(HTMLParser):
             if attrs.get(key):
                 self.links.append(attrs[key])
 
-paths = [ROOT/'index.html'] + [ROOT/p['slug']/'index.html' for p in projects]
+papers = json.loads((ROOT/'papers.json').read_text())
+paths = [ROOT/'index.html'] + [ROOT/p['slug']/'index.html' for p in projects + papers]
 pages = {p.resolve(): Page(p) for p in paths}
 for path, page in pages.items():
-    assert 'demo' in path.read_text().lower(), 'Missing demo disclosure'
+    if path.parent.name not in [p['slug'] for p in papers]:
+        assert 'demo' in path.read_text().lower(), 'Missing demo disclosure'
     for link in page.links:
         url = urlsplit(link)
         if url.scheme or url.netloc:
@@ -40,7 +42,7 @@ for path, page in pages.items():
         assert target.exists(), f'Missing local target: {path.name}: {link}'
         if url.fragment and target in pages:
             assert unquote(url.fragment) in pages[target].ids, f'Missing anchor: {link}'
-    if path != (ROOT/'index.html').resolve():
+    if path.parent.name in [p['slug'] for p in projects]:
         assert page.videos == 1
     print('PASS', path.relative_to(ROOT))
 

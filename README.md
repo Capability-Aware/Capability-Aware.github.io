@@ -1,60 +1,29 @@
-# Capability-Aware research website
+# Capability Aware
 
-Live hub: https://capability-aware.github.io/
+Live website: https://capability-aware.github.io/
 
-The homepage presents a long-term physical intelligence agenda spanning **locomotion + navigation + manipulation** as three interacting capabilities. It covers understanding physical task boundaries, composing capabilities, acting autonomously, and advancing achievable performance. Current consequence-prediction work is one concrete entry into that agenda. FDM, MPPI, RL, WAMs, and VLA models are methods within the agenda, not the definition of the initiative.
+A minimal academic showcase: Research Projects dropdown, centered title and author, dark link buttons, teaser video, project previews, a short abstract, and project links.
 
-The expandable website demo section preserves Nerfies and HyperNeRF as examples by their original authors, **not Capability-Aware publications**. All demo pages retain their attribution.
+## Update content
 
-## Brand
+- `papers.json`: the Paper 1/2/3 placeholder names and paths. These have working standalone pages at `/paper1/`, `/paper2/`, and `/paper3/`.
+- `scripts/build_site.py`: homepage text, link buttons, teaser, and project page content.
+- `assets/site.css` and `assets/site.js`: shared layout and dropdown/carousel behavior.
+- `projects.json`: archived Nerfies and HyperNeRF demonstration content. These are not Capability Aware publications.
 
-Current GitHub avatar: `assets/brand/capability-aware-triad.png`. Three interwoven angular components represent locomotion, navigation, and manipulation. The homepage includes a labelled relationship figure using the same mark. Design rationale and generation prompts are in `assets/brand/TRIAD.md`.
-
-## Pages
-
-| Page | URL | Source |
-|---|---|---|
-| Research hub | https://capability-aware.github.io/ | `index.html` |
-| Nerfies demo | https://capability-aware.github.io/demo-nerfies/ | `demo-nerfies/index.html` |
-| HyperNeRF demo | https://capability-aware.github.io/demo-hypernerf/ | `demo-hypernerf/index.html` |
-
-Navigation includes the project menu, thumbnail/title links, paper/code/video links, a return-to-hub link, and a next-project link. Project pages include an MP4 player, original presentation embed, figures, and a copyable BibTeX citation. Core content and navigation work without JavaScript; only the copy button uses JavaScript.
-
-## Edit and publish
-
-Edit `projects.json`, then run:
+The homepage teaser and two Demo Video buttons currently use clearly attributed sample media. Replace these with your own videos when available. The black project previews link to placeholder pages; they do not claim to contain research videos yet.
 
 ```sh
 python3 scripts/build_site.py
 python3 scripts/check_site.py
-git add index.html projects.json assets demo-nerfies demo-hypernerf scripts README.md CREDITS.md .gitignore .nojekyll
-git commit -m "Update research projects"
-git push origin main
 ```
 
-Shared styling: `assets/site.css`. Page structure: `scripts/build_site.py`. GitHub Pages publishes `main` / repository root; no Actions workflow or dependency installation is required. Generated HTML is committed, so GitHub does not run Python.
+Commit the generated HTML together with source changes. GitHub Pages publishes `main` / repository root. No build dependencies are required.
 
-Local preview: `python3 -m http.server 8000`, then visit http://localhost:8000/.
+## Project pages
 
-## Separate project repositories
+Project pages currently live in subdirectories of this repository. They are not separate GitHub repositories. Replace placeholders with research content when ready.
 
-The currently published demos are **subdirectories in this repository**, not separate GitHub repositories. The existing token could upload files but the API rejected repository creation with HTTP 403. No independent demo repositories were created.
+The archived demos remain at `/demo-nerfies/` and `/demo-hypernerf/`. They can still be exported with `python3 scripts/export_project.py demo-nerfies` (or `demo-hypernerf`). Exports are written to the ignored `_export/` folder.
 
-The same public paths can also be served by separate repositories named `demo-nerfies` and `demo-hypernerf` under the `Capability-Aware` account, each with its own GitHub Pages configuration. A project repository does not need `.github.io` in its name.
-
-To prepare a self-contained project repository:
-
-```sh
-python3 scripts/export_project.py demo-nerfies
-python3 scripts/export_project.py demo-hypernerf
-```
-
-Each `_export/<project>/` includes a standalone `index.html`, local assets, citation, and media credits. Navigation uses absolute URLs back to the hub and sibling project; styles and local media live inside that export. After creating the matching GitHub repository, push the exported folder and enable Pages from `main` / root. The exports are ignored by the main repository.
-
-When an independent Pages site is working, remove the corresponding generated subdirectory from the hub repository and adjust the generator to stop generating it, avoiding two sources for the same public path. Keep the hub's link unchanged.
-
-## Media
-
-See [CREDITS.md](CREDITS.md). Nerfies' CC BY-SA assets are hosted here; HyperNeRF assets and the original YouTube presentations load from their respective providers. External playback depends on visitor network access. The MP4 players and direct-video links provide an alternative to YouTube embeds.
-
-The old empty template remains at `templates/research-home.html` as a reference. The production site uses `projects.json` and the generator above.
+See [CREDITS.md](CREDITS.md) for demo media attribution. The simplified layout follows the academic showcase structure of [Project Instinct](https://project-instinct.github.io/), with original site code and placeholder content.
