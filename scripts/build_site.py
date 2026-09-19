@@ -19,7 +19,7 @@ def shell(title, body, prefix='', description='Locomotion, navigation, and manip
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}">
-<link rel="stylesheet" href="{prefix}assets/site.css?v=tempoloco-v1"><script src="{prefix}assets/site.js?v=tempoloco-v1" defer></script></head>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=autoplay-v1"><script src="{prefix}assets/site.js?v=autoplay-v1" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <nav class="topnav" aria-label="Main navigation"><a class="home" href="{prefix or './'}" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v9h5v-6h4v6h5v-9h3L12 3z"/></svg></a><details class="project-menu"><summary>Research Projects <span aria-hidden="true">⌄</span></summary><div class="menu">{menu}</div></details></nav>
 {body}
@@ -27,7 +27,7 @@ def shell(title, body, prefix='', description='Locomotion, navigation, and manip
 </body></html>'''
 
 def build_home():
-    cards = ''.join(f'<a class="video-card footage-card" href="{v["src"]}" data-video="{v["src"]}" data-poster="{v["poster"]}" data-title="{e(v["title"])}"><img src="{v["poster"]}" alt="{e(v["title"])} video preview" loading="lazy"><span class="clip-label">▷ {e(v["title"])}</span></a>' for v in VIDEOS)
+    cards = ''.join(f'<div class="video-card footage-card"><video controls autoplay muted loop playsinline preload="metadata" aria-label="{e(v["title"])}"><source src="{v["src"]}" type="video/mp4"><a href="{v["src"]}">{e(v["title"])}</a></video></div>' for v in VIDEOS)
     first = json.loads((ROOT / 'featured-video.json').read_text())
     papers = ''.join(f'<article class="paper-entry"><h3><a href="{p["slug"]}/">{e(p["name"])}</a></h3><p>Coming soon.</p></article>' for p in PAPERS)
     home_links = json.loads((ROOT / 'links.json').read_text())
@@ -39,7 +39,7 @@ def build_home():
 <p class="authors"><a href="https://haozhangrobotics.github.io/">Hao Zhang</a></p><p class="affiliations">Westlake University</p>
 <div class="buttons">{links}</div></header>
 <figure class="teaser container" id="videos"><video id="showcase-video" controls playsinline muted loop preload="metadata" poster="{first['poster']}" aria-label="{e(first['title'])}"><source src="{first['src']}" type="video/mp4"><a href="{first['src']}">Open video</a></video><figcaption><span id="video-title">{e(first['title'])}</span> · <a id="video-direct" href="{first['src']}">Open video ↗</a></figcaption></figure>
-<section class="video-strip" aria-label="Project previews"><div class="carousel"><button class="carousel-arrow" data-scroll="-1" aria-label="Previous projects">‹</button><div class="video-track">{cards}</div><button class="carousel-arrow" data-scroll="1" aria-label="Next projects">›</button></div></section>
+<section class="video-strip" aria-label="Locomotion videos"><div class="carousel"><button class="carousel-arrow" data-scroll="-1" aria-label="Previous videos">‹</button><div class="video-track">{cards}</div><button class="carousel-arrow" data-scroll="1" aria-label="Next videos">›</button></div></section>
 <section class="text-section" id="abstract"><h2>Abstract</h2><p>Capability Aware explores physical intelligence across locomotion, navigation, and manipulation. We study how robots can understand their capability boundaries, compose skills, and autonomously decide where to go and how to act—pushing the limits of what they can achieve in the physical world.</p></section>
 <section class="text-section research" id="projects"><h2>Research Projects</h2>{papers}</section>
 </main>'''

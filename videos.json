@@ -1,10 +1,5 @@
 [
   {
-    "title": "TempoLoco",
-    "src": "assets/videos/tempoloco.mp4",
-    "poster": "assets/videos/tempoloco.png"
-  },
-  {
     "title": "Large Rocks",
     "src": "assets/videos/large-rocks.mp4",
     "poster": "assets/videos/large-rocks.png"
@@ -33,10 +28,5 @@
     "title": "Gravel & Grass",
     "src": "assets/videos/gravel-grass.mp4",
     "poster": "assets/videos/gravel-grass.png"
-  },
-  {
-    "title": "Simulation",
-    "src": "assets/videos/simulation.mp4",
-    "poster": "assets/videos/simulation.png"
   }
 ]

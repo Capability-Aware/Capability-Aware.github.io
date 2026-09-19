@@ -37,24 +37,8 @@ document.querySelectorAll('[data-scroll]').forEach((button) => {
   });
 });
 
-const showcase = document.getElementById('showcase-video');
-const clips = document.querySelectorAll('[data-video]');
-if (showcase) {
-  clips.forEach((clip) => {
-    if (clip.href === showcase.querySelector('source')?.src) clip.setAttribute('aria-current', 'true');
-  });
-  clips.forEach((clip) => clip.addEventListener('click', (event) => {
-    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    showcase.pause();
-    showcase.poster = clip.dataset.poster;
-    showcase.src = clip.dataset.video;
-    showcase.setAttribute('aria-label', clip.dataset.title);
-    document.getElementById('video-title').textContent = clip.dataset.title;
-    document.getElementById('video-direct').href = clip.dataset.video;
-    clips.forEach((item) => item.removeAttribute('aria-current'));
-    clip.setAttribute('aria-current', 'true');
-    showcase.load();
-    showcase.play().catch(() => {});
-  }));
-}
+// Muting before play also supports browsers that inspect the runtime property.
+document.querySelectorAll('.video-track video').forEach((video) => {
+  video.muted = true;
+  video.play().catch(() => { /* Native controls remain available. */ });
+});
