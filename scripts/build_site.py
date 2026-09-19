@@ -19,7 +19,7 @@ def shell(title, body, prefix='', description='Locomotion, navigation, and manip
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}">
-<link rel="stylesheet" href="{prefix}assets/site.css?v=local-videos-v1"><script src="{prefix}assets/site.js?v=local-videos-v1" defer></script></head>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=tempoloco-v1"><script src="{prefix}assets/site.js?v=tempoloco-v1" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <nav class="topnav" aria-label="Main navigation"><a class="home" href="{prefix or './'}" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v9h5v-6h4v6h5v-9h3L12 3z"/></svg></a><details class="project-menu"><summary>Research Projects <span aria-hidden="true">⌄</span></summary><div class="menu">{menu}</div></details></nav>
 {body}
@@ -28,7 +28,7 @@ def shell(title, body, prefix='', description='Locomotion, navigation, and manip
 
 def build_home():
     cards = ''.join(f'<a class="video-card footage-card" href="{v["src"]}" data-video="{v["src"]}" data-poster="{v["poster"]}" data-title="{e(v["title"])}"><img src="{v["poster"]}" alt="{e(v["title"])} video preview" loading="lazy"><span class="clip-label">▷ {e(v["title"])}</span></a>' for v in VIDEOS)
-    first = VIDEOS[0]
+    first = json.loads((ROOT / 'featured-video.json').read_text())
     papers = ''.join(f'<article class="paper-entry"><h3><a href="{p["slug"]}/">{e(p["name"])}</a></h3><p>Coming soon.</p></article>' for p in PAPERS)
     home_links = json.loads((ROOT / 'links.json').read_text())
     links = ''.join(button(link['label'], link['url']) if link['url'] else

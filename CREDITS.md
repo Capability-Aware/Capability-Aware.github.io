@@ -31,3 +31,5 @@ The hub → project page → paper/code/video navigation is inspired by https://
 ## BasicLoco videos
 
 The seven homepage videos and their extracted preview frames in `assets/videos/` were provided by Hao Zhang from BasicLoco v3 for publication on this website. They are separate from the archived third-party demo media listed above.
+
+The featured TempoLoco video (`assets/videos/tempoloco.mp4`) and its extracted cover were also supplied by Hao Zhang for the homepage.

@@ -40,7 +40,9 @@ document.querySelectorAll('[data-scroll]').forEach((button) => {
 const showcase = document.getElementById('showcase-video');
 const clips = document.querySelectorAll('[data-video]');
 if (showcase) {
-  clips[0]?.setAttribute('aria-current', 'true');
+  clips.forEach((clip) => {
+    if (clip.href === showcase.querySelector('source')?.src) clip.setAttribute('aria-current', 'true');
+  });
   clips.forEach((clip) => clip.addEventListener('click', (event) => {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();

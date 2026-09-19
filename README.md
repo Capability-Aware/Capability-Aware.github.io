@@ -6,6 +6,7 @@ A minimal academic showcase: Research Projects dropdown, centered title and auth
 
 ## Update content
 
+- `featured-video.json`: main homepage video (currently TempoLoco).
 - `links.json`: homepage black buttons. Fill the empty YouTube/Bilibili `url` values to activate them.
 - `papers.json`: the Paper 1/2/3 placeholder names and paths. These have working standalone pages at `/paper1/`, `/paper2/`, and `/paper3/`.
 - `scripts/build_site.py`: homepage text, link buttons, teaser, and project page content.
