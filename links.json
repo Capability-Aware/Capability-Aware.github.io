@@ -1,0 +1,26 @@
+[
+  {
+    "label": "YouTube",
+    "url": ""
+  },
+  {
+    "label": "Bilibili",
+    "url": ""
+  },
+  {
+    "label": "capability_rl",
+    "url": "https://github.com/HaoZhangRobotics/capability_rl"
+  },
+  {
+    "label": "capabilitylab",
+    "url": "https://github.com/HaoZhangRobotics/capabilitylab"
+  },
+  {
+    "label": "Research-tools",
+    "url": "https://github.com/HaoZhangRobotics/Research-tools"
+  },
+  {
+    "label": "Academic Website",
+    "url": "https://haozhangrobotics.github.io/"
+  }
+]

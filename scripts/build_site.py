@@ -30,12 +30,10 @@ def build_home():
     cards = ''.join(f'<a class="video-card footage-card" href="{v["src"]}" data-video="{v["src"]}" data-poster="{v["poster"]}" data-title="{e(v["title"])}"><img src="{v["poster"]}" alt="{e(v["title"])} video preview" loading="lazy"><span class="clip-label">▷ {e(v["title"])}</span></a>' for v in VIDEOS)
     first = VIDEOS[0]
     papers = ''.join(f'<article class="paper-entry"><h3><a href="{p["slug"]}/">{e(p["name"])}</a></h3><p>Coming soon.</p></article>' for p in PAPERS)
-    links = ''.join(button(label, url) for label,url in [
-        ('GitHub', 'https://github.com/Capability-Aware'),
-        ('Hao Zhang', 'https://haozhangrobotics.github.io/'),
-        ('Website Code', 'https://github.com/Capability-Aware/Capability-Aware.github.io'),
-        ('▷ Real World', 'assets/videos/large-rocks.mp4'),
-        ('▷ Simulation', 'assets/videos/simulation.mp4')])
+    home_links = json.loads((ROOT / 'links.json').read_text())
+    links = ''.join(button(link['label'], link['url']) if link['url'] else
+                    f'<span class="button" role="link" aria-disabled="true" title="Coming soon">{e(link["label"])}</span>'
+                    for link in home_links)
     body = f'''<main id="main">
 <header class="hero container"><h1>Capability Aware</h1>
 <p class="authors"><a href="https://haozhangrobotics.github.io/">Hao Zhang</a></p><p class="affiliations">Westlake University</p>

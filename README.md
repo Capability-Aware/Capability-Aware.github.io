@@ -6,12 +6,13 @@ A minimal academic showcase: Research Projects dropdown, centered title and auth
 
 ## Update content
 
+- `links.json`: homepage black buttons. Fill the empty YouTube/Bilibili `url` values to activate them.
 - `papers.json`: the Paper 1/2/3 placeholder names and paths. These have working standalone pages at `/paper1/`, `/paper2/`, and `/paper3/`.
 - `scripts/build_site.py`: homepage text, link buttons, teaser, and project page content.
 - `assets/site.css` and `assets/site.js`: shared layout and dropdown/carousel behavior.
 - `projects.json`: archived Nerfies and HyperNeRF demonstration content. These are not Capability Aware publications.
 
-The homepage uses seven user-provided BasicLoco videos in `assets/videos/`, configured in `videos.json`. Clicking a thumbnail switches the main player; without JavaScript each thumbnail opens the MP4 directly. Real World and Simulation buttons also open local videos. Original source videos are unchanged. Paper 1/2/3 remain placeholders in the research menu and list.
+The homepage uses seven user-provided BasicLoco videos in `assets/videos/`, configured in `videos.json`. Clicking a thumbnail switches the main player; without JavaScript each thumbnail opens the MP4 directly. Each video also has an Open video link. Original source videos are unchanged. Paper 1/2/3 remain placeholders in the research menu and list.
 
 ```sh
 python3 scripts/build_site.py
