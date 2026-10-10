@@ -74,32 +74,21 @@ def build_research(p):
         f = p[key]
         src = e(asset(f['src'], '../'))
         return f'<figure class="research-figure"><a href="{src}"><img src="{src}" alt="{e(f["alt"])}" loading="lazy"></a><figcaption>{e(f["caption"])} Click the figure to view full size.</figcaption></figure>'
-    def table(headers, rows, caption):
-        head = ''.join(f'<th scope="col">{e(h)}</th>' for h in headers)
-        cells = ''.join('<tr'+(' class="result-highlight"' if row[0]=='TempoLoco' else '')+'><th scope="row">'+e(row[0])+'</th>'+''.join(f'<td>{e(v)}</td>' for v in row[1:])+'</tr>' for row in rows)
-        return f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(caption)}"><table class="results-table"><caption>{e(caption)}</caption><thead><tr>{head}</tr></thead><tbody>{cells}</tbody></table></div>'
     teaser = figure('overview_image', 'Project overview')
     video = p.get('video')
     if video:
         teaser += f'<figure class="research-video" id="project-video"><video controls playsinline muted loop preload="metadata" poster="{e(asset(video["poster"], "../"))}" aria-label="TempoLoco demonstration compilation"><source src="{e(asset(video["src"], "../"))}" type="video/mp4">Your browser does not support this video.</video><figcaption>{e(video["caption"])}</figcaption></figure>'
     else:
         teaser += '<div class="media-placeholder"><strong>Project video</strong><span>Coming soon</span></div>'
-    results = table(['Method','Success ↑','Completion ↑','Worst-terrain success ↑','Termination ↓'],p['main_results'],'Full-curriculum benchmark: percentages, mean ± SD across three training seeds; 40k PPO iterations and 100,000 episodes per policy.') if p.get('main_results') else ''
-    physical = table(['Physical course','Completed trials'],p['physical_results'],'Unitree B2 physical capability tests: five trials per course; 23/25 completed in total.') if p.get('physical_results') else ''
-    citation = (f'<pre><code id="citation">{e(p["bibtex"])}</code></pre>' if p['bibtex'] else
-                '<div class="citation-pending">Citation details will be added when the preprint is available.</div>')
     body = f'''<main id="main" class="research-page">
 <header class="hero paper-hero"><p class="paper-kicker">Capability Aware · Research</p>
 <h1 class="research-title"><span>{e(headline)}:</span><span class="research-subtitle">{e(subtitle)}</span></h1>
 <p class="authors{' pending-meta' if not p['authors'] else ''}">{authors}</p><p class="affiliations{' pending-meta' if not p['affiliations'] else ''}">{affiliations}</p>
 <p class="publication-status">{e(p['status'])}</p><div class="buttons">{links}</div></header>
 <div class="paper-teaser">{teaser}</div>
-<nav class="section-nav" aria-label="Page sections"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#ablations">Ablations</a><a href="#citation-section">Citation</a></nav>
+<nav class="section-nav" aria-label="Page sections"><a href="#abstract">Abstract</a><a href="#method">Method</a></nav>
 <section class="paper-section" id="abstract"><h2>Abstract</h2>{content('abstract', 'Abstract coming soon.')}</section>
 <section class="paper-section section-tinted" id="method"><div class="section-inner"><h2>Method Overview</h2>{content('method', 'Method details coming soon.')}{figure('method_image', 'Method figure')}</div></section>
-<section class="paper-section" id="experiments"><h2>Complex-Terrain Quadruped Locomotion</h2>{content('experiments', 'Experiment details and demonstration videos coming soon.')}{results}{physical}<p class="experiment-note">Physical trials establish execution on the tested courses; they do not establish superiority over untested hardware baselines.</p></section>
-<section class="paper-section section-tinted" id="ablations"><div class="section-inner"><h2>Analysis and Ablations</h2>{content('ablations', 'Analysis, comparisons, and ablation results coming soon.')}{figure('analysis_image', 'Results figure')}</div></section>
-<section class="paper-section" id="citation-section"><h2>BibTeX</h2>{citation}</section>
 <nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
 </main>'''
     (folder/'index.html').write_text(shell(p['title']+' | Capability Aware', body, '../', p['title']))
