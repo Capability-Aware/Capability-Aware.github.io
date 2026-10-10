@@ -1,5 +1,144 @@
 [
-  {"slug": "paper1", "name": "Paper 1"},
-  {"slug": "paper2", "name": "Paper 2"},
-  {"slug": "paper3", "name": "Paper 3"}
+  {
+    "slug": "beyond-fixed-visual-history",
+    "name": "Beyond Fixed Visual History",
+    "title": "Beyond Fixed Visual History: Learning Motion-Adaptive Temporal Receptive Fields for Complex-Terrain Quadruped Locomotion",
+    "type": "research",
+    "status": "Preprint coming soon",
+    "legacy_slug": "paper1",
+    "authors": [
+      {
+        "name": "Hao Zhang",
+        "affiliation": "1",
+        "url": "https://haozhangrobotics.github.io/"
+      },
+      {
+        "name": "Yuping Yan",
+        "affiliation": "1"
+      },
+      {
+        "name": "Yitian Hong",
+        "affiliation": "2"
+      },
+      {
+        "name": "Luying Feng",
+        "affiliation": "1"
+      },
+      {
+        "name": "Tianhong Wang",
+        "affiliation": "1"
+      },
+      {
+        "name": "Fengqi Dai",
+        "affiliation": "1"
+      },
+      {
+        "name": "Wei Chen",
+        "affiliation": "1"
+      },
+      {
+        "name": "Yaochu Jin",
+        "affiliation": "1"
+      }
+    ],
+    "affiliations": "1 · Westlake University, Hangzhou, China\n2 · East China University of Science and Technology, Shanghai, China",
+    "links": {
+      "Paper": "",
+      "arXiv": "",
+      "Code": "",
+      "Video": "#project-video"
+    },
+    "abstract": "Versatile quadruped locomotion depends on a tight coupling between what the robot perceives and what its body can execute. Yet existing visual controllers typically organize depth history using fixed temporal patterns, overlooking that the same temporal span corresponds to different spatial ranges as the robot’s speed, posture, and gait phase change. Consequently, the same visual history may be insufficient in one motion state but outdated or misaligned in another. To address this limitation, we propose TempoLoco, a body-aware dynamic visual perception framework that organizes visual memory according to the robot’s current locomotion state. TempoLoco learns multiple complementary temporal views from a long depth buffer, encodes them within a shared feature space, and dynamically aggregates them using proprioceptive history and multi-scale terrain evidence. This enables a single policy to align visual anticipation with the robot’s current motion capabilities across complex terrains, including stairs, platforms, gaps, discrete obstacles, rough ground, and slopes. From the experiment analysis, TempoLoco achieves a 78.4% success rate, compared with 58.2% for the strongest fixed-history baseline and 62.1% for uniform multi-scale fusion. In separate capability evaluations, it completes 41/45 simulated trials across nine terrain types and 23/25 real-world trials on a Unitree B2 with a fixed arm, demonstrating robust and deployable locomotion through body-aware dynamic visual perception.",
+    "method": "TempoLoco separates global temporal-scale learning from state-conditioned fusion. Four globally learned continuous strides sample complementary eight-frame histories from a 37-slot depth buffer. A shared visual encoder maps these histories into a common feature space; a temporal gate combines them using five-step proprioceptive history and multi-scale terrain evidence. The learned strides remain fixed after training, while fusion weights adapt at every policy step. A single locomotion policy produces targets for the twelve leg joints.",
+    "experiments": "The manuscript reports 41/45 goal-reaching trials across nine fixed MuJoCo courses and 23/25 physical trials across five courses on an arm-equipped Unitree B2. These capability tests use a pre-designated seed-42 checkpoint and are separate from the three-seed full-curriculum benchmark. The arm remains fixed outside the locomotion action space. Depth observations are sent to an external RTX 5080 workstation for inference.",
+    "ablations": "A matched factorial study separates temporal-scale learning from state-conditioned fusion. Full-curriculum success is 62.1 ± 3.9% with fixed scales and uniform fusion, 71.5 ± 3.5% with fixed scales and conditioned fusion, 68.4 ± 3.1% with learned scales and uniform fusion, and 78.4 ± 2.3% with both. Figure 3 shows learned actor strides and descriptive gate usage across terrain–speed conditions; the strides are global parameters, while the fusion weights vary online.",
+    "bibtex": "",
+    "overview_image": {
+      "src": "assets/papers/tempoloco/fig1.png",
+      "alt": "TempoLoco overview showing body-aware temporal perception and quadruped terrain traversal",
+      "caption": "TempoLoco: learned temporal views and motion-adaptive fusion for complex-terrain locomotion. The mounted arm is fixed; the policy controls the legs."
+    },
+    "method_image": {
+      "src": "assets/papers/tempoloco/fig2.png",
+      "alt": "TempoLoco depth-history sampling, shared encoding, temporal gate, locomotion policy, and real-robot deployment architecture",
+      "caption": "Four learned temporal supports feed a shared encoder and a body-state-conditioned gate. Strides are learned during training; fusion weights adapt online."
+    },
+    "analysis_image": {
+      "src": "assets/papers/tempoloco/fig3.png",
+      "alt": "Learned temporal strides across three seeds and mean actor-gate weights across terrain and speed conditions",
+      "caption": "Learned temporal supports and actor-gate usage. Gate weights are descriptive averages over the evaluated terrain–speed conditions."
+    },
+    "video": {
+      "src": "assets/videos/tempoloco.mp4",
+      "poster": "assets/videos/tempoloco.png",
+      "caption": "TempoLoco demonstration compilation supplied by the authors. This video illustrates locomotion behavior; trial counts are reported separately below."
+    },
+    "main_results": [
+      [
+        "Dense",
+        "58.2 ± 4.2",
+        "65.2 ± 3.8",
+        "32.1 ± 5.6",
+        "21.3 ± 2.1"
+      ],
+      [
+        "Uniform-Multi",
+        "62.1 ± 3.9",
+        "69.0 ± 3.5",
+        "38.3 ± 5.1",
+        "18.8 ± 1.9"
+      ],
+      [
+        "Learned-Multi",
+        "68.4 ± 3.1",
+        "74.6 ± 2.9",
+        "46.2 ± 4.3",
+        "14.4 ± 1.5"
+      ],
+      [
+        "Global-Static",
+        "52.3 ± 4.8",
+        "60.1 ± 4.1",
+        "25.8 ± 6.2",
+        "24.6 ± 2.4"
+      ],
+      [
+        "TempoLoco",
+        "78.4 ± 2.3",
+        "83.8 ± 1.8",
+        "54.5 ± 3.2",
+        "8.2 ± 0.9"
+      ]
+    ],
+    "physical_results": [
+      [
+        "Gravel",
+        "5/5"
+      ],
+      [
+        "Rocky terrain",
+        "5/5"
+      ],
+      [
+        "Sandy slope",
+        "5/5"
+      ],
+      [
+        "Stairs, down–up",
+        "5/5"
+      ],
+      [
+        "Pit, down–up",
+        "3/5"
+      ]
+    ]
+  },
+  {
+    "slug": "paper2",
+    "name": "Paper 2"
+  },
+  {
+    "slug": "paper3",
+    "name": "Paper 3"
+  }
 ]

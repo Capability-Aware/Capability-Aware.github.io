@@ -1,3 +1,5 @@
 .DS_Store
 __pycache__/
 _export/
+paper1/*.zip
+paper1/TempoLoco_ICRA2027_draft_v0_clean/

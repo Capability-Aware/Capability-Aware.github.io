@@ -8,12 +8,20 @@ A minimal academic showcase: Research Projects dropdown, centered title and auth
 
 - `featured-video.json`: main homepage video (currently TempoLoco).
 - `links.json`: homepage black buttons. Fill the empty YouTube/Bilibili `url` values to activate them.
-- `papers.json`: the Paper 1/2/3 placeholder names and paths. These have working standalone pages at `/paper1/`, `/paper2/`, and `/paper3/`.
+- `papers.json`: research page titles, paths, status, and content. The first paper has a standalone page at `/beyond-fixed-visual-history/`; `/paper1/` redirects there. Paper 2/3 are still placeholders.
 - `scripts/build_site.py`: homepage text, link buttons, teaser, and project page content.
 - `assets/site.css` and `assets/site.js`: shared layout and dropdown/carousel behavior.
 - `projects.json`: archived Nerfies and HyperNeRF demonstration content. These are not Capability Aware publications.
 
-The homepage features TempoLoco in the main player. The horizontal strip contains six BasicLoco real-world videos from `videos.json`, playing muted on a loop with native playback controls. Simulation is excluded from the strip. Paper 1/2/3 remain placeholders in the research menu and list.
+The homepage features TempoLoco in the main player. The horizontal strip contains six BasicLoco real-world videos from `videos.json`, playing muted on a loop with native playback controls. Simulation is excluded from the strip. The first research entry is **Beyond Fixed Visual History: Learning Motion-Adaptive Temporal Receptive Fields for Complex-Terrain Quadruped Locomotion**. Its standalone page presents the supplied manuscript and demonstration compilation; public paper links and citation metadata remain pending.
+
+## First paper: preparing the release
+
+The author order and affiliations, abstract, method summary, three figures, and selected experimental results are now taken from the manuscript supplied on October 10, 2026. The TempoLoco compilation is embedded beneath the overview figure. The manuscript reports simulation and hardware trial counts separately from the full-curriculum comparison; the arm is fixed and policy inference uses an external workstation. These are manuscript-reported results, not an acceptance announcement.
+
+Edit the first entry in `papers.json` for future content updates. Paper/arXiv/code URLs and BibTeX remain empty until their public records are supplied; unavailable URLs render as labels rather than fake links. Update `status` when the arXiv record is available. Figures live in `assets/papers/tempoloco/`. The published TempoLoco video has `Hao Zhang | HaoZhangRobotics.github.io` burned into every frame; the poster is extracted from that version. Original video and manuscript source files are preserved outside published output. Do not commit the manuscript ZIP or extracted LaTeX project.
+
+The standalone layout follows the centered title, author block, resource buttons, teaser, and section structure of [Embrace Collisions](https://project-instinct.github.io/embrace-collisions/), using original HTML/CSS and no copied research media or text.
 
 ```sh
 python3 scripts/build_site.py

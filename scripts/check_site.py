@@ -27,6 +27,7 @@ class Page(HTMLParser):
 
 papers = json.loads((ROOT/'papers.json').read_text())
 paths = [ROOT/'index.html'] + [ROOT/p['slug']/'index.html' for p in projects + papers]
+paths += [ROOT/p['legacy_slug']/'index.html' for p in papers if p.get('legacy_slug')]
 pages = {p.resolve(): Page(p) for p in paths}
 for path, page in pages.items():
     if path.parent.name in [p['slug'] for p in projects]:
