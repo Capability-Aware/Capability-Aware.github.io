@@ -36,6 +36,6 @@ The featured TempoLoco video (`assets/videos/tempoloco.mp4`) and its extracted c
 
 ## TempoLoco paper page
 
-The three figures in `assets/papers/tempoloco/`, author information, abstract, and reported results were supplied in the authors' manuscript on October 10, 2026. The project page is prepared for a forthcoming preprint; no arXiv identifier or conference acceptance is claimed.
+The three figures in `assets/papers/tempoloco/`, author information, abstract, and reported results were supplied in the authors' manuscript on October 10, 2026. The public preprint is available at https://arxiv.org/abs/2610.14753. Its identifier is displayed on the project page; no conference acceptance is claimed.
 
 The TempoLoco compilation is also used on its standalone project page. Its published version carries `Hao Zhang | HaoZhangRobotics.github.io` in every frame, and its poster is extracted from the watermarked video. Original sources are preserved outside published output.

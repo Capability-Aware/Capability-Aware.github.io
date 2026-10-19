@@ -4,7 +4,7 @@
     "name": "Beyond Fixed Visual History",
     "title": "Beyond Fixed Visual History: Learning Motion-Adaptive Temporal Receptive Fields for Complex-Terrain Quadruped Locomotion",
     "type": "research",
-    "status": "Preprint coming soon",
+    "status": "arXiv:2610.14753 · 2026",
     "legacy_slug": "paper1",
     "authors": [
       {
@@ -43,8 +43,8 @@
     ],
     "affiliations": "1 · Westlake University, Hangzhou, China\n2 · East China University of Science and Technology, Shanghai, China",
     "links": {
-      "Paper": "",
-      "arXiv": "",
+      "Paper": "https://arxiv.org/pdf/2610.14753",
+      "arXiv": "https://arxiv.org/abs/2610.14753",
       "Code": "",
       "Video": "#project-video"
     },
