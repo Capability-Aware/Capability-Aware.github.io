@@ -35,3 +35,11 @@
 /* Keep the side-by-side B+C comparison footage large enough to inspect. */
 .p2-result-panel#panel-coordination .p2-clip-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 @media(max-width:650px){.p2-result-panel#panel-coordination .p2-clip-grid{grid-template-columns:1fr}}
+
+/* Larger research-style result cards for gait and ablation comparisons. */
+.p2-result-panel#panel-motion>.p2-clip-grid,
+.p2-result-panel#panel-ablation .p2-ablation-group>.p2-clip-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.p2-result-panel#panel-ablation .p2-ablation-group{margin:34px 0 42px}
+.p2-result-panel#panel-ablation .p2-ablation-group>h4{font-size:20px;line-height:1.35;margin:0 0 15px;padding:0 0 10px;border-bottom:1px solid #e1e6e8;color:#303d43}
+.p2-result-panel#panel-ablation .p2-ablation-note{margin:0 0 18px!important;padding:12px 15px;border-left:3px solid #9aaeb8;background:#f5f8f9;color:#536168!important;font-size:14px!important;line-height:1.65}
+@media(max-width:650px){.p2-result-panel#panel-motion>.p2-clip-grid,.p2-result-panel#panel-ablation .p2-ablation-group>.p2-clip-grid{grid-template-columns:1fr}}

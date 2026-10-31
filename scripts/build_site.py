@@ -140,7 +140,7 @@ tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>activate(tab));tab.
 </script>
 </main>'''
     page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
-    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v6')
+    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v7')
     (folder/'index.html').write_text(page)
 
 def build_placeholder_paper(p):
