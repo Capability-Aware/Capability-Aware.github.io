@@ -49,10 +49,41 @@ def build_placeholder(p):
     folder = ROOT / p['slug']
     folder.mkdir(exist_ok=True)
     if p.get('demo'):
-        body = f'''<main id="main" class="placeholder-page"><header class="hero container"><h1>{e(p['name'])}</h1><p>Capability Aware</p></header><section class="text-section"><h2>Interactive demo</h2><p class="center">The paper is in preparation. Explore the current results and demonstrations below.</p><div class="buttons">{button('Open the demo showcase', p['demo'])}{button('← Capability Aware', '../')}</div></section></main>'''
+        build_demo_landing(p)
+        return
     else:
         body = f'''<main id="main" class="placeholder-page"><header class="hero container"><h1>{e(p['name'])}</h1><p>Capability Aware</p></header><section class="text-section"><div class="empty-video"><span aria-hidden="true">▷</span><p>Video coming soon</p></div><h2>Coming soon</h2><p class="center">This project page is a placeholder. Paper, code, and video links will be added here.</p><div class="buttons">{button('← Capability Aware', '../')}</div></section></main>'''
     (folder/'index.html').write_text(shell(p['name']+' | Capability Aware', body, '../'))
+
+def build_demo_landing(p):
+    folder = ROOT / p['slug']
+    folder.mkdir(exist_ok=True)
+    videos = [
+        ('Variable-height stairs', 'media_stage/random_height_width_stairs_L0.mp4', 'Quadruped traversal across stairs with changing height and width.'),
+        ('Low-clearance traversal', 'media_stage/low_ceiling_success35_v16.mp4', 'A low-ceiling passage requiring a crouched body posture.'),
+        ('High-speed locomotion', 'media_stage/speed5_goals.mp4', 'Locomotion demonstration with high-speed velocity targets.'),
+        ('Arm-equipped platform', 'media_stage/arm_five_application_REVIEW_v18.mp4', 'Locomotion with a fixed arm mounted on the robot.'),
+        ('Body-motion adaptation', 'media_stage/joint_body_flat_walk_large_H40_60_RP10_v1.mp4', 'Walking demonstration with body-height and orientation variation.'),
+        ('Pillar contact comparison', 'media_capability_v5/contact_pillars_CB.mp4', 'Contact-rich traversal among discrete pillars.'),
+    ]
+    cards = ''.join(f'''<figure class="p2-video-card"><video controls playsinline muted preload="metadata" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><figcaption><strong>{e(title)}</strong><span>{e(caption)}</span></figcaption></figure>''' for title, src, caption in videos)
+    hero_video = '../assets/videos/paper2/media_stage/random_height_width_stairs_L0.mp4'
+    body = f'''<main id="main" class="research-page paper2-page">
+<header class="hero paper-hero p2-hero"><p class="paper-kicker">Capability Aware · Interactive Research Preview</p>
+<h1 class="research-title">Paper 2</h1>
+<p class="authors"><a href="https://haozhangrobotics.github.io/">Hao Zhang</a></p>
+<p class="affiliations">Westlake University</p>
+<p class="publication-status">Manuscript in preparation · Demonstrations available</p>
+<p class="p2-intro">The manuscript is in preparation. This page presents selected robot demonstrations; explore the full showcase for the current experiment collection and supporting details.</p>
+<div class="buttons"><a class="button" href="{e(p['demo'])}">Open the demo showcase</a><a class="button" href="#videos">Watch selected videos</a><a class="button" href="../">← Capability Aware</a></div></header>
+<section class="p2-feature" aria-label="Featured demonstration"><video controls playsinline muted preload="metadata" aria-label="Variable-height stair traversal"><source src="{hero_video}" type="video/mp4">Your browser does not support this video.</video><p>Selected demonstration · Variable-height stair traversal</p></section>
+<nav class="section-nav" aria-label="Page sections"><a href="#overview">Preview</a><a href="#videos">Selected demonstrations</a></nav>
+<section class="paper-section p2-overview" id="overview"><p class="paper-kicker">A work in progress</p><h2>Interactive preview</h2><p>This page is an early visual entry point for the project. The detailed demo showcase remains available with the existing experiment pages and media.</p><p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></p></section>
+<section class="paper-section section-tinted p2-gallery-section" id="videos"><div class="section-inner"><p class="paper-kicker">Selected clips</p><h2>Robot demonstrations</h2><div class="p2-video-grid">{cards}</div></div></section>
+<nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
+</main>'''
+    page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
+    (folder/'index.html').write_text(page)
 
 def build_research(p):
     folder = ROOT / p['slug']
