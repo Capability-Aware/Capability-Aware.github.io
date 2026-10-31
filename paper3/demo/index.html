@@ -7,13 +7,13 @@
 </style></head><body><main>
 <header><span class="brand">multiagent-grabgarbage</span><span class="score">单目标完成 1 / 1<small>场景总计 1 / 24</small></span></header>
 <h1>走近 → 转身 → 抓取 → 携物 → 投桶</h1>
-<video id="thirdVideo" controls playsinline muted preload="metadata" width="1920" height="1080" src="continuous_flow_v23_third.mp4" poster="continuous_flow_v23_third.jpg" aria-label="连续任务独立第三视角"></video>
+<video id="thirdVideo" controls playsinline muted preload="metadata" width="1920" height="1080" src="../../assets/videos/paper3/continuous_flow_v23_third.mp4" poster="continuous_flow_v23_third.jpg" aria-label="连续任务独立第三视角"></video>
 <div class="watch"><button type="button" data-time="101.2" data-play="true">▶ 直接看抓起</button><button type="button" data-time="155.5" data-play="true">▶ 直接看投桶</button></div>
 <div class="tools"><button id="playBoth" type="button">▶ 播放两路</button><button id="pauseBoth" type="button">暂停两路</button><button type="button" data-time="0">从头看</button></div>
 <details class="stage-select"><summary>按实际阶段定位</summary><nav class="timeline" aria-label="跳转真实阶段"><button type="button" data-time="6.4">走近</button><button type="button" data-time="29.8">接近与转身</button><button type="button" data-time="46.6">腕部复查</button><button type="button" data-time="72.6">抓取</button><button type="button" data-time="118.0">携物转向</button><button type="button" data-time="133.6">携物行走</button><button type="button" data-time="155.5">投桶</button><button type="button" data-time="169.7">桶内完成</button></nav></details>
 <p class="info" id="thirdInfo">第三视角 · 原生 1920×1080</p>
 <section class="onboard"><h2>无人机／狗前／狗后／腕部</h2>
-<video id="onboardVideo" controls playsinline muted preload="metadata" width="1344" height="810" src="continuous_flow_v23_onboard.mp4" poster="continuous_flow_v23_onboard.jpg" aria-label="真实机载四相机独立四宫格"></video>
+<video id="onboardVideo" controls playsinline muted preload="metadata" width="1344" height="810" src="../../assets/videos/paper3/continuous_flow_v23_onboard.mp4" poster="continuous_flow_v23_onboard.jpg" aria-label="真实机载四相机独立四宫格"></video>
 <p class="info" id="onboardInfo">自然比例四宫格 · 两路可独立播放，共同按钮定位同一次真实曝光。</p></section>
 <details><summary>来源与验证范围</summary>
 <p>同一仿真会话连续完成一个目标，真实携物净位移 1.075 米；169.660 秒正确桶内完成，连续物理记录至 170.660 秒。单目标成绩为 1/1，整场仍为 1/24，未完成全部垃圾清理。</p>
@@ -26,7 +26,7 @@
 <section style="margin-top:34px;padding-top:18px;border-top:1px solid var(--line)">
 <h2>v26 双目标连续收集 · 2 / 2 完成</h2>
 <p class="score">公开目标完成 2 / 2 <small>场景目录 2 / 24；full_task_success=false</small></p>
-<video controls playsinline muted preload="metadata" width="2560" height="720" src="continuous_flow_v26_two_target_collection_complete.mp4" poster="continuous_flow_v26_two_target_collection_complete.jpg" aria-label="双目标连续收集 wide 与 side observer 视角"></video>
+<video controls playsinline muted preload="metadata" width="2560" height="720" src="../../assets/videos/paper3/continuous_flow_v26_two_target_collection_complete.mp4" poster="continuous_flow_v26_two_target_collection_complete.jpg" aria-label="双目标连续收集 wide 与 side observer 视角"></video>
 <p class="info">同一 Session 内两件目标分别抓取并投进 bin_0_can；第二轮离桶停稳后继续完成。视频为 5 fps 两路 observer 并排，未作为策略或评分输入。</p>
 <p>两件无人机目标框、四足前视/腕视框及每轮腕部 SAM mask/罐模型均由当前实际图像外部标注和复核。四足使用冻结 MoE 26399；机械臂抓取仍为临时关节 PD（Kp=60、Kd=12），正式抓取算法待负责同学交付。当前结果证明的是受控双目标连续流程，未完成 24 件场景清理，也不是自主识别演示。</p>
 <div class="links"><a href="continuous_flow_v26_two_target_collection_complete_result.json">v26 实际结果</a><a href="版本记录.md">运行证据与实验边界</a></div>
@@ -34,7 +34,7 @@
 <section style="margin-top:34px;padding-top:18px;border-top:1px solid var(--line)">
 <h2>v24 双目标尝试 · 部分完成</h2>
 <p class="score">发现目标 2 件 · 完成 1 / 2 <small>场景目录 1 / 24；第二轮接近未开始</small></p>
-<video controls playsinline muted preload="metadata" width="2560" height="720" src="continuous_flow_v24_two_target_partial.mp4" poster="continuous_flow_v24_two_target_partial.jpg" aria-label="双目标尝试的 wide 与 side observer 视角"></video>
+<video controls playsinline muted preload="metadata" width="2560" height="720" src="../../assets/videos/paper3/continuous_flow_v24_two_target_partial.mp4" poster="continuous_flow_v24_two_target_partial.jpg" aria-label="双目标尝试的 wide 与 side observer 视角"></video>
 <p class="info">第一件完成抓取并投进正确桶，空手收臂后发现第二件；第二轮转场因导航累计预算耗尽停止。视频为 5 fps 两路 observer 并排，标为展示用途。</p>
 <p>两轮无人机目标框均由当前真实 RGB 外部人工标注；第一轮前视、腕视框和抓取前 SAM mask 也有外部人工确认。因此这不是无人自主识别或双目标成功结果。</p>
 <div class="links"><a href="continuous_flow_v24_two_target_partial_result.json">v24 实际结果</a><a href="版本记录.md">版本记录与实验边界</a></div>
@@ -42,7 +42,7 @@
 <section style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line)">
 <h2>v25 双目标尝试 · 离桶预算失败</h2>
 <p class="score">公开目标完成 1 / 2 <small>第二轮离桶转场失败；不是成功演示</small></p>
-<video controls playsinline muted preload="metadata" width="2560" height="720" src="continuous_flow_v25_two_target_time_budget_partial.mp4" poster="continuous_flow_v25_two_target_time_budget_partial.jpg" aria-label="v25 双目标尝试的 wide 与 side observer 视角"></video>
+<video controls playsinline muted preload="metadata" width="2560" height="720" src="../../assets/videos/paper3/continuous_flow_v25_two_target_time_budget_partial.mp4" poster="continuous_flow_v25_two_target_time_budget_partial.jpg" aria-label="v25 双目标尝试的 wide 与 side observer 视角"></video>
 <p>首件成功投桶；第二轮离开垃圾桶时累计路径预算耗尽，第二次接近未开始。此版本保留为 v26 修复前的真实失败记录。</p>
 <div class="links"><a href="continuous_flow_v25_two_target_time_budget_partial_result.json">v25 实际结果</a></div>
 </section>
