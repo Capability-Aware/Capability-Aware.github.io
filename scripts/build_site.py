@@ -74,7 +74,7 @@ def build_demo_landing(p):
         ('身体高度｜连续 20–68 cm', 'media_body_frontier_v1/body_height_CB_B_only.mp4', 'result_body_height.jpg', 'body', '连续高度变化；画面保留 C+B 与单 Body 对照。'),
         ('身体俯仰｜连续 ±28°', 'media_body_frontier_v1/body_pitch_CB_B_only.mp4', 'result_body_pitch.jpg', 'body', '连续俯仰变化；画面保留 C+B 与单 Body 对照。'),
         ('左右侧倾｜连续 ±40°', 'media_body_frontier_v1/body_roll_CB_B_only.mp4', 'result_body_roll.jpg', 'body', '连续侧倾变化；画面保留 C+B 与单 Body 对照。'),
-        ('高度＋roll＋pitch 联合姿态', 'media_stage/body_three_axes_explicit_v17.mp4', 'result_body_combined.jpg', 'body', '高度、roll、pitch 及三轴联合姿态演示。'),
+        ('高度＋roll＋pitch 联合姿态', 'media_stage/body_combined.mp4', 'result_body_combined.jpg', 'body', '40 cm 高度，roll +5°、pitch −5°联合静态姿态。'),
     ]
     arm_tasks = [
         ('升高身体触达', 'arm_height', '高度变化时四足与机械臂协同触达；同屏对比固定 Body 与调用 Body。'),
