@@ -59,28 +59,36 @@ def build_demo_landing(p):
     folder = ROOT / p['slug']
     folder.mkdir(exist_ok=True)
     videos = [
-        ('Variable-height stairs', 'media_stage/random_height_width_stairs_L0.mp4', 'Quadruped traversal across stairs with changing height and width.'),
-        ('Low-clearance traversal', 'media_stage/low_ceiling_success35_v16.mp4', 'A low-ceiling passage requiring a crouched body posture.'),
-        ('High-speed locomotion', 'media_stage/speed5_goals.mp4', 'Locomotion demonstration with high-speed velocity targets.'),
-        ('Arm-equipped platform', 'media_stage/arm_five_application_REVIEW_v18.mp4', 'Locomotion with a fixed arm mounted on the robot.'),
-        ('Body-motion adaptation', 'media_stage/joint_body_flat_walk_large_H40_60_RP10_v1.mp4', 'Walking demonstration with body-height and orientation variation.'),
-        ('Pillar contact comparison', 'media_capability_v5/contact_pillars_CB.mp4', 'Contact-rich traversal among discrete pillars.'),
+        ('Variable-height stairs', 'media_stage/random_height_width_stairs_L0.mp4', 'stairs.jpg', 'Terrain', 'Traversal across stairs with changing step geometry.'),
+        ('Low-clearance passage', 'media_stage/low_ceiling_success35_v16.mp4', 'low_clearance.jpg', 'Terrain', 'A low ceiling calls for a crouched body posture.'),
+        ('Pillar contact', 'media_capability_v5/contact_pillars_CB.mp4', 'pillars.jpg', 'Terrain', 'Contact-rich traversal among discrete pillars.'),
+        ('High-speed command', 'media_stage/speed5_goals.mp4', 'high_speed.jpg', 'Motion', 'Locomotion with a high-speed velocity target.'),
+        ('Body-height and attitude', 'media_stage/joint_body_flat_walk_large_H40_60_RP10_v1.mp4', 'body_motion.jpg', 'Motion', 'Walking with changes in body height and orientation.'),
+        ('Fixed-arm setup', 'media_stage/arm_five_application_REVIEW_v18.mp4', 'fixed_arm.jpg', 'Robot setup', 'Locomotion with an arm mounted on the robot.'),
     ]
-    cards = ''.join(f'''<figure class="p2-video-card"><video controls playsinline muted preload="metadata" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><figcaption><strong>{e(title)}</strong><span>{e(caption)}</span></figcaption></figure>''' for title, src, caption in videos)
-    hero_video = '../assets/videos/paper2/media_stage/random_height_width_stairs_L0.mp4'
+    cards = ''.join(f'''<button class="p2-clip{' is-active' if i == 0 else ''}" type="button" data-category="{e(category)}" data-title="{e(title)}" data-caption="{e(caption)}" data-video="../assets/videos/paper2/{e(src)}" data-poster="../assets/videos/paper2/posters/{e(poster)}" aria-pressed="{'true' if i == 0 else 'false'}"><span class="p2-thumb"><img src="../assets/videos/paper2/posters/{e(poster)}" alt="" loading="lazy"><span class="p2-play" aria-hidden="true">▶</span></span><span class="p2-clip-copy"><strong>{e(title)}</strong><small>{e(category)}</small></span></button>''' for i,(title,src,poster,category,caption) in enumerate(videos))
+    first_title,first_src,first_poster,first_category,first_caption = videos[0]
     body = f'''<main id="main" class="research-page paper2-page">
 <header class="hero paper-hero p2-hero"><p class="paper-kicker">Capability Aware · Interactive Research Preview</p>
 <h1 class="research-title">Paper 2</h1>
 <p class="authors"><a href="https://haozhangrobotics.github.io/">Hao Zhang</a></p>
 <p class="affiliations">Westlake University</p>
 <p class="publication-status">Manuscript in preparation · Demonstrations available</p>
-<p class="p2-intro">The manuscript is in preparation. This page presents selected robot demonstrations; explore the full showcase for the current experiment collection and supporting details.</p>
-<div class="buttons"><a class="button" href="{e(p['demo'])}">Open the demo showcase</a><a class="button" href="#videos">Watch selected videos</a><a class="button" href="../">← Capability Aware</a></div></header>
-<section class="p2-feature" aria-label="Featured demonstration"><video controls playsinline muted preload="metadata" aria-label="Variable-height stair traversal"><source src="{hero_video}" type="video/mp4">Your browser does not support this video.</video><p>Selected demonstration · Variable-height stair traversal</p></section>
-<nav class="section-nav" aria-label="Page sections"><a href="#overview">Preview</a><a href="#videos">Selected demonstrations</a></nav>
-<section class="paper-section p2-overview" id="overview"><p class="paper-kicker">A work in progress</p><h2>Interactive preview</h2><p>This page is an early visual entry point for the project. The detailed demo showcase remains available with the existing experiment pages and media.</p><p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></p></section>
-<section class="paper-section section-tinted p2-gallery-section" id="videos"><div class="section-inner"><p class="paper-kicker">Selected clips</p><h2>Robot demonstrations</h2><div class="p2-video-grid">{cards}</div></div></section>
+<p class="p2-intro">Selected robot demonstrations. Choose a clip to preview it here, or open the full experiment showcase.</p>
+<div class="buttons"><a class="button" href="{e(p['demo'])}">Open the demo showcase</a><a class="button" href="#videos">Browse demonstrations</a><a class="button" href="../">← Capability Aware</a></div></header>
+<section class="p2-showcase" id="videos" aria-label="Video demonstrations">
+<div class="p2-stage-wrap"><video id="p2-stage" controls playsinline preload="none" poster="../assets/videos/paper2/posters/{e(first_poster)}" aria-label="{e(first_title)}"><source src="../assets/videos/paper2/{e(first_src)}" type="video/mp4">Your browser does not support this video.</video></div>
+<div class="p2-showcase-info"><p class="paper-kicker">Now showing · <span id="p2-category">{e(first_category)}</span></p><h2 id="p2-title">{e(first_title)}</h2><p id="p2-caption">{e(first_caption)}</p></div>
+<div class="p2-library"><div class="p2-library-heading"><div><p class="paper-kicker">Video library</p><h2>Choose a demonstration</h2></div><div class="p2-filters" role="group" aria-label="Filter demonstrations"><button class="is-active" type="button" data-filter="All" aria-pressed="true">All <span>6</span></button><button type="button" data-filter="Terrain" aria-pressed="false">Terrain <span>3</span></button><button type="button" data-filter="Motion" aria-pressed="false">Motion <span>2</span></button><button type="button" data-filter="Robot setup" aria-pressed="false">Robot setup <span>1</span></button></div></div>
+<div class="p2-clip-grid">{cards}</div></div></section>
+<section class="p2-footer-cta"><p>The full collection includes the current experiment pages and supporting details.</p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></section>
 <nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
+<script>
+(()=>{{const stage=document.getElementById('p2-stage'),source=stage.querySelector('source'),title=document.getElementById('p2-title'),caption=document.getElementById('p2-caption'),category=document.getElementById('p2-category'),clips=[...document.querySelectorAll('.p2-clip')],filters=[...document.querySelectorAll('.p2-filters button')];
+const selectClip=card=>{{source.src=card.dataset.video;stage.poster=card.dataset.poster;stage.setAttribute('aria-label',card.dataset.title);stage.load();title.textContent=card.dataset.title;caption.textContent=card.dataset.caption;category.textContent=card.dataset.category;clips.forEach(c=>{{c.classList.toggle('is-active',c===card);c.setAttribute('aria-pressed',String(c===card))}})}};
+clips.forEach(card=>card.addEventListener('click',()=>selectClip(card)));
+filters.forEach(filter=>filter.addEventListener('click',()=>{{filters.forEach(f=>{{f.classList.toggle('is-active',f===filter);f.setAttribute('aria-pressed',String(f===filter))}});clips.forEach(card=>card.hidden=filter.dataset.filter!=='All'&&card.dataset.category!==filter.dataset.filter);if(filter.dataset.filter!=='All'&&document.querySelector('.p2-clip.is-active')?.hidden)selectClip(clips.find(card=>!card.hidden))}}));}})();
+</script>
 </main>'''
     page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
     (folder/'index.html').write_text(page)
