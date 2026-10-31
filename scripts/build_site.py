@@ -94,9 +94,10 @@ def build_demo_landing(p):
             videos.append((f'{suite_title}｜{label}', f'media_stage_ablation/native_three_v2/{variant}_{suite}.mp4', f'result_ablation_{suite}_{variant}.jpg', 'ablation', f'{suite_caption}；当前展示已有阶段素材。'))
     def video_card(video):
         title,src,poster,category,caption = video
-        return f'''<article class="p2-demo-card"><video controls playsinline muted preload="none" poster="../assets/videos/paper2/posters/{e(poster)}" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><div class="p2-demo-copy"><h4>{e(title)}</h4><p>{e(caption)}</p></div></article>'''
+        speed_attr = ' data-playback-rate="1.5"' if category == 'terrain' else ''
+        return f'''<article class="p2-demo-card"><video controls playsinline muted preload="none"{speed_attr} poster="../assets/videos/paper2/posters/{e(poster)}" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><div class="p2-demo-copy"><h4>{e(title)}</h4><p>{e(caption)}</p></div></article>'''
     result_groups = [
-        ('terrain', '挑战地形', '俯身穿越、稀疏梅花桩、不规则楼梯与窄梁。', 'terrain'),
+        ('terrain', '挑战地形', '俯身穿越、稀疏梅花桩、不规则楼梯与窄梁；视频默认以 1.5× 播放。', 'terrain'),
         ('motion', '运动与步态', '0.5、1、3、5 m/s 速度目标，以及行走中的步态切换。', 'motion'),
         ('body', '身体姿态', '连续高度、俯仰、侧倾变化与多轴联合姿态。', 'body'),
         ('coordination', 'B+C 协同', '每段视频保留左右对照；放大查看四足与机械臂协同任务。', 'coordination'),
@@ -134,13 +135,13 @@ def build_demo_landing(p):
 <section class="p2-footer-cta"><p>The full collection includes the current experiment pages and supporting details.</p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></section>
 <nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
 <script>
-(()=>{{const tabs=[...document.querySelectorAll('.p2-tab')],panels=[...document.querySelectorAll('.p2-result-panel')];
+(()=>{{document.querySelectorAll('#panel-terrain video[data-playback-rate]').forEach(video=>{{const rate=Number(video.dataset.playbackRate);video.defaultPlaybackRate=rate;video.playbackRate=rate;video.addEventListener('loadedmetadata',()=>{{video.playbackRate=rate}},{{once:true}})}});const tabs=[...document.querySelectorAll('.p2-tab')],panels=[...document.querySelectorAll('.p2-result-panel')];
 const activate=tab=>{{tabs.forEach(t=>{{const active=t===tab;t.classList.toggle('is-active',active);t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1}});panels.forEach(p=>p.hidden=p.id!==tab.getAttribute('aria-controls'))}};
 tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();tabs[next].focus();activate(tabs[next])}})}});}})();
 </script>
 </main>'''
     page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
-    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v7')
+    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v8')
     (folder/'index.html').write_text(page)
 
 def build_placeholder_paper(p):
