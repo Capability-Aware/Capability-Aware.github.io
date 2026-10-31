@@ -14,11 +14,13 @@ def asset(url, prefix):
 def button(label, href, secondary=False):
     return f'<a class="button" href="{e(href)}">{e(label)}</a>'
 
-def shell(title, body, prefix='', description='Locomotion, navigation, and manipulation toward physical intelligence.'):
-    menu = ''.join(f'<a href="{prefix}{p["slug"]}/">{e(p["name"])}</a>' for p in PAPERS)
+def shell(title, body, prefix='', description='Locomotion, navigation, and manipulation toward physical intelligence.', noindex=False):
+    visible_papers = [p for p in PAPERS if p.get('discoverable', True)]
+    menu = ''.join(f'<a href="{prefix}{p["slug"]}/">{e(p["name"])}</a>' for p in visible_papers)
+    robots = '<meta name="robots" content="noindex,nofollow"><meta name="googlebot" content="noindex,nofollow">' if noindex else ''
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(title)}</title><meta name="description" content="{e(description)}">
+<title>{e(title)}</title><meta name="description" content="{e(description)}">{robots}
 <link rel="stylesheet" href="{prefix}assets/site.css?v=paper-layout-v1"><script src="{prefix}assets/site.js?v=autoplay-v1" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <nav class="topnav" aria-label="Main navigation"><a class="home" href="{prefix or './'}" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v9h5v-6h4v6h5v-9h3L12 3z"/></svg></a><details class="project-menu"><summary>Research Projects <span aria-hidden="true">⌄</span></summary><div class="menu">{menu}</div></details></nav>
@@ -29,7 +31,12 @@ def shell(title, body, prefix='', description='Locomotion, navigation, and manip
 def build_home():
     cards = ''.join(f'<div class="video-card footage-card"><video controls autoplay muted loop playsinline preload="metadata" aria-label="{e(v["title"])}"><source src="{v["src"]}" type="video/mp4"><a href="{v["src"]}">{e(v["title"])}</a></video></div>' for v in VIDEOS)
     first = json.loads((ROOT / 'featured-video.json').read_text())
-    papers = ''.join(f'<article class="paper-entry"><h3><a href="{p["slug"]}/">{e(p.get("title", p["name"]))}</a></h3><p>{e(p.get("status", "Coming soon."))}</p></article>' for p in PAPERS)
+    paper_entries = []
+    for p in PAPERS:
+        title = e(p.get('title', p['name']))
+        heading = f'<a href="{p["slug"]}/">{title}</a>' if p.get('discoverable', True) else title
+        paper_entries.append(f'<article class="paper-entry"><h3>{heading}</h3><p>{e(p.get("status", "Coming soon."))}</p></article>')
+    papers = ''.join(paper_entries)
     home_links = json.loads((ROOT / 'links.json').read_text())
     links = ''.join(button(link['label'], link['url']) if link['url'] else
                     f'<span class="button" role="link" aria-disabled="true" title="Coming soon">{e(link["label"])}</span>'
@@ -56,7 +63,7 @@ def build_placeholder(p):
         return
     else:
         body = f'''<main id="main" class="placeholder-page"><header class="hero container"><h1>{e(p['name'])}</h1><p>Capability Aware</p></header><section class="text-section"><div class="empty-video"><span aria-hidden="true">▷</span><p>Video coming soon</p></div><h2>Coming soon</h2><p class="center">This project page is a placeholder. Paper, code, and video links will be added here.</p><div class="buttons">{button('← Capability Aware', '../')}</div></section></main>'''
-    (folder/'index.html').write_text(shell(p['name']+' | Capability Aware', body, '../'))
+    (folder/'index.html').write_text(shell(p['name']+' | Capability Aware', body, '../', noindex=not p.get('discoverable', True)))
 
 def build_demo_landing(p):
     folder = ROOT / p['slug']
@@ -140,7 +147,7 @@ const activate=tab=>{{tabs.forEach(t=>{{const active=t===tab;t.classList.toggle(
 tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();tabs[next].focus();activate(tabs[next])}})}});}})();
 </script>
 </main>'''
-    page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
+    page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.', noindex=not p.get('discoverable', True))
     page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v8')
     (folder/'index.html').write_text(page)
 
@@ -162,7 +169,7 @@ def build_placeholder_paper(p):
 <section class="p2-footer-cta"><p>Explore the current project demo.</p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></section>
 <nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
 </main>'''
-    page = shell(p['name']+' | Capability Aware', body, '../', 'Paper 3 project page and demo showcase.')
+    page = shell(p['name']+' | Capability Aware', body, '../', 'Paper 3 project page and demo showcase.', noindex=not p.get('discoverable', True))
     page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper3-layout-v1')
     (folder/'index.html').write_text(page)
 
