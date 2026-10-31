@@ -66,31 +66,27 @@ def build_demo_landing(p):
         ('Body-height and attitude', 'media_stage/joint_body_flat_walk_large_H40_60_RP10_v1.mp4', 'body_motion.jpg', 'Motion', 'Walking with changes in body height and orientation.'),
         ('Fixed-arm setup', 'media_stage/arm_five_application_REVIEW_v18.mp4', 'fixed_arm.jpg', 'Robot setup', 'Locomotion with an arm mounted on the robot.'),
     ]
-    cards = ''.join(f'''<button class="p2-clip{' is-active' if i == 0 else ''}" type="button" data-category="{e(category)}" data-title="{e(title)}" data-caption="{e(caption)}" data-video="../assets/videos/paper2/{e(src)}" data-poster="../assets/videos/paper2/posters/{e(poster)}" aria-pressed="{'true' if i == 0 else 'false'}"><span class="p2-thumb"><img src="../assets/videos/paper2/posters/{e(poster)}" alt="" loading="lazy"><span class="p2-play" aria-hidden="true">▶</span></span><span class="p2-clip-copy"><strong>{e(title)}</strong><small>{e(category)}</small></span></button>''' for i,(title,src,poster,category,caption) in enumerate(videos))
-    first_title,first_src,first_poster,first_category,first_caption = videos[0]
+    cards = ''.join(f'''<article class="p2-demo-card" data-category="{e(category)}"><video controls playsinline muted preload="none" poster="../assets/videos/paper2/posters/{e(poster)}" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><div class="p2-demo-copy"><span class="p2-demo-category">{e(category)}</span><h3>{e(title)}</h3><p>{e(caption)}</p></div></article>''' for title,src,poster,category,caption in videos)
     body = f'''<main id="main" class="research-page paper2-page">
 <header class="hero paper-hero p2-hero"><p class="paper-kicker">Capability Aware · Interactive Research Preview</p>
 <h1 class="research-title">Paper 2</h1>
 <p class="authors"><a href="https://haozhangrobotics.github.io/">Hao Zhang</a></p>
 <p class="affiliations">Westlake University</p>
 <p class="publication-status">Manuscript in preparation · Demonstrations available</p>
-<p class="p2-intro">Selected robot demonstrations. Choose a clip to preview it here, or open the full experiment showcase.</p>
+<p class="p2-intro">The paper is in preparation. Selected simulation demonstrations are available below.</p>
 <div class="buttons"><a class="button" href="{e(p['demo'])}">Open the demo showcase</a><a class="button" href="#videos">Browse demonstrations</a><a class="button" href="../">← Capability Aware</a></div></header>
-<section class="p2-showcase" id="videos" aria-label="Video demonstrations">
-<div class="p2-stage-wrap"><video id="p2-stage" controls playsinline preload="none" poster="../assets/videos/paper2/posters/{e(first_poster)}" aria-label="{e(first_title)}"><source src="../assets/videos/paper2/{e(first_src)}" type="video/mp4">Your browser does not support this video.</video></div>
-<div class="p2-showcase-info"><p class="paper-kicker">Now showing · <span id="p2-category">{e(first_category)}</span></p><h2 id="p2-title">{e(first_title)}</h2><p id="p2-caption">{e(first_caption)}</p></div>
-<div class="p2-library"><div class="p2-library-heading"><div><p class="paper-kicker">Video library</p><h2>Choose a demonstration</h2></div><div class="p2-filters" role="group" aria-label="Filter demonstrations"><button class="is-active" type="button" data-filter="All" aria-pressed="true">All <span>6</span></button><button type="button" data-filter="Terrain" aria-pressed="false">Terrain <span>3</span></button><button type="button" data-filter="Motion" aria-pressed="false">Motion <span>2</span></button><button type="button" data-filter="Robot setup" aria-pressed="false">Robot setup <span>1</span></button></div></div>
-<div class="p2-clip-grid">{cards}</div></div></section>
+<section class="p2-coming" aria-label="Upcoming real robot demonstration"><div class="empty-video p2-empty" role="img" aria-label="Real robot video coming soon"><span aria-hidden="true">▷</span><p>Video coming soon</p><small>Real-robot demonstration</small></div></section>
+<section class="p2-library" id="videos" aria-label="Simulation video demonstrations"><div class="p2-library-heading"><div><p class="paper-kicker">Simulation videos</p><h2>Selected demonstrations</h2></div><div class="p2-filters" role="group" aria-label="Filter demonstrations"><button class="is-active" type="button" data-filter="All" aria-pressed="true">All <span>6</span></button><button type="button" data-filter="Terrain" aria-pressed="false">Terrain <span>3</span></button><button type="button" data-filter="Motion" aria-pressed="false">Motion <span>2</span></button><button type="button" data-filter="Robot setup" aria-pressed="false">Robot setup <span>1</span></button></div></div>
+<div class="p2-clip-grid">{cards}</div></section>
 <section class="p2-footer-cta"><p>The full collection includes the current experiment pages and supporting details.</p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></section>
 <nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
 <script>
-(()=>{{const stage=document.getElementById('p2-stage'),source=stage.querySelector('source'),title=document.getElementById('p2-title'),caption=document.getElementById('p2-caption'),category=document.getElementById('p2-category'),clips=[...document.querySelectorAll('.p2-clip')],filters=[...document.querySelectorAll('.p2-filters button')];
-const selectClip=card=>{{source.src=card.dataset.video;stage.poster=card.dataset.poster;stage.setAttribute('aria-label',card.dataset.title);stage.load();title.textContent=card.dataset.title;caption.textContent=card.dataset.caption;category.textContent=card.dataset.category;clips.forEach(c=>{{c.classList.toggle('is-active',c===card);c.setAttribute('aria-pressed',String(c===card))}})}};
-clips.forEach(card=>card.addEventListener('click',()=>selectClip(card)));
-filters.forEach(filter=>filter.addEventListener('click',()=>{{filters.forEach(f=>{{f.classList.toggle('is-active',f===filter);f.setAttribute('aria-pressed',String(f===filter))}});clips.forEach(card=>card.hidden=filter.dataset.filter!=='All'&&card.dataset.category!==filter.dataset.filter);if(filter.dataset.filter!=='All'&&document.querySelector('.p2-clip.is-active')?.hidden)selectClip(clips.find(card=>!card.hidden))}}));}})();
+(()=>{{const cards=[...document.querySelectorAll('.p2-demo-card')],filters=[...document.querySelectorAll('.p2-filters button')];
+filters.forEach(filter=>filter.addEventListener('click',()=>{{filters.forEach(f=>{{f.classList.toggle('is-active',f===filter);f.setAttribute('aria-pressed',String(f===filter))}});cards.forEach(card=>card.hidden=filter.dataset.filter!=='All'&&card.dataset.category!==filter.dataset.filter)}}));}})();
 </script>
 </main>'''
     page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
+    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v4')
     (folder/'index.html').write_text(page)
 
 def build_research(p):
