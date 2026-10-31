@@ -1,32 +1,32 @@
 [
   {
     "title": "Large Rocks",
-    "src": "assets/videos/large-rocks.mp4",
-    "poster": "assets/videos/large-rocks.png"
+    "src": "assets/videos/tempoloco/large-rocks.mp4",
+    "poster": "assets/videos/tempoloco/large-rocks.png"
   },
   {
     "title": "Stairs",
-    "src": "assets/videos/stairs.mp4",
-    "poster": "assets/videos/stairs.png"
+    "src": "assets/videos/tempoloco/stairs.mp4",
+    "poster": "assets/videos/tempoloco/stairs.png"
   },
   {
     "title": "Sand",
-    "src": "assets/videos/sand.mp4",
-    "poster": "assets/videos/sand.png"
+    "src": "assets/videos/tempoloco/sand.mp4",
+    "poster": "assets/videos/tempoloco/sand.png"
   },
   {
     "title": "Gravel to Platform",
-    "src": "assets/videos/gravel-platform.mp4",
-    "poster": "assets/videos/gravel-platform.png"
+    "src": "assets/videos/tempoloco/gravel-platform.mp4",
+    "poster": "assets/videos/tempoloco/gravel-platform.png"
   },
   {
     "title": "Platform Traversal",
-    "src": "assets/videos/platform.mp4",
-    "poster": "assets/videos/platform.png"
+    "src": "assets/videos/tempoloco/platform.mp4",
+    "poster": "assets/videos/tempoloco/platform.png"
   },
   {
     "title": "Gravel & Grass",
-    "src": "assets/videos/gravel-grass.mp4",
-    "poster": "assets/videos/gravel-grass.png"
+    "src": "assets/videos/tempoloco/gravel-grass.mp4",
+    "poster": "assets/videos/tempoloco/gravel-grass.png"
   }
 ]

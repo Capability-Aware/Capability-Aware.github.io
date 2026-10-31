@@ -1,0 +1,1647 @@
+{
+  "schema": "paper-demo-capability-grouped-ablation-protocol/5",
+  "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+  "status": "registered_new_matrix_not_executed",
+  "priority": "CURRENT_5090_GOAL:save real media->Body10/Contact8/joint3->page/docs/Git;no new learning/hardening",
+  "slots": [
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.45,
+          0,
+          0
+        ],
+        [
+          0.6,
+          0,
+          0
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_height",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_height/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.45,
+          0,
+          0
+        ],
+        [
+          0.6,
+          0,
+          0
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_height",
+      "group": "B_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000/model_update_11650.pt",
+        "sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "training_revision": "paper-demo-B-only-H50-repair/1-full10650-same-F-no-C-six-second"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_height/B_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.55,
+          10,
+          0
+        ],
+        [
+          0.55,
+          -10,
+          0
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_roll",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_roll/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.55,
+          10,
+          0
+        ],
+        [
+          0.55,
+          -10,
+          0
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_roll",
+      "group": "B_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000/model_update_11650.pt",
+        "sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "training_revision": "paper-demo-B-only-H50-repair/1-full10650-same-F-no-C-six-second"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_roll/B_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.55,
+          0,
+          10
+        ],
+        [
+          0.55,
+          0,
+          -10
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_pitch",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_pitch/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.55,
+          0,
+          10
+        ],
+        [
+          0.55,
+          0,
+          -10
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_pitch",
+      "group": "B_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000/model_update_11650.pt",
+        "sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "training_revision": "paper-demo-B-only-H50-repair/1-full10650-same-F-no-C-six-second"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_pitch/B_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.5,
+          5,
+          -5
+        ],
+        [
+          0.5,
+          -5,
+          5
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_mixed",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_mixed/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 4,
+      "window_s": 4.0,
+      "targets_m_deg": [
+        [
+          0.55,
+          0,
+          0
+        ],
+        [
+          0.5,
+          5,
+          -5
+        ],
+        [
+          0.5,
+          -5,
+          5
+        ],
+        [
+          0.55,
+          0,
+          0
+        ]
+      ],
+      "requested_C": 0,
+      "execution_template": "paper_demo_unified_body_v3:native-static with explicit new mild sequence",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_mixed",
+      "group": "B_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000/model_update_11650.pt",
+        "sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "training_revision": "paper-demo-B-only-H50-repair/1-full10650-same-F-no-C-six-second"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_mixed/B_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "score": {
+        "height_RMS_m": 0.01,
+        "roll_pitch_RMS_deg": 2.0,
+        "last_window_s": 1.0,
+        "incomplete_window_error": null
+      }
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 1,
+      "requested_C": 0,
+      "requested_B_m_deg": [
+        0.65,
+        6.0,
+        10.0
+      ],
+      "prepare_s": 2.0,
+      "execution_template": "paper_demo_arm_reach_ablation_v1:height_roll_pitch original real arm case",
+      "execution_layer": "Actor-leg-control + shared arm-only DLS",
+      "leg_IK_WBC": false,
+      "tool_hold_s": 0.1,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_arm",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_arm/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output"
+    },
+    {
+      "domain": "body",
+      "groups": [
+        "CB",
+        "B_only"
+      ],
+      "seconds": 16.0,
+      "windows": 1,
+      "requested_C": 0,
+      "requested_B_m_deg": [
+        0.65,
+        6.0,
+        10.0
+      ],
+      "prepare_s": 2.0,
+      "execution_template": "paper_demo_arm_reach_ablation_v1:height_roll_pitch original real arm case",
+      "execution_layer": "Actor-leg-control + shared arm-only DLS",
+      "leg_IK_WBC": false,
+      "tool_hold_s": 0.1,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "body_arm",
+      "group": "B_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000/model_update_11650.pt",
+        "sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "training_revision": "paper-demo-B-only-H50-repair/1-full10650-same-F-no-C-six-second"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/body_arm/B_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output"
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 120.0,
+      "requested_C": 84,
+      "pairs": 42,
+      "execution_template": "run_cb_nonuniform_stairs_open_v6 original84/42 plan/XML;new common neutral55",
+      "execution_layer": "declared-common-system-if-IK-WBC",
+      "historical_B47_and_edgeheight_schedule": "historical only;not active new protocol;never reuse old success",
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_stairs",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_stairs/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 120.0,
+      "requested_C": 84,
+      "pairs": 42,
+      "execution_template": "run_cb_nonuniform_stairs_open_v6 original84/42 plan/XML;new common neutral55",
+      "execution_layer": "declared-common-system-if-IK-WBC",
+      "historical_B47_and_edgeheight_schedule": "historical only;not active new protocol;never reuse old success",
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_stairs",
+      "group": "C_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/C_only_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_stairs/C_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 75.0,
+      "requested_C": 74,
+      "pairs": 37,
+      "execution_template": "cb_pillars60_y_accel_wrench_ff_v1 original74/37 plan/XML",
+      "execution_layer": "declared-common-system-if-IK-WBC",
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_pillars",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_pillars/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 75.0,
+      "requested_C": 74,
+      "pairs": 37,
+      "execution_template": "cb_pillars60_y_accel_wrench_ff_v1 original74/37 plan/XML",
+      "execution_layer": "declared-common-system-if-IK-WBC",
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_pillars",
+      "group": "C_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/C_only_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_pillars/C_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 180.0,
+      "requested_C": 60,
+      "pairs": 30,
+      "execution_template": "cb_sparse_beam_pair_queue1_v1 original60/30 plan/XML",
+      "execution_layer": "declared-common-system-if-IK-WBC",
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_beam",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_beam/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 180.0,
+      "requested_C": 60,
+      "pairs": 30,
+      "execution_template": "cb_sparse_beam_pair_queue1_v1 original60/30 plan/XML",
+      "execution_layer": "declared-common-system-if-IK-WBC",
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_beam",
+      "group": "C_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/C_only_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_beam/C_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 23.86,
+      "prepare_s": 4.0,
+      "task_s": 19.8666666667,
+      "requested_C": 132,
+      "gait_quota": {
+        "trot": 28,
+        "pace": 28,
+        "single": 12,
+        "pronk": 24,
+        "bound": 40
+      },
+      "execution_template": "original displayed Stage55/cycle03 fixed original clock/plan;new B0/neutral55 common execution",
+      "execution_layer": "Actor-leg-control with original cycle03",
+      "original_target_filter_tau_s": 0.03,
+      "legacy55_assist_enabled": false,
+      "latest_timed_gait_V1_V6_used": false,
+      "gait_labels_are_not_realized_footpattern": true,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_gait",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_gait/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "contact",
+      "groups": [
+        "CB",
+        "C_only"
+      ],
+      "seconds": 23.86,
+      "prepare_s": 4.0,
+      "task_s": 19.8666666667,
+      "requested_C": 132,
+      "gait_quota": {
+        "trot": 28,
+        "pace": 28,
+        "single": 12,
+        "pronk": 24,
+        "bound": 40
+      },
+      "execution_template": "original displayed Stage55/cycle03 fixed original clock/plan;new B0/neutral55 common execution",
+      "execution_layer": "Actor-leg-control with original cycle03",
+      "original_target_filter_tau_s": 0.03,
+      "legacy55_assist_enabled": false,
+      "latest_timed_gait_V1_V6_used": false,
+      "gait_labels_are_not_realized_footpattern": true,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "contact_gait",
+      "group": "C_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/C_only_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/contact_gait/C_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output",
+      "shared_default_support": {
+        "height_m": 0.55,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "user_B_enabled": false,
+        "P1": false,
+        "required_disclosure": "reference owner/inputs/weights and whether IK/QP stabilizes Body;same source/config both groups;not hidden47/50 target"
+      }
+    },
+    {
+      "domain": "joint",
+      "groups": [
+        "CB",
+        "C_only",
+        "B_only"
+      ],
+      "seconds": 20.0,
+      "requested_C": 100,
+      "full16_reference_requests": 1796,
+      "representative_env": 11,
+      "requested_B_m_deg": [
+        0.5,
+        5.0,
+        -5.0
+      ],
+      "prepare_s": 4.0,
+      "execution_template": "original joint_route/env11/seed44/3m_s_T032 same fixed flat task",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "joint_flat",
+      "group": "CB",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": true,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": "original common joint profile only",
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/joint_flat/CB",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output"
+    },
+    {
+      "domain": "joint",
+      "groups": [
+        "CB",
+        "C_only",
+        "B_only"
+      ],
+      "seconds": 20.0,
+      "requested_C": 100,
+      "full16_reference_requests": 1796,
+      "representative_env": 11,
+      "requested_B_m_deg": [
+        0.5,
+        5.0,
+        -5.0
+      ],
+      "prepare_s": 4.0,
+      "execution_template": "original joint_route/env11/seed44/3m_s_T032 same fixed flat task",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "joint_flat",
+      "group": "C_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/C_only_showcase_formal1000_v2/model_update_11650.pt",
+        "sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+        "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+      },
+      "intent": {
+        "B_enabled": false,
+        "C_enabled": true,
+        "B_mask": [
+          0,
+          0,
+          0
+        ],
+        "C_mask_when_requested": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "neutral55 written before reference construction and every target sample;no user B or derived user B",
+        "C_before_producer": "original declared plan/publish once",
+        "C_ids_and_goal_balls": "actual published only"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/joint_flat/C_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output"
+    },
+    {
+      "domain": "joint",
+      "groups": [
+        "CB",
+        "C_only",
+        "B_only"
+      ],
+      "seconds": 20.0,
+      "requested_C": 100,
+      "full16_reference_requests": 1796,
+      "representative_env": 11,
+      "requested_B_m_deg": [
+        0.5,
+        5.0,
+        -5.0
+      ],
+      "prepare_s": 4.0,
+      "execution_template": "original joint_route/env11/seed44/3m_s_T032 same fixed flat task",
+      "execution_layer": "Actor-leg-control",
+      "leg_IK_WBC": false,
+      "revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+      "task": "joint_flat",
+      "group": "B_only",
+      "checkpoint": {
+        "path": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000/model_update_11650.pt",
+        "sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "training_revision": "paper-demo-B-only-H50-repair/1-full10650-same-F-no-C-six-second"
+      },
+      "intent": {
+        "B_enabled": true,
+        "C_enabled": false,
+        "B_mask": [
+          1,
+          1,
+          1
+        ],
+        "C_mask_when_requested": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "default_body_m_rad": [
+          0.55,
+          0.0,
+          0.0
+        ],
+        "P1_enabled": false,
+        "B_before_reference": "requested B retained",
+        "C_before_producer": "no Contact plan/publish/core active/independent/manipulation/waypoint/memory/C deadline",
+        "C_ids_and_goal_balls": "none;no external requested-foot IDs or goal spheres;first/error null"
+      },
+      "seed": 44,
+      "mean_actions": true,
+      "normalization_updates": false,
+      "PPO_updates": 0,
+      "physics_dt_s": 0.005,
+      "policy_dt_s": 0.02,
+      "Actor_runtime_objects": 1,
+      "Actor_input_dim": 217,
+      "action_dim": 12,
+      "output": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/capability_grouped_ablation_v5_20261029/joint_flat/B_only",
+      "new_protocol_not_old6": true,
+      "target_removal": "before reference/producer/feedback,not merely final packet;packet cleanup is additional assertion",
+      "recording": "keep original scores and real failure footage;no blacktail/loop/offline fake recovery;out-of-controller-domain stop is explicit",
+      "learning_claim": "system-level target comparison if leg IK/WBC carries task;never claim Actor learned the solver output"
+    }
+  ],
+  "counts": {
+    "body": 10,
+    "contact": 8,
+    "joint": 3,
+    "total": 21
+  },
+  "endpoints": {
+    "CB": {
+      "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+      "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+    },
+    "C_only": {
+      "path": "outputs/motor_interface/paper_demo_20261028/C_only_showcase_formal1000_v2/model_update_11650.pt",
+      "sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+      "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+    },
+    "B_only": {
+      "path": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000/model_update_11650.pt",
+      "sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "training_revision": "paper-demo-B-only-H50-repair/1-full10650-same-F-no-C-six-second"
+    }
+  },
+  "common_training": {
+    "parent_update": 10650,
+    "parent_sha256": "623074a539b6317988f8f773eaeee4d8fdd8aba678d0624d61af5bd00a8ed6bf",
+    "new_updates_each": 1000,
+    "num_envs": 8192,
+    "rollout_steps": 32,
+    "transitions_each": 262144000,
+    "seed": 44,
+    "endpoint": 11650,
+    "retraining": false,
+    "clock_disclosure": "B-only original training6s vs C task deadlines retained;not trajectory-identical training"
+  },
+  "comparisons": "Body both C0,same B;Contact both B0/P1off/neutral55,same C;only joint masterBC then remove each group target",
+  "source_sha256": {
+    "scripts/locomotion/paper_demo_showcase_loader_v3.py": "e48c7b71e7524747bf0c3f78a9d8b15df940fd5254b7aa3018b125d5dc4f856e",
+    "scripts/locomotion/paper_demo_e469_repaired_ablation_evaluate_v1.py": "0eda5889624bae7abf7ac52208f554ef6be321ddd0a7cfb5a3e283fdf3537b40",
+    "scripts/locomotion/paper_demo_b_only_h50_profile_v1.py": "7b115dfd5f46136833003a130d99df66578743e06fdf8b9c22aa25fc66427173",
+    "scripts/locomotion/paper_demo_b_only_h50_train_v1.py": "5a06eb3433ce7e73bec7c717101cfeb093ae04be7a4e3b97c4459f4d313f869e",
+    "scripts/locomotion/paper_demo_showcase_v2_profile.py": "4a7df2d20ef3b7c42d8d8c1bf9ef4a5286996d25cacdd8493f20f563c8a317aa",
+    "scripts/locomotion/paper_demo_capability_ablation_profile_v5.py": "94eebed95becba6b916d8a9f92dd0062ea7ddb3ba568b272d6ac6b3b3ac5e7a7",
+    "scripts/locomotion/paper_demo_capability_ablation_loader_v5.py": "c9a9dd01497f5b48e7f6933810612cfb34c47fffceb8e36b2d8916a8741bff75"
+  },
+  "old_formal6": "historical separate slots and gates unchanged;not prerequisite or completion credit for this matrix",
+  "control_boundary": "same per-task public executor/config across compared groups;no group-specific IK/WBC assist or expert;all solver contribution disclosed",
+  "success_not_required_for_delivery": true
+}

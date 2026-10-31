@@ -1,0 +1,1462 @@
+{
+  "schema": "paper-demo-e469-stage-coverage/1",
+  "stage_candidate": true,
+  "final_policy_selected": false,
+  "final_freeze": false,
+  "checkpoint": {
+    "update": 11650,
+    "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+    "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+    "weight_loaded_this_audit": false
+  },
+  "public_execution_catalog": {
+    "version": "e469-stage-result-linked-profiles/1",
+    "single_Actor_checkpoint": true,
+    "homogeneous_motor_control": false,
+    "profile_contract_authority": "每卡evidence实际contract路径/SHA为本阶段公开执行版本依据",
+    "legacy_draft_path": "research/motor_interface/paper_demo_20261028/execution_bundle_draft_v3.json",
+    "legacy_draft_sha256": "f516ed2616eb806e65278d39cebf2b2d8d236c89dd2b2480c9f35afb94e80252",
+    "legacy_draft_status": "DRAFT_NOT_SELECTED_NOT_RECORDING_ADMISSION",
+    "legacy_draft_byte_identity_not_claimed": true,
+    "final_execution_bundle_verified": false,
+    "stage_bundle_integration_pending": true,
+    "amendments": [
+      "中空局部高度保持V2替原固定H47 V6，旧失败保留",
+      "3/5共同V7确认后gfade及P1-only公开执行，4s/1s原门不改",
+      "低速typed-output/exactMRO沿原公开工程链；非全部速度裸Actor"
+    ]
+  },
+  "summary": {
+    "card_positions": 18,
+    "complete": 8,
+    "partial": 5,
+    "pending": 5,
+    "unknown": 0,
+    "cards_with_actual_result": 13,
+    "unique_complete_physical_profiles": 7,
+    "complete_positions_share_one_speed5_run": true,
+    "original_Body_jobs_pending": 8,
+    "formal_media": 0,
+    "formal_media_denominator": 18,
+    "ablation_media": 0,
+    "ablation_media_denominator": 6
+  },
+  "status_definition": {
+    "complete": "该卡当前公开实际profile原路线门完整达到，额外严格/精停另列",
+    "partial": "已实际验证但仅部分指标完成或原路线明确失败，不是通过",
+    "pending": "原主展示输入链无真实该候选结果；null不是失败",
+    "unknown": "缺可靠证据"
+  },
+  "cards": [
+    {
+      "id": "pillars_60mm_trot",
+      "title": "梅花桩｜细疏升高桩",
+      "requested_target": "6cm桩面；逐列基准升高5cm、相对基准高低变化≤2cm，出口累计升高60cm；Trot。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 37,
+        "denominator": 37,
+        "unit": "原完整LOAD80对"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75/result.json",
+          "result_sha256": "7cc22f09510207d03bd597cfd29e3db99e807f3930ce20e58e6d559e93125b0c",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75/contract.json",
+          "contract_sha256": "76a18f743a9d121ff16cdd442dd66239e86a5660b24fb59b191c49868eed8e11",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "公开IK/WBC+0.10 Actor姿态弱正则；非裸Actor",
+      "stage_summary": "74/74真实首落、37/37接管，原出口及1s承重门通过",
+      "gaps": [
+        "固定路线有限回归；未正式录制",
+        "首秒XY漂移超另列50mm精停门"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 74,
+          "denominator": 74,
+          "scope": "三账真实首落审查"
+        },
+        {
+          "name": "immediate_stop50mm",
+          "passed": false,
+          "first1s_root_XY_drift_mm": 106.235,
+          "main_18_gate": false
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "audit_evidence": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/candidate_terrain_review_v1/four_terrain_results_compact.json",
+        "sha256": "502796b01aca080ccae6375f926d4efc98c2aaf7e0762702242822c6dd276ca0"
+      }
+    },
+    {
+      "id": "random_height_width_stairs_L0",
+      "title": "中空不规则楼梯｜悬空踏板／尺寸变化",
+      "requested_target": "高差6–18cm、踏面30–50cm、横宽80–160cm；悬空踏板与断口。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 42,
+        "denominator": 42,
+        "unit": "原完整LOAD80对"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2/result.json",
+          "result_sha256": "c18d4042c2f021c2bd7af93b432cea2b15568061a5cb86afbe1732fc185c80bc",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2/contract.json",
+          "contract_sha256": "67fdec07e5bd35659936a08fa64cdfa608d62e2d85579a86715714cb449f1e69",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "公开IK/WBC+0.10 Actor姿态弱正则；非裸Actor",
+      "stage_summary": "84/84真实首落、42/42接管，原出口及1s承重门通过",
+      "gaps": [
+        "固定路线有限回归；未正式录制",
+        "首秒XY漂移超另列50mm精停门",
+        "公开局部高度保持V2，非旧open_v6固定H47草稿；旧35/42失败保留"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 84,
+          "denominator": 84,
+          "scope": "三账真实首落审查"
+        },
+        {
+          "name": "immediate_stop50mm",
+          "passed": false,
+          "first1s_root_XY_drift_mm": 136.497,
+          "main_18_gate": false
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "audit_evidence": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/candidate_edge_height_review_v2/results_compact.json",
+        "sha256": "a8e02c6827ef51caa556580f8d3a3dfcd54e0fd0c22b28022b148c66a28f8e1f"
+      }
+    },
+    {
+      "id": "speed5_goals",
+      "title": "5m/s｜四脚落脚目标",
+      "requested_target": "目标5m/s；四脚发布目标球、实际足点和首次触地同时显示。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 16,
+        "denominator": 16,
+        "unit": "原完整路线+连续1s保持首回合"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/result.json",
+          "result_sha256": "867669689009fd5c0a3bd9b698977b6ec394f375a21ff3d5bc2faf2184406c53",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/contract.json",
+          "contract_sha256": "9de0b84ccfcc80a8969e47f105b66f4c29d8a654d69702f1f1a2fa9e5a74a68b",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-route-confirmed-contact-gfade/7-shared-P1-only-postContact20-latched100ms",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/first_episode_execution_50Hz.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/render_inputs.json",
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "同e469直接Actor→原PD；共同V7真实完成后g衰减",
+      "stage_summary": "4s巡航16/16，first2144/2144，完整路线保持16/16",
+      "gaps": [
+        "公开P1-only及确认后gfade V7，非旧draft原highspeed v2；按真实contract集成stage执行目录",
+        "严格25mm整段单列，不提升原18门"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 1896,
+          "denominator": 2144
+        },
+        {
+          "name": "strict_first25_complete",
+          "numerator": 0,
+          "denominator": 16,
+          "main_18_gate": false
+        },
+        {
+          "name": "actual_4s_cruise_m_s",
+          "minimum": 4.987527072429657,
+          "maximum": 4.998772025108337
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "fixed_render_env": 0,
+      "shared_raw_evidence_with": [
+        "speed5_goals",
+        "flat_5ms"
+      ]
+    },
+    {
+      "id": "arm_five_application_REVIEW",
+      "title": "机械臂｜固定Body与调用Body",
+      "requested_target": "高度、roll、pitch、三轴组合、行走触碰五组；左固定Body，右调用Body。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "partial",
+      "main_metric": {
+        "numerator": 4,
+        "denominator": 5,
+        "unit": "启用Body原局部qualified_touch案"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_fixed_body",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_fixed_body/result.json",
+          "result_sha256": "296d2c6e21cc913cc9f1ef4e062b842deea589ff873777483d1ca9f02c512200",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_fixed_body/contract.json",
+          "contract_sha256": "c907f516976f77fbcb4b231a90d39fa327c2d520b6a7bf636c8509c23cb3a200",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_fixed_body/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_body_enabled",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_body_enabled/result.json",
+          "result_sha256": "96be10842b86c61a9391a54048498bc5c742735fbf5c4e4feb95c5b7746e0847",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_body_enabled/contract.json",
+          "contract_sha256": "65b8436907a66fb76f7c6ac3ef2cb96a1986179c85f4a269b6b4b3c6ba73965b",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_body_enabled/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_fixed_body",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_fixed_body/result.json",
+          "result_sha256": "84558580dc1de1b11ce4554555f55fa424829aba5f2afb8b8d8e1f8ddc35ab9a",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_fixed_body/contract.json",
+          "contract_sha256": "4c3812368e1f1dabbcf63f64405f0efc559399d0d629668ce4b6ae0ea416e400",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_fixed_body/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_body_enabled",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_body_enabled/result.json",
+          "result_sha256": "7bdb2e9ca2726db28f8cb50bc52e2639030618fb69df1b3db0ddeb9bcc8a7ea5",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_body_enabled/contract.json",
+          "contract_sha256": "670ff65bbf4a1e3e596eba96c65ff71bfd6baed4c7984378a8c044ca62b5e31b",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_body_enabled/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_fixed_body",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_fixed_body/result.json",
+          "result_sha256": "fcc557480ba2d740c68628de64a24756c658a259170e7b8e632b747bb18d08cd",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_fixed_body/contract.json",
+          "contract_sha256": "d0abf5bdb1d83e36350acc64a194d1ee0f00dd767a353217641253f87f941d74",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_fixed_body/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_body_enabled",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_body_enabled/result.json",
+          "result_sha256": "e9085425002ebfb77e666c3ec8b5ab1ce628e803d50880fd76384cf05baf8eb6",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_body_enabled/contract.json",
+          "contract_sha256": "e118fffcffd56622ca8bacc2c2c9c199a4e8663d1c8879273d5a78b5d0992350",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_body_enabled/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_fixed_body",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_fixed_body/result.json",
+          "result_sha256": "2b0e4724f1eddd31e6779dc2753e38864a87707cbb88b90ab2ea1936e4ac80b6",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_fixed_body/contract.json",
+          "contract_sha256": "3ca2dd2528f8e07633bb305b8cbf9ad088ade9f84b59a3e83beb842e742e51c3",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_fixed_body/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_body_enabled",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_body_enabled/result.json",
+          "result_sha256": "dd253b7b7dd618c9acd3f7acd8609e2dabcafb96a222a95595fc514320f1a9d3",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_body_enabled/contract.json",
+          "contract_sha256": "b2bf69f44b325f1f61f0ef7559242e00271483f8dc3e0dac8ff12e073bea8954",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_body_enabled/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_fixed_body",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_fixed_body/result.json",
+          "result_sha256": "7ae569b7725fd566e638914769cb0fbee3a9884a9eb53698d1fbf10a0d12cb32",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_fixed_body/contract.json",
+          "contract_sha256": "cc9be1c8eb34ec3876c7c3911680be12873d095e9c9536437cbba7195effa9cf",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_fixed_body/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_body_enabled",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_body_enabled/result.json",
+          "result_sha256": "0c1976938ff7dfea3339c96a26236afcea6e89ec345efb071e0a8d2b195f957c",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_body_enabled/contract.json",
+          "contract_sha256": "3b643fdf1e1df7a6064ec61c616e0299f38bd82df0560475d5a6cb0ce33c2f8a",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": null,
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_body_enabled/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "同e469腿Actor+真实10.16kg臂/ArmIK/PD/COM差量/pose servo",
+      "stage_summary": "启用4/5、固定0/5；roll启用物理失败",
+      "gaps": [
+        "非pureActor消融；不能用pureBody替代真实arm",
+        "八静态条件全程XY≤5cm均未过；moving两条件实际臂速>3.14rad/s"
+      ],
+      "additional_checks": [
+        {
+          "name": "fixed_Body_touch",
+          "numerator": 0,
+          "denominator": 5
+        },
+        {
+          "name": "whole_run_static_XY50mm",
+          "numerator": 0,
+          "denominator": 8,
+          "main_18_gate": false
+        },
+        {
+          "name": "per_condition",
+          "items": [
+            {
+              "case": "height",
+              "condition": "fixed_body",
+              "qualified_touch": false,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "height",
+              "condition": "body_enabled",
+              "qualified_touch": true,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "roll",
+              "condition": "fixed_body",
+              "qualified_touch": false,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "roll",
+              "condition": "body_enabled",
+              "qualified_touch": false,
+              "seconds": 5.359999999999908
+            },
+            {
+              "case": "pitch",
+              "condition": "fixed_body",
+              "qualified_touch": false,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "pitch",
+              "condition": "body_enabled",
+              "qualified_touch": true,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "height_roll_pitch",
+              "condition": "fixed_body",
+              "qualified_touch": false,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "height_roll_pitch",
+              "condition": "body_enabled",
+              "qualified_touch": true,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "moving_height",
+              "condition": "fixed_body",
+              "qualified_touch": false,
+              "seconds": 16.0000000000011
+            },
+            {
+              "case": "moving_height",
+              "condition": "body_enabled",
+              "qualified_touch": true,
+              "seconds": 16.0000000000011
+            }
+          ]
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "low_ceiling_comparison",
+      "title": "压低身体过障碍｜三列对比",
+      "requested_target": "64cm净空；GeCCo基线、同一C+B高度55cm、同一C+B高度35cm三列。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "partial",
+      "main_metric": {
+        "numerator": 0,
+        "denominator": 2,
+        "unit": "同e469两高度原穿越+恢复条件"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055/result.json",
+          "result_sha256": "bde1068eac3ed14f4f44856247e8ad304335021854ef4d4c76566bc0b0605f49",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055/contract.json",
+          "contract_sha256": "7fae556a16c3d487dee6c8cae5a700b2a4bf351b6139333fb8823da4bc85c757",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035/result.json",
+          "result_sha256": "d6091adff538d70f3396c0a8650e66128f71c9e425a8c7bd20b81c6bda65f7d4",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035/contract.json",
+          "contract_sha256": "f2471179ad2868aaca2a1cdbc8de8437b709d14e5022b33b71959f418d43919f",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "同e469腿Actor/原BodyReference/PD；GeCCo列只是历史基线",
+      "stage_summary": "55cm9.10s顶碰；35cm22.74s contact_stall，零顶碰未退出恢复",
+      "gaps": [
+        "两同Actor条件均未通过全身退出/恢复门",
+        "第三列GeCCo不得计入e469覆盖"
+      ],
+      "additional_checks": [
+        {
+          "name": "per_condition",
+          "items": [
+            {
+              "height_m": 0.55,
+              "qualified": false,
+              "stop_reason": "ceiling_contact",
+              "simulated_s": 9.100000000000023,
+              "roof_force_peak_N": 1952.839574793773,
+              "whole_body_cleared": false,
+              "restored": false
+            },
+            {
+              "height_m": 0.35,
+              "qualified": false,
+              "stop_reason": "contact_stall",
+              "simulated_s": 22.73999999999976,
+              "roof_force_peak_N": 0.0,
+              "whole_body_cleared": false,
+              "restored": false
+            }
+          ]
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "joint_body_flat_walk",
+      "title": "联合姿态｜平地边走边变化",
+      "requested_target": "行走中升降、侧倾和俯仰；包含50cm＋roll＋6°＋pitch−6°联合段。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "partial",
+      "main_metric": {
+        "numerator": 5,
+        "denominator": 9,
+        "unit": "原27s连续联合Body窗口"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1/result.json",
+          "result_sha256": "b9ab1ae216748de23b6b5af8d43e730a91352b04ea89354faa442fe238972afb",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1/contract.json",
+          "contract_sha256": "21a9d7c9ee39df535f98ab61323d8c7f08981a634dbc06eaba336e83b5ffcb85",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-formal-changes/3-showcase2-original27s-nine-windows-trot",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "同e469原Joint BodyReference/Actor/PD",
+      "stage_summary": "5/9窗口，连续27s，净前进4.825m",
+      "gaps": [
+        "4窗未过，不能因走完27s称联合姿态全过"
+      ],
+      "additional_checks": [
+        {
+          "name": "requested_first",
+          "numerator": 164,
+          "denominator": 166
+        },
+        {
+          "name": "first25mm",
+          "numerator": 106,
+          "denominator": 166,
+          "main_18_gate": false
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "beam_30cm_trot",
+      "title": "窄梁｜连续Trot",
+      "requested_target": "30cm窄梁；连续Trot，记录完整路线和停止支撑。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 30,
+        "denominator": 30,
+        "unit": "原完整LOAD80对"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180/result.json",
+          "result_sha256": "e2fbe1e8237c3e8993bc39efe945ce6c03126a733977dc55e2e48195be9c1e19",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180/contract.json",
+          "contract_sha256": "fad1937ee5cd995c7c225179673a6df18b3e61730bbb4a83fd51ad623401be1f",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "公开IK/WBC+0.10 Actor姿态弱正则；非裸Actor",
+      "stage_summary": "60/60真实首落、30/30接管，原出口及1s承重门通过",
+      "gaps": [
+        "固定路线有限回归；未正式录制",
+        "首秒XY漂移超另列50mm精停门"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 60,
+          "denominator": 60,
+          "scope": "三账真实首落审查"
+        },
+        {
+          "name": "immediate_stop50mm",
+          "passed": false,
+          "first1s_root_XY_drift_mm": 56.216,
+          "main_18_gate": false
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "audit_evidence": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/candidate_terrain_review_v1/four_terrain_results_compact.json",
+        "sha256": "502796b01aca080ccae6375f926d4efc98c2aaf7e0762702242822c6dd276ca0"
+      }
+    },
+    {
+      "id": "combined_gait_transition_REVIEW",
+      "title": "行走中切换步态",
+      "requested_target": "50cm＋roll＋5°＋pitch−5°；依次请求Trot→Pace→Single→Pronk→Bound。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "partial",
+      "main_metric": {
+        "numerator": 1,
+        "denominator": 4,
+        "unit": "真实步态splice"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/result.json",
+          "result_sha256": "916b39c9a8261c32cc0287859ea1b0fa80d4f462dcded9854cceba85c2d2c939",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/contract.json",
+          "contract_sha256": "5cb14cd0c2ed17b8ece3c525a59fdf5b7c0a1a0b305c1dd5b167687837487b4f",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "同e469公开cycle_tau03/原低速执行",
+      "stage_summary": "仅trot→pace一次；global17s contact_stall，完整路线未完成",
+      "gaps": [
+        "single/pronk/bound未实际到达，时钟标签不作真实切换",
+        "原五步态足序门未全过"
+      ],
+      "additional_checks": [
+        {
+          "name": "full_route",
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "name": "gaits_reached",
+          "numerator": 2,
+          "denominator": 5
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "body_three_axes_explicit",
+      "title": "静止三轴姿态｜大幅变化四宫格",
+      "requested_target": "高度30–65cm、roll±30°、pitch±25°与三轴组合，四宫格。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "pending",
+      "main_metric": {
+        "numerator": null,
+        "denominator": 16,
+        "unit": "原Body展示窗口"
+      },
+      "evidence": [],
+      "execution_role": "原Body Cctx记录链待同e469真实执行",
+      "stage_summary": "原输入/本次真初态链未验证；不借旧C300或pureC0替代",
+      "gaps": [
+        "相应原Body链无e469 result/pose，numerator=null而非0",
+        "已有pureC0观测只附诊断，不改原18门"
+      ],
+      "additional_checks": [],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "pending_original_Body_profiles": [
+        "four_panel_height",
+        "four_panel_roll",
+        "four_panel_pitch",
+        "four_panel_mixed"
+      ],
+      "pose": {
+        "availability": "unknown",
+        "file": null,
+        "file_present": false
+      }
+    },
+    {
+      "id": "speed05_goals",
+      "title": "0.5m/s｜四脚目标球",
+      "requested_target": "目标0.5m/s；四脚落脚目标球。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 52,
+        "denominator": 52,
+        "unit": "原完整请求/载荷接管"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output/result.json",
+          "result_sha256": "a9407c7f134f85dd0dce8e8fa620ff845de01cf0338d327373b8cbef0b8402fc",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output/contract.json",
+          "contract_sha256": "f54cd41b79e4f7a8d19908ab5b1aa343df7b1ae5cc0cffe47c51552239c141d1",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "cb-timed-overlap-contract/1-per-foot-full-period-deadline",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "公开显式ID/native执行+同e469 Actor弱先验；非裸Actor",
+      "stage_summary": "52/52真实first及接管，末1s支持完成",
+      "gaps": [
+        "旧类型/MRO失败保留，此处仅成功独立修订",
+        "原低速巡航窗2.96s，不冒充高速4s"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 52,
+          "denominator": 52
+        },
+        {
+          "name": "actual_cruise_m_s",
+          "value": 0.5000156773711141,
+          "observed_s": 2.96000000000011
+        },
+        {
+          "name": "old_half_cycle_contract_pass",
+          "value": true
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "speed1_goals",
+      "title": "1m/s｜四脚目标球",
+      "requested_target": "目标1m/s；四脚落脚目标球。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 64,
+        "denominator": 64,
+        "unit": "原完整请求/载荷接管"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO/result.json",
+          "result_sha256": "c51ca58379afa1dca4731e78af92aab7def605b9c5dee7dbf62052f238840835",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO/contract.json",
+          "contract_sha256": "88364d7a3faa018dae173522bae3c42a69f1b4006e6f8aa0d7e5a518fb7ff0c8",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "cb-timed-overlap-contract/1-per-foot-full-period-deadline",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "公开显式ID/native执行+同e469 Actor弱先验；非裸Actor",
+      "stage_summary": "64/64真实first及接管，末1s支持完成",
+      "gaps": [
+        "旧类型/MRO失败保留，此处仅成功独立修订",
+        "原低速巡航窗2.96s，不冒充高速4s"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 64,
+          "denominator": 64
+        },
+        {
+          "name": "actual_cruise_m_s",
+          "value": 1.0005110801267658,
+          "observed_s": 2.96000000000011
+        },
+        {
+          "name": "old_half_cycle_contract_pass",
+          "value": true
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "speed3_goals",
+      "title": "3m/s｜四脚真实发布目标球",
+      "requested_target": "目标3m/s；四脚落脚目标、实际足点和首次触地。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "partial",
+      "main_metric": {
+        "numerator": 14,
+        "denominator": 16,
+        "unit": "原完整路线+连续1s保持首回合"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7/result.json",
+          "result_sha256": "a515d296bad909f02cc02bb2c14a6e9a5f18fd05a8c9a2b593165d7e660d35cd",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7/contract.json",
+          "contract_sha256": "38cd3ed94b13c38a5dcd04882a779b503b1f3ce50d01080811f497ce0ff5774d",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-route-confirmed-contact-gfade/7-shared-P1-only-postContact20-latched100ms",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7/first_episode_execution_50Hz.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7/render_inputs.json",
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "同e469直接Actor→原PD；共同V7真实完成后g衰减",
+      "stage_summary": "4s巡航16/16，first1600/1600，完整路线保持14/16",
+      "gaps": [
+        "公开P1-only及确认后gfade V7，非旧draft原highspeed v2；按真实contract集成stage执行目录",
+        "严格25mm整段单列，不提升原18门",
+        "env6/10仅0.98s合格承重，原1s期限未过"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 1420,
+          "denominator": 1600
+        },
+        {
+          "name": "strict_first25_complete",
+          "numerator": 1,
+          "denominator": 16,
+          "main_18_gate": false
+        },
+        {
+          "name": "actual_4s_cruise_m_s",
+          "minimum": 2.998025417327881,
+          "maximum": 3.001623809337616
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "fixed_render_env": 0,
+      "shared_raw_evidence_with": []
+    },
+    {
+      "id": "body_height_continuous",
+      "title": "身体高度连续变化",
+      "requested_target": "高度55→30→65→55cm，连续变化。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "pending",
+      "main_metric": {
+        "numerator": null,
+        "denominator": 4,
+        "unit": "原Body展示窗口"
+      },
+      "evidence": [],
+      "execution_role": "原Body Cctx记录链待同e469真实执行",
+      "stage_summary": "原输入/本次真初态链未验证；不借旧C300或pureC0替代",
+      "gaps": [
+        "相应原Body链无e469 result/pose，numerator=null而非0",
+        "已有pureC0观测只附诊断，不改原18门"
+      ],
+      "additional_checks": [],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "pending_original_Body_profiles": [
+        "continuous_height"
+      ],
+      "pose": {
+        "availability": "unknown",
+        "file": null,
+        "file_present": false
+      }
+    },
+    {
+      "id": "body_pitch_continuous",
+      "title": "身体俯仰连续变化",
+      "requested_target": "高度55cm；pitch 0→＋25°→−25°→0。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "pending",
+      "main_metric": {
+        "numerator": null,
+        "denominator": 4,
+        "unit": "原Body展示窗口"
+      },
+      "evidence": [],
+      "execution_role": "原Body Cctx记录链待同e469真实执行",
+      "stage_summary": "原输入/本次真初态链未验证；不借旧C300或pureC0替代",
+      "gaps": [
+        "相应原Body链无e469 result/pose，numerator=null而非0",
+        "已有pureC0观测只附诊断，不改原18门"
+      ],
+      "additional_checks": [],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "pending_original_Body_profiles": [
+        "continuous_pitch"
+      ],
+      "pose": {
+        "availability": "unknown",
+        "file": null,
+        "file_present": false
+      }
+    },
+    {
+      "id": "body_roll10",
+      "title": "静态roll控制",
+      "requested_target": "55cm＋roll＋10°静态Body。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "pending",
+      "main_metric": {
+        "numerator": null,
+        "denominator": 1,
+        "unit": "原Body展示窗口"
+      },
+      "evidence": [],
+      "execution_role": "原Body Cctx记录链待同e469真实执行",
+      "stage_summary": "原输入/本次真初态链未验证；不借旧C300或pureC0替代",
+      "gaps": [
+        "相应原Body链无e469 result/pose，numerator=null而非0",
+        "已有pureC0观测只附诊断，不改原18门"
+      ],
+      "additional_checks": [],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "pending_original_Body_profiles": [
+        "roll10"
+      ],
+      "pose": {
+        "availability": "unknown",
+        "file": null,
+        "file_present": false
+      }
+    },
+    {
+      "id": "body_combined",
+      "title": "高度＋roll＋pitch联合姿态",
+      "requested_target": "40cm＋roll＋5°＋pitch−5°联合静态Body。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "pending",
+      "main_metric": {
+        "numerator": null,
+        "denominator": 1,
+        "unit": "原Body展示窗口"
+      },
+      "evidence": [],
+      "execution_role": "原Body Cctx记录链待同e469真实执行",
+      "stage_summary": "原输入/本次真初态链未验证；不借旧C300或pureC0替代",
+      "gaps": [
+        "相应原Body链无e469 result/pose，numerator=null而非0",
+        "已有pureC0观测只附诊断，不改原18门"
+      ],
+      "additional_checks": [],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "pending_original_Body_profiles": [
+        "combined"
+      ],
+      "pose": {
+        "availability": "unknown",
+        "file": null,
+        "file_present": false
+      }
+    },
+    {
+      "id": "flat_5ms",
+      "title": "平地约5m/s完整巡航与保持",
+      "requested_target": "目标5m/s平地巡航与停止支撑，保留无目标球全景。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 16,
+        "denominator": 16,
+        "unit": "原完整路线+连续1s保持首回合"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/result.json",
+          "result_sha256": "867669689009fd5c0a3bd9b698977b6ec394f375a21ff3d5bc2faf2184406c53",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/contract.json",
+          "contract_sha256": "9de0b84ccfcc80a8969e47f105b66f4c29d8a654d69702f1f1a2fa9e5a74a68b",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-route-confirmed-contact-gfade/7-shared-P1-only-postContact20-latched100ms",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/first_episode_execution_50Hz.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [],
+            "render_inputs_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/render_inputs.json",
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "同e469直接Actor→原PD；共同V7真实完成后g衰减",
+      "stage_summary": "4s巡航16/16，first2144/2144，完整路线保持16/16",
+      "gaps": [
+        "公开P1-only及确认后gfade V7，非旧draft原highspeed v2；按真实contract集成stage执行目录",
+        "严格25mm整段单列，不提升原18门"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 1896,
+          "denominator": 2144
+        },
+        {
+          "name": "strict_first25_complete",
+          "numerator": 0,
+          "denominator": 16,
+          "main_18_gate": false
+        },
+        {
+          "name": "actual_4s_cruise_m_s",
+          "minimum": 4.987527072429657,
+          "maximum": 4.998772025108337
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "fixed_render_env": 0,
+      "shared_raw_evidence_with": [
+        "speed5_goals",
+        "flat_5ms"
+      ]
+    },
+    {
+      "id": "stairs_15cm_reliable",
+      "title": "15cm楼梯",
+      "requested_target": "15cm台阶完整路线。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 46,
+        "denominator": 46,
+        "unit": "原完整LOAD80对"
+      },
+      "evidence": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240/result.json",
+          "result_sha256": "a6f78ce084b9f8b0df0c47b603498a3fec7eafadffc0ee52fc873c1fbd4433b3",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240/contract.json",
+          "contract_sha256": "b90eb6113c6be0d8511e973d42906286d4eefe4c1c333aa90ea7fad206eeb661",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "execution_role": "公开IK/WBC+0.10 Actor姿态弱正则；非裸Actor",
+      "stage_summary": "92/92真实首落、46/46接管，原出口及1s承重门通过",
+      "gaps": [
+        "固定路线有限回归；未正式录制",
+        "首秒XY漂移超另列50mm精停门"
+      ],
+      "additional_checks": [
+        {
+          "name": "first25mm",
+          "numerator": 92,
+          "denominator": 92,
+          "scope": "三账真实首落审查"
+        },
+        {
+          "name": "immediate_stop50mm",
+          "passed": false,
+          "first1s_root_XY_drift_mm": 64.087,
+          "main_18_gate": false
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "audit_evidence": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/candidate_terrain_review_v1/four_terrain_results_compact.json",
+        "sha256": "502796b01aca080ccae6375f926d4efc98c2aaf7e0762702242822c6dd276ca0"
+      }
+    }
+  ],
+  "additional_diagnostics_not_primary": {
+    "pureC0_Body": [
+      {
+        "profile": "height",
+        "evidence": {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_height_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_height_raw_v1/result.json",
+          "result_sha256": "60f159904c18cdecf6f3fe33d7bf79c9dfa5057f6f62aba173722ea0ae2b6343",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_height_raw_v1/contract.json",
+          "contract_sha256": "12132e05dff419785446e30af02f5a756f1267627a4acb8f55e591b945a648b8",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-formal-body/3-showcase2-native-static-full-C-field-removal",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_height_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_height_raw_v1/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        "windows_pass": 2,
+        "windows_total": 4,
+        "scope": "额外pureC0六条，非原Body Cctx八条展示输入"
+      },
+      {
+        "profile": "roll",
+        "evidence": {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll_raw_v1/result.json",
+          "result_sha256": "f40305ff0cdb928389db0b44bde2af9e526fd498cc4b64a8f9441ed9aa08e801",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll_raw_v1/contract.json",
+          "contract_sha256": "612f24f46ca561e27829fe0465c2c6f336ca86f2d9bcc3d1df9869cb2d8ecb26",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-formal-body/3-showcase2-native-static-full-C-field-removal",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll_raw_v1/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        "windows_pass": 1,
+        "windows_total": 4,
+        "scope": "额外pureC0六条，非原Body Cctx八条展示输入"
+      },
+      {
+        "profile": "pitch",
+        "evidence": {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_pitch_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_pitch_raw_v1/result.json",
+          "result_sha256": "96779ad0f14eb0a778a587d3ecfa24544ed48e0267931c5bf8175c42fccc3d79",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_pitch_raw_v1/contract.json",
+          "contract_sha256": "4a984793e508e9ee58fae94c5523737f9b0a2cb353218d0361e51f20b067ce98",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-formal-body/3-showcase2-native-static-full-C-field-removal",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_pitch_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_pitch_raw_v1/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        "windows_pass": 1,
+        "windows_total": 4,
+        "scope": "额外pureC0六条，非原Body Cctx八条展示输入"
+      },
+      {
+        "profile": "mixed",
+        "evidence": {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_mixed_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_mixed_raw_v1/result.json",
+          "result_sha256": "257b35749dc9c2bdaa78336693fcb0e7714bb545c39148dd55da305f8c3bce8b",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_mixed_raw_v1/contract.json",
+          "contract_sha256": "ab0cafa37142b601c83c38feebc39922d315312ce642b11a5130b068ec5708e1",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-formal-body/3-showcase2-native-static-full-C-field-removal",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_mixed_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_mixed_raw_v1/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        "windows_pass": 0,
+        "windows_total": 4,
+        "scope": "额外pureC0六条，非原Body Cctx八条展示输入"
+      },
+      {
+        "profile": "roll10",
+        "evidence": {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll10_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll10_raw_v1/result.json",
+          "result_sha256": "12ce38acb666a3dfa43a7f76dba737f457dcab6c4f1a4712cd96adc9dc8e2522",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll10_raw_v1/contract.json",
+          "contract_sha256": "d8ff965e91bf2cfcf31f4d823872e5224855a95674aa9995ec12c3e256eb93b6",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-formal-body/3-showcase2-native-static-full-C-field-removal",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll10_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll10_raw_v1/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        "windows_pass": 0,
+        "windows_total": 1,
+        "scope": "额外pureC0六条，非原Body Cctx八条展示输入"
+      },
+      {
+        "profile": "combined",
+        "evidence": {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_combined_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_combined_raw_v1/result.json",
+          "result_sha256": "bb2d446bf3cd8b78d9de06a54456d13cd40235f0ac6ed40f3931170fc46bc8a0",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_combined_raw_v1/contract.json",
+          "contract_sha256": "ded0c8b9e6278af72001440e2e52fbd82393b59fd5d69b230952941b095621c3",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "paper-demo-formal-body/3-showcase2-native-static-full-C-field-removal",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_combined_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_combined_raw_v1/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        },
+        "windows_pass": 1,
+        "windows_total": 1,
+        "scope": "额外pureC0六条，非原Body Cctx八条展示输入"
+      }
+    ],
+    "strict_first25": "高速整段1/16与0/16单列，不升原18主门",
+    "immediate_stop50mm": "四地形原1s承重已过但根XY漂移超50mm；另列未过",
+    "excluded": "不以C300/11750/11850或其它权重替代e469"
+  },
+  "source_sha256": {
+    "research/motor_interface/paper_demo_20261028/layout.json": "c20d191efcf438afe65961481bd492386b406ea3e8876d03b7833bc13deda655",
+    "research/motor_interface/paper_demo_20261028/execution_bundle_draft_v3.json": "f516ed2616eb806e65278d39cebf2b2d8d236c89dd2b2480c9f35afb94e80252",
+    "docs/research/motor_interface/PAPER_SHOWCASE_CB11650_FOUR_TERRAIN_RESULTS_20261028.md": "d2e03ee70c3c7e2813c67974448b6f497e1fd619c6b6f4ad894a42016b1e01e7",
+    "docs/research/motor_interface/PAPER_SHOWCASE_OPEN_EDGE_HEIGHT_HOLD_V2_RESULTS_20261029.md": "cb30c55541674f962071e69ec609f7657798be470b5f5156cdf3fc6e1ccbf23f",
+    "docs/research/motor_interface/PAPER_DEMO_CB11650_ARM_CEILING_RAW_RESULTS_20261029.md": "9e8f188d6e5df2859a8c37beb7e14f90d6521ab9e7d2d9c56dae6fac407a7636",
+    "docs/research/motor_interface/PAPER_CB11650_GAIT_TRANSITION_NEGATIVE_20261029.md": "051deecc7a77e0bbadbc6e7b2f6317f284edd7d1ce45dbe318c7c8f0c0f930f0",
+    "docs/research/motor_interface/CANDIDATE_CB11650_BODY_RAW_REVIEW_V1_20261028.md": "b50f0f7a1602e92feac765fb0f307d22e1275cd5d0bd46778fbbff10aa43e144",
+    "docs/research/motor_interface/CB11650_SPEED3_CONFIRMED_GFADE_V7_REAL_RESULT_20261029.md": "5c57862ddeedbd6cd01c67bf177b660e5bda63e49e0d9357b10f2b2c6c80cbc3",
+    "docs/research/motor_interface/CB11650_SPEED5_CONFIRMED_GFADE_V7_V6_BITEXACT_20261029.md": "8ffcfaeb404ce8af837f4810df3d7e4609a114e6d8799f02a1e102336dd1d951",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75/result.json": "7cc22f09510207d03bd597cfd29e3db99e807f3930ce20e58e6d559e93125b0c",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75/contract.json": "76a18f743a9d121ff16cdd442dd66239e86a5660b24fb59b191c49868eed8e11",
+    "docs/evidence/paper_demo_formal_CB11650_20261028/candidate_terrain_review_v1/four_terrain_results_compact.json": "502796b01aca080ccae6375f926d4efc98c2aaf7e0762702242822c6dd276ca0",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180/result.json": "e2fbe1e8237c3e8993bc39efe945ce6c03126a733977dc55e2e48195be9c1e19",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180/contract.json": "fad1937ee5cd995c7c225179673a6df18b3e61730bbb4a83fd51ad623401be1f",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240/result.json": "a6f78ce084b9f8b0df0c47b603498a3fec7eafadffc0ee52fc873c1fbd4433b3",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240/contract.json": "b90eb6113c6be0d8511e973d42906286d4eefe4c1c333aa90ea7fad206eeb661",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2/result.json": "c18d4042c2f021c2bd7af93b432cea2b15568061a5cb86afbe1732fc185c80bc",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2/contract.json": "67fdec07e5bd35659936a08fa64cdfa608d62e2d85579a86715714cb449f1e69",
+    "docs/evidence/paper_demo_formal_CB11650_20261028/candidate_edge_height_review_v2/results_compact.json": "a8e02c6827ef51caa556580f8d3a3dfcd54e0fd0c22b28022b148c66a28f8e1f",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output/result.json": "a9407c7f134f85dd0dce8e8fa620ff845de01cf0338d327373b8cbef0b8402fc",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output/contract.json": "f54cd41b79e4f7a8d19908ab5b1aa343df7b1ae5cc0cffe47c51552239c141d1",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO/result.json": "c51ca58379afa1dca4731e78af92aab7def605b9c5dee7dbf62052f238840835",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO/contract.json": "88364d7a3faa018dae173522bae3c42a69f1b4006e6f8aa0d7e5a518fb7ff0c8",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7/result.json": "a515d296bad909f02cc02bb2c14a6e9a5f18fd05a8c9a2b593165d7e660d35cd",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7/contract.json": "38cd3ed94b13c38a5dcd04882a779b503b1f3ce50d01080811f497ce0ff5774d",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/result.json": "867669689009fd5c0a3bd9b698977b6ec394f375a21ff3d5bc2faf2184406c53",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7/contract.json": "9de0b84ccfcc80a8969e47f105b66f4c29d8a654d69702f1f1a2fa9e5a74a68b",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1/result.json": "b9ab1ae216748de23b6b5af8d43e730a91352b04ea89354faa442fe238972afb",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1/contract.json": "21a9d7c9ee39df535f98ab61323d8c7f08981a634dbc06eaba336e83b5ffcb85",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/result.json": "916b39c9a8261c32cc0287859ea1b0fa80d4f462dcded9854cceba85c2d2c939",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/contract.json": "5cb14cd0c2ed17b8ece3c525a59fdf5b7c0a1a0b305c1dd5b167687837487b4f",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_fixed_body/result.json": "296d2c6e21cc913cc9f1ef4e062b842deea589ff873777483d1ca9f02c512200",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_fixed_body/contract.json": "c907f516976f77fbcb4b231a90d39fa327c2d520b6a7bf636c8509c23cb3a200",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_body_enabled/result.json": "96be10842b86c61a9391a54048498bc5c742735fbf5c4e4feb95c5b7746e0847",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_body_enabled/contract.json": "65b8436907a66fb76f7c6ac3ef2cb96a1986179c85f4a269b6b4b3c6ba73965b",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_fixed_body/result.json": "84558580dc1de1b11ce4554555f55fa424829aba5f2afb8b8d8e1f8ddc35ab9a",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_fixed_body/contract.json": "4c3812368e1f1dabbcf63f64405f0efc559399d0d629668ce4b6ae0ea416e400",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_body_enabled/result.json": "7bdb2e9ca2726db28f8cb50bc52e2639030618fb69df1b3db0ddeb9bcc8a7ea5",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_body_enabled/contract.json": "670ff65bbf4a1e3e596eba96c65ff71bfd6baed4c7984378a8c044ca62b5e31b",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_fixed_body/result.json": "fcc557480ba2d740c68628de64a24756c658a259170e7b8e632b747bb18d08cd",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_fixed_body/contract.json": "d0abf5bdb1d83e36350acc64a194d1ee0f00dd767a353217641253f87f941d74",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_body_enabled/result.json": "e9085425002ebfb77e666c3ec8b5ab1ce628e803d50880fd76384cf05baf8eb6",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_body_enabled/contract.json": "e118fffcffd56622ca8bacc2c2c9c199a4e8663d1c8879273d5a78b5d0992350",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_fixed_body/result.json": "2b0e4724f1eddd31e6779dc2753e38864a87707cbb88b90ab2ea1936e4ac80b6",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_fixed_body/contract.json": "3ca2dd2528f8e07633bb305b8cbf9ad088ade9f84b59a3e83beb842e742e51c3",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_body_enabled/result.json": "dd253b7b7dd618c9acd3f7acd8609e2dabcafb96a222a95595fc514320f1a9d3",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_body_enabled/contract.json": "b2bf69f44b325f1f61f0ef7559242e00271483f8dc3e0dac8ff12e073bea8954",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_fixed_body/result.json": "7ae569b7725fd566e638914769cb0fbee3a9884a9eb53698d1fbf10a0d12cb32",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_fixed_body/contract.json": "cc9be1c8eb34ec3876c7c3911680be12873d095e9c9536437cbba7195effa9cf",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_body_enabled/result.json": "0c1976938ff7dfea3339c96a26236afcea6e89ec345efb071e0a8d2b195f957c",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_body_enabled/contract.json": "3b643fdf1e1df7a6064ec61c616e0299f38bd82df0560475d5a6cb0ce33c2f8a",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055/result.json": "bde1068eac3ed14f4f44856247e8ad304335021854ef4d4c76566bc0b0605f49",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055/contract.json": "7fae556a16c3d487dee6c8cae5a700b2a4bf351b6139333fb8823da4bc85c757",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035/result.json": "d6091adff538d70f3396c0a8650e66128f71c9e425a8c7bd20b81c6bda65f7d4",
+    "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035/contract.json": "f2471179ad2868aaca2a1cdbc8de8437b709d14e5022b33b71959f418d43919f",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_height_raw_v1/result.json": "60f159904c18cdecf6f3fe33d7bf79c9dfa5057f6f62aba173722ea0ae2b6343",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_height_raw_v1/contract.json": "12132e05dff419785446e30af02f5a756f1267627a4acb8f55e591b945a648b8",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll_raw_v1/result.json": "f40305ff0cdb928389db0b44bde2af9e526fd498cc4b64a8f9441ed9aa08e801",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll_raw_v1/contract.json": "612f24f46ca561e27829fe0465c2c6f336ca86f2d9bcc3d1df9869cb2d8ecb26",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_pitch_raw_v1/result.json": "96779ad0f14eb0a778a587d3ecfa24544ed48e0267931c5bf8175c42fccc3d79",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_pitch_raw_v1/contract.json": "4a984793e508e9ee58fae94c5523737f9b0a2cb353218d0361e51f20b067ce98",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_mixed_raw_v1/result.json": "257b35749dc9c2bdaa78336693fcb0e7714bb545c39148dd55da305f8c3bce8b",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_mixed_raw_v1/contract.json": "ab0cafa37142b601c83c38feebc39922d315312ce642b11a5130b068ec5708e1",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll10_raw_v1/result.json": "12ce38acb666a3dfa43a7f76dba737f457dcab6c4f1a4712cd96adc9dc8e2522",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_roll10_raw_v1/contract.json": "d8ff965e91bf2cfcf31f4d823872e5224855a95674aa9995ec12c3e256eb93b6",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_combined_raw_v1/result.json": "bb2d446bf3cd8b78d9de06a54456d13cd40235f0ac6ed40f3931170fc46bc8a0",
+    "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/body_combined_raw_v1/contract.json": "ded0c8b9e6278af72001440e2e52fbd82393b59fd5d69b230952941b095621c3"
+  },
+  "boundaries": [
+    "阶段网页已有覆盖目录，不是全18最终冻结/publication receipt",
+    "只读现有e469 result/contract、小docs及紧凑审查；未开NPZ/PT，0模型/物理/GPU",
+    "pose仅核文件存在及既有schema/小报告，不新读大NPZ或做FK；不保证正式渲染准入",
+    "未修改layout/builder/index/protocol/旧freeze/CURRENT或5080"
+  ]
+}

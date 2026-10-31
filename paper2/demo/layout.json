@@ -1,0 +1,318 @@
+{
+  "title": "论文展示页",
+  "phase": "用户已确认版位；统一候选核验与匹配预算学习执行中，尚无新正式视频",
+  "reference_page": "C+B Demo 展示（已冻结）",
+  "cards": [
+    {
+      "id": "pillars_60mm_trot",
+      "title": "梅花桩｜细疏升高桩",
+      "section": "featured",
+      "target": "6cm桩面；逐列基准升高5cm、相对基准高低变化≤2cm，出口累计升高60cm；Trot。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "af333d402866ed705b7b664eaf23443e6c7328e2b44e505b710e39d839e1d842",
+      "reference_source": "outputs/motor_interface/cb_continuity_round37_5090_20261028/video_pillars60_y_accel_wrench_ff_v1_all74_hold/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "random_height_width_stairs_L0",
+      "title": "中空不规则楼梯｜悬空踏板／尺寸变化",
+      "section": "featured",
+      "target": "高差6–18cm、踏面30–50cm、横宽80–160cm；悬空踏板与断口。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "13bcb24e554f5b7f9bc6520ac6d0cfb9fee952b3be1b640eac4ee11fb13f8063",
+      "reference_source": "outputs/motor_interface/cb_nonuniform_fluent_20261028/video_open_v6_full84_1x/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "speed5_goals",
+      "title": "5m/s｜四脚落脚目标",
+      "section": "featured",
+      "target": "目标5m/s；四脚发布目标球、实际足点和首次触地同时显示。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "90aed9a9de4500574f432c88fe4b93768da0bf87059c806f02910e27165c685b",
+      "reference_source": "outputs/motor_interface/cb_flat_goals_video_20261028/speed5_four_foot_goals/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "arm_five_application_REVIEW",
+      "title": "机械臂｜固定Body与调用Body",
+      "section": "featured",
+      "target": "高度、roll、pitch、三轴组合、行走触碰五组；左固定Body，右调用Body。",
+      "panel_labels": [
+        "固定Body",
+        "调用Body"
+      ],
+      "full_width": true,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "5344b62f4dff171a6d5c303a429b9e9fe4052c67f9e340dee92f0f551eafe350",
+      "reference_source": "outputs/motor_interface/arm_body_reach_20261026/comparisons_v5_final/all_five_cases_comparison.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "low_ceiling_comparison",
+      "title": "压低身体过障碍｜高度对比",
+      "section": "featured",
+      "target": "64cm净空；GeCCo基线、同一C+B高度55cm、同一C+B高度35cm三列。",
+      "panel_labels": [
+        "GeCCo基线",
+        "C+B｜55cm",
+        "同一C+B｜35cm"
+      ],
+      "full_width": true,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "105561d8f95307ed23e0f5c2d8d75fcafaaf98a1ef66d7583c2bde4fdf3cf1a5",
+      "reference_source": "outputs/motor_interface/gecco_body_benchmark_20261026/comparison_ceiling_v3/06_Low_Ceiling.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "joint_body_flat_walk",
+      "title": "联合姿态｜平地边走边变化",
+      "section": "featured",
+      "target": "行走中升降、侧倾和俯仰；包含50cm＋roll＋6°＋pitch−6°联合段。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "74892dc18c40c72d74175edbdb6ead89bb7f7d50e8db73c47b615e238e7b8b92",
+      "reference_source": "outputs/motor_interface/cb_gaits_20261025/mujoco51_videos/joint_body_changes/video.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "beam_30cm_trot",
+      "title": "窄梁｜连续Trot",
+      "section": "featured",
+      "target": "30cm窄梁；连续Trot，记录完整路线和停止支撑。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "8eca1f89c976aea3405c2ab4715dbad411dda1ba54b7702d842205f1551cf8fd",
+      "reference_source": "outputs/motor_interface/cb_continuity_round31_5090_20261028/video_beam_queue1_full60_hold/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "combined_gait_transition_REVIEW",
+      "title": "行走中切换步态",
+      "section": "featured",
+      "target": "50cm＋roll＋5°＋pitch−5°；依次请求Trot→Pace→Single→Pronk→Bound。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "91162226df2ca232a2dde32a81ff339e1c6b526d5887051af9381b6e6c3cdbaf",
+      "reference_source": "outputs/motor_interface/cb_gait_transition_repair_20261028/cycle_tau03_video/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "body_three_axes_explicit",
+      "title": "静止三轴姿态｜大幅变化四宫格",
+      "section": "featured",
+      "target": "高度30–65cm、roll±30°、pitch±25°与三轴组合，四宫格。",
+      "panel_labels": [
+        "高度",
+        "roll",
+        "pitch",
+        "三轴组合"
+      ],
+      "full_width": true,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "600f569df42e3cfe8f693c2293814aba98bf7bbe915e591bbc01e3abcd3692a7",
+      "reference_source": "outputs/motor_interface/cb_gaits_20261025/mujoco51_videos/videos/01_body_four_views.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "speed05_goals",
+      "title": "0.5m/s｜四脚目标球",
+      "section": "speed",
+      "target": "目标0.5m/s；四脚落脚目标球。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "4e0b16e92015ae9ff2270d753115597ea6701ee672a2cf48d39b518ab81ecd29",
+      "reference_source": "outputs/motor_interface/cb_flat_goals_video_20261028/speed05_R52_four_foot_goals/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "speed1_goals",
+      "title": "1m/s｜四脚目标球",
+      "section": "speed",
+      "target": "目标1m/s；四脚落脚目标球。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "2f27ea9f8722d55489d1824072c6f61e239aa1fa14b1d69f68a8781ef1ae050a",
+      "reference_source": "outputs/motor_interface/cb_sparse_clearance_5090_20261026/videos/R68_native_V5_1m_fullroute_precise/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "speed3_goals",
+      "title": "3m/s｜四脚真实发布目标球",
+      "section": "speed",
+      "target": "目标3m/s；四脚落脚目标、实际足点和首次触地。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "692c9bcd6c2b8e9ada032f42bbd8a3e75bddc951e663cc90345adb0b54e6b007",
+      "reference_source": "outputs/motor_interface/cb_flat_goals_video_20261028/speed3_four_foot_goals/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "body_height_continuous",
+      "title": "身体高度连续变化",
+      "section": "more",
+      "target": "高度55→30→65→55cm，连续变化。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "739ab8a77a2662f35762ad820be108a662b1a2c13ae79c24d8d5ae6ac76eb737",
+      "reference_source": "outputs/motor_interface/cb_scratch_body_retest_7500_20261026/mujoco_anchor_probe/height/video.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "body_pitch_continuous",
+      "title": "身体俯仰连续变化",
+      "section": "more",
+      "target": "高度55cm；pitch 0→＋25°→−25°→0。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "af1f372848b9daa59d446758ee6f27f0638aa539613cb69fdf817fa0d6f7e4a2",
+      "reference_source": "outputs/motor_interface/cb_scratch_body_retest_7500_20261026/mujoco_anchor_probe/pitch/video.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "body_roll10",
+      "title": "左右侧倾｜连续变化",
+      "section": "more",
+      "target": "55cm；roll +15°→0→−15°→0，各4秒连续变化；原10°静态基准记录保留。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "4d535401a14bbbb931b70447301215241345f4e14aacf2f9fb8a63f3ec1f7738",
+      "reference_source": "outputs/motor_interface/cb_demo_reference_5090_20261026/body_recorded_replay/rollP10/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "body_combined",
+      "title": "高度＋roll＋pitch联合姿态",
+      "section": "more",
+      "target": "40cm＋roll＋5°＋pitch−5°联合静态Body。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "ddaf5db1c158af27eb0db16662d8d9f3ebb8a76018f2c3edd4f9f75c8533ed51",
+      "reference_source": "outputs/motor_interface/cb_demo_reference_5090_20261026/body_recorded_replay/combined/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "flat_5ms",
+      "title": "平地约5m/s完整巡航与保持",
+      "section": "more",
+      "target": "目标5m/s平地巡航与停止支撑，保留无目标球全景。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "c710572e7103b514bc67462e952102155d198032371af1ddfb8163d68b53b1a5",
+      "reference_source": "outputs/motor_interface/cb_flat_speed_video_5090_20261028/video_10650_env0_speed5_original/viewport.mp4",
+      "reference_only_not_new_result": true
+    },
+    {
+      "id": "stairs_15cm_reliable",
+      "title": "15cm楼梯",
+      "section": "more",
+      "target": "15cm台阶完整路线。",
+      "panel_labels": [
+        "统一C+B策略"
+      ],
+      "full_width": false,
+      "status": "待统一策略复跑",
+      "media": null,
+      "reference_video_SHA256": "b22304fd59106abdb55099dc0cea1beb76ec5bc15d867b60067aa5af2767ffbf",
+      "reference_source": "outputs/motor_interface/cb_continuity_round30_5090_20261028/video_stairs15_handoff_full92_hold/viewport.mp4",
+      "reference_only_not_new_result": true
+    }
+  ],
+  "section_order": [
+    "featured",
+    "speed",
+    "more",
+    "ablation"
+  ],
+  "ablation_after": "more",
+  "primary_checkpoint": {
+    "status": "待固定",
+    "candidate_update": 10650,
+    "candidate_is_not_selected_or_validated": true
+  },
+  "ablation_scenarios": [
+    {
+      "id": "body_reach",
+      "title": "联合姿态与触达",
+      "task": "同一身体目标与机械臂目标，比较三组的身体跟踪与实际触达。",
+      "labels": [
+        "完整C+B",
+        "mask B｜C-only",
+        "mask C｜B-only"
+      ]
+    },
+    {
+      "id": "contact_route",
+      "title": "指定落脚与联合姿态行走",
+      "task": "同一落脚路线与Body目标，比较真实首落、位移、姿态与最终保持。",
+      "labels": [
+        "完整C+B",
+        "mask B｜C-only",
+        "mask C｜B-only"
+      ]
+    }
+  ],
+  "media_status": "所有视频位置均为空；不以历史片充当新统一策略或消融结果。"
+}

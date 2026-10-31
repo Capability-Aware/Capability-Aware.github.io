@@ -30,12 +30,16 @@ The hub → project page → paper/code/video navigation is inspired by https://
 
 ## BasicLoco videos
 
-The seven homepage videos and their extracted preview frames in `assets/videos/` were provided by Hao Zhang from BasicLoco v3 for publication on this website. They are separate from the archived third-party demo media listed above.
+The seven homepage videos and their extracted preview frames in `assets/videos/tempoloco/` were provided by Hao Zhang from BasicLoco v3 for publication on this website. They are separate from the archived third-party demo media listed above.
 
-The featured TempoLoco video (`assets/videos/tempoloco.mp4`) and its extracted cover were also supplied by Hao Zhang for the homepage.
+The featured TempoLoco video (`assets/videos/tempoloco/tempoloco.mp4`) and its extracted cover were also supplied by Hao Zhang for the homepage.
 
 ## TempoLoco paper page
 
 The three figures in `assets/papers/tempoloco/`, author information, abstract, and reported results were supplied in the authors' manuscript on October 10, 2026. The public preprint is available at https://arxiv.org/abs/2610.14753. Its identifier is displayed on the project page; no conference acceptance is claimed.
 
 The TempoLoco compilation is also used on its standalone project page. Its published version carries `Hao Zhang | HaoZhangRobotics.github.io` in every frame, and its poster is extracted from the watermarked video. Original sources are preserved outside published output.
+
+## Paper 2 demo
+
+The videos under `assets/videos/paper2/` are web playback encodes of the supplied demo recordings. They retain 1080p/50fps; source recordings remain unchanged outside the published site.

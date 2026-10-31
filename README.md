@@ -8,12 +8,14 @@ A minimal academic showcase: Research Projects dropdown, centered title and auth
 
 - `featured-video.json`: main homepage video (currently TempoLoco).
 - `links.json`: homepage black buttons. Fill the empty YouTube/Bilibili `url` values to activate them.
-- `papers.json`: research page titles, paths, status, and content. The first paper has a standalone page at `/beyond-fixed-visual-history/`; `/paper1/` redirects there. Paper 2/3 are still placeholders.
+- `papers.json`: research page titles, paths, status, and content. The first paper has a standalone page at `/beyond-fixed-visual-history/`; `/paper1/` redirects there. Paper 2 has a demo showcase at `/paper2/demo/`; its paper is in preparation. Paper 3 remains a placeholder.
 - `scripts/build_site.py`: homepage text, link buttons, teaser, and project page content.
 - `assets/site.css` and `assets/site.js`: shared layout and dropdown/carousel behavior.
 - `projects.json`: archived Nerfies and HyperNeRF demonstration content. These are not Capability Aware publications.
 
-The homepage features TempoLoco in the main player. The horizontal strip contains six BasicLoco real-world videos from `videos.json`, playing muted on a loop with native playback controls. Simulation is excluded from the strip. The first research entry is **Beyond Fixed Visual History: Learning Motion-Adaptive Temporal Receptive Fields for Complex-Terrain Quadruped Locomotion**. Its standalone page presents the supplied manuscript and demonstration compilation; the public preprint is available as [arXiv:2610.14753](https://arxiv.org/abs/2610.14753), with direct PDF and arXiv links.
+The homepage features TempoLoco in the main player. The horizontal strip contains six BasicLoco real-world videos from `videos.json`, playing muted on a loop with native playback controls. Simulation is excluded from the strip. Videos for this work live under `assets/videos/tempoloco/`; Paper 2 demo videos live under `assets/videos/paper2/`.
+
+The first research entry is **Beyond Fixed Visual History: Learning Motion-Adaptive Temporal Receptive Fields for Complex-Terrain Quadruped Locomotion**. Its standalone page presents the supplied manuscript and demonstration compilation; the public preprint is available as [arXiv:2610.14753](https://arxiv.org/abs/2610.14753), with direct PDF and arXiv links.
 
 ## First paper: TempoLoco preprint
 

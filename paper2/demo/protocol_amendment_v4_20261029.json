@@ -1,0 +1,70 @@
+{
+  "status": "V4_ALL3_SMOKE2_PASSED_FORMAL100_QUEUE_ACTIVE_CB_RUNNING_EVAL_WAITING_ENDPOINT",
+  "supersedes_only": "strict_same_request_ablation_interpretation_of_V2_and_unrun_V3; all original data retained",
+  "correction_doc": "docs/research/motor_interface/PAPER_DEMO_PROTOCOL_CORRECTION_20261029.md",
+  "common_parent": {
+    "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+    "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+    "restore": "same complete Actor Critic Adam norms std LR counts four RNG; runtime group rebound only; environment rebuilt"
+  },
+  "groups": [
+    "CB",
+    "C_only",
+    "B_only"
+  ],
+  "budget": {
+    "start": 11650,
+    "formal_endpoint": 11750,
+    "updates_each": 100,
+    "num_envs": 8192,
+    "rollout_steps": 32,
+    "transitions_each": 26214400,
+    "formal_total_transitions": 78643200,
+    "technical_smoke_updates_each": 2,
+    "technical_smoke_total_transitions": 1572864,
+    "extra_collect": 0,
+    "smoke_not_formal_parent": true
+  },
+  "master": {
+    "B1_timed_slots": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "B0_timed_slots": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "slot": "global env index %16",
+    "B1_timed_target": [
+      0.5,
+      0,
+      0
+    ],
+    "B0_public_geometry": [
+      0.55,
+      0,
+      0
+    ],
+    "rule": "same master request before group removal; B-only B0C0 stays inactive, no extra B exposure; disabled targets/rewards/reference paths removed"
+  },
+  "source_SHA256": {
+    "scripts/locomotion/paper_demo_activation_v4_profile.py": "b9ddd80e2f21b295a39ca7091860d874216cb1449addb7291b7678f449a1830a",
+    "scripts/locomotion/paper_demo_activation_v4_train.py": "9e47d4fc032358e66dbd3e5bceb82b0f3c906697976fc064183b33f1e88d62ba",
+    "scripts/locomotion/paper_demo_activation_v4_loader.py": "76fde6a3f0a157977f71edec4eb317ee2895b67008292a680b659a25c0c70cfe",
+    "scripts/locomotion/paper_demo_activation_v4_check_cpu.py": "01090168aaddee489a6033ac4212adaaea91e3a11b5cfbe46ad1ee564be886fa"
+  },
+  "original_protocol_preserved": true,
+  "final_policy_selected": false,
+  "formal_recording_allowed": false,
+  "publication_order": [
+    "qualified selected checkpoint",
+    "complete raw pt + SHA + actual loader/execution/source configs pushed",
+    "live remote hash verified and receipt",
+    "formal recording18 then paper page"
+  ],
+  "scope": "shared CB pretrained history plus100 adaptation; not scratch; V2 C/B1000 not ancestry of V4"
+}

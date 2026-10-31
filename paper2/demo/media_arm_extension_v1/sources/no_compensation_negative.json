@@ -1,0 +1,1095 @@
+{
+  "status": "ACTUAL_THREE_STATIC_AND_ONE_MOVING_C0_RECORDED_NOT_QUALIFIED",
+  "source": "scripts/locomotion/paper_demo_arm_ablation_static_extension_v3.py",
+  "source_sha256": "cfa728406e507ee76595330558bedce33154ac95c072ed1b24f4bf24dc957a9e",
+  "rows": [
+    {
+      "case": "roll",
+      "CB_reused": {
+        "run": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_static_support_v1/arm_roll_body_enabled",
+        "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "result_sha256": "39d1405ed50fa7a6792bc64bf577a3e730bc55863639217a156ae8374ec656d2",
+        "contract_sha256": "689db5115f60ebd18fd1f344c2ca4973b0e0bf6cbc508e33aed812b63be708e2",
+        "trace_sha256": "510b9aa6186e37acdb3143d542b0a6f93f28539c7d0f360f59b84348c13abdcd",
+        "support_log_sha256": "0ed30d413375d2c83807638ba93437c270fe70e917707b4b7b9c1f2123d88de9",
+        "motor_log_sha256": "a651dfff0e3df9e1defa1b4c1a0ebe9624618aa326bac2843a73787782da2094",
+        "seconds": 16.0000000000011,
+        "qualified_touch": true,
+        "first_qualified_touch_s": 5.999999999999894,
+        "tip_min_m": 0.020313321828090123,
+        "maximum_nonfoot_force_N": 0.0,
+        "maximum_arm_self_contact_force_N": 0.0,
+        "target_m_deg": [
+          0.55,
+          -25.0,
+          0.0
+        ],
+        "final_actual_m_deg": [
+          0.550006091594696,
+          -24.88092431606324,
+          -0.016658991468219773
+        ],
+        "final_error_m_deg": [
+          6.091594696000513e-06,
+          0.11907568393676118,
+          -0.016658991468219773
+        ],
+        "windows": [
+          {
+            "interval_s": [
+              2.0,
+              6.0
+            ],
+            "samples": 201,
+            "body_RMS_m_deg": [
+              0.0002246984148655184,
+              7.928536605854357,
+              0.04072385101011022
+            ],
+            "tip_min_m": 0.020313321828090123,
+            "tool_max_force_N": 119.97123090688966,
+            "IK_error_max_m": null,
+            "IK_converged_count": 99,
+            "Actor_action_absmax": 1.725594401359558,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 7.784843736885393e-05,
+            "Actor_prior_RHS_absmax": 4.504372611590899e-05,
+            "geometry_RHS_norm_mean": 0.006775017099012882,
+            "Actor_q_minus_measured_absmax_rad": 0.7206996178545437,
+            "IK_delta_absmax_rad": 0.030153648672139995,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 9612,
+            "arm_rate_limited_axes": 426,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 4824,
+            "arm_qref_tracking_absmax_rad": 0.18564602889356738
+          },
+          {
+            "interval_s": [
+              14.0,
+              16.0
+            ],
+            "samples": 101,
+            "body_RMS_m_deg": [
+              8.927624969796136e-06,
+              0.12262224563281952,
+              0.017816976639577042
+            ],
+            "tip_min_m": 0.022953768398013653,
+            "tool_max_force_N": 2.1312065420762414,
+            "IK_error_max_m": 0.00019923322532717084,
+            "IK_converged_count": 101,
+            "Actor_action_absmax": 1.721218466758728,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 7.655544144441427e-05,
+            "Actor_prior_RHS_absmax": 4.298244603794608e-05,
+            "geometry_RHS_norm_mean": 0.00802338152536947,
+            "Actor_q_minus_measured_absmax_rad": 0.6877191366071371,
+            "IK_delta_absmax_rad": 0.026061671886983887,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 4800,
+            "arm_rate_limited_axes": 0,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 2424,
+            "arm_qref_tracking_absmax_rad": 0.00977541600184656
+          }
+        ]
+      },
+      "B_only_new": {
+        "run": "outputs/motor_interface/paper_demo_20261028/arm_ablation_static_extension_v3_20261029/roll/B_only",
+        "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "result_sha256": "e6fe30dc910c30af42b7a1d5c5eceb770e1140a00c4db45b2b16059ed00342d5",
+        "contract_sha256": "2e6757805e406eb01df20d51ff24448a8d407e07c681c7b5a2066a518bdf1627",
+        "trace_sha256": "494e900fb9cc1b2a24233d814978f3fbd3b39b0b02220f28f7b1ba53cc02b530",
+        "support_log_sha256": "dac30433f192e2d253eb8680d8aedeeb8bde3da1f288c287b3d49eb64b403f2d",
+        "motor_log_sha256": "02cc0a7a10207ec66bd7d0d23c307ca98b725a016f653f1417deac19955c77c8",
+        "seconds": 16.0000000000011,
+        "qualified_touch": false,
+        "first_qualified_touch_s": null,
+        "tip_min_m": 0.040344398962416456,
+        "maximum_nonfoot_force_N": 0.0,
+        "maximum_arm_self_contact_force_N": 0.0,
+        "target_m_deg": [
+          0.55,
+          -25.0,
+          0.0
+        ],
+        "final_actual_m_deg": [
+          0.560966432094574,
+          -23.144715842255387,
+          -0.3318685664458852
+        ],
+        "final_error_m_deg": [
+          0.01096643209457393,
+          1.8552841577446149,
+          -0.3318685664458852
+        ],
+        "windows": [
+          {
+            "interval_s": [
+              2.0,
+              6.0
+            ],
+            "samples": 201,
+            "body_RMS_m_deg": [
+              0.0058719872794442685,
+              8.368693695237827,
+              0.24377116968810628
+            ],
+            "tip_min_m": 0.040344398962416456,
+            "tool_max_force_N": 0.0,
+            "IK_error_max_m": null,
+            "IK_converged_count": 0,
+            "Actor_action_absmax": 1.5068784952163696,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 6.897830889065152e-05,
+            "Actor_prior_RHS_absmax": 3.998026353417379e-05,
+            "geometry_RHS_norm_mean": 0.016658185933709,
+            "Actor_q_minus_measured_absmax_rad": 0.6396842165467805,
+            "IK_delta_absmax_rad": 0.11057007090973817,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 9612,
+            "arm_rate_limited_axes": 488,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 4824,
+            "arm_qref_tracking_absmax_rad": 0.08107517438256773
+          },
+          {
+            "interval_s": [
+              14.0,
+              16.0
+            ],
+            "samples": 101,
+            "body_RMS_m_deg": [
+              0.010966219643190795,
+              1.855297412418923,
+              0.3318817646264518
+            ],
+            "tip_min_m": 0.04106320565689473,
+            "tool_max_force_N": 0.0,
+            "IK_error_max_m": 0.02056466084076304,
+            "IK_converged_count": 0,
+            "Actor_action_absmax": 1.488842248916626,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 6.528706597822028e-05,
+            "Actor_prior_RHS_absmax": 3.677947986709146e-05,
+            "geometry_RHS_norm_mean": 0.03431612083394816,
+            "Actor_q_minus_measured_absmax_rad": 0.5884716778734632,
+            "IK_delta_absmax_rad": 0.10170078710396499,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 4800,
+            "arm_rate_limited_axes": 0,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 2424,
+            "arm_qref_tracking_absmax_rad": 5.860023102322032e-07
+          }
+        ]
+      },
+      "shared_contract_equal": false,
+      "same_requested_B": true,
+      "same_tool_geometry": true,
+      "same_asset_sha256": true,
+      "same_target_world": true,
+      "shared_contract_differences": [
+        {
+          "path": ".pose_servo.enabled",
+          "CB": true,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.COM_reference",
+          "CB": "original P1 COM reference + task-pose-servo correction + desired_delta",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.COM_velocity",
+          "CB": "original P1 COM velocity + task-pose-servo derivative + finite difference desired_delta/.02",
+          "B_only": "finite difference of consecutive desired COM at the real .02s control clock; first previous value is installation-time actual COM"
+        },
+        {
+          "path": ".reference_adapter.actor_parameters_changed",
+          "CB": null,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.arm_home_rad",
+          "CB": [
+            0.0,
+            1.57079632679,
+            -3.03687289847,
+            0.0,
+            -0.157079632679,
+            0.0174532925199
+          ],
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.compatibility",
+          "CB": null,
+          "B_only": "current pure/joint BodyReference only; no general support-transfer/QP reference substitution claimed"
+        },
+        {
+          "path": ".reference_adapter.current_configuration",
+          "CB": "actual base, legs and non-arm joints identical in actual/shadow",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.delta_local",
+          "CB": "Ractual^T*(COMactual-COMshadowHome)",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.desired_COM",
+          "CB": null,
+          "B_only": "applied_base_ref + Rdesired*current_local_COM; applied pose includes original P1 correction"
+        },
+        {
+          "path": ".reference_adapter.desired_delta",
+          "CB": "Rdesired*delta_local",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.enabled",
+          "CB": true,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.future_outcome_inputs",
+          "CB": null,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.initialization",
+          "CB": "arm at home, previous desired_delta=0; no initial finite-difference COM-position rebasing pulse",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.insertion",
+          "CB": "original P1 -> optional existing task pose servo -> arm-only COM delta -> original planned-g -> same frozen Actor",
+          "B_only": "original P1.apply exactly once -> selected-reference COM reconstruction -> original planned-g -> same frozen Actor"
+        },
+        {
+          "path": ".reference_adapter.local_COM",
+          "CB": null,
+          "B_only": "Ractual^T*(actual full-robot COM - actual base), using every actual robot link mass including arm"
+        },
+        {
+          "path": ".reference_adapter.mode",
+          "CB": "arm_delta",
+          "B_only": "off"
+        },
+        {
+          "path": ".reference_adapter.no_guarantee",
+          "CB": "measured arm shape enters COM reference; no proof of stability, static XY retention or successful contact; actual failure checks unchanged",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.physical_integration_steps",
+          "CB": 0,
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.preserved",
+          "CB": null,
+          "B_only": "original base/foot references, body command smoothing, contact events, all other Actor columns, P1/g, frozen Actor/own norm, masses, PD and failure criteria"
+        },
+        {
+          "path": ".reference_adapter.preserves",
+          "CB": "original leg/posture COM target, original support-COM-centering base trajectory, foot targets, body goal, all other packet columns, Actor/own norm, masses/limits/PD/guard",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.retained_filter",
+          "CB": null,
+          "B_only": "original reference.packet advances once; no second input/packet/features/Fz-filter update"
+        },
+        {
+          "path": ".reference_adapter.revision",
+          "CB": "cb-arm-home-delta-com-reference/1-after-P1-and-pose-servo",
+          "B_only": "cb-arm-articulated-com-reference/1-after-P1"
+        },
+        {
+          "path": ".reference_adapter.robot_bodies",
+          "CB": "actual base_link robot subtree; excludes static target and scene bodies",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.selected_reference",
+          "CB": null,
+          "B_only": "pure before walking launch and for static Body; joint after real walking launch"
+        },
+        {
+          "path": ".reference_adapter.semantic_scope",
+          "CB": "compensates only moving-arm configuration relative to home; does not replace original COM objective by current full-body offset",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.semantic_tradeoff",
+          "CB": null,
+          "B_only": "This removes independent COM-centering error caused by internal articulation. At matching actual/desired orientation, new COM error equals base position error. Original support-COM target is shifted; this is a changed reference contract, not a stability guarantee or a proved bug fix."
+        },
+        {
+          "path": ".reference_adapter.shadow",
+          "CB": "copy full actual integration state into private MjData; replace only six arm q with declared home; mj_forward only, zero integration",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.source",
+          "CB": "/home/user/isaac/capability_research/scripts/locomotion/cb_arm_reach_arm_delta.py",
+          "B_only": "/home/user/isaac/capability_research/scripts/locomotion/cb_arm_reach_reference.py"
+        },
+        {
+          "path": ".reference_adapter.state_write",
+          "CB": null,
+          "B_only": "only current ReferenceState COM clone and new packet COM columns; no refgen internal state, qpos, qvel, roots or actions written"
+        }
+      ]
+    },
+    {
+      "case": "pitch",
+      "CB_reused": {
+        "run": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_static_support_v2/arm_pitch_body_enabled",
+        "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "result_sha256": "6d3f6a8c29ff1d7e6b3be7bb73580c051d608a2021a6e3b6b6989422bfe60f6a",
+        "contract_sha256": "c942f69476107d7c534a08cb8f23559922fe3dfb25e73e6837e2f3f6e3453ceb",
+        "trace_sha256": "da6cb853c1d341bcf12ca133aa6dd3ae2eae5e91054e02210860a186a395005f",
+        "support_log_sha256": "0c192143869e6be106d9a0844af39a9db355e7410c529fb563b697bf52f33150",
+        "motor_log_sha256": "cfb0e9df15a80d6d20921eb212a0617681f191807d17a9a35a2b7775ac34a7e7",
+        "seconds": 16.0000000000011,
+        "qualified_touch": true,
+        "first_qualified_touch_s": 5.799999999999899,
+        "tip_min_m": 0.019884796561855295,
+        "maximum_nonfoot_force_N": 0.0,
+        "maximum_arm_self_contact_force_N": 0.0,
+        "target_m_deg": [
+          0.55,
+          0.0,
+          -25.0
+        ],
+        "final_actual_m_deg": [
+          0.5498444437980652,
+          0.4962556650794745,
+          -24.447512954732787
+        ],
+        "final_error_m_deg": [
+          -0.00015555620193485886,
+          0.4962556650794745,
+          0.5524870452672128
+        ],
+        "windows": [
+          {
+            "interval_s": [
+              2.0,
+              6.0
+            ],
+            "samples": 201,
+            "body_RMS_m_deg": [
+              0.0007099719838976813,
+              0.1556611824813186,
+              7.938249594882648
+            ],
+            "tip_min_m": 0.019884796561855295,
+            "tool_max_force_N": 202.76711943317198,
+            "IK_error_max_m": null,
+            "IK_converged_count": 106,
+            "Actor_action_absmax": 1.659114956855774,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 4.138784771292392e-05,
+            "Actor_prior_RHS_absmax": 4.393155615305105e-05,
+            "geometry_RHS_norm_mean": 0.010532193467419817,
+            "Actor_q_minus_measured_absmax_rad": 0.7029048984488167,
+            "IK_delta_absmax_rad": 0.10346863985399131,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 9612,
+            "arm_rate_limited_axes": 295,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 4824,
+            "arm_qref_tracking_absmax_rad": 0.2404403482374426
+          },
+          {
+            "interval_s": [
+              14.0,
+              16.0
+            ],
+            "samples": 101,
+            "body_RMS_m_deg": [
+              0.0001731707924849893,
+              0.49102417152592487,
+              0.551047264543045
+            ],
+            "tip_min_m": 0.022955250079860434,
+            "tool_max_force_N": 1.9359338256341911,
+            "IK_error_max_m": 0.00019763160770301847,
+            "IK_converged_count": 101,
+            "Actor_action_absmax": 1.6591434478759766,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 3.312499712409027e-05,
+            "Actor_prior_RHS_absmax": 1.6171070039617543e-05,
+            "geometry_RHS_norm_mean": 0.02289035408163439,
+            "Actor_q_minus_measured_absmax_rad": 0.25873712063388066,
+            "IK_delta_absmax_rad": 0.14884562528092343,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 4800,
+            "arm_rate_limited_axes": 0,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 2424,
+            "arm_qref_tracking_absmax_rad": 0.009032170881947021
+          }
+        ]
+      },
+      "B_only_new": {
+        "run": "outputs/motor_interface/paper_demo_20261028/arm_ablation_static_extension_v3_20261029/pitch/B_only",
+        "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "result_sha256": "adae184ac0b4657d62ebe2edfe9bc776f463a492e899360ecac7c72ad3c86b18",
+        "contract_sha256": "d532bbf2802d66dfc862f0ad195fcd57df2604a12a5a3d99abab1412ec727428",
+        "trace_sha256": "dbe97996eae3b44bca36fcdd818dbf968fec13e0ec28d8f1dc3016d8c9400610",
+        "support_log_sha256": "7c674856cb3a6efc01fa05ef79d96dc7b1881f6421f7f15fae92d6f70b890df4",
+        "motor_log_sha256": "e6a8ad420902f3246bc5aa8fef535f9251688a794e060c64fab0c83c249ef6c9",
+        "seconds": 16.0000000000011,
+        "qualified_touch": false,
+        "first_qualified_touch_s": null,
+        "tip_min_m": 0.03869067390766705,
+        "maximum_nonfoot_force_N": 0.0,
+        "maximum_arm_self_contact_force_N": 0.0,
+        "target_m_deg": [
+          0.55,
+          0.0,
+          -25.0
+        ],
+        "final_actual_m_deg": [
+          0.5578293800354004,
+          -0.2866554889047511,
+          -23.311331476868677
+        ],
+        "final_error_m_deg": [
+          0.007829380035400346,
+          -0.2866554889047511,
+          1.6886685231313239
+        ],
+        "windows": [
+          {
+            "interval_s": [
+              2.0,
+              6.0
+            ],
+            "samples": 201,
+            "body_RMS_m_deg": [
+              0.0042814733482748535,
+              0.31763156054324587,
+              8.161689125300555
+            ],
+            "tip_min_m": 0.04003820010874907,
+            "tool_max_force_N": 0.0,
+            "IK_error_max_m": null,
+            "IK_converged_count": 0,
+            "Actor_action_absmax": 1.6584938764572144,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 5.2966568997349265e-05,
+            "Actor_prior_RHS_absmax": 4.407234895327628e-05,
+            "geometry_RHS_norm_mean": 0.02641979835218321,
+            "Actor_q_minus_measured_absmax_rad": 0.7051575832524204,
+            "IK_delta_absmax_rad": 0.08198179602250048,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 9612,
+            "arm_rate_limited_axes": 362,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 1,
+            "arm_motor_substep_axis_denominator": 4824,
+            "arm_qref_tracking_absmax_rad": 0.08332968794918072
+          },
+          {
+            "interval_s": [
+              14.0,
+              16.0
+            ],
+            "samples": 101,
+            "body_RMS_m_deg": [
+              0.00782941367373447,
+              0.28672474428454375,
+              1.688641303991043
+            ],
+            "tip_min_m": 0.0387052560377811,
+            "tool_max_force_N": 0.0,
+            "IK_error_max_m": 0.018224028425802712,
+            "IK_converged_count": 0,
+            "Actor_action_absmax": 1.6586871147155762,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 5.561694739384826e-05,
+            "Actor_prior_RHS_absmax": 3.490257782235461e-05,
+            "geometry_RHS_norm_mean": 0.036082187687718974,
+            "Actor_q_minus_measured_absmax_rad": 0.5584412451576737,
+            "IK_delta_absmax_rad": 0.07953401207601359,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 4800,
+            "arm_rate_limited_axes": 0,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 2424,
+            "arm_qref_tracking_absmax_rad": 1.0488782993228751e-05
+          }
+        ]
+      },
+      "shared_contract_equal": false,
+      "same_requested_B": true,
+      "same_tool_geometry": true,
+      "same_asset_sha256": true,
+      "same_target_world": true,
+      "shared_contract_differences": [
+        {
+          "path": ".pose_servo.enabled",
+          "CB": true,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.COM_reference",
+          "CB": "original P1 COM reference + task-pose-servo correction + desired_delta",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.COM_velocity",
+          "CB": "original P1 COM velocity + task-pose-servo derivative + finite difference desired_delta/.02",
+          "B_only": "finite difference of consecutive desired COM at the real .02s control clock; first previous value is installation-time actual COM"
+        },
+        {
+          "path": ".reference_adapter.actor_parameters_changed",
+          "CB": null,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.arm_home_rad",
+          "CB": [
+            0.0,
+            1.57079632679,
+            -3.03687289847,
+            0.0,
+            -0.157079632679,
+            0.0174532925199
+          ],
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.compatibility",
+          "CB": null,
+          "B_only": "current pure/joint BodyReference only; no general support-transfer/QP reference substitution claimed"
+        },
+        {
+          "path": ".reference_adapter.current_configuration",
+          "CB": "actual base, legs and non-arm joints identical in actual/shadow",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.delta_local",
+          "CB": "Ractual^T*(COMactual-COMshadowHome)",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.desired_COM",
+          "CB": null,
+          "B_only": "applied_base_ref + Rdesired*current_local_COM; applied pose includes original P1 correction"
+        },
+        {
+          "path": ".reference_adapter.desired_delta",
+          "CB": "Rdesired*delta_local",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.enabled",
+          "CB": true,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.future_outcome_inputs",
+          "CB": null,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.initialization",
+          "CB": "arm at home, previous desired_delta=0; no initial finite-difference COM-position rebasing pulse",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.insertion",
+          "CB": "original P1 -> optional existing task pose servo -> arm-only COM delta -> original planned-g -> same frozen Actor",
+          "B_only": "original P1.apply exactly once -> selected-reference COM reconstruction -> original planned-g -> same frozen Actor"
+        },
+        {
+          "path": ".reference_adapter.local_COM",
+          "CB": null,
+          "B_only": "Ractual^T*(actual full-robot COM - actual base), using every actual robot link mass including arm"
+        },
+        {
+          "path": ".reference_adapter.mode",
+          "CB": "arm_delta",
+          "B_only": "off"
+        },
+        {
+          "path": ".reference_adapter.no_guarantee",
+          "CB": "measured arm shape enters COM reference; no proof of stability, static XY retention or successful contact; actual failure checks unchanged",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.physical_integration_steps",
+          "CB": 0,
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.preserved",
+          "CB": null,
+          "B_only": "original base/foot references, body command smoothing, contact events, all other Actor columns, P1/g, frozen Actor/own norm, masses, PD and failure criteria"
+        },
+        {
+          "path": ".reference_adapter.preserves",
+          "CB": "original leg/posture COM target, original support-COM-centering base trajectory, foot targets, body goal, all other packet columns, Actor/own norm, masses/limits/PD/guard",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.retained_filter",
+          "CB": null,
+          "B_only": "original reference.packet advances once; no second input/packet/features/Fz-filter update"
+        },
+        {
+          "path": ".reference_adapter.revision",
+          "CB": "cb-arm-home-delta-com-reference/1-after-P1-and-pose-servo",
+          "B_only": "cb-arm-articulated-com-reference/1-after-P1"
+        },
+        {
+          "path": ".reference_adapter.robot_bodies",
+          "CB": "actual base_link robot subtree; excludes static target and scene bodies",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.selected_reference",
+          "CB": null,
+          "B_only": "pure before walking launch and for static Body; joint after real walking launch"
+        },
+        {
+          "path": ".reference_adapter.semantic_scope",
+          "CB": "compensates only moving-arm configuration relative to home; does not replace original COM objective by current full-body offset",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.semantic_tradeoff",
+          "CB": null,
+          "B_only": "This removes independent COM-centering error caused by internal articulation. At matching actual/desired orientation, new COM error equals base position error. Original support-COM target is shifted; this is a changed reference contract, not a stability guarantee or a proved bug fix."
+        },
+        {
+          "path": ".reference_adapter.shadow",
+          "CB": "copy full actual integration state into private MjData; replace only six arm q with declared home; mj_forward only, zero integration",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.source",
+          "CB": "/home/user/isaac/capability_research/scripts/locomotion/cb_arm_reach_arm_delta.py",
+          "B_only": "/home/user/isaac/capability_research/scripts/locomotion/cb_arm_reach_reference.py"
+        },
+        {
+          "path": ".reference_adapter.state_write",
+          "CB": null,
+          "B_only": "only current ReferenceState COM clone and new packet COM columns; no refgen internal state, qpos, qvel, roots or actions written"
+        }
+      ]
+    },
+    {
+      "case": "height_roll_pitch",
+      "CB_reused": {
+        "run": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_static_support_v2/arm_height_roll_pitch_body_enabled",
+        "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+        "result_sha256": "f5a431b78eded6e3eadd7b9ba30803b4983b274a2e18e749e67c8474aaed10cc",
+        "contract_sha256": "869ff6fac631761da315019f133f4c493d04937de96af0067d40eff2bea5c20e",
+        "trace_sha256": "ada8f8ec1ec2bf41cdfa1c69e9341e7703646034804c04fae8cc299ed76398e0",
+        "support_log_sha256": "54397324b4985d105ad366ee51adcb135a277d3f7595f6c33186c28c9083f25e",
+        "motor_log_sha256": "b7f90cc2ac669cc9209e67bd8dde426dc0cad660023db20ed67c309c2a82a5ea",
+        "seconds": 16.0000000000011,
+        "qualified_touch": true,
+        "first_qualified_touch_s": 4.979999999999916,
+        "tip_min_m": 0.02233259686663268,
+        "maximum_nonfoot_force_N": 0.0,
+        "maximum_arm_self_contact_force_N": 0.0,
+        "target_m_deg": [
+          0.65,
+          6.000000000000001,
+          10.0
+        ],
+        "final_actual_m_deg": [
+          0.6496198773384094,
+          5.450324898695979,
+          9.29593612548519
+        ],
+        "final_error_m_deg": [
+          -0.0003801226615905984,
+          -0.5496751013040212,
+          -0.7040638745148093
+        ],
+        "windows": [
+          {
+            "interval_s": [
+              2.0,
+              6.0
+            ],
+            "samples": 201,
+            "body_RMS_m_deg": [
+              0.03224030186316198,
+              1.9625149310284706,
+              3.2889097874136026
+            ],
+            "tip_min_m": 0.02233259686663268,
+            "tool_max_force_N": 22.795688742348133,
+            "IK_error_max_m": null,
+            "IK_converged_count": 123,
+            "Actor_action_absmax": 1.595476508140564,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 3.812771446420329e-05,
+            "Actor_prior_RHS_absmax": 4.72275437799718e-05,
+            "geometry_RHS_norm_mean": 0.02900253727816139,
+            "Actor_q_minus_measured_absmax_rad": 0.7556407004795487,
+            "IK_delta_absmax_rad": 0.18000000000000002,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 9612,
+            "arm_rate_limited_axes": 261,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 4824,
+            "arm_qref_tracking_absmax_rad": 0.07043010730953941
+          },
+          {
+            "interval_s": [
+              14.0,
+              16.0
+            ],
+            "samples": 101,
+            "body_RMS_m_deg": [
+              0.0004711691486712051,
+              0.5504640110942642,
+              0.6993546336319632
+            ],
+            "tip_min_m": 0.022853725017450685,
+            "tool_max_force_N": 2.9344968200606365,
+            "IK_error_max_m": 0.00019873492813045774,
+            "IK_converged_count": 101,
+            "Actor_action_absmax": 1.5960910320281982,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 3.514134908535976e-05,
+            "Actor_prior_RHS_absmax": 1.9723263588128304e-05,
+            "geometry_RHS_norm_mean": 0.09189798371929976,
+            "Actor_q_minus_measured_absmax_rad": 0.3155722174100528,
+            "IK_delta_absmax_rad": 0.18,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 4800,
+            "arm_rate_limited_axes": 0,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 2424,
+            "arm_qref_tracking_absmax_rad": 0.01167838041329744
+          }
+        ]
+      },
+      "B_only_new": {
+        "run": "outputs/motor_interface/paper_demo_20261028/arm_ablation_static_extension_v3_20261029/height_roll_pitch/B_only",
+        "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+        "result_sha256": "727f030ff2086ffcd2f32993b33391866a3d3101e6e6f61eec6c4c75038b7da4",
+        "contract_sha256": "1b4dc702565428af20d67ba7b3a109b13c4dcec5c769eb9167f77b361f9a537b",
+        "trace_sha256": "85c5d35f5d42bad2a9be653d975cef3a8317f07bfa2bba477549373025bb6f0e",
+        "support_log_sha256": "3eb658ee1a63d10f522352a7ccea0301313a3b57c07c3a1c0e88592d8f91d47e",
+        "motor_log_sha256": "b869ef51402767c1175fb7213d222b353bda0346b8853bde930b6ae2c6b6894a",
+        "seconds": 16.0000000000011,
+        "qualified_touch": false,
+        "first_qualified_touch_s": null,
+        "tip_min_m": 0.021943979843968855,
+        "maximum_nonfoot_force_N": 0.0,
+        "maximum_arm_self_contact_force_N": 0.0,
+        "target_m_deg": [
+          0.65,
+          6.000000000000001,
+          10.0
+        ],
+        "final_actual_m_deg": [
+          0.6252424120903015,
+          5.550562620520971,
+          9.738464935583963
+        ],
+        "final_error_m_deg": [
+          -0.02475758790969851,
+          -0.4494373794790297,
+          -0.26153506441603697
+        ],
+        "windows": [
+          {
+            "interval_s": [
+              2.0,
+              6.0
+            ],
+            "samples": 201,
+            "body_RMS_m_deg": [
+              0.04002324359034933,
+              1.9507778294579814,
+              3.186273437639897
+            ],
+            "tip_min_m": 0.021943979843968855,
+            "tool_max_force_N": 115.91219459400885,
+            "IK_error_max_m": null,
+            "IK_converged_count": 116,
+            "Actor_action_absmax": 1.516002893447876,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 5.669384378302088e-05,
+            "Actor_prior_RHS_absmax": 4.291723902522826e-05,
+            "geometry_RHS_norm_mean": 0.02583287765848148,
+            "Actor_q_minus_measured_absmax_rad": 0.686675824403652,
+            "IK_delta_absmax_rad": 0.18,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 9612,
+            "arm_rate_limited_axes": 272,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 4824,
+            "arm_qref_tracking_absmax_rad": 0.09957584247798312
+          },
+          {
+            "interval_s": [
+              14.0,
+              16.0
+            ],
+            "samples": 101,
+            "body_RMS_m_deg": [
+              0.02475397713167219,
+              0.4483399860268825,
+              0.25789615669377336
+            ],
+            "tip_min_m": 0.022951429566616974,
+            "tool_max_force_N": 3.2252338993146825,
+            "IK_error_max_m": 0.0001995671560138612,
+            "IK_converged_count": 101,
+            "Actor_action_absmax": 1.5150431394577026,
+            "Actor_action_at3_axes": 0,
+            "Actor_prior_RHS_norm_mean": 5.84534856616703e-05,
+            "Actor_prior_RHS_absmax": 3.500604297219886e-05,
+            "geometry_RHS_norm_mean": 0.06083085674832122,
+            "Actor_q_minus_measured_absmax_rad": 0.5600966875551816,
+            "IK_delta_absmax_rad": 0.18,
+            "leg_motor_saturated_axes": 0,
+            "leg_motor_axis_samples": 4800,
+            "arm_rate_limited_axes": 0,
+            "arm_joint_limit_qref_axes": 0,
+            "arm_motor_saturated_substep_axes": 0,
+            "arm_motor_substep_axis_denominator": 2424,
+            "arm_qref_tracking_absmax_rad": 0.009917123523992433
+          }
+        ]
+      },
+      "shared_contract_equal": false,
+      "same_requested_B": true,
+      "same_tool_geometry": true,
+      "same_asset_sha256": true,
+      "same_target_world": true,
+      "shared_contract_differences": [
+        {
+          "path": ".pose_servo.enabled",
+          "CB": true,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.COM_reference",
+          "CB": "original P1 COM reference + task-pose-servo correction + desired_delta",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.COM_velocity",
+          "CB": "original P1 COM velocity + task-pose-servo derivative + finite difference desired_delta/.02",
+          "B_only": "finite difference of consecutive desired COM at the real .02s control clock; first previous value is installation-time actual COM"
+        },
+        {
+          "path": ".reference_adapter.actor_parameters_changed",
+          "CB": null,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.arm_home_rad",
+          "CB": [
+            0.0,
+            1.57079632679,
+            -3.03687289847,
+            0.0,
+            -0.157079632679,
+            0.0174532925199
+          ],
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.compatibility",
+          "CB": null,
+          "B_only": "current pure/joint BodyReference only; no general support-transfer/QP reference substitution claimed"
+        },
+        {
+          "path": ".reference_adapter.current_configuration",
+          "CB": "actual base, legs and non-arm joints identical in actual/shadow",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.delta_local",
+          "CB": "Ractual^T*(COMactual-COMshadowHome)",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.desired_COM",
+          "CB": null,
+          "B_only": "applied_base_ref + Rdesired*current_local_COM; applied pose includes original P1 correction"
+        },
+        {
+          "path": ".reference_adapter.desired_delta",
+          "CB": "Rdesired*delta_local",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.enabled",
+          "CB": true,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.future_outcome_inputs",
+          "CB": null,
+          "B_only": false
+        },
+        {
+          "path": ".reference_adapter.initialization",
+          "CB": "arm at home, previous desired_delta=0; no initial finite-difference COM-position rebasing pulse",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.insertion",
+          "CB": "original P1 -> optional existing task pose servo -> arm-only COM delta -> original planned-g -> same frozen Actor",
+          "B_only": "original P1.apply exactly once -> selected-reference COM reconstruction -> original planned-g -> same frozen Actor"
+        },
+        {
+          "path": ".reference_adapter.local_COM",
+          "CB": null,
+          "B_only": "Ractual^T*(actual full-robot COM - actual base), using every actual robot link mass including arm"
+        },
+        {
+          "path": ".reference_adapter.mode",
+          "CB": "arm_delta",
+          "B_only": "off"
+        },
+        {
+          "path": ".reference_adapter.no_guarantee",
+          "CB": "measured arm shape enters COM reference; no proof of stability, static XY retention or successful contact; actual failure checks unchanged",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.physical_integration_steps",
+          "CB": 0,
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.preserved",
+          "CB": null,
+          "B_only": "original base/foot references, body command smoothing, contact events, all other Actor columns, P1/g, frozen Actor/own norm, masses, PD and failure criteria"
+        },
+        {
+          "path": ".reference_adapter.preserves",
+          "CB": "original leg/posture COM target, original support-COM-centering base trajectory, foot targets, body goal, all other packet columns, Actor/own norm, masses/limits/PD/guard",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.retained_filter",
+          "CB": null,
+          "B_only": "original reference.packet advances once; no second input/packet/features/Fz-filter update"
+        },
+        {
+          "path": ".reference_adapter.revision",
+          "CB": "cb-arm-home-delta-com-reference/1-after-P1-and-pose-servo",
+          "B_only": "cb-arm-articulated-com-reference/1-after-P1"
+        },
+        {
+          "path": ".reference_adapter.robot_bodies",
+          "CB": "actual base_link robot subtree; excludes static target and scene bodies",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.selected_reference",
+          "CB": null,
+          "B_only": "pure before walking launch and for static Body; joint after real walking launch"
+        },
+        {
+          "path": ".reference_adapter.semantic_scope",
+          "CB": "compensates only moving-arm configuration relative to home; does not replace original COM objective by current full-body offset",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.semantic_tradeoff",
+          "CB": null,
+          "B_only": "This removes independent COM-centering error caused by internal articulation. At matching actual/desired orientation, new COM error equals base position error. Original support-COM target is shifted; this is a changed reference contract, not a stability guarantee or a proved bug fix."
+        },
+        {
+          "path": ".reference_adapter.shadow",
+          "CB": "copy full actual integration state into private MjData; replace only six arm q with declared home; mj_forward only, zero integration",
+          "B_only": null
+        },
+        {
+          "path": ".reference_adapter.source",
+          "CB": "/home/user/isaac/capability_research/scripts/locomotion/cb_arm_reach_arm_delta.py",
+          "B_only": "/home/user/isaac/capability_research/scripts/locomotion/cb_arm_reach_reference.py"
+        },
+        {
+          "path": ".reference_adapter.state_write",
+          "CB": null,
+          "B_only": "only current ReferenceState COM clone and new packet COM columns; no refgen internal state, qpos, qvel, roots or actions written"
+        }
+      ]
+    }
+  ],
+  "moving_C0": {
+    "result": {
+      "schema": "arm-body-reach-episode-result/3",
+      "tool_contact_mode": "gripper",
+      "COM_reference_mode": "original",
+      "contact_preload_mm": 2.0,
+      "case": "moving_height",
+      "condition": "body_enabled",
+      "PPO_updates": 0,
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "status": "time_limit",
+      "simulated_seconds": 16.0000000000011,
+      "planned_seconds": 16.0,
+      "controls": 800,
+      "actual_arm_mass_kg": 10.160500030000001,
+      "actual_robot_mass_kg": 83.90680012999997,
+      "first_tool_contact_s": null,
+      "first_qualified_touch_s": null,
+      "maximum_tool_contact_duration_s": 0.0,
+      "maximum_qualified_touch_duration_s": 0.0,
+      "qualified_touch": false,
+      "moving_continuity": null,
+      "minimum_tip_target_distance_m": 0.5166101655094646,
+      "maximum_nonfoot_force_N": 0.0,
+      "maximum_arm_self_contact_force_N": 0.0,
+      "global_static_XY_within_5cm": null,
+      "final_body_m_rad": [
+        0.6366166472434998,
+        0.0002817960921674967,
+        -0.009911248460412025
+      ],
+      "final_root": [
+        -0.02170189842581749,
+        -0.001739288680255413,
+        0.6366166472434998
+      ],
+      "maximum_static_root_XY_drift_m": 0.0256954492534537,
+      "actual_distance_x_m": -0.02170189794563095,
+      "original_sources_unchanged": true,
+      "model_norm_delta": 0,
+      "wall_seconds": 8.352704216027632,
+      "scope": "Finite actual dynamic execution; target contact is physical, same model/arm controller; no pose teleport/no policy training."
+    },
+    "result_sha256": "96e8fc1fd9f317171e0b8ebc4d4db989b7c48577a93eb02f9cac8d4ea4d7e6ce",
+    "contract_sha256": "6d5b9d7fca7d0650fd756a9fd90ac74db745945b65194a35024032ef40c96f97",
+    "score_not_redefined": true,
+    "Contact_route_deleted": true
+  },
+  "causal_limit": "Two frozen learned Actor priors differ under same public static IK/SRB-QP. Nonzero prior and saturation are observed covariates,not a no-prior intervention;cannot uniquely attribute failure to prior. No target/toolradius/score edits or retries.",
+  "PPO_updates": 0
+}

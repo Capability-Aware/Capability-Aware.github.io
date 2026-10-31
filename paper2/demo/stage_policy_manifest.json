@@ -1,0 +1,409 @@
+{
+  "schema": "e469-partial-coverage-stage-artifact/1",
+  "status": "STAGE_CANDIDATE_NOT_ALL18_FINAL",
+  "created_utc": "2026-10-29T03:15:38.129308+00:00",
+  "raw_checkpoint": {
+    "path": "policy_full_raw.pt",
+    "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+    "bytes": 10967003,
+    "original_payload_preserved": true,
+    "contains": [
+      "Actor",
+      "Critic",
+      "normalization",
+      "log_std",
+      "Adam",
+      "learning_rate",
+      "four_RNG",
+      "training_contract",
+      "counters"
+    ]
+  },
+  "loader": {
+    "source": "scripts/locomotion/paper_demo_e469_stage_loader_v1.py",
+    "sha256": "ab1214dadc80960c8ea7afdd0eadf2ecfd581bd458727e35c9a6539e1d0e5002",
+    "input_dimensions": 217,
+    "output_dimensions": 12,
+    "mean_actions": true,
+    "PT_loads": 1,
+    "ancestor_PT_loads": 0,
+    "actual_CPU_parity_evidence": "docs/evidence/paper_demo_formal_CB11650_20261028/e469_stage_loader_actual_cpu_20261029.json",
+    "actual_CPU_parity_sha256": "a2942b3388b4716cdab03a5adfede42f0e5775614d460e9a3d1e8eb6a57a0645"
+  },
+  "coverage_at_selection": {
+    "card_positions": 18,
+    "complete": 8,
+    "partial": 5,
+    "pending": 5,
+    "unknown": 0,
+    "cards_with_actual_result": 13,
+    "unique_complete_physical_profiles": 7,
+    "complete_positions_share_one_speed5_run": true,
+    "original_Body_jobs_pending": 8,
+    "formal_media": 0,
+    "formal_media_denominator": 18,
+    "ablation_media": 0,
+    "ablation_media_denominator": 6
+  },
+  "profiles": {
+    "5457122def61": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/pillars_full75",
+      "local_profile": "profiles/5457122def61",
+      "files": {
+        "contract": {
+          "path": "profiles/5457122def61/contract.json",
+          "sha256": "76a18f743a9d121ff16cdd442dd66239e86a5660b24fb59b191c49868eed8e11",
+          "bytes": 296481
+        },
+        "result": {
+          "path": "profiles/5457122def61/result.json",
+          "sha256": "7cc22f09510207d03bd597cfd29e3db99e807f3930ce20e58e6d559e93125b0c",
+          "bytes": 10451
+        }
+      }
+    },
+    "3a6077c14a78": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/open_v6_edge_height_hold_full120_v2",
+      "local_profile": "profiles/3a6077c14a78",
+      "files": {
+        "contract": {
+          "path": "profiles/3a6077c14a78/contract.json",
+          "sha256": "67fdec07e5bd35659936a08fa64cdfa608d62e2d85579a86715714cb449f1e69",
+          "bytes": 269370
+        },
+        "result": {
+          "path": "profiles/3a6077c14a78/result.json",
+          "sha256": "c18d4042c2f021c2bd7af93b432cea2b15568061a5cb86afbe1732fc185c80bc",
+          "bytes": 34820
+        }
+      }
+    },
+    "fca5b25f8446": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed5_route_confirmed_gfade_raw_v7",
+      "local_profile": "profiles/fca5b25f8446",
+      "files": {
+        "contract": {
+          "path": "profiles/fca5b25f8446/contract.json",
+          "sha256": "9de0b84ccfcc80a8969e47f105b66f4c29d8a654d69702f1f1a2fa9e5a74a68b",
+          "bytes": 93761
+        },
+        "result": {
+          "path": "profiles/fca5b25f8446/result.json",
+          "sha256": "867669689009fd5c0a3bd9b698977b6ec394f375a21ff3d5bc2faf2184406c53",
+          "bytes": 29084
+        }
+      }
+    },
+    "31b030e74eda": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_fixed_body",
+      "local_profile": "profiles/31b030e74eda",
+      "files": {
+        "contract": {
+          "path": "profiles/31b030e74eda/contract.json",
+          "sha256": "c907f516976f77fbcb4b231a90d39fa327c2d520b6a7bf636c8509c23cb3a200",
+          "bytes": 109353
+        },
+        "result": {
+          "path": "profiles/31b030e74eda/result.json",
+          "sha256": "296d2c6e21cc913cc9f1ef4e062b842deea589ff873777483d1ca9f02c512200",
+          "bytes": 1440
+        }
+      }
+    },
+    "540805b6f01a": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_body_enabled",
+      "local_profile": "profiles/540805b6f01a",
+      "files": {
+        "contract": {
+          "path": "profiles/540805b6f01a/contract.json",
+          "sha256": "65b8436907a66fb76f7c6ac3ef2cb96a1986179c85f4a269b6b4b3c6ba73965b",
+          "bytes": 109357
+        },
+        "result": {
+          "path": "profiles/540805b6f01a/result.json",
+          "sha256": "96be10842b86c61a9391a54048498bc5c742735fbf5c4e4feb95c5b7746e0847",
+          "bytes": 1473
+        }
+      }
+    },
+    "83776d45d3a2": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_fixed_body",
+      "local_profile": "profiles/83776d45d3a2",
+      "files": {
+        "contract": {
+          "path": "profiles/83776d45d3a2/contract.json",
+          "sha256": "4c3812368e1f1dabbcf63f64405f0efc559399d0d629668ce4b6ae0ea416e400",
+          "bytes": 109531
+        },
+        "result": {
+          "path": "profiles/83776d45d3a2/result.json",
+          "sha256": "84558580dc1de1b11ce4554555f55fa424829aba5f2afb8b8d8e1f8ddc35ab9a",
+          "bytes": 1437
+        }
+      }
+    },
+    "bc26a826c998": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_roll_body_enabled",
+      "local_profile": "profiles/bc26a826c998",
+      "files": {
+        "contract": {
+          "path": "profiles/bc26a826c998/contract.json",
+          "sha256": "670ff65bbf4a1e3e596eba96c65ff71bfd6baed4c7984378a8c044ca62b5e31b",
+          "bytes": 109551
+        },
+        "result": {
+          "path": "profiles/bc26a826c998/result.json",
+          "sha256": "7bdb2e9ca2726db28f8cb50bc52e2639030618fb69df1b3db0ddeb9bcc8a7ea5",
+          "bytes": 1460
+        }
+      }
+    },
+    "fd0a90dfd13a": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_fixed_body",
+      "local_profile": "profiles/fd0a90dfd13a",
+      "files": {
+        "contract": {
+          "path": "profiles/fd0a90dfd13a/contract.json",
+          "sha256": "d0abf5bdb1d83e36350acc64a194d1ee0f00dd767a353217641253f87f941d74",
+          "bytes": 109551
+        },
+        "result": {
+          "path": "profiles/fd0a90dfd13a/result.json",
+          "sha256": "fcc557480ba2d740c68628de64a24756c658a259170e7b8e632b747bb18d08cd",
+          "bytes": 1442
+        }
+      }
+    },
+    "5c86fac5e076": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_pitch_body_enabled",
+      "local_profile": "profiles/5c86fac5e076",
+      "files": {
+        "contract": {
+          "path": "profiles/5c86fac5e076/contract.json",
+          "sha256": "e118fffcffd56622ca8bacc2c2c9c199a4e8663d1c8879273d5a78b5d0992350",
+          "bytes": 109571
+        },
+        "result": {
+          "path": "profiles/5c86fac5e076/result.json",
+          "sha256": "e9085425002ebfb77e666c3ec8b5ab1ce628e803d50880fd76384cf05baf8eb6",
+          "bytes": 1470
+        }
+      }
+    },
+    "4b55fa80d7a5": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_fixed_body",
+      "local_profile": "profiles/4b55fa80d7a5",
+      "files": {
+        "contract": {
+          "path": "profiles/4b55fa80d7a5/contract.json",
+          "sha256": "3ca2dd2528f8e07633bb305b8cbf9ad088ade9f84b59a3e83beb842e742e51c3",
+          "bytes": 109830
+        },
+        "result": {
+          "path": "profiles/4b55fa80d7a5/result.json",
+          "sha256": "2b0e4724f1eddd31e6779dc2753e38864a87707cbb88b90ab2ea1936e4ac80b6",
+          "bytes": 1451
+        }
+      }
+    },
+    "4b6f8f8e3b18": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_height_roll_pitch_body_enabled",
+      "local_profile": "profiles/4b6f8f8e3b18",
+      "files": {
+        "contract": {
+          "path": "profiles/4b6f8f8e3b18/contract.json",
+          "sha256": "b2bf69f44b325f1f61f0ef7559242e00271483f8dc3e0dac8ff12e073bea8954",
+          "bytes": 109866
+        },
+        "result": {
+          "path": "profiles/4b6f8f8e3b18/result.json",
+          "sha256": "dd253b7b7dd618c9acd3f7acd8609e2dabcafb96a222a95595fc514320f1a9d3",
+          "bytes": 1481
+        }
+      }
+    },
+    "f7637ac92b88": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_fixed_body",
+      "local_profile": "profiles/f7637ac92b88",
+      "files": {
+        "contract": {
+          "path": "profiles/f7637ac92b88/contract.json",
+          "sha256": "cc9be1c8eb34ec3876c7c3911680be12873d095e9c9536437cbba7195effa9cf",
+          "bytes": 110870
+        },
+        "result": {
+          "path": "profiles/f7637ac92b88/result.json",
+          "sha256": "7ae569b7725fd566e638914769cb0fbee3a9884a9eb53698d1fbf10a0d12cb32",
+          "bytes": 1443
+        }
+      }
+    },
+    "ef60463cce69": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/arm_moving_height_body_enabled",
+      "local_profile": "profiles/ef60463cce69",
+      "files": {
+        "contract": {
+          "path": "profiles/ef60463cce69/contract.json",
+          "sha256": "3b643fdf1e1df7a6064ec61c616e0299f38bd82df0560475d5a6cb0ce33c2f8a",
+          "bytes": 110874
+        },
+        "result": {
+          "path": "profiles/ef60463cce69/result.json",
+          "sha256": "0c1976938ff7dfea3339c96a26236afcea6e89ec345efb071e0a8d2b195f957c",
+          "bytes": 2050
+        }
+      }
+    },
+    "6b89ea454cc5": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h055",
+      "local_profile": "profiles/6b89ea454cc5",
+      "files": {
+        "contract": {
+          "path": "profiles/6b89ea454cc5/contract.json",
+          "sha256": "7fae556a16c3d487dee6c8cae5a700b2a4bf351b6139333fb8823da4bc85c757",
+          "bytes": 98602
+        },
+        "result": {
+          "path": "profiles/6b89ea454cc5/result.json",
+          "sha256": "bde1068eac3ed14f4f44856247e8ad304335021854ef4d4c76566bc0b0605f49",
+          "bytes": 1934
+        }
+      }
+    },
+    "60ce60aab719": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/CB11650_arm_ceiling_raw_v1/ceiling_CB_h035",
+      "local_profile": "profiles/60ce60aab719",
+      "files": {
+        "contract": {
+          "path": "profiles/60ce60aab719/contract.json",
+          "sha256": "f2471179ad2868aaca2a1cdbc8de8437b709d14e5022b33b71959f418d43919f",
+          "bytes": 98598
+        },
+        "result": {
+          "path": "profiles/60ce60aab719/result.json",
+          "sha256": "d6091adff538d70f3396c0a8650e66128f71c9e425a8c7bd20b81c6bda65f7d4",
+          "bytes": 1894
+        }
+      }
+    },
+    "981a8c50673f": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/joint_changes_raw_v1",
+      "local_profile": "profiles/981a8c50673f",
+      "files": {
+        "contract": {
+          "path": "profiles/981a8c50673f/contract.json",
+          "sha256": "21a9d7c9ee39df535f98ab61323d8c7f08981a634dbc06eaba336e83b5ffcb85",
+          "bytes": 38384
+        },
+        "result": {
+          "path": "profiles/981a8c50673f/result.json",
+          "sha256": "b9ab1ae216748de23b6b5af8d43e730a91352b04ea89354faa442fe238972afb",
+          "bytes": 83899
+        }
+      }
+    },
+    "2c05d570fcce": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/beam_full180",
+      "local_profile": "profiles/2c05d570fcce",
+      "files": {
+        "contract": {
+          "path": "profiles/2c05d570fcce/contract.json",
+          "sha256": "fad1937ee5cd995c7c225179673a6df18b3e61730bbb4a83fd51ad623401be1f",
+          "bytes": 154172
+        },
+        "result": {
+          "path": "profiles/2c05d570fcce/result.json",
+          "sha256": "e2fbe1e8237c3e8993bc39efe945ce6c03126a733977dc55e2e48195be9c1e19",
+          "bytes": 19842
+        }
+      }
+    },
+    "ff71ab06d4b7": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1",
+      "local_profile": "profiles/ff71ab06d4b7",
+      "files": {
+        "contract": {
+          "path": "profiles/ff71ab06d4b7/contract.json",
+          "sha256": "5cb14cd0c2ed17b8ece3c525a59fdf5b7c0a1a0b305c1dd5b167687837487b4f",
+          "bytes": 98273
+        },
+        "result": {
+          "path": "profiles/ff71ab06d4b7/result.json",
+          "sha256": "916b39c9a8261c32cc0287859ea1b0fa80d4f462dcded9854cceba85c2d2c939",
+          "bytes": 20114
+        }
+      }
+    },
+    "d8c2c79ca83f": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed05_raw_v2_typed_output",
+      "local_profile": "profiles/d8c2c79ca83f",
+      "files": {
+        "contract": {
+          "path": "profiles/d8c2c79ca83f/contract.json",
+          "sha256": "f54cd41b79e4f7a8d19908ab5b1aa343df7b1ae5cc0cffe47c51552239c141d1",
+          "bytes": 133701
+        },
+        "result": {
+          "path": "profiles/d8c2c79ca83f/result.json",
+          "sha256": "a9407c7f134f85dd0dce8e8fa620ff845de01cf0338d327373b8cbef0b8402fc",
+          "bytes": 4352
+        }
+      }
+    },
+    "b457cdb2fb2e": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed1_raw_v3_exact_MRO",
+      "local_profile": "profiles/b457cdb2fb2e",
+      "files": {
+        "contract": {
+          "path": "profiles/b457cdb2fb2e/contract.json",
+          "sha256": "88364d7a3faa018dae173522bae3c42a69f1b4006e6f8aa0d7e5a518fb7ff0c8",
+          "bytes": 162550
+        },
+        "result": {
+          "path": "profiles/b457cdb2fb2e/result.json",
+          "sha256": "c51ca58379afa1dca4731e78af92aab7def605b9c5dee7dbf62052f238840835",
+          "bytes": 5531
+        }
+      }
+    },
+    "4293cc0b37d1": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/speed3_route_confirmed_gfade_raw_v7",
+      "local_profile": "profiles/4293cc0b37d1",
+      "files": {
+        "contract": {
+          "path": "profiles/4293cc0b37d1/contract.json",
+          "sha256": "38cd3ed94b13c38a5dcd04882a779b503b1f3ce50d01080811f497ce0ff5774d",
+          "bytes": 93760
+        },
+        "result": {
+          "path": "profiles/4293cc0b37d1/result.json",
+          "sha256": "a515d296bad909f02cc02bb2c14a6e9a5f18fd05a8c9a2b593165d7e660d35cd",
+          "bytes": 29095
+        }
+      }
+    },
+    "74c6cf33248c": {
+      "original_output": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/stairs15_full240",
+      "local_profile": "profiles/74c6cf33248c",
+      "files": {
+        "contract": {
+          "path": "profiles/74c6cf33248c/contract.json",
+          "sha256": "b90eb6113c6be0d8511e973d42906286d4eefe4c1c333aa90ea7fad206eeb661",
+          "bytes": 196534
+        },
+        "result": {
+          "path": "profiles/74c6cf33248c/result.json",
+          "sha256": "a6f78ce084b9f8b0df0c47b603498a3fec7eafadffc0ee52fc873c1fbd4433b3",
+          "bytes": 20054
+        }
+      }
+    }
+  },
+  "physical_contract": {
+    "path": "physical_contract.json",
+    "sha256": "551d990a757a082df1b894206cf0ead92173d38890c6d649e679d01313ea695f"
+  },
+  "execution": "同一Actor；各profile保留公开参考、时序和电机执行。复杂地形含IK/WBC、带臂含ArmIK及姿态/COM反馈，非所有视频裸Actor。",
+  "formal_all18_selected": false,
+  "old_display_unchanged": true
+}

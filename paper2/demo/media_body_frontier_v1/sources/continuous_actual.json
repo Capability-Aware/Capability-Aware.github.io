@@ -1,0 +1,904 @@
+{
+  "status": "ACTUAL_TEN_CONTINUOUS_RUNS_NOT_SPLICED",
+  "rows": [
+    {
+      "stage": "frontierV2",
+      "task": "body_height",
+      "group": "CB",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_height/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "2d1b733089391725d5168424601ab85c2556725bca12a43e3680b7f49f684b4b",
+      "contract_sha256": "92979192521cd636f313d61e5333a8bf0626af05e79e2c35814a0b46832933ed",
+      "registered_contract_sha256": "e26abf0d187341e3f90e68005ddf64ba5a306c86c9687f95d68d3b761735ad8f",
+      "trace_sha256": "cbac7ceb761131f730a581adbdb760b4d7add32e898a76d9ec33df8f4e563325",
+      "display_sha256": "5184c9147a9abcfbc10fd035a32e4f298a1f0c8f108d23b93d36112067ea7a0f",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": false,
+      "net_displacement_m": [
+        -0.0012350572505965829,
+        3.579371696105227e-05,
+        -0.046331942081451416
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8066231999873055,
+            0.00428350814659311,
+            0.10864446924662137
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            4.9828545856508235,
+            0.025344773812376112,
+            0.8917593996248505
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.7,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            10.044150812485537,
+            0.005436379436976536,
+            0.032634363540147364
+          ],
+          "Body_pass": false
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            1.4060853199884658,
+            0.003558740802832681,
+            0.17668991318722688
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "frontierV2",
+      "task": "body_height",
+      "group": "B_only",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_height/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "1e9b945a43dbfe651ae984fd0736c8c4df59d4e74dbf044f1ec6db345f4c6cf3",
+      "contract_sha256": "aa401ed4f64ca37e679ae8639df37e73166f3e1b74c0b543ae2685aa01284bce",
+      "registered_contract_sha256": "96fa9a147c7847c0d4b6a9db67e2dc945ed8de81eff4d05e588afc08eb340ce5",
+      "trace_sha256": "3e8cef5e79c92c1a5df4004aa54d38c146f22b7934580d485b14dddab67d7f7a",
+      "display_sha256": "6be75f626dd4ec6dd32a5f93e0b392c23255b233fc838998e18d863c5cc60d7e",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": false,
+      "net_displacement_m": [
+        -0.0011767976684495807,
+        6.330840551527217e-05,
+        -0.04636627435684204
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8386252989849328,
+            0.005982119277118309,
+            0.11955851167842836
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            4.9725461830385145,
+            0.023572262964025734,
+            0.8894674008589707
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.7,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            10.01843795070695,
+            0.00791836279175651,
+            0.034921676379629125
+          ],
+          "Body_pass": false
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            1.4358593460074573,
+            0.004887286067763443,
+            0.18806593835679616
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "frontierV2",
+      "task": "body_roll",
+      "group": "CB",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "aa5930fbdda953026703c589fc689b173dc55cd807812c4cc45652d9384bec5a",
+      "contract_sha256": "3256dada0b90d65f09eeece729e1d4df7fa2236b57786ed285ab5232f384a8c3",
+      "registered_contract_sha256": "7c9000a93681746aef50340e37851b510c3ca6cc573aa2dcd9e74f2cf52d10ff",
+      "trace_sha256": "44a65c16f564b7ba7bc67ed80d712debb28ab5ce6377bf21a391ba97d25e66af",
+      "display_sha256": "87e6f67c6e199cac613653a330ac087ce141780ddb258d47fddf05b02147c0eb",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": true,
+      "net_displacement_m": [
+        5.1507151511032134e-05,
+        1.5741157767479308e-05,
+        -0.047419965267181396
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8066231999873055,
+            0.00428350814659311,
+            0.10864446924662137
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.55,
+            40.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            6.0836174611326195,
+            1.7508699488460917,
+            0.43340503815336623
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.55,
+            -40.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.4710503696441273,
+            1.2799409214575146,
+            0.06937050627436055
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.24836937812776,
+            0.5473985089240703,
+            0.10868997911737635
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "frontierV2",
+      "task": "body_roll",
+      "group": "B_only",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "1abe36aa2e5c2acc959710d81a10b57b0b4cd2edd9e04314ca1d486a9d879c48",
+      "contract_sha256": "d31089c959933a734250ca1d2fa3b047a3f9f02f2b1fb09f287145c3f4c6062b",
+      "registered_contract_sha256": "20113baa781a413e3feb7231ab3594a38c3bdd3904a6fd1db909e3c4166f4457",
+      "trace_sha256": "662da7513809f30659c6da3c8c500e3a2056cf857d15a5d64923526a88f49b21",
+      "display_sha256": "21f69e43a2bdbdc8af412ea2da1eb1984a9ceff204f1887c9494f2b349ed0494",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": true,
+      "net_displacement_m": [
+        0.00010829513485077769,
+        5.236648939899169e-05,
+        -0.047453880310058594
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8386252989849328,
+            0.005982119277118309,
+            0.11955851167842836
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.55,
+            40.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            6.095919879608381,
+            1.746225248660368,
+            0.4348979636616098
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.55,
+            -40.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.4838191991343304,
+            1.2849480210369904,
+            0.06997001216549069
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.284272312923899,
+            0.5505011627669837,
+            0.12099986826423935
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "frontierV2",
+      "task": "body_pitch",
+      "group": "CB",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_pitch/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "292f6018c7811dde95f22bdd2d13b05ae3773fcc5f628974ada5dc0436801cd2",
+      "contract_sha256": "afaa81b5eb6164176c209f5336cf695ef46c46fa17991d6979301906327f1950",
+      "registered_contract_sha256": "b4016d197970343d0b13ccbb615a5ef60ae16874a6d47e1b92d468d504ad4e61",
+      "trace_sha256": "03504a6f1a0611a6d8e38f07ee5f01a7974086eb0196daa9eadf1ac705e78097",
+      "display_sha256": "ac98886d4c99213a881554e035a15fc0c6e646ed680ed102519927c7d7c438ad",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": false,
+      "net_displacement_m": [
+        0.00042784324614331126,
+        3.376486347406171e-05,
+        -0.04754120111465454
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8066231999873055,
+            0.00428350814659311,
+            0.10864446924662137
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.55,
+            0.0,
+            30.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.030301709347325,
+            0.010122213594011392,
+            0.9283004356355442
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.55,
+            0.0,
+            -30.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            0.7403996844759184,
+            0.024105264571256155,
+            2.1097415183067145
+          ],
+          "Body_pass": false
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.436430073488556,
+            0.003490823892668759,
+            0.3506245409713389
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "frontierV2",
+      "task": "body_pitch",
+      "group": "B_only",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_pitch/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "1473ee213e587d31ff8cd55e6e2dab0c556edcc9fb07e75dcfaf3964de4029a1",
+      "contract_sha256": "161e0c9f9dd03e7f2e8b39a40e1327c9f61d0884bf0c15baec789c9eedbbaa81",
+      "registered_contract_sha256": "4ac303f457355fca1b8ef6fb0f479e26cb340c9f936a33a5988008e918d51b65",
+      "trace_sha256": "43022afe90850bdff8eb043a7939c96bb06a44333f72279d6714f2d32e4117b8",
+      "display_sha256": "1ff731183c03cf0cdbe1735b90d0194b73742e746353f520548494b1c565ac2f",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": false,
+      "net_displacement_m": [
+        0.0004813119303435087,
+        6.080014645704068e-05,
+        -0.047574758529663086
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8386252989849328,
+            0.005982119277118309,
+            0.11955851167842836
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.55,
+            0.0,
+            30.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.0233765073878534,
+            0.005289181992191236,
+            0.9303082244055874
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.55,
+            0.0,
+            -30.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            0.7165521984438395,
+            0.041638336045808,
+            2.1107654592860166
+          ],
+          "Body_pass": false
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.4712018999924017,
+            0.006285492425521072,
+            0.3403703954713291
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "marginV3",
+      "task": "body_height",
+      "group": "CB",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "872597828ad697bb863d75f439d37d107038cd6b7cc3bc62db331418106e7363",
+      "contract_sha256": "1ba0a2ad100443dd5fc8a28948dbc85193e912e263f558ddf5d961afff95e879",
+      "registered_contract_sha256": "2668a1b411871b3433536801aa3c0572c1293fd8264796b57fdeb0570406d402",
+      "trace_sha256": "140783790acb61650424ab2d31d4e62af21863b7e4a69255417877c770a59d8c",
+      "display_sha256": "400d384ce83c3fe3dab08dee8150d340376cb59c958013e4233df556fa07321d",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": true,
+      "net_displacement_m": [
+        -0.0014227870851755142,
+        2.9137692763470113e-05,
+        -0.04644805192947388
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8066231999873055,
+            0.00428350814659311,
+            0.10864446924662137
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            4.9828545856508235,
+            0.025344773812376112,
+            0.8917593996248505
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.68,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            9.543142530073762,
+            0.0023739243297685015,
+            0.021307906879112975
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            1.5874464008984952,
+            0.004561453403461896,
+            0.18812141927961537
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "marginV3",
+      "task": "body_height",
+      "group": "B_only",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "a153ab9f3a426dbd88da81d66b1b3d36fb2350a17c254be68479455252da1959",
+      "contract_sha256": "1a3d875fea5ddfa07fe5ad06a0f296cb39cd4baf7e6267ad96c5769df9cd240f",
+      "registered_contract_sha256": "61997a33505c2c288f246ff073e7b5d3a06c97d6e4cded9acf43bd4a42ee49da",
+      "trace_sha256": "a93596780d620ac78281bfb52f6673c1584c781b68368240e9972f4213b1ffa4",
+      "display_sha256": "4fa0dcb14febd13a247f5f3cc8cd59674dc4bf55abe05cfc2891589fd04990be",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": true,
+      "net_displacement_m": [
+        -0.0013690320774912834,
+        5.549485649680719e-05,
+        -0.046481192111968994
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8386252989849328,
+            0.005982119277118309,
+            0.11955851167842836
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.2,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            4.9725461830385145,
+            0.023572262964025734,
+            0.8894674008589707
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.68,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            9.516705690931447,
+            0.005524388523560655,
+            0.022880500843037797
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            1.618860989141509,
+            0.0058785652066303765,
+            0.19968604762402956
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "marginV3",
+      "task": "body_pitch",
+      "group": "CB",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "62fbb061ed053388af062d2c3f715a522ef89875887c0070f4d39ab5f26c1a0a",
+      "contract_sha256": "fdc2f424496ce1ee657278bdb79e049ae3f565d210e1eb2a8cedf43dceedc950",
+      "registered_contract_sha256": "d10b311040bb794c425033cf1522de1e2573a6a8f1b09e9965aad8917ba60033",
+      "trace_sha256": "a02df6ec54fd958ad752c0b359fcb5eb3d4c527d2537d688831e99da463ac947",
+      "display_sha256": "b271f0628bc9ddc042432ea28632c3f5cf2d0d2f7f6424666468a62df3f5a02c",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": true,
+      "net_displacement_m": [
+        -8.354352758033201e-06,
+        0.00017592716903891414,
+        -0.04749101400375366
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8066231999873055,
+            0.00428350814659311,
+            0.10864446924662137
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.55,
+            0.0,
+            28.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            1.2817506234820617,
+            0.008786028784579092,
+            0.6617800928262464
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.55,
+            0.0,
+            -28.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            0.3825099029457154,
+            0.012059074665915867,
+            1.782829600415097
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.382317232493609,
+            0.006593544516267102,
+            0.2968998653953229
+          ],
+          "Body_pass": true
+        }
+      ]
+    },
+    {
+      "stage": "marginV3",
+      "task": "body_pitch",
+      "group": "B_only",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "d73b84cc57c3e1911a027e417d10606e56e46009e1ad7b16ca6aaa23a9fb1186",
+      "contract_sha256": "2405b77e8bc0e44a9874b5057870bda49b879c10c5b2dc58b8ae196ddb1dccdf",
+      "registered_contract_sha256": "ad116822dd97359e9bd63c17c44d741302643baaae6269694fd02322ff2d3a48",
+      "trace_sha256": "ae430b3aab6ae1bc482b4a643b54a9a9d122e00a461a6cc6e2e1f40cf3301080",
+      "display_sha256": "b913d9cc070eb058d886924afacc635f2ec7dee3a0c55818159f52117c472475",
+      "full16_s": 16.0000000000011,
+      "physical_failure": false,
+      "all_windows_pass": true,
+      "net_displacement_m": [
+        -0.00014024759002495557,
+        0.00015063703176565468,
+        -0.047504305839538574
+      ],
+      "same_objects": true,
+      "physical_resets": 0,
+      "windows": [
+        {
+          "window": 0,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            2.8386252989849328,
+            0.005982119277118309,
+            0.11955851167842836
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 1,
+          "target": [
+            0.55,
+            0.0,
+            28.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            1.2856957474402015,
+            0.003020216525919541,
+            0.6641187024170452
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 2,
+          "target": [
+            0.55,
+            0.0,
+            -28.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            0.3560519075678924,
+            0.03676790464864055,
+            1.7952387170607371
+          ],
+          "Body_pass": true
+        },
+        {
+          "window": 3,
+          "target": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "complete": true,
+          "samples": 200,
+          "tail_RMS_mm_deg": [
+            3.3981195205437955,
+            0.0025224898626689473,
+            0.27746843685813355
+          ],
+          "Body_pass": true
+        }
+      ]
+    }
+  ],
+  "selected_main_ranges": {
+    "height_cm": [
+      20,
+      68
+    ],
+    "roll_deg": [
+      -40,
+      40
+    ],
+    "pitch_deg": [
+      -28,
+      28
+    ]
+  },
+  "selected_six_runs_all4of4": true,
+  "original_H70_and_P30_partial_preserved": true,
+  "all_full16s_no_guard": true,
+  "attribution": "same commonIK/SRBQP+.10respectiveActor,notRLgain",
+  "PPO_updates": 0
+}

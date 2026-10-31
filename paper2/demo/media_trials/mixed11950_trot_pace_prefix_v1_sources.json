@@ -1,0 +1,65 @@
+{
+  "revision": "current-trial-mixed11950/1-one-real-prefix-increment-not-main",
+  "status": "ACTUAL_RECORDED_CANDIDATE_PARTIAL_NOT_PROMOTED",
+  "videos": [
+    {
+      "id": "mixed11950_trot_pace_prefix_v1",
+      "title": "低速Trot→Pace｜MIX11950候选",
+      "status": "partial",
+      "status_label": "部分完成",
+      "description": "12.10秒真实前缀，50fps原速；固定env11，实际足点与真实发布目标球。独立试录，不替换主展示。",
+      "source": "outputs/motor_interface/paper_demo_20261028/mixed11950_transition_media_v1_20261029/viewport.mp4",
+      "asset": "media_trials/mixed11950_trot_pace_prefix_v1.mp4",
+      "sha256": "2b5a5e982fd318a003c99a5e0d0e79a39f18049d8ef915ee246a3fd29055ec30",
+      "details_asset": "media_trials/mixed11950_trot_pace_prefix_v1_sources.json",
+      "qualification": "完整e469父新增300更新所得d774候选。Pace已发布201对中99对具有至少2个50Hz共同air样本，该描述项不是足序全部合格；路线+保持0/16，5m停车8/16较父16/16回退，因此不晋升。env11 first48/52、25mm27/52，12.10秒own_request_deadline；原缓存没有失败后帧，无黑尾/补帧/循环。原PhysX记录仅FK显示，未新跑Actor或物理。",
+      "checkpoint_sha256": "d774a1e66b1b4e79f58006e32caa23080e5f71b26df56a28fedfb2bc2185fca0",
+      "parent_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "frame_count": 605,
+      "duration_s": 12.1,
+      "fps": 50,
+      "not_main_showcase": true,
+      "promotion": false
+    }
+  ],
+  "comparison_summary": {
+    "Pace_common_air_pairs": 99,
+    "Pace_published_pairs": 201,
+    "native_planned": 832,
+    "native_first": 744,
+    "native_first25": 445,
+    "native_route_support": 0,
+    "native_envs": 16,
+    "speed5_route_support": 8,
+    "speed5_envs": 16,
+    "parent_speed5_route_support": 16,
+    "footpattern_qualification": "共同air仅描述项，未全部通过；无五步态成功声明"
+  },
+  "provenance": {
+    "parent_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+    "candidate_sha256": "d774a1e66b1b4e79f58006e32caa23080e5f71b26df56a28fedfb2bc2185fca0",
+    "renderer_source": "scripts/locomotion/paper_demo_mixed11950_transition_render_v1.py",
+    "renderer_sha256": "55ddb5776c71fec54af1984e969f7c59fc51060c46c386b3d5721b81d2b71109",
+    "render_result": "outputs/motor_interface/paper_demo_20261028/mixed11950_transition_media_v1_20261029/result.json",
+    "render_result_sha256": "b888c9dd823e22bc7b2c4942f758d45133c300b97d6c0268052771b677fb026b",
+    "actual_science": "docs/evidence/paper_demo_formal_CB11650_20261028/mixed11950_eval_v2_actual_compact_20261029.json",
+    "actual_science_sha256": "758f4cd7cf640c7d147ad219524f283d2c61b61ae8377189716bf850baf22f33",
+    "actual_input_SHA256": {
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/contract.json": "bf899f68aedc948cd2b7b9c1dad3e5d1b4e777cd6fb15d3332351dfafb65023d",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/result.json": "10ff6e3af6a991d8fafa21ca7d390d8e76d7d41331983e60e6b7aa6e1abe03b1",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/first_episode_results.json": "d341acc09d19134e6fdc414b8b4e50fc560abc3f38f54597e9c6cc83787ef6f5",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/requests.json": "ade1a834492fc505f2c7158e0946dad4dc3b27d6bd0f2441d8dc4042fe2da4c8",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/representative_execution_schema.json": "60f33bb11c3de3534f0c86fb77e56b0cb8177326d97179091859c4ee7c708a74",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/representative_initial_state.json": "78a2146c4fcb8403ad1dd9dac0d73c8cf73680247a60de8bfc95ae1257d64dc3",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/representative_execution_50Hz.npz": "761309907f5dd934c8fc43adb900b7a599fbabd5f6482f60403124bcfa746f17",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/evaluation_v2/native_transition/native_trot_pace_summary.json": "6db83b542f29392af7761610cc57e9ee72242de81f22ce8f062778049b565022",
+      "outputs/motor_interface/paper_demo_20261028/mixed_gait_retention_v1_20261029/root_evaluation_queue_v2/native_transition_terminal.json": "35dcfe1076f55c4872fd2b600e9429c489c77a7d1c7dbc44d0060b5db70b50c9"
+    }
+  },
+  "registration_source_sha256": "b51fe850840dc9c1e66d153fe1d377d440c458fa98d73bba0c592693710d7196",
+  "main18_unchanged": true,
+  "PT_reads": 0,
+  "Actor_calls": 0,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

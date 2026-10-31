@@ -1,0 +1,797 @@
+{
+  "status": "frozen_first_episodes_complete",
+  "revision": "paper-demo-native-basic-trot/4-late-unreleased-native-current-completion-eligibility",
+  "checkpoint": {
+    "revision": "paper-demo-showcase-formal-loader/3-showcase2-full11650",
+    "checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+    "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+    "selected_update": 11650,
+    "additional_updates": 1000,
+    "group": "CB",
+    "loader": "paper_demo_showcase_v2_profile.load_checkpoint",
+    "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6",
+    "training_profile": {
+      "revision": "paper-demo-showcase/2-full10650-body-retention-no6",
+      "group": "CB",
+      "parent_checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_speed6_period24_curriculum_5090_20261028/formal250/model_update_10650.pt",
+      "parent_sha256": "623074a539b6317988f8f773eaeee4d8fdd8aba678d0624d61af5bd00a8ed6bf",
+      "parent_update": 10650,
+      "formal_updates": 1000,
+      "num_envs": 8192,
+      "rollout_steps": 32,
+      "new_training_transitions": 262144000,
+      "save_interval": 100,
+      "seed": 44,
+      "architecture": "same217→12 parameter/state signature",
+      "training_scope": "same inherited F: actor.net/contact_encoder/critic trainable; goal_encoder/norm/std/bounds frozen",
+      "forward": "shared goal encoder gate max(B,C); Contact encoder gate C*g; CB with B=1 equals original Contact20 math",
+      "mask_columns": {
+        "C_only": [
+          [
+            167,
+            185
+          ],
+          [
+            197,
+            200
+          ]
+        ],
+        "B_only": [
+          [
+            25,
+            45
+          ],
+          [
+            143,
+            167
+          ],
+          [
+            185,
+            197
+          ],
+          [
+            200,
+            204
+          ],
+          [
+            216,
+            217
+          ]
+        ]
+      },
+      "ranges": "half-open; actor and critic; additionally applied inside actor for standalone loading",
+      "B_disabled": "sampled Body is discarded before reference construction, public neutral .55/0/0 geometry prior only; P1 disabled; no Body target reward",
+      "C_disabled": "pure BodyReference only; no timed plan/publish, waypoint, memory, P1, activity gate, WBC/IK, C reward or C deadline",
+      "B_only_semantics": "Body control with stationary XY reference; no Motion channel exists, moving tasks have missing intent and remain in evaluation denominator",
+      "common_stability": [
+        "alive",
+        "action_rate",
+        "joint_acceleration",
+        "energy",
+        "undesired_collisions",
+        "foot_slip",
+        "joint_target_saturation",
+        "nonfoot_ground_support",
+        "broad_safety_envelope",
+        "physical_termination"
+      ],
+      "broad_safety_envelope": "height outside[.18,.85]m, |roll/pitch| outside.7rad; no neutral pose tracking",
+      "B_reward": "-5*clip(((h-Bh)/.04)^2,max4)-2.5*clip(sum(((RP-BRP)/.0872665)^2),max8), integrated dt",
+      "C_reward": "original support_alignment/approach/foot_clearance/touchdown/progress plus original timed speed2/foot_reference1/cadence.5; no C reward in B_only",
+      "pools": [
+        2048,
+        2048,
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "curriculum": "fixed showcase V2 six pools; no6/A3 rows; no adaptive curriculum",
+      "reset": "same physical reset; environment state not restored; full model/Adam/LR/normalizers/std/four RNG restored",
+      "fairness": "matched additional learning after shared full10650 history; not a from-scratch factor-discovery experiment",
+      "evaluation": "fixed1000 endpoint, no best-checkpoint selection; test-time masking is separate diagnostic",
+      "training_pool_names": [
+        "timed3_T032",
+        "timed5_T024",
+        "pureBody6s_wide11",
+        "old_Body_Trot",
+        "old_Body_Single",
+        "old_moderate"
+      ],
+      "training_pool_percent": [
+        25.0,
+        25.0,
+        25.0,
+        12.5,
+        6.25,
+        6.25
+      ],
+      "distribution_delta": "only task distribution/necessary pureBody producer/reward/deadline eligibility; same complete parent/network/forward/F scope/explicit reward coefficients/PPO/physics",
+      "timed_tasks": {
+        "speed_m_s": [
+          3.0,
+          5.0
+        ],
+        "period_ticks": [
+          16,
+          12
+        ],
+        "prepare_s": 4.0,
+        "route_s": 8.0,
+        "plan_guard_m": [
+          1.1,
+          1.21
+        ],
+        "reference": "原TimedContactState；5仅原period24私有plan guard；无A3参考"
+      },
+      "pure_Body": {
+        "pool_id": 2,
+        "environments": 2048,
+        "window_s": 6.0,
+        "targets_m_deg": [
+          [
+            0.55,
+            0.0,
+            0.0
+          ],
+          [
+            0.3,
+            0.0,
+            0.0
+          ],
+          [
+            0.65,
+            0.0,
+            0.0
+          ],
+          [
+            0.55,
+            30.0,
+            0.0
+          ],
+          [
+            0.55,
+            -30.0,
+            0.0
+          ],
+          [
+            0.55,
+            0.0,
+            25.0
+          ],
+          [
+            0.55,
+            0.0,
+            -25.0
+          ],
+          [
+            0.5,
+            6.0,
+            -6.0
+          ],
+          [
+            0.45,
+            -6.0,
+            6.0
+          ],
+          [
+            0.55,
+            10.0,
+            0.0
+          ],
+          [
+            0.4,
+            5.0,
+            -5.0
+          ]
+        ],
+        "targets_m_rad": [
+          [
+            0.55,
+            0.0,
+            0.0
+          ],
+          [
+            0.3,
+            0.0,
+            0.0
+          ],
+          [
+            0.65,
+            0.0,
+            0.0
+          ],
+          [
+            0.55,
+            0.5235987755982988,
+            0.0
+          ],
+          [
+            0.55,
+            -0.5235987755982988,
+            0.0
+          ],
+          [
+            0.55,
+            0.0,
+            0.4363323129985824
+          ],
+          [
+            0.55,
+            0.0,
+            -0.4363323129985824
+          ],
+          [
+            0.5,
+            0.10471975511965978,
+            -0.10471975511965978
+          ],
+          [
+            0.45,
+            -0.10471975511965978,
+            0.10471975511965978
+          ],
+          [
+            0.55,
+            0.17453292519943295,
+            0.0
+          ],
+          [
+            0.4,
+            0.08726646259971647,
+            -0.08726646259971647
+          ]
+        ],
+        "unique_targets": 11,
+        "sampling": "static_slot_ordinal + per_environment_reset_count modulo11; deterministic cycle, actual reset/time exposure logged",
+        "synchronized_batch_balance": "2048=186*11+2; any synchronized reset187 for2 targets/186 for9, rotates; asynchronous physical resets may change exposure",
+        "C": "excluded BEFORE producer launch/plan/publish; timed.mask=false, core.active=false, no route, no C shaping/timed reward/failure/deadline",
+        "packet": "CB B111/C0000/g0; rowwise same C-field deletion as B_only BEFORE P1; original P1 bit-exact identity; no IK/WBC/ContactMemory in selected pure packet",
+        "C_only": "public neutral55cm geometry; B000/C0000/g0; no B target reward, shared stability only",
+        "B_only": "all8192 rows use original pureBody adapter, C0/g0; no published Contact intent anywhere"
+      },
+      "runner": {
+        "entry": "scripts/locomotion/paper_demo_showcase_v2_train.py",
+        "loop_source": "scripts/locomotion/paper_demo_ablation_train.py",
+        "binding": "process-local factory profile binding; write contract annotates actual runner/loader; original frozen loop source unchanged"
+      },
+      "exposure": "per pool true control steps, target/reset histogram, B/C/g packets, P1 identity, timed publications and legacy launches; never equate all done episodes with task success"
+    },
+    "actual_runner": "scripts/locomotion/paper_demo_showcase_v2_train.py",
+    "require_endpoint": true,
+    "loader_source": "/home/user/isaac/capability_research/scripts/locomotion/paper_demo_showcase_v2_profile.py",
+    "loader_source_sha256": "4a7df2d20ef3b7c42d8d8c1bf9ef4a5286996d25cacdd8493f20f563c8a317aa",
+    "source_count": 155,
+    "parent_sha256": "623074a539b6317988f8f773eaeee4d8fdd8aba678d0624d61af5bd00a8ed6bf",
+    "full_model_Adam_norm_std_LR_RNG_and_sources_checked": true,
+    "parent_full_loader_receipt": {
+      "parent_checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_speed6_period24_curriculum_5090_20261028/formal250/model_update_10650.pt",
+      "parent_sha256": "623074a539b6317988f8f773eaeee4d8fdd8aba678d0624d61af5bd00a8ed6bf",
+      "parent_update": 10650,
+      "parent_total_transitions": 2791833600,
+      "strict_parent_validation": {
+        "revision": "cb-speed6-period24-10650-loader/1-full10400-plus250",
+        "checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_speed6_period24_curriculum_5090_20261028/formal250/model_update_10650.pt",
+        "checkpoint_sha256": "623074a539b6317988f8f773eaeee4d8fdd8aba678d0624d61af5bd00a8ed6bf",
+        "selected_update": 10650,
+        "strict_parent10400": {
+          "revision": "cb-speed5-period24-10400-loader/1-complete-course-source-Contact20",
+          "checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_speed5_period24_curriculum_5090_20261028/formal250/model_update_10400.pt",
+          "checkpoint_sha256": "b93360e7049710ad1d3925947cdaf91d50a2f048e48bfa811a7ba4d99ff9854b",
+          "selected_update": 10400,
+          "strict_F10150_parent": {
+            "revision": "cb-speed5-trunk-CF-10150-loader/1-explicit-branch-fullstate",
+            "branch": "F",
+            "checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_speed5_trunk_cf_5090_20261027/F_formal250/model_update_10150.pt",
+            "checkpoint_sha256": "00cde2c6fcebde504695484910cf7651762e9ad607bb686afa8762bd01eef197",
+            "selected_update": 10150,
+            "strict_parent9900": {
+              "revision": "cb-speed5-9900-frozen-loader/1-formal250-originalg-only",
+              "checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_speed5_5090_20261027/formal250/model_update_9900.pt",
+              "checkpoint_sha256": "547b1ea300e3db8bf16a55e1f5fb38001543cf186c9ec371e616475b557685b7",
+              "selected_update": 9900,
+              "parent9650": {
+                "revision": "cb-speed-cadence-9650-frozen-loader/1-formal250-only",
+                "checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_speed_cadence_5090_20261027/formal250/model_update_9650.pt",
+                "checkpoint_sha256": "09c7fbc4486207f834dc0b39b2ff61ebea710e795fe01ae90740aeb708ce1bc2",
+                "selected_update": 9650,
+                "parent9400": {
+                  "revision": "cb-timed-contact-PPO-frozen-loader/1-exact8900-or9400",
+                  "checkpoint": "/home/user/isaac/capability_research/outputs/motor_interface/cb_timed_contact_ppo_20261027/formal500/model_update_9400.pt",
+                  "checkpoint_sha256": "c505d3c96600f26a78ffa62e53dbf12419c7c86a5cc4dbfd944d102a702b366b",
+                  "selected_update": 9400,
+                  "source_counts": {
+                    "parent8900": 114,
+                    "ancestor8500": 110,
+                    "candidate9400": 116
+                  },
+                  "full_model_Adam_norm_std_RNG_checked": true,
+                  "parent_Body_frozen_checked": true,
+                  "raw_ancestor_files_for_provenance_only": true,
+                  "Actor_instances_executed": 1,
+                  "mean_actions": true,
+                  "normalization_updates": false,
+                  "PPO_updates": 0,
+                  "optimizer_steps": 0,
+                  "source_sha256": "40e332bd8f0ac8c11fb55f746d447f4e223570a3e2f368d70bfa59c705f1cc34"
+                },
+                "source_counts": {
+                  "trained9650": 119
+                },
+                "formal250_full_model_Adam_norm_std_RNG_checked": true,
+                "frozen_Body_Adam_checked": true,
+                "no_smoke_no_midpoint": true,
+                "Actor_instances_executed": 1,
+                "mean_actions": true,
+                "normalization_updates": false,
+                "PPO_updates": 0,
+                "optimizer_steps": 0,
+                "source_sha256": "41e483a03acdc7875db96488be8c459fa643628f58a8b70682616cc5000cbdaf"
+              },
+              "source_counts": {
+                "trained9900": 122
+              },
+              "formal250_full_model_Adam_norm_std_RNG_checked": true,
+              "frozen_Body_Adam_checked": true,
+              "no_smoke_no_midpoint": true,
+              "Actor_instances_executed": 1,
+              "mean_actions": true,
+              "normalization_updates": false,
+              "PPO_updates": 0,
+              "optimizer_steps": 0,
+              "source_sha256": "33af1334b6d8af7ad75213f92189a46b9a54feca9b7289c9174cb0c684c4a650"
+            },
+            "source_count": 126,
+            "formal250_full_model_Adam_norm_std_RNG_checked": true,
+            "no_smoke_no_midpoint": true,
+            "Body_encoder_norm_std_bounds_frozen": true,
+            "Body_function_exact_C0000": false,
+            "F_shared_trunk_Body_regression_required": true,
+            "mean_actions": true,
+            "normalization_updates": false,
+            "PPO_updates": 0,
+            "optimizer_steps": 0,
+            "Actor_forward_calls": 0,
+            "source_sha256": "389f4e2c8760190d3bbdd2523b1a36a42aa036d26217b2dd2405c0a7af7c7187"
+          },
+          "source_count": 141,
+          "formal250_full_model_Adam_norm_std_LR_RNG_checked": true,
+          "no_smoke_no_midpoint_no_partial": true,
+          "execution_observation_signature": {
+            "dimension": 217,
+            "Contact_velocity_bound": 20.0,
+            "Body_context_bound": 10.0,
+            "source_revision": "cb-contact-foot-reference-velocity/2-Contact20-Body10-decision-packet-clocks",
+            "new_training_signature": "cb-speed5-period24-curriculum/1-F10150-fullstate-episode4to5",
+            "source_contract_historical": {
+              "revision": "cb-contact-foot-reference-velocity/2-Contact20-Body10-decision-packet-clocks",
+              "weight_source": "完整F10150，先旧strict loader核对，再绑定独立执行函数",
+              "checkpoint_sha256": "00cde2c6fcebde504695484910cf7651762e9ad607bb686afa8762bd01eef197",
+              "observation_dimension": 217,
+              "action_dimension": 12,
+              "producer_columns": [
+                155,
+                167
+              ],
+              "producer_unit": "同拍body逆旋转foot_ref world velocity，m/s，无新增缩放",
+              "Contact_encoder_context_columns": [
+                155,
+                167
+              ],
+              "Contact_velocity_bound_m_s": 20.0,
+              "goal_encoder_context_bound": 10.0,
+              "other_context_bound": 10.0,
+              "producer_active_rows": "C.any>0且g>0；C0000/g0所有列原样",
+              "state_dict_and_norm_std": "完全相同，不重训，不新增参数，不修改类全局forward",
+              "prior_domain": "所有原速度通道绝对值<=10的输入，Actor输出逐值保真",
+              "inactive_domain": "C0000或g0，同输入函数逐值保真；继承F原Body14/16缺口，不称修复",
+              "unchanged": "原g/6cm/0preview/参考几何与导数/绝对时钟/首落/12N/期限/物理/电机/奖励",
+              "logging": "Actor决策时复制producer包/packet序号/common_step/episode tick；capture时的当前包单列，不默认为同拍",
+              "PPO_updates": 0,
+              "claim": "执行观测语义干预，非同旧revision无条件泛化；CPU接线不证明行为改善"
+            },
+            "training": "同contact20_forward数学函数；不连评价专用producer getter，避免PPO历史/乱序minibatch误配当前包；不改变Gaussian/logprob。"
+          },
+          "same_Contact20_function_as_training": true,
+          "all_model_parameters_frozen": true,
+          "Body_function_exact_C0000_protection": false,
+          "Body_regression_required": true,
+          "mean_actions": true,
+          "normalization_updates": false,
+          "PPO_updates": 0,
+          "Actor_forward_calls": 0,
+          "source_sha256": "5e0ba23af3291254a39febe941e2fee5a1e566f8d0ee359e6e99080e71657aa9"
+        },
+        "formal250_complete_model_Adam_norm_std_LR_RNG_checked": true,
+        "source_count": 146,
+        "all_parameters_frozen": true,
+        "mean_actions": true,
+        "normalization_updates": false,
+        "PPO_updates": 0,
+        "same_Contact20_function_as_parent": true,
+        "no_smoke_no_midpoint_no_partial": true,
+        "Body_function_exact_protection": false,
+        "source_sha256": "b4975f8c279bb8e6e381a106b994e3095bf026a0f41e4df6df9be9983b2ae623"
+      },
+      "full_model_equal": true,
+      "full_Adam_equal": true,
+      "parent_optimizer_deepcopied": true,
+      "learning_rate": 0.0002562890625000001,
+      "actor_norm_count": 69632000.0,
+      "critic_norm_count": 87244800.0,
+      "trainability": {
+        "branch": "F",
+        "trainable_parameter_names": [
+          "actor.net.0.weight",
+          "actor.net.0.bias",
+          "actor.net.2.weight",
+          "actor.net.2.bias",
+          "actor.net.4.weight",
+          "actor.net.4.bias",
+          "actor.net.6.weight",
+          "actor.net.6.bias",
+          "actor.contact_encoder.0.weight",
+          "actor.contact_encoder.0.bias",
+          "actor.contact_encoder.2.weight",
+          "actor.contact_encoder.2.bias",
+          "critic.0.weight",
+          "critic.0.bias",
+          "critic.2.weight",
+          "critic.2.bias",
+          "critic.4.weight",
+          "critic.4.bias"
+        ],
+        "trainable_parameters": 516749,
+        "frozen_parameters": 373772,
+        "pure_Body_function_exact_protection": false,
+        "Body_encoder_norm_std_frozen": true,
+        "actor_prefix_normalizer_updates": "原显式no-op",
+        "warning": "F共享net参与C0000路径；Body encoder冻结不保证纯Body输出或物理能力保持。"
+      },
+      "Adam_states": 23,
+      "Adam_initial_steps": {
+        "log_std": 340000.0,
+        "actor.net.0.weight": 370000.0,
+        "actor.net.0.bias": 370000.0,
+        "actor.net.2.weight": 370000.0,
+        "actor.net.2.bias": 370000.0,
+        "actor.net.4.weight": 370000.0,
+        "actor.net.4.bias": 370000.0,
+        "actor.net.6.weight": 370000.0,
+        "actor.net.6.bias": 370000.0,
+        "actor.goal_encoder.0.weight": 340000.0,
+        "actor.goal_encoder.0.bias": 340000.0,
+        "actor.goal_encoder.2.weight": 340000.0,
+        "actor.goal_encoder.2.bias": 340000.0,
+        "actor.contact_encoder.0.weight": 426000.0,
+        "actor.contact_encoder.0.bias": 426000.0,
+        "actor.contact_encoder.2.weight": 426000.0,
+        "actor.contact_encoder.2.bias": 426000.0,
+        "critic.0.weight": 426000.0,
+        "critic.0.bias": 426000.0,
+        "critic.2.weight": 426000.0,
+        "critic.2.bias": 426000.0,
+        "critic.4.weight": 426000.0,
+        "critic.4.bias": 426000.0
+      },
+      "RNG_fields": [
+        "rng",
+        "cuda_rng",
+        "python_rng",
+        "numpy_rng"
+      ],
+      "environment_state_restored": false,
+      "Contact20_function_bound_state_RNG_unchanged": true,
+      "evaluation_producer_getter_connected": false,
+      "ablation_group": "CB",
+      "function_binding_parameter_state_unchanged": true,
+      "showcase_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+    },
+    "forward": "max(B,C)*goal_encoder + C*g*contact_encoder; native Contact20 context bounds; group mask inside Actor",
+    "actor_forward_calls_during_loading": 0,
+    "actor_input_dimension": 217,
+    "action_dimension": 12,
+    "mean_actions": true,
+    "normalization_updates": false,
+    "PPO_updates": 0,
+    "parent10650_probe_is_not_formal_endpoint": true,
+    "capability_loader_revision": "paper-demo-capability-grouped-loader/5-exact-e469-f578-fdda-full11650",
+    "capability_profile_revision": "paper-demo-capability-grouped-ablation/5-fixed11650-body10-contact8-joint3",
+    "capability_source_sha256": {
+      "scripts/locomotion/paper_demo_showcase_loader_v3.py": "e48c7b71e7524747bf0c3f78a9d8b15df940fd5254b7aa3018b125d5dc4f856e",
+      "scripts/locomotion/paper_demo_e469_repaired_ablation_evaluate_v1.py": "0eda5889624bae7abf7ac52208f554ef6be321ddd0a7cfb5a3e283fdf3537b40",
+      "scripts/locomotion/paper_demo_b_only_h50_profile_v1.py": "7b115dfd5f46136833003a130d99df66578743e06fdf8b9c22aa25fc66427173",
+      "scripts/locomotion/paper_demo_b_only_h50_train_v1.py": "5a06eb3433ce7e73bec7c717101cfeb093ae04be7a4e3b97c4459f4d313f869e",
+      "scripts/locomotion/paper_demo_showcase_v2_profile.py": "4a7df2d20ef3b7c42d8d8c1bf9ef4a5286996d25cacdd8493f20f563c8a317aa",
+      "scripts/locomotion/paper_demo_capability_ablation_profile_v5.py": "94eebed95becba6b916d8a9f92dd0062ea7ddb3ba568b272d6ac6b3b3ac5e7a7",
+      "scripts/locomotion/paper_demo_capability_ablation_loader_v5.py": "c9a9dd01497f5b48e7f6933810612cfb34c47fffceb8e36b2d8916a8741bff75"
+    },
+    "strict_dispatch": "paper_demo_showcase_loader_v3.load_selected",
+    "new_training_transitions": 262144000,
+    "Actor_input_dim": 217,
+    "action_dim": 12,
+    "actual_forward": "original profile.masked_forward max(B,C) + C*g Contact20; no rebind",
+    "ancestor_Actor_forward_calls": 0,
+    "target_removal_installed_by_loader": false,
+    "execution_contract_owner": "new per-task runner must delete upstream target/reference/feedback before packet cleanup",
+    "stage_or_grouped_protocol_not_old_formal6": true
+  },
+  "protocol": {
+    "revision": "paper-demo-native-basic-trot/4-late-unreleased-native-current-completion-eligibility",
+    "title": "基础Trot：同原生timed公开参考，不是五步态切换",
+    "group": "CB",
+    "checkpoint": {
+      "path": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2/model_update_11650.pt",
+      "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "training_revision": "paper-demo-showcase/2-full10650-body-retention-no6"
+    },
+    "num_envs": 16,
+    "representative_env": 11,
+    "seed": 44,
+    "speed_m_s": 3.0,
+    "period_ticks": 16,
+    "period_s": 0.32,
+    "plan_guard_m": 1.1,
+    "duty": 0.4,
+    "swing_height_m": 0.06,
+    "preload_m": 0.008,
+    "prepare_s": 4.0,
+    "acceleration_s": 2.0,
+    "cruise_episode_s": [
+      6.0,
+      10.0
+    ],
+    "cruise_s": 4.0,
+    "deceleration_s": 2.0,
+    "route_s": 8.0,
+    "final_support_s": 1.0,
+    "per_env_max_s": 20.0,
+    "max_control_ticks": 1001,
+    "planned_requests_per_env": 100,
+    "planned_requests_total": 1600,
+    "per_foot_each": 25,
+    "physics_dt_s": 0.005,
+    "policy_dt_s": 0.02,
+    "Body": {
+      "requested_m_rad": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "produced_before_reference_m_rad": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "B_mask": [
+        1,
+        1,
+        1
+      ],
+      "P1_enabled": true,
+      "C_only": "目标在reference构造前丢弃为neutral55；Body18/Bmask在P1前清、P1off；CB保原H50/B111/P1，未强迫B0泛化"
+    },
+    "thresholds": {
+      "first25_m": 0.025,
+      "actual_completion_m": 0.1,
+      "minimum_air_samples": 2,
+      "minimum_peak_lift_m": 0.015,
+      "loaded_norm_N": 12.0,
+      "actual_loaded_confirmation_s": 0.02,
+      "final_support_s": 1.0,
+      "note": "原timed实际源码10cm completion与20ms load；25mm严格first独立，不混楼梯80ms"
+    },
+    "execution": "原Isaac/PhysX bareB2/PD/alpha.8/.5scale/Contact20/原activitygate；原strict各组max(B,C)forward；无IK/WBC/教师/新滤波",
+    "plan": "原speed3实际launch足点anchors，原解析p/v与周期weight/phase；无6/A3/5m或新速度，非五步态原132的同参考消融",
+    "scoring": "原first/deadline/路线与完整4s巡航/最终1s承重保留；CB原Body保持也原样单列，C_only不把被移除B当执行输入；16首回合全部留分母",
+    "recording": "原actual217/rawmean同拍prehook + postphysics/pre-reset真实关节/足/力；固定env11完整实际前缀，失败也保存，不挑成功env/不补黑",
+    "source_sha256": {
+      "scripts/locomotion/paper_demo_showcase_loader_v3.py": "e48c7b71e7524747bf0c3f78a9d8b15df940fd5254b7aa3018b125d5dc4f856e",
+      "scripts/locomotion/paper_demo_e469_repaired_ablation_evaluate_v1.py": "0eda5889624bae7abf7ac52208f554ef6be321ddd0a7cfb5a3e283fdf3537b40",
+      "scripts/locomotion/paper_demo_b_only_h50_profile_v1.py": "7b115dfd5f46136833003a130d99df66578743e06fdf8b9c22aa25fc66427173",
+      "scripts/locomotion/paper_demo_b_only_h50_train_v1.py": "5a06eb3433ce7e73bec7c717101cfeb093ae04be7a4e3b97c4459f4d313f869e",
+      "scripts/locomotion/paper_demo_showcase_v2_profile.py": "4a7df2d20ef3b7c42d8d8c1bf9ef4a5286996d25cacdd8493f20f563c8a317aa",
+      "scripts/locomotion/paper_demo_capability_ablation_profile_v5.py": "94eebed95becba6b916d8a9f92dd0062ea7ddb3ba568b272d6ac6b3b3ac5e7a7",
+      "scripts/locomotion/paper_demo_capability_ablation_loader_v5.py": "c9a9dd01497f5b48e7f6933810612cfb34c47fffceb8e36b2d8916a8741bff75",
+      "scripts/locomotion/paper_demo_highspeed_profile_v1.py": "0fb7942e0ac2cb664723a04fd820081c34db80f823bd4fc6d9aba5814a36b380",
+      "scripts/locomotion/paper_demo_showcase_evaluate_v2.py": "9a3ad212a3c2482377c331bfc3e1b8232ff3ba35abf94dfc3cdd44b730464bc7",
+      "scripts/locomotion/paper_demo_e469_ablation_record_v1.py": "9a8690f6f01c4cbcfbe7f336d242e60901fdcad999c79f3839803e4deb04107c",
+      "scripts/locomotion/cb_timed_contact_ppo_profile.py": "cff1fa2b77aac6effb4a62c24940d4f2db7b81e2a8ca03cb06ef8264306485b1",
+      "scripts/locomotion/cb_speed5_contact_velocity20.py": "ff70c09468237f8c2a527fe19ab19fbe04ef9c460a8ab7500c8ac6abbd86d5d2",
+      "scripts/locomotion/paper_demo_native_basic_trot_v1.py": "b3e5e984b074c779f3205bff9cd7e6baf290a5842ec799dd91aa9de8f866a4c0",
+      "scripts/locomotion/cb_contact_intent.py": "7e3495dcfa738ec6ace6cfa07c0892c2f8b046548f1f825f0adbefd1748dda2a",
+      "scripts/locomotion/cb_contact_activity.py": "468ebfca761cd936c1582016df3ccc36258ceb2f2389a74dc77e35c16f2f0976",
+      "scripts/locomotion/paper_demo_native_basic_trot_terminal_gate_v2.py": "97aad5e77d28c9171a6045b498f99a7f3f0231b6dad2da33a9a799b93ed122c2",
+      "source/capability_rl/capability_rl/gecco/contact_learning.py": "06bcb69c5b660fcf98292c7eab373dcd91d54629b3f4ba28a72238e95cfe33b6",
+      "source/capabilitylab/capabilitylab/locomotion/b2rm/tasks/locomotion/gecco_curriculum_env.py": "5469ca04c3f362d10749810ebacb555e3eb5485b2746022ecacae0f1c8dddd3a",
+      "scripts/locomotion/paper_demo_native_basic_trot_completion_context_v4.py": "2be9588cf8392a16b1bd36bb87b5c693465615500f3f6392986ba675ea73600b"
+    },
+    "mean_actions": true,
+    "normalization_updates": false,
+    "PPO_updates": 0,
+    "new_training": false,
+    "formal_old_five_gait_scores_unchanged": true,
+    "default_prepare": true,
+    "terminal_gate": {
+      "sole_intervention": "原ContactIntentGate内部need在已合法完成路线的行置false；唯一apply，原0.10s quintic/current-g反转连续性和内部history继续",
+      "eligibility": "本拍pre-action task_tick>=400、timed mask/started、未failed/done、last_pair49、逐脚request25、finished_requests100、confirmed全true、pending全false、completed_tick>=publication；仅真实首回合",
+      "latch": "每env首次合法状态锁存；若同首回合又出现pending/请求变化则拒绝，不借未来成功标签；真实reset清锁",
+      "preserved": "C1111/最终锚/全部原216输入/Contact20/P1按原组/权重/PD/环境/发布/所有first与期限评分均不改",
+      "terminal_clock": "原task8.16s开始承重、episode13.16s截止及连续1s门不变；未全confirm的C_only绝不退场",
+      "counterfactual": "原local_need/scheduled_need/need保存为本拍原公式诊断，非第二次gate调用或另一Actor",
+      "logs": "terminal_gate_consumed_50Hz.npz保存实际Actor消费g、原需求、退场条件/锁存、pre/posttick、首回合mask；summary逐env首次实际消费触发，原代表env11完整217/rawmean照旧",
+      "attribution": "独立0PPO执行生命周期机制探针；不宣称学习收益或已通过"
+    },
+    "completion_context": {
+      "baseline": "直接继承原V2真实完成后gate退场；不包含V3 native12几何替换",
+      "sole_intervention": "仅选中脚native当前correct位37+f置0；所有未选中的217位置逐位保留，包括ground9:13、真实目标误差25:37、previous41:45、Body、C、g及history",
+      "E": "active_first & timed.mask/started & !failed/done & last_pair49 & all(request25) & pending_f & !first_seen_f & original_weight_f==0 & !legacy_requested_f & raw_current_correct_f==1 & age_f>=Ts/2 & !seen_air_this_identity_f",
+      "formula": "y[37+f]=0 if E_f else x[37+f];其余位置y=x；只改送Actor任务完成资格提示，不改任何真实状态/评分",
+      "seen_air": "逐env/foot的真实episode、request ID、publication tick；本ID实际原native ground位曾false即永久锁存至新ID或真实reset；不是会在落地后归零的当前air_count",
+      "clock": "原T=.32/duty.4/Ts=.192；半程96ms落50Hz网格首次100ms，原swing余最多5拍；原320ms期限不变",
+      "causal_exclusion": "任何已观测release的脚永久排除本ID干预；CB/C_only同一规则，不按group选择或借未来成功标签",
+      "retained": "原16env/seed44/1600最终目标/所有p-v-z与weight/发布时钟/2air15mm/12N20ms/first25/巡航4s/保持1s/Actor均值与strict各自权重/滤波电机/P1组分派/原评分全部不变",
+      "logging": "completion_context_consumed_50Hz.npz存实际消费217对应correct旧新位/E/seen_air/identity/年龄/原ground/legacy资格；env11原完整trace/rawmean继续；不记录未消费末packet为动作",
+      "attribution": "公开执行输入资格语义0PPO探针；非学习收益，原V2分数与媒体不改，不保证能使脚卸载"
+    }
+  },
+  "episodes": 16,
+  "requested_task_complete": 14,
+  "strict_requested_task_complete": 1,
+  "physical_guard": 0,
+  "planned": 1600,
+  "first": 1600,
+  "first_within25mm": 1420,
+  "missing_C_goal_errors_null": false,
+  "all_weights_norm_std_unchanged": true,
+  "PPO_updates": 0,
+  "wall_seconds": 188.35094984108582,
+  "limitations": [
+    "two fixed seeds are finite regression",
+    "50Hz first event is not200Hz earliest impact",
+    "plane suites do not qualify all18 terrain showcases"
+  ],
+  "task": "native_basic_trot",
+  "motion_route_and_support_complete": 14,
+  "full_cruise4s": 16,
+  "representative_env": 11,
+  "representative": {
+    "env": 11,
+    "timed": true,
+    "speed_band": 0,
+    "assigned_speed_m_s": 3.0,
+    "retention_task": null,
+    "planned": 100,
+    "published": 100,
+    "not_started": 0,
+    "first": 100,
+    "within25mm": 76,
+    "confirmed": 100,
+    "by_foot": {
+      "FL": {
+        "planned": 25,
+        "published": 25,
+        "not_started": 0,
+        "release": 25,
+        "first": 25,
+        "within25mm": 24,
+        "error_mean_m": 0.013525337353348732,
+        "error_max_m": 0.026775475591421127,
+        "confirmed": 25
+      },
+      "FR": {
+        "planned": 25,
+        "published": 25,
+        "not_started": 0,
+        "release": 25,
+        "first": 25,
+        "within25mm": 23,
+        "error_mean_m": 0.014566280655562877,
+        "error_max_m": 0.03194531425833702,
+        "confirmed": 25
+      },
+      "RL": {
+        "planned": 25,
+        "published": 25,
+        "not_started": 0,
+        "release": 25,
+        "first": 25,
+        "within25mm": 5,
+        "error_mean_m": 0.02792766146361828,
+        "error_max_m": 0.03679876774549484,
+        "confirmed": 25
+      },
+      "RR": {
+        "planned": 25,
+        "published": 25,
+        "not_started": 0,
+        "release": 25,
+        "first": 25,
+        "within25mm": 24,
+        "error_mean_m": 0.011779688354581595,
+        "error_max_m": 0.040272824466228485,
+        "confirmed": 25
+      }
+    },
+    "first_episode_terminal_s": 13.16,
+    "stop_reason": "timed_route_and_final_support_complete",
+    "administrative_truncation": false,
+    "route_and_final1s_complete": true,
+    "strict_first25_complete": false,
+    "initial_root_world_m": [
+      -2.0,
+      6.0,
+      0.5941470265388489
+    ],
+    "final_root_world_m": [
+      15.86363697052002,
+      6.034759998321533,
+      0.50460284948349
+    ],
+    "actual_total_forward_displacement_m": 17.86363697052002,
+    "actual_launched_forward_displacement_m": 18.01092267036438,
+    "planned_cruise_episode_window_s": [
+      6.0,
+      10.0
+    ],
+    "actual_cruise_root_displacement_vx_m_s": 2.9989584535360336,
+    "cruise_observed_s": 4.0,
+    "full_cruise_window_observed": true,
+    "body_error_rms_m_rad": [
+      0.007508764102769376,
+      0.009477850878263505,
+      0.020059931855322108
+    ],
+    "final_actual_root_quat_w": [
+      0.9951629638671875,
+      0.0015609241090714931,
+      0.008289260789752007,
+      -0.09787600487470627
+    ],
+    "nonfoot_guard": false,
+    "own_request_failure_code": 0,
+    "desired_B_target_m_rad": [
+      0.5,
+      0.0,
+      0.0
+    ],
+    "execution_C_enabled": true,
+    "requested_C_ledger_is_not_control_input": false,
+    "B_target_missing": false,
+    "C_target_missing": false,
+    "paper_metrics": {
+      "samples": 658,
+      "whole_B_RMS_m_rad": [
+        0.007508764102769376,
+        0.009477850878263505,
+        0.020059931855322108
+      ],
+      "tail_B_RMS_m_rad": [
+        0.004299554483008764,
+        0.0021851733207314,
+        0.01717798589441368
+      ],
+      "last1s_loaded_coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "final_support_hold": true,
+      "Body_1cm_2deg": true,
+      "actual_observed_duration_s": 13.14,
+      "actual_first_to_last_displacement_m": [
+        17.86347997188568,
+        0.03492879867553711,
+        -0.08630388975143433
+      ],
+      "mean_observed_vx_m_s": 1.3594733616351355,
+      "full_Body_horizon": null,
+      "requested_task_complete": true,
+      "strict_requested_task_complete": false
+    },
+    "physical_event_semantics": "original50Hz requested first event; no claim of200Hz earliest impact"
+  },
+  "requested_B_preserved_only_CB": true,
+  "not_five_gait_pass": true
+}

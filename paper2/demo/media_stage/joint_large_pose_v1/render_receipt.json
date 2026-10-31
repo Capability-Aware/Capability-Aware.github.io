@@ -1,0 +1,326 @@
+{
+  "status": "COMPLETE_REAL_JOINT_LARGE_40S_SUPPLEMENT_VIDEO",
+  "revision": "paper-demo-e469-joint-large-recorded-render/1-40s-supplement-not-hero",
+  "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+  "admission": {
+    "status": "PUBLISHED_E469_AND_STRICT_V1_INPUTS_VERIFIED",
+    "revision": "paper-demo-e469-joint-large-recorded-render/1-40s-supplement-not-hero",
+    "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+    "publication": "research/motor_interface/paper_demo_20261028/stage_e469_publication.json",
+    "publication_sha256": "7b02b69292aa1d936b8a55383a6a67029bc9a7789d7f9edbb8258c658e00db16",
+    "source_sha256": {
+      "scripts/locomotion/cb_mujoco_video.py": "498b96571ae06ef9c3244f699bb42bb09ebec57155a57e723a9552635357425c",
+      "scripts/locomotion/paper_demo_highspeed_render_v1.py": "0bf2275f01fa1cf5d73a711f31e6b16f4cdd56a0464269781e8ea2071bc310b2",
+      "scripts/locomotion/paper_demo_e469_stage_media_registry_v1.py": "1072fb4f9ed7fab8a4db22d1c937a2466178f3e29752dca37712320e910d3537",
+      "scripts/locomotion/paper_demo_joint_large_hybrid_render_v1.py": "2dc389646724f9b8d3c10afd60b0bdd8ca272473c732201b5ba8bfea780fe841",
+      "research/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_media_inputs_v1.json": "fe5f4a3ffa971cb3155cfd79a8a3153a6c463c60797403f8b0db1b19e478d852"
+    },
+    "input_sha256": {
+      "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_v1_20261029/joint9_full40/result.json": "99708223d7ad1c62cc15d0d01c23378e6efd68d52d05c45d31c0c97bd7824e21",
+      "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_v1_20261029/joint9_full40/contract.json": "999c7020b0704eda7d2e74cf92971591664f678f328f30f017b201cd5d000686",
+      "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_v1_20261029/joint9_full40/trace.npz": "adbd6ab2f64a02d33e1184297784fd7fe11c02025e327822bfe25e0966a883c7",
+      "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_v1_20261029/joint9_full40/scene/scene.xml": "41476597a9411aaf803200d067648670573ccc004977de94d85d04c4770e1831",
+      "docs/evidence/paper_demo_formal_CB11650_20261028/e469_joint_large_hybrid_v1_actual_strict_compact_20261029.json": "44ed780a1a7c24b83e744350d35fb476249360826c1af6593e275d2be8648d93",
+      "docs/evidence/paper_demo_formal_CB11650_20261028/root_joint_large_hybrid_v1_actual_20261029.json": "d21a12bbfda143a419a44bb82f9295ddd6d278b934e4f3c4ccd414813c230a85",
+      "scripts/locomotion/paper_demo_e469_joint_large_hybrid_v1.py": "cbd6b632012c9aeecf322df34cc9f98b8e536b45c2fafa0f6e76291b3b56369e",
+      "research/motor_interface/paper_demo_20261028/e469_joint_large_pair032_plan_v1.json": "bf042b7ee5052dfb2e1d406b471e3ed7f5f00d971ae91207d4dc83a1e5374321",
+      "research/motor_interface/paper_demo_20261028/stage_e469_publication.json": "7b02b69292aa1d936b8a55383a6a67029bc9a7789d7f9edbb8258c658e00db16",
+      "docs/evidence/paper_demo_formal_CB11650_20261028/e469_stage_actual_remote_verification_20261029.json": "79c323c434521f7389c06dae930a62c39cd8550f01abee80756cc40aadf8db45",
+      "deploy/capability_mujoco/robots/b2rm/assets/00_base_link.obj": "5bd2e7c234ca56777c7170b89baf879dad84fc68683711920eb0ef8c6c3b264f",
+      "deploy/capability_mujoco/robots/b2rm/assets/01_FL_hip.obj": "5e3942ae305c6f9f0fa074f9c92195345948bc953a5a40e7005656730133a41a",
+      "deploy/capability_mujoco/robots/b2rm/assets/02_FL_thigh.obj": "b794d94f88310d331016855dcd91df3abdad965a81f668d25fcfc7cdcc85762b",
+      "deploy/capability_mujoco/robots/b2rm/assets/03_FL_calf.obj": "03919f68e467d21b8e36de50e43b0c55c7fe2577132f3d8f4a3565d05568f211",
+      "deploy/capability_mujoco/robots/b2rm/assets/04_FR_hip.obj": "23b89b015a6c30bc8423a81d547ed41cfe0fa0d1d60f922c9dd8379139d22b83",
+      "deploy/capability_mujoco/robots/b2rm/assets/05_FR_thigh.obj": "c7caaa7ec3b143dbcda8980bd440217f30340cce739990f6883a3569b0b18af9",
+      "deploy/capability_mujoco/robots/b2rm/assets/06_FR_calf.obj": "03919f68e467d21b8e36de50e43b0c55c7fe2577132f3d8f4a3565d05568f211",
+      "deploy/capability_mujoco/robots/b2rm/assets/07_RL_hip.obj": "6e2879adc22ac042a5496cc34e4b33899629bba7551409694e63ac6000c553a0",
+      "deploy/capability_mujoco/robots/b2rm/assets/08_RL_thigh.obj": "b794d94f88310d331016855dcd91df3abdad965a81f668d25fcfc7cdcc85762b",
+      "deploy/capability_mujoco/robots/b2rm/assets/09_RL_calf.obj": "03919f68e467d21b8e36de50e43b0c55c7fe2577132f3d8f4a3565d05568f211",
+      "deploy/capability_mujoco/robots/b2rm/assets/10_RR_hip.obj": "8518c8bc919782381dce1dcc170e5d2c0621e8bf6de40d78ec98d8b48ba8eadf",
+      "deploy/capability_mujoco/robots/b2rm/assets/11_RR_thigh.obj": "c7caaa7ec3b143dbcda8980bd440217f30340cce739990f6883a3569b0b18af9",
+      "deploy/capability_mujoco/robots/b2rm/assets/12_RR_calf.obj": "03919f68e467d21b8e36de50e43b0c55c7fe2577132f3d8f4a3565d05568f211",
+      "deploy/capability_mujoco/robots/b2rm/assets/13_base_link.stl": "6df1b234db4fefdbbf95f6cbae6a42ffc349c7573a48dbe4e07d0c92f454a173",
+      "deploy/capability_mujoco/robots/b2rm/assets/14_link_1.stl": "48e2b4bc9b895b0e648c346c708ca02ce19aaf8cc9c1fabf1144433401199d00",
+      "deploy/capability_mujoco/robots/b2rm/assets/15_link_2.stl": "eb7bd779a1ca8de8551ee945a932d435a8c3407abc9d98adf22315f0c1389858",
+      "deploy/capability_mujoco/robots/b2rm/assets/16_link_3.stl": "43ee786b091f4c010bb363e2ea85a3354b9e7498a2312011aff426f55112b9d6",
+      "deploy/capability_mujoco/robots/b2rm/assets/17_link_4.stl": "91880dcaf63b12e7f27f1407fe17beb7e3306e9d0477bf2388e561da7d2d95eb",
+      "deploy/capability_mujoco/robots/b2rm/assets/18_link_5.stl": "dedd7ff3cafe10e7041ba8dcba406c07b1142edcccc7ba4a10a0b2ada66ea759",
+      "deploy/capability_mujoco/robots/b2rm/assets/19_link_6.stl": "67de729fae5ac84252188a4850572854afa892b3de6bdb072b67c6e978dae2af",
+      "deploy/capability_mujoco/robots/b2rm/assets/20_camera_connection_plate.stl": "6ad75b00657f9b3a6885d47e26eb7c5d586673fcd7bf4995437875285bf93696",
+      "deploy/capability_mujoco/robots/b2rm/assets/21_d435_camera.stl": "194b6c4599c34b784630571030786f434d449515e96bd38ed55a0d73f5fdde7e",
+      "deploy/capability_mujoco/robots/b2rm/assets/22_base_link.stl": "c8f74bb7aad8e0eedb7312854a555927fd0cc4654c642e7331ef97850c9d7594",
+      "deploy/capability_mujoco/robots/b2rm/assets/23_finger1_link.stl": "ca87880fe69373657bd12322146f876bd8397e1e029b4fe54222acfa80c37025",
+      "deploy/capability_mujoco/robots/b2rm/assets/24_finger1_link.stl": "ca87880fe69373657bd12322146f876bd8397e1e029b4fe54222acfa80c37025",
+      "deploy/capability_mujoco/robots/b2rm/assets/25_finger2_link.stl": "fdd56c09ff0fed9fde7a2721216f157c59892613aa812041466d49f70c89a280",
+      "deploy/capability_mujoco/robots/b2rm/assets/26_finger2_link.stl": "fdd56c09ff0fed9fde7a2721216f157c59892613aa812041466d49f70c89a280",
+      "deploy/capability_mujoco/robots/b2rm/assets/27_si63_arm_guard_1.stl": "60587b942273dac41f73475b9db5c0d51a3cd29b1e2011a31edeb3f50ba18a54",
+      "deploy/capability_mujoco/robots/b2rm/assets/28_si63_arm_guard_2.stl": "6acc915c23ff07ff82cd32ad737f7ee1d7edab59d80ba927f5142d03631ab877",
+      "deploy/capability_mujoco/robots/b2rm/assets/29_si63_back_shell.stl": "4e2b216d2d1649efeb550423230539bcd01abb1ffc7ce44192a6ea7a3ff0de2b",
+      "deploy/capability_mujoco/robots/b2rm/assets/30_si63_b2_dock_shell.stl": "a5dc192b24045d70e92d99717d3000427c1a63027ce72c85af2adb3aef81de3a"
+    },
+    "raw_artifact_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+    "original_first_action_formal_publication_admitted": false,
+    "model_deserialization": false
+  },
+  "actual": {
+    "encoding": {
+      "revision": "cb-mujoco-streaming-video/2-world-grid-native1080p50",
+      "path": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_media_v1_20261029/viewport.mp4",
+      "success": true,
+      "frames": 2000,
+      "width": 1920,
+      "height": 1080,
+      "fps": 50,
+      "duration_s": 40.0,
+      "first_sim_time_s": 0.02,
+      "last_sim_time_s": 40.00000000000201,
+      "covered_control_interval_s": [
+        0.0,
+        40.00000000000201
+      ],
+      "one_frame_per_control_step": true,
+      "playback_speed": "1x simulation time; encoding wall time is independent",
+      "native_render_resolution": true,
+      "upscaled": false,
+      "PNG_sequence": false,
+      "camera": {
+        "azimuth_deg": 135.0,
+        "elevation_deg": -24.0,
+        "distance_m": 2.65,
+        "follow": "base_link world position; fixed three-quarter direction"
+      },
+      "goal_spheres": {
+        "foot_order": [
+          "FL",
+          "FR",
+          "RL",
+          "RR"
+        ],
+        "radius_m": 0.02,
+        "display_z_offset_m": 0.025,
+        "render_scene_only": true
+      },
+      "world_grid": {
+        "enabled": true,
+        "spacing_m": 0.25,
+        "world_origin_xy_m": [
+          0.0,
+          0.0
+        ],
+        "lines": 74,
+        "plane_geom_id": 0,
+        "plane_z_m": 0.0,
+        "display_z_m": 0.001,
+        "display_z_offset_m": 0.001,
+        "line_width_pixels": 1.15,
+        "last_xy_bounds_m": [
+          -3.0,
+          7.0,
+          -4.0,
+          4.0
+        ],
+        "scope": "Render scene only; integer world grid, ordinary scene depth testing, never an image overlay or collision geom."
+      },
+      "HUD_pose_units": "input metres/radians; displayed metres/degrees",
+      "model_visual_size_before_after": [
+        640,
+        480
+      ],
+      "checked_qpos_qvel_ctrl_time_unchanged": true,
+      "gl": {
+        "requested_backend": "egl",
+        "context_module": "mujoco.egl",
+        "vendor": "NVIDIA Corporation",
+        "renderer": "NVIDIA GeForce RTX 5090/PCIe/SSE2",
+        "version": "4.6.0 NVIDIA 580.178.04"
+      },
+      "ffmpeg_command": [
+        "/usr/bin/ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-n",
+        "-f",
+        "rawvideo",
+        "-vcodec",
+        "rawvideo",
+        "-pixel_format",
+        "rgb24",
+        "-video_size",
+        "1920x1080",
+        "-framerate",
+        "50",
+        "-i",
+        "pipe:0",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-crf",
+        "17",
+        "-preset",
+        "fast",
+        "-threads",
+        "1",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "50",
+        "-movflags",
+        "+faststart",
+        "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_media_v1_20261029/viewport.mp4"
+      ],
+      "ffmpeg_returncode": 0,
+      "error": null,
+      "ffmpeg_log": "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_media_v1_20261029/viewport.mp4.ffmpeg.log",
+      "ffmpeg_stderr_tail": "",
+      "ffprobe": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "50/1",
+        "duration": "40.000000",
+        "nb_read_frames": "2000"
+      },
+      "wall_seconds": 94.09238376794383,
+      "sha256": "f221a47735d9769a0ab6cb02415c804c7f8953ce80fb0e5f57eb44d41fd72e5c",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "source_sha256": "498b96571ae06ef9c3244f699bb42bb09ebec57155a57e723a9552635357425c",
+      "scope": "Rendering and encoding only. Targets/HUD do not change physics or declare behavior success; partial original video/log retained on failure."
+    },
+    "FK_root_max_error_m": 0.0,
+    "FK_sole_max_error_m": 1.1891888407333795e-07,
+    "joint_names": [
+      "FL_hip_joint",
+      "FR_hip_joint",
+      "RL_hip_joint",
+      "RR_hip_joint",
+      "FL_thigh_joint",
+      "FR_thigh_joint",
+      "RL_thigh_joint",
+      "RR_thigh_joint",
+      "FL_calf_joint",
+      "FR_calf_joint",
+      "RL_calf_joint",
+      "RR_calf_joint"
+    ],
+    "qpos_addresses": [
+      7,
+      10,
+      13,
+      16,
+      8,
+      11,
+      14,
+      17,
+      9,
+      12,
+      15,
+      18
+    ],
+    "qvel_addresses": [
+      6,
+      9,
+      12,
+      15,
+      7,
+      10,
+      13,
+      16,
+      8,
+      11,
+      14,
+      17
+    ],
+    "feet_order": [
+      "FL",
+      "FR",
+      "RL",
+      "RR"
+    ],
+    "sole_world_z_offset_m": -0.032,
+    "frames": 2000,
+    "source_times_s": [
+      0.02,
+      40.00000000000201
+    ],
+    "target_actual_phase": "same logged row: pre-step sent command and post-step actual; no temporal shift",
+    "nominal_window_targets_H_m_R_P_deg": [
+      [
+        0.55,
+        0.0,
+        0.0
+      ],
+      [
+        0.6,
+        0.0,
+        0.0
+      ],
+      [
+        0.4,
+        0.0,
+        0.0
+      ],
+      [
+        0.55,
+        10.0,
+        0.0
+      ],
+      [
+        0.55,
+        -10.0,
+        0.0
+      ],
+      [
+        0.55,
+        0.0,
+        10.0
+      ],
+      [
+        0.55,
+        0.0,
+        -10.0
+      ],
+      [
+        0.45,
+        8.0,
+        -8.0
+      ],
+      [
+        0.55,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "video": "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_media_v1_20261029/viewport.mp4",
+  "video_sha256": "f221a47735d9769a0ab6cb02415c804c7f8953ce80fb0e5f57eb44d41fd72e5c",
+  "probe": {
+    "width": 1920,
+    "height": 1080,
+    "avg_frame_rate": "50/1",
+    "duration": "40.000000",
+    "nb_frames": "2000"
+  },
+  "width": 1920,
+  "height": 1080,
+  "fps": 50,
+  "frames": 2000,
+  "duration_s": 40.0,
+  "playback_speed": 1.0,
+  "actual_physics_frames": 2000,
+  "black_tail_frames": 0,
+  "duplicated_frames": 0,
+  "interpolation": false,
+  "original_inputs_and_sources_unchanged": true,
+  "Actor_loads": 0,
+  "Actor_calls": 0,
+  "physics_steps": 0,
+  "PPO_updates": 0,
+  "GPU_workers": 1,
+  "GPU_launch_snapshot": "0, GPU-7c645a08-ab35-75d1-6690-d7db14c68398, 2793, 32607",
+  "wall_seconds": 95.27959052403457,
+  "role": "supplement_larger_Body_range_not_replacement_of_27s_hero",
+  "scientific_qualification_source": "docs/evidence/paper_demo_formal_CB11650_20261028/e469_joint_large_hybrid_v1_actual_strict_compact_20261029.json",
+  "boundary": "同e469+hybrid IK/SRB-QP/PD/FF，.10为Actor姿态正则；非Actor-only或新RL收益。阶段发布核验非原首动作前formal收据。"
+}

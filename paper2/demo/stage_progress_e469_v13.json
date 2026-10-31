@@ -1,0 +1,686 @@
+{
+  "schema": "paper-demo-stage-progress/13-user-accepted-slow-clear-joint-route",
+  "stage_candidate": "e469",
+  "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+  "final_policy_selected": false,
+  "final_freeze": false,
+  "base_coverage": {
+    "path": "research/motor_interface/paper_demo_20261028/coverage_e469_stage_v1.json",
+    "sha256": "bb109be6250b8d7fab4d7355bd2d1abeaa05624fd18da575bfa5b33a96790e62",
+    "bytes_unchanged": true
+  },
+  "merge_rule": "apply cumulative card_updates by id to unchanged baseline;previous v1 remains byte-identical",
+  "summary": {
+    "card_positions": 18,
+    "complete": 16,
+    "partial": 2,
+    "pending": 0,
+    "unknown": 0,
+    "cards_with_actual_result": 18,
+    "complete_positions_share_one_speed5_run": true,
+    "original_Body_jobs_pending": 0,
+    "formal_media": 0,
+    "formal_media_denominator": 18,
+    "ablation_media": 0,
+    "ablation_media_denominator": 6,
+    "count_scope": "18展示版位，部分版位共享同一次实际轨迹；不当18独立任务分布验证"
+  },
+  "card_updates": [
+    {
+      "id": "body_three_axes_explicit",
+      "title": "静止三轴姿态｜大幅变化四宫格",
+      "requested_target": "高度30–65cm、roll±30°、pitch±25°与三轴组合，四宫格。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 16,
+        "denominator": 16,
+        "unit": "原Body展示窗口",
+        "completed_windows": 16,
+        "incomplete_windows": 0
+      },
+      "evidence": [
+        {
+          "axis": "height",
+          "result": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v1_20261029/body_height/CB/result.json",
+          "result_sha256": "1a5535abd5affc0de19ea79ba552660f4cc75afdf8e145944f25873ea0eb4d10",
+          "contract": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v1_20261029/body_height/CB/contract.json",
+          "contract_sha256": "95a48422f9a07f502a5050a0f6f0f1f7502837346ec8b40df84078e34074dd1c",
+          "root_terminal": {
+            "path": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_stage_wide_v1_body_height_CB_actual_20261029.json",
+            "sha256": "0aad850a5e996eba449b0b872ce4d8ea17addf81f5eec7ed5620c82ce9b032c7",
+            "OS_exit_code": 0,
+            "pid": 2662951,
+            "wall_seconds": 7.322124263970181
+          }
+        },
+        {
+          "axis": "roll",
+          "result": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v2_20261029/body_roll/CB/result.json",
+          "result_sha256": "f0ac832ff8f78dc3ae824cdde5e7cf0f6fd6ebbbf144d744feb0d0a9590c16b2",
+          "contract": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v2_20261029/body_roll/CB/contract.json",
+          "contract_sha256": "be1af2352aa3bb449ce9a1ae46b27aafcc8c8f55ef86d68aacd9458cbf513721",
+          "root_terminal": {
+            "path": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_stage_wide_v2_roll_CB_actual_20261029.json",
+            "sha256": "5451f2faaf5e32b344d16af775f9289a70a6f610b5c43b3474682bc33e8857df",
+            "OS_exit_code": 0,
+            "wall_seconds": 6.671159466961399,
+            "pid": null
+          }
+        },
+        {
+          "axis": "pitch",
+          "result": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v1_20261029/body_pitch/CB/result.json",
+          "result_sha256": "f166d0c596c32267695579bfb8f3c91b3f6c794ababb626b0f4a2dcb21cea022",
+          "contract": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v1_20261029/body_pitch/CB/contract.json",
+          "contract_sha256": "4b8eb22b656679adf5677c04a082d0be8a2b5061ff2d8aeed4ee465210aa7904",
+          "root_terminal": {
+            "path": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_stage_wide_v1_body_pitch_CB_actual_20261029.json",
+            "sha256": "b2282c05eb479344e581a1af2cdd10a0182c61b298dbb46e202c3f83c5b2a10c",
+            "OS_exit_code": 0,
+            "pid": 2662953,
+            "wall_seconds": 7.374533722992055
+          }
+        },
+        {
+          "axis": "mixed",
+          "result": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v1_20261029/body_mixed/CB/result.json",
+          "result_sha256": "6f5e835f8813c3518e95ec7a5218ebfe090ca9ad8cd2f0a06a540c53d98984a5",
+          "contract": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_stage_wide_v1_20261029/body_mixed/CB/contract.json",
+          "contract_sha256": "fdaf9c3c0b5cf6d928d732b2f497fe76bcd2e8e9c69a0f8625feba8f8a2896f7",
+          "root_terminal": {
+            "path": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_stage_wide_v1_body_mixed_CB_actual_20261029.json",
+            "sha256": "746c0d65ad9a364bbd7b312fb7a87fa9a1c3c2ca18131ac4707bc515c54dff5d",
+            "OS_exit_code": 0,
+            "pid": 2662956,
+            "wall_seconds": 7.32228397403378
+          }
+        }
+      ],
+      "execution_role": "同e469/11650、纯C0/B111/P1off；同版当前状态支撑锚IK/SRB-QP＋0.10 Actor先验；不是纯Actor或新增RL收益",
+      "stage_summary": "高度30–65cm、roll±30°、pitch±25°及三轴组合，16/16原精度窗通过；每案连续16s、无物理guard；同一公开静态执行合同，原结果保留",
+      "gaps": [],
+      "publication": "stage_candidate_only_not_final_freeze",
+      "original_18_thresholds_unchanged": true,
+      "new_public_execution": true,
+      "new_RL_improvement": false,
+      "scientific_binding": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/body_stage_wide_v2_main_three_cards_uniform_C0_binding_20261029.json",
+        "sha256": "bcfa4648e71c7e049ea91c1c2c1386bc7e491cb4d36f3377d9eb743f04679918"
+      },
+      "previous_result": {
+        "progress": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v8.json",
+        "progress_sha256": "7f350542e13de75c874903ebfc8a3eb3578bc7ad0f314cd3bc9895f7000e640b",
+        "status": "partial",
+        "main_metric": {
+          "numerator": 13,
+          "denominator": 16,
+          "unit": "原Body展示窗口",
+          "completed_windows": 16,
+          "incomplete_windows": 0
+        },
+        "original_results_preserved": true
+      }
+    },
+    {
+      "id": "body_roll10",
+      "title": "左右侧倾±40°",
+      "requested_target": "55cm，roll 0→+40°→−40°→0°，连续四窗4/4。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 4,
+        "denominator": 4,
+        "unit": "新登记连续Body窗口",
+        "completed_windows": 4,
+        "incomplete_windows": 0
+      },
+      "evidence": [
+        {
+          "case": "body_roll",
+          "group": "CB",
+          "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB",
+          "source_sha256": {
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/result.json": "aa5930fbdda953026703c589fc689b173dc55cd807812c4cc45652d9384bec5a",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/contract.json": "3256dada0b90d65f09eeece729e1d4df7fa2236b57786ed285ab5232f384a8c3",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/trace.npz": "44a65c16f564b7ba7bc67ed80d712debb28ab5ce6377bf21a391ba97d25e66af",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/display_live_trace.npz": "87e6f67c6e199cac613653a330ac087ce141780ddb258d47fddf05b02147c0eb",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/scene.xml": "1aceccad553e118c46b19489b6949a674d30295aa0c4a7173e266c51926b283f",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/body_bridge_contract.json": "7c9000a93681746aef50340e37851b510c3ca6cc573aa2dcd9e74f2cf52d10ff",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/body_bridge_execution.json": "7086c0223c757869ad8a4935f4a06408c9c611184ea79932ccf2e50f91cc0c80",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/common_static_support_execution.json": "71fa33de2ec921d2ab8057b6ff41407b6bf2f992758ff8b5d8f637802590499e",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_roll/CB/post_failure_continued_control.json": "1b9a50c78343f17d9be93767fe1883b3707b131f2e7da50f0e257784ec2009c4",
+            "docs/evidence/paper_demo_formal_CB11650_20261028/body_continuous_frontier_v2_body_roll_CB_actual_terminal_20261029.json": "cbc03b3ba76de14e3ad3cefbd12c79bdf6c187b46a5622c3fa7234106c8d6953"
+          },
+          "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+          "actual_frames": 800,
+          "planned_frames": 800,
+          "black_tail_frames": 0,
+          "behavior_pass": true,
+          "windows_pass": 4,
+          "physical_failure": false,
+          "result_sha256": "aa5930fbdda953026703c589fc689b173dc55cd807812c4cc45652d9384bec5a"
+        }
+      ],
+      "stage_summary": "55cm，roll 0→+40°→−40°→0°，连续四窗4/4。",
+      "execution_role": "共同IK/SRB-QP＋同e469的0.10 Actor先验；连续同环境，非纯Actor/新增RL收益",
+      "new_RL_improvement": false,
+      "new_registered_target_version": true,
+      "scientific_binding": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/body_continuous_frontier_and_margin_actual_20261029.json",
+        "sha256": "b5dcd950da1cdb7a684f4fd6a7e084bc8af992654b84cfbbc095813a57cab2e9"
+      },
+      "display_trim": null,
+      "previous_result": {
+        "progress": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v11.json",
+        "sha256": "f8a3dc06a6a83bf20ee4e91284e4f971a86fa3bbc3165058b40b542dfa87925b",
+        "requested_target": "55cm＋roll＋10°静态Body。",
+        "status": "complete",
+        "main_metric": {
+          "numerator": 1,
+          "denominator": 1,
+          "unit": "原静态Body保持任务",
+          "tail_samples": 100,
+          "body_hold_qualified": true
+        },
+        "original_results_preserved": true
+      },
+      "gaps": [],
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "body_combined",
+      "title": "高度＋roll＋pitch联合姿态",
+      "requested_target": "40cm＋roll＋5°＋pitch−5°联合静态Body。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 1,
+        "denominator": 1,
+        "unit": "原静态Body保持任务",
+        "tail_samples": 100,
+        "body_hold_qualified": true
+      },
+      "evidence": [
+        {
+          "result": "outputs/motor_interface/paper_demo_20261028/old_profile_e469_v1_20261029/body_combined/result.json",
+          "result_sha256": "91a7cfd0e5abdb8deb57f8fc95a1feee2a908cc78f10a63e0822392b0ae9d8dd",
+          "contract": "outputs/motor_interface/paper_demo_20261028/old_profile_e469_v1_20261029/body_combined/contract.json",
+          "contract_sha256": "e3060d75d1fc15462487105dfb85d21e78e4e7b9e0a675efe97cc2f54a10be60"
+        }
+      ],
+      "execution_role": "原7500历史锚benchmark冻结runner/runtime仅换完整e469均值；rawcontext/P1/g/physical原样",
+      "stage_summary": "原4s+6s完整10s，末2s100样本达到原2cm/2deg，physical_failure=false；不是仅OS0/finite_horizon推通过",
+      "gaps": [
+        "尚无正式录片/最终发布资格；不声明精确足锚保持或动态Body泛化"
+      ],
+      "additional_checks": [
+        {
+          "receipt": "docs/evidence/paper_demo_formal_CB11650_20261028/old_profile_e469_static_v1_actual_JSON_readonly_20261029.json",
+          "sha256": "8599d87fa0d43e4c256187ed42aeebfb34194e040f3a699eb48c1d57db745a43",
+          "RMS_mm_deg": [
+            0.50434301864189,
+            0.588396981263187,
+            0.32036440983015374
+          ],
+          "net_XY_m": 0.12353901146591505,
+          "full_weights_norm_std_frozen": true
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "pending_original_Body_profiles": [],
+      "pose": {
+        "availability": "recorded_actual_trace_not_read_here",
+        "file": "outputs/motor_interface/paper_demo_20261028/old_profile_e469_v1_20261029/body_combined/trace.npz",
+        "file_present": true,
+        "SHA256": null
+      }
+    },
+    {
+      "id": "body_height_continuous",
+      "title": "高度连续20–68cm",
+      "requested_target": "高度55→20→68→55cm，连续四窗4/4。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 4,
+        "denominator": 4,
+        "unit": "新登记连续Body窗口",
+        "completed_windows": 4,
+        "incomplete_windows": 0
+      },
+      "evidence": [
+        {
+          "case": "body_height",
+          "group": "CB",
+          "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB",
+          "source_sha256": {
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/result.json": "872597828ad697bb863d75f439d37d107038cd6b7cc3bc62db331418106e7363",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/contract.json": "1ba0a2ad100443dd5fc8a28948dbc85193e912e263f558ddf5d961afff95e879",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/trace.npz": "140783790acb61650424ab2d31d4e62af21863b7e4a69255417877c770a59d8c",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/display_live_trace.npz": "400d384ce83c3fe3dab08dee8150d340376cb59c958013e4233df556fa07321d",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/scene.xml": "1aceccad553e118c46b19489b6949a674d30295aa0c4a7173e266c51926b283f",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/body_bridge_contract.json": "2668a1b411871b3433536801aa3c0572c1293fd8264796b57fdeb0570406d402",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/body_bridge_execution.json": "07d430a7ecb29a604f7b9f04dcd4c8993ffe82afe8ff3c3962f2a2d3308bbf49",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/common_static_support_execution.json": "9d8667aca42588be74778563a846c821d37316e85d189e2865bf4f8f8327a5a3",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_height/CB/post_failure_continued_control.json": "03e5df7400a06458480f9b9f07166e53a687c0016d40f9d434c5496cfa989532",
+            "docs/evidence/paper_demo_formal_CB11650_20261028/body_continuous_margin_v3_body_height_CB_actual_terminal_20261029.json": "9f31bd48a79b70cd460d4c20ab2d3123e0abb47b3307db320d364454668011cc"
+          },
+          "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+          "actual_frames": 800,
+          "planned_frames": 800,
+          "black_tail_frames": 0,
+          "behavior_pass": true,
+          "windows_pass": 4,
+          "physical_failure": false,
+          "result_sha256": "872597828ad697bb863d75f439d37d107038cd6b7cc3bc62db331418106e7363",
+          "previous_partial_run_preserved": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_height/CB",
+          "previous_partial_result_sha256": "2d1b733089391725d5168424601ab85c2556725bca12a43e3680b7f49f684b4b"
+        }
+      ],
+      "stage_summary": "高度55→20→68→55cm，连续四窗4/4。",
+      "execution_role": "共同IK/SRB-QP＋同e469的0.10 Actor先验；连续同环境，非纯Actor/新增RL收益",
+      "new_RL_improvement": false,
+      "new_registered_target_version": true,
+      "scientific_binding": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/body_continuous_frontier_and_margin_actual_20261029.json",
+        "sha256": "b5dcd950da1cdb7a684f4fd6a7e084bc8af992654b84cfbbc095813a57cab2e9"
+      },
+      "display_trim": {
+        "drop_first_frames": 150,
+        "source_frames_kept": [
+          150,
+          799
+        ],
+        "source_HUD_clock_s": [
+          3.02,
+          16.0
+        ],
+        "original_full_video": {
+          "source": "outputs/motor_interface/paper_demo_20261028/arm_body_expanded_media_v1_20261029/body/body_height/CB/viewport.mp4",
+          "sha256": "8ca5e77b36911d80a2bbd5b243c7f25dfb845d62b62ce2fdb9f63f06b14e9c64",
+          "frames": 800,
+          "duration_s": 16.0
+        },
+        "original_scientific_800_frames_unchanged": true
+      },
+      "previous_result": {
+        "progress": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v11.json",
+        "sha256": "f8a3dc06a6a83bf20ee4e91284e4f971a86fa3bbc3165058b40b542dfa87925b",
+        "requested_target": "高度55→30→65→55cm，连续变化。",
+        "status": "complete",
+        "main_metric": {
+          "numerator": 4,
+          "denominator": 4,
+          "unit": "原Body展示窗口",
+          "completed_windows": 4,
+          "incomplete_windows": 0
+        },
+        "original_results_preserved": true
+      },
+      "gaps": [],
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "body_pitch_continuous",
+      "title": "连续俯仰±28°",
+      "requested_target": "55cm，pitch 0→+28°→−28°→0°，连续四窗4/4。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 4,
+        "denominator": 4,
+        "unit": "新登记连续Body窗口",
+        "completed_windows": 4,
+        "incomplete_windows": 0
+      },
+      "evidence": [
+        {
+          "case": "body_pitch",
+          "group": "CB",
+          "run": "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB",
+          "source_sha256": {
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/result.json": "62fbb061ed053388af062d2c3f715a522ef89875887c0070f4d39ab5f26c1a0a",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/contract.json": "fdc2f424496ce1ee657278bdb79e049ae3f565d210e1eb2a8cedf43dceedc950",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/trace.npz": "a02df6ec54fd958ad752c0b359fcb5eb3d4c527d2537d688831e99da463ac947",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/display_live_trace.npz": "b271f0628bc9ddc042432ea28632c3f5cf2d0d2f7f6424666468a62df3f5a02c",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/scene.xml": "1aceccad553e118c46b19489b6949a674d30295aa0c4a7173e266c51926b283f",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/body_bridge_contract.json": "d10b311040bb794c425033cf1522de1e2573a6a8f1b09e9965aad8917ba60033",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/body_bridge_execution.json": "19477363cfdaa243f7aee9bea4356d22e24fce0ffab74f7cb474045337d97741",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/common_static_support_execution.json": "690c847ec27372c7227c42a66c4b098687953d48bf257354ab238d612c80554c",
+            "outputs/motor_interface/paper_demo_20261028/body_continuous_margin_v3_20261029/body_pitch/CB/post_failure_continued_control.json": "62d2625e71b6fe57b7cf4eb445f7d3ee2adf6bf0879dba079f26a1fb14b617ca",
+            "docs/evidence/paper_demo_formal_CB11650_20261028/body_continuous_margin_v3_body_pitch_CB_actual_terminal_20261029.json": "d16c5d4d8f195713bce81a4a3b82742c70654c9abe094337421880adfbadb850"
+          },
+          "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+          "actual_frames": 800,
+          "planned_frames": 800,
+          "black_tail_frames": 0,
+          "behavior_pass": true,
+          "windows_pass": 4,
+          "physical_failure": false,
+          "result_sha256": "62fbb061ed053388af062d2c3f715a522ef89875887c0070f4d39ab5f26c1a0a",
+          "previous_partial_run_preserved": "outputs/motor_interface/paper_demo_20261028/body_continuous_frontier_v2_20261029/body_pitch/CB",
+          "previous_partial_result_sha256": "292f6018c7811dde95f22bdd2d13b05ae3773fcc5f628974ada5dc0436801cd2"
+        }
+      ],
+      "stage_summary": "55cm，pitch 0→+28°→−28°→0°，连续四窗4/4。",
+      "execution_role": "共同IK/SRB-QP＋同e469的0.10 Actor先验；连续同环境，非纯Actor/新增RL收益",
+      "new_RL_improvement": false,
+      "new_registered_target_version": true,
+      "scientific_binding": {
+        "path": "docs/evidence/paper_demo_formal_CB11650_20261028/body_continuous_frontier_and_margin_actual_20261029.json",
+        "sha256": "b5dcd950da1cdb7a684f4fd6a7e084bc8af992654b84cfbbc095813a57cab2e9"
+      },
+      "display_trim": {
+        "drop_first_frames": 150,
+        "source_frames_kept": [
+          150,
+          799
+        ],
+        "source_HUD_clock_s": [
+          3.02,
+          16.0
+        ],
+        "original_full_video": {
+          "source": "outputs/motor_interface/paper_demo_20261028/arm_body_expanded_media_v1_20261029/body/body_pitch/CB/viewport.mp4",
+          "sha256": "80ec408b9f829a978849e7176699d03d0b57124a7ffa4d2492af077c0a5dce23",
+          "frames": 800,
+          "duration_s": 16.0
+        },
+        "original_scientific_800_frames_unchanged": true
+      },
+      "previous_result": {
+        "progress": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v11.json",
+        "sha256": "f8a3dc06a6a83bf20ee4e91284e4f971a86fa3bbc3165058b40b542dfa87925b",
+        "requested_target": "高度55cm；pitch 0→＋25°→−25°→0。",
+        "status": "complete",
+        "main_metric": {
+          "numerator": 4,
+          "denominator": 4,
+          "unit": "原Body展示窗口",
+          "completed_windows": 4,
+          "incomplete_windows": 0
+        },
+        "original_results_preserved": true
+      },
+      "gaps": [],
+      "publication": "stage_candidate_only_not_final_freeze"
+    },
+    {
+      "id": "combined_gait_transition_REVIEW",
+      "title": "行走中切换步态",
+      "requested_target": "50cm＋roll＋5°＋pitch−5°；依次请求Trot→Pace→Single→Pronk→Bound。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "partial",
+      "main_metric": {
+        "numerator": 4,
+        "denominator": 4,
+        "unit": "真实步态splice"
+      },
+      "evidence": [
+        {
+          "result": "outputs/motor_interface/paper_demo_20261028/e469_gait_swing_reference55_v1_20261029/gait_transition/result.json",
+          "result_sha256": "56148272d94b907bcfc99225125afad333fe7f26ba189a98f5f2349ca228f929",
+          "contract": "outputs/motor_interface/paper_demo_20261028/e469_gait_swing_reference55_v1_20261029/gait_transition/contract.json",
+          "contract_sha256": "f289107b593d6acdd5bc8e03f4548520a923d3c7215afb77a0498cd11524e031"
+        }
+      ],
+      "execution_role": "同e469＋原cycle_tau03＋公开Stage55因果中间足参考；不是新增学习收益",
+      "stage_summary": "23.86s连续执行，4/4真实切换、五段均到达；原严格五步态足序仍未通过",
+      "gaps": [
+        "四次实际切换不等于各步态足序合格；同原足序门按实际区间检查仍0/5",
+        "132原参考分母保留，52实际发布请求中51首落、18个25mm命中；原完整路线门未升级"
+      ],
+      "additional_checks": [
+        {
+          "name": "full_route",
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "name": "gaits_reached",
+          "numerator": 5,
+          "denominator": 5
+        },
+        {
+          "name": "strict_gait_segments",
+          "numerator": 0,
+          "denominator": 5
+        },
+        {
+          "name": "published_requested_first",
+          "numerator": 51,
+          "denominator": 52
+        },
+        {
+          "name": "first_within25mm",
+          "numerator": 18,
+          "denominator": 52
+        },
+        {
+          "name": "original_reference_requests",
+          "denominator": 132
+        }
+      ],
+      "original_18_thresholds_unchanged": true,
+      "publication": "stage_candidate_only_not_final_freeze",
+      "original_evidence_preserved": [
+        {
+          "output_dir": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1",
+          "result_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/result.json",
+          "result_sha256": "916b39c9a8261c32cc0287859ea1b0fa80d4f462dcded9854cceba85c2d2c939",
+          "contract_path": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/contract.json",
+          "contract_sha256": "5cb14cd0c2ed17b8ece3c525a59fdf5b7c0a1a0b305c1dd5b167687837487b4f",
+          "checkpoint_identity_confirmed_in_actual_JSON": true,
+          "actual_execution_revision": "gecco-body-benchmark-frozen-physical-run/5-explicit-body-mask-demo",
+          "pose": {
+            "file": "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/trace.npz",
+            "file_present": true,
+            "availability": "present_existing_recording_schema",
+            "array_opened_this_audit": false,
+            "geometry_files_present": [
+              "outputs/motor_interface/paper_demo_20261028/candidate_CB11650_v1/gait_transition_raw_v1/scene/scene.xml"
+            ],
+            "render_inputs_path": null,
+            "formal_render_admission": false
+          }
+        }
+      ],
+      "candidate_intervention": "existing ContactSwingReference55 lift-anchor before original P1; only command fields changed; original goals/events/physics unchanged",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_e469_gait_swing_reference_v1_actual_terminal_20261029.json"
+    },
+    {
+      "id": "arm_five_application_REVIEW",
+      "title": "机械臂｜固定Body与调用Body",
+      "requested_target": "高度、roll、pitch、三轴组合、行走触碰五组；左固定Body，右调用Body。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "behavior_scope": "原五个Body-enabled局部任务qualified_touch5/5；四静态XY及moving前后连续性原门均通过；五个fixedBody对照均未触达",
+      "execution_revision": "arm-public-system-execution/1-single-e469-two-declared-task-profiles",
+      "execution_profiles": [
+        "Body_only_static_support",
+        "declared_contact_route"
+      ],
+      "single_Actor_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "common_public_task_dispatch_verified": true,
+      "actual_new_entry_profiles_validated": 2,
+      "reused_old_conditions": 8,
+      "Actor_only": false,
+      "single_leg_control_law": false,
+      "new_RL_gain": false,
+      "online_seamless_switch_claim": false,
+      "formal_global_deployment_qualification": false,
+      "main_metric": {
+        "numerator": 5,
+        "denominator": 5,
+        "unit": "原五个Body enabled局部触达任务",
+        "fixed_body_numerator": 0,
+        "fixed_body_denominator": 5
+      },
+      "stage_summary": "同e469，五项Body触达5/5，固定Body0/5；静态四足支撑与Contact连续行走两种公开模式，均已验证公共入口。原五案各16s，视频与实际轨迹同字节复用。",
+      "gaps": [],
+      "evidence": [
+        {
+          "path": "docs/evidence/paper_demo_formal_CB11650_20261028/arm_public_execution_v1_actual_readonly_20261029.json",
+          "sha256": "4b80efd23d6872aa48a0cbc56da8b83dcaa08fbe30f61708d9b71af6d0cdb48d"
+        },
+        {
+          "path": "research/motor_interface/paper_demo_20261028/arm_public_execution_v1.json",
+          "sha256": "44e6896522be1748ab741bcda276377bf586c9c47bb55514cdb5afeba497553f"
+        }
+      ],
+      "previous_result": {
+        "progress": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v9.json",
+        "sha256": "304b7b83f24b43060225a053d1c8755e26285a1e708b14317951a3e342824486",
+        "status": "partial",
+        "main_metric": {
+          "numerator": 5,
+          "denominator": 5,
+          "unit": "启用Body局部qualified_touch案；四静态新框架＋原moving"
+        },
+        "old_source_results_preserved": true
+      },
+      "publication": "stage_candidate_only_not_final_freeze",
+      "original_18_thresholds_unchanged": true,
+      "scope": "局部五触达任务；两个公开执行模式，非单一腿控制律、Actor-only、新RL增益或在线无缝切换"
+    },
+    {
+      "id": "low_ceiling_comparison",
+      "title": "压低身体过障碍｜35cm完整穿越",
+      "requested_target": "64cm净空；GeCCo基线、同一C+B高度55cm、同一C+B高度35cm三列。",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "status": "complete",
+      "main_metric": {
+        "numerator": 144,
+        "denominator": 144,
+        "completed_pairs": 72,
+        "planned_pairs": 72,
+        "unit": "CB35主任务真实足步",
+        "comparison_conditions_recorded": 3,
+        "comparison_conditions": 3,
+        "successful_main_conditions": 1,
+        "expected_collision_controls": 2
+      },
+      "stage_summary": "同64cm净空、72对144目标：左GeCCo和中CB55抵达屋顶碰撞；右同CB35完整4.33m、清顶后恢复55cm并保持。两失败后各有2秒真实续控，原失败不改分。",
+      "execution_role": "CB35/CB55同e469和公开IK/QP/.10先验，只改高度命令；GeCCo自身81维Actor/PD外部基线，非同执行器或匹配训练预算消融",
+      "evidence": [
+        {
+          "path": "research/motor_interface/paper_demo_20261028/published_stage_ceiling_matched_media_v19.json",
+          "sha256": "f53820fe667fee6df5d3ee8ef7dc821a2fca009e0092f42ec7e6d78265bd2541"
+        },
+        {
+          "path": "docs/evidence/paper_demo_formal_CB11650_20261028/low_ceiling_matched_three_actual_compact_20261029.json",
+          "sha256": "23e03ce18bc9a610f5a53632835afac389f9da3c40b7ef0a7c92177160a5c847"
+        }
+      ],
+      "gaps": [],
+      "new_RL_gain": false,
+      "original_18_thresholds_unchanged": true,
+      "previous_result": {
+        "path": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v10.json",
+        "sha256": "0953681772150726eb961fb6c16a33c02eca14d272bec03f93957592bea46686",
+        "status": "partial",
+        "old_failure_files_preserved": true
+      },
+      "publication": "stage_candidate_only_not_final_freeze",
+      "scope": "限高三条件交付与CB35路线；不宣称GeCCo整体能力不足或纯RL因果"
+    },
+    {
+      "id": "joint_body_flat_walk",
+      "title": "联合姿态｜平地边走边变化",
+      "requested_target": "慢速连续行走中，高度40–60cm、roll/pitch分别±10°，组合H45cm/roll+8°/pitch−8°；九窗与完整路线保持。",
+      "status": "complete",
+      "same_checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "main_metric": {
+        "numerator": 9,
+        "denominator": 9,
+        "unit": "原1cm/2度姿态窗口"
+      },
+      "stage_summary": "原速40s、9/9姿态窗、32/32接管、64/64严格首落；前进1.925m，约0.054m/s。",
+      "evidence": [
+        {
+          "path": "docs/evidence/paper_demo_formal_CB11650_20261028/e469_joint_large_hybrid_v1_actual_strict_compact_20261029.json",
+          "sha256": "44ed780a1a7c24b83e744350d35fb476249360826c1af6593e275d2be8648d93"
+        },
+        {
+          "path": "research/motor_interface/paper_demo_20261028/published_stage_joint_slow_v20.json",
+          "sha256": "d78be570869bcb796897570e25ad9645795e2acc5e832464d98f3efa7e667369"
+        }
+      ],
+      "acceptance_change_by_user": "不需要较快的联合姿态行走，较慢能有比较明显切换就行",
+      "previous_target_result": {
+        "status": "partial",
+        "windows": "5/9",
+        "duration_s": 27,
+        "net_forward_m": 4.825,
+        "score_unchanged": true,
+        "asset": "media_stage/joint_body_flat_walk_v7.mp4"
+      },
+      "scope": "新展示参考及用户慢速验收，不改写旧27秒任务成绩；不是新增学习收益"
+    }
+  ],
+  "unchanged_pending_cards": [],
+  "source_receipt": {
+    "quad_stop_repair_actual_receipt": "docs/evidence/paper_demo_formal_CB11650_20261028/old_profile_e469_quad_c0stop_v1_actual_JSON_prefix_20261029.json",
+    "sha256": "48baf72e884aa8befa3f5a0020f17965a11ee7fd367dfaaf85d151d790ae5116",
+    "previous_cumulative_overlay": {
+      "path": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v3.json",
+      "sha256": "b9f4ec6464542babb8ed83d1a9a841fe583634cfc05269b6bb714d7a787b9b93"
+    }
+  },
+  "boundary": "16个展示版位按其公开系统执行版本完成；不是16个独立Actor-only或学习增益验收。用户接受慢速明显联合姿态，新的40秒参考9/9通过，原27秒5/9及其首落退化不改判。原MIX300未晋升；在训MIX_C终点尚待评价。",
+  "root_continuous_terminal_receipts": {
+    "height": {
+      "session_id": 65303,
+      "tool": "ad04b9",
+      "exit_code": 0
+    },
+    "pitch": {
+      "session_id": 50886,
+      "tool": "6eb602",
+      "exit_code": 0
+    }
+  },
+  "accepted_by_root": true,
+  "supersedes": {
+    "path": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v12.json",
+    "sha256": "bc923070dd6d5fe86093af141ea6cac1787e434366eceaa46c107580262332c1",
+    "old_file_preserved": true
+  },
+  "root_C0stop_terminal_receipts": {
+    "height": {
+      "session_id": 80927,
+      "tool": "e80795",
+      "exit_code": 0
+    },
+    "pitch": {
+      "session_id": 35872,
+      "tool": "4150d5",
+      "exit_code": 0
+    },
+    "mixed": {
+      "session_id": 88305,
+      "tool": "6f7765",
+      "exit_code": 0
+    },
+    "roll": "保留原物理失败，未重跑"
+  },
+  "latest_change": "用户取消较快联合姿态行走要求；使用已有同e46940秒慢速、明显姿态变化完整路线。其它17卡状态不变。",
+  "previous_progress": {
+    "path": "research/motor_interface/paper_demo_20261028/stage_progress_e469_v12.json",
+    "sha256": "bc923070dd6d5fe86093af141ea6cac1787e434366eceaa46c107580262332c1"
+  },
+  "created_utc": "2026-10-29T14:02:02.124325+00:00",
+  "pose_expansion_registry": {
+    "path": "research/motor_interface/paper_demo_20261028/published_arm_body_expanded_media_v1.json",
+    "sha256": "1d4500b329fd0cff0f304f9e794349a4c7973ee980615b7f780fcb8b05c7bdaf",
+    "arm_AB_complete": 4,
+    "continuous_Body_AB_complete": 3,
+    "new_RL_gain": false
+  },
+  "joint_slow_main_registry": {
+    "path": "research/motor_interface/paper_demo_20261028/published_stage_joint_slow_v20.json",
+    "sha256": "d78be570869bcb796897570e25ad9645795e2acc5e832464d98f3efa7e667369"
+  }
+}

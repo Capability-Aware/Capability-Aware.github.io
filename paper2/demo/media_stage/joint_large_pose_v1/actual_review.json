@@ -1,0 +1,46 @@
+{
+  "status": "ACTUAL_REAL_40S_VIDEO_FFPROBE_SHA_FK_VISUAL_PASS",
+  "render_result": "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_media_v1_20261029/result.json",
+  "render_result_sha256": "c29b47625fc18ea4f73adc0161024ede791a816b1890c79395d8ce045202c3e4",
+  "root_authorized_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/agent_joint_large_hybrid_v1_render_actual_20261029.json",
+  "actual_terminal_sha256": "174944a66216ab142cda579ce06795ee7892f0ba08f9d3d7f0eb25652e995b68",
+  "actual_OS_exit": 0,
+  "wall_seconds": 95.39338440191932,
+  "video": "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_media_v1_20261029/viewport.mp4",
+  "video_sha256": "f221a47735d9769a0ab6cb02415c804c7f8953ce80fb0e5f57eb44d41fd72e5c",
+  "video_bytes": 69225889,
+  "independent_CPU_ffprobe": {
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "50/1",
+    "duration": "40.000000",
+    "nb_frames": "2000"
+  },
+  "FK_full_frames": 2000,
+  "FK_root_max_error_m": 0.0,
+  "FK_sole_max_error_m": 1.1891888407333795e-07,
+  "physical_state_unchanged_during_render": true,
+  "source_input_SHA_unchanged": true,
+  "no_new_Actor_or_physics": true,
+  "actual_visual_review": {
+    "keyframes": "docs/evidence/paper_demo_formal_CB11650_20261028/e469_joint_large_hybrid_v1_media_keyframes_20261029.png",
+    "sha256": "7f01b3a65198c7f55b9a76f4e3c4222c9ace3a31d6b792e86dd625f8a984c4f3",
+    "actual_source_frame_indices": [
+      549,
+      749,
+      1349,
+      1749
+    ],
+    "actual_sim_times_s": [
+      11.0,
+      15.0,
+      27.0,
+      35.0
+    ],
+    "CPU_extraction_only": true,
+    "reviewed": true,
+    "findings": "完整机器人/脚、地面网格与目标球可见；H60/H40及pitch/组合姿态清楚；HUD数值简洁可读，无裁剪身体。四格仅独立关键帧预览，不是同步不同实验比较。"
+  },
+  "limits": "完整真实低速40s补充，不替旧27s主hero；不是RL或速度提升。无黑尾、插帧、复制末态、快放。"
+}

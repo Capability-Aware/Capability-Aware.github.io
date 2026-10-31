@@ -1,0 +1,499 @@
+{
+  "status": "ACTUAL_TWO_FUNCTIONAL_TARGET_REMOVAL_GROUPS_FULL40_NO_PHYSICAL_FAILURE",
+  "science_scope": "system-level same public IK/SRBQP/PD/.10 ownActor target-removal;not native Actor learning contribution;alpha0 diagnostic separately preserved",
+  "groups": {
+    "C_only": {
+      "run": "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only",
+      "checkpoint_sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+      "technical_OS_exit": 0,
+      "root_terminal": "outputs/motor_interface/paper_demo_20261028/user_review_repair_v1_20261029/root_CPU_queue/joint_C_only_terminal.json",
+      "root_wall_s": 32.25686097401194,
+      "duration_s": 40.00000000000201,
+      "native_samples": 2000,
+      "motor_samples": 8000,
+      "physical_guard": false,
+      "first_terminal": null,
+      "observation_only_samples": 0,
+      "Actor_calls": 2000,
+      "own_Actor_prior_weight": 0.1,
+      "weights_and_norm_frozen": true,
+      "PPO_updates": 0,
+      "body_active": false,
+      "Contact_active": true,
+      "master_B_windows": 9,
+      "master_C_pairs": 32,
+      "master_C_requests": 64,
+      "actual_B_windows": 0,
+      "actual_C_pairs": 32,
+      "actual_C_requests": 64,
+      "body_passed": null,
+      "Body_active_qualified": null,
+      "Contact_active_qualified": true,
+      "Contact_first_errors": {
+        "native50_error3D_m": 0.009520260617136955,
+        "pipeline200_error3D_m": 0.009520266948818648,
+        "cached50_coordinate_error3D_m": 0.013469740422381403
+      },
+      "raw_generic_qualified": false,
+      "raw_strict_contact_status": "PENDING_REAL_FIRST_AIR_LOAD_LEDGER_REVIEW",
+      "overall_combination_status": "partial_B_removed",
+      "root_displacement_m": [
+        1.9230280968891615,
+        0.013684902325652455,
+        -0.0480046774417926
+      ],
+      "body_windows": [
+        {
+          "index": 0,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 6.471470924865357,
+          "RMS_R_deg": 0.3069251696685026,
+          "RMS_P_deg": 0.2795644704539915,
+          "passed": null
+        },
+        {
+          "index": 1,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 5.994945452460689,
+          "RMS_R_deg": 0.15967972048374524,
+          "RMS_P_deg": 0.24666006253409747,
+          "passed": null
+        },
+        {
+          "index": 2,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 5.894796013242565,
+          "RMS_R_deg": 0.1696996739453573,
+          "RMS_P_deg": 0.24384376958331555,
+          "passed": null
+        },
+        {
+          "index": 3,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 5.89044881639936,
+          "RMS_R_deg": 0.17316088660055037,
+          "RMS_P_deg": 0.2437985857988921,
+          "passed": null
+        },
+        {
+          "index": 4,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 5.914182503856514,
+          "RMS_R_deg": 0.16886872777012063,
+          "RMS_P_deg": 0.24853892495611382,
+          "passed": null
+        },
+        {
+          "index": 5,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 5.93515498002147,
+          "RMS_R_deg": 0.12954952229646188,
+          "RMS_P_deg": 0.25109229734812766,
+          "passed": null
+        },
+        {
+          "index": 6,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 6.08357311381029,
+          "RMS_R_deg": 0.13607943618298535,
+          "RMS_P_deg": 0.23564932713581732,
+          "passed": null
+        },
+        {
+          "index": 7,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 4.331702495835196,
+          "RMS_R_deg": 0.10233434970037772,
+          "RMS_P_deg": 0.19056001345444118,
+          "passed": null
+        },
+        {
+          "index": 8,
+          "active": false,
+          "target_H_m_R_P_deg": null,
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 3.861597819929799,
+          "RMS_R_deg": 0.004900394830165467,
+          "RMS_P_deg": 0.23446413910403674,
+          "passed": null
+        }
+      ],
+      "mask_actual217_exact": true,
+      "g_range": [
+        0.0,
+        1.0
+      ],
+      "C_mask_rows": 1800,
+      "B_mask_rows": 0,
+      "actual_target_range_H_R_P": [
+        [
+          0.55,
+          0.0,
+          0.0
+        ],
+        [
+          0.594147,
+          0.0,
+          0.0
+        ]
+      ],
+      "final1s": {
+        "samples": 50,
+        "four_ground_12N_samples": 50,
+        "root_XY_max_drift_m": 3.666219812151438e-05
+      },
+      "motor_to_trace_exact": true,
+      "qtarget_to_trace_exact": true,
+      "motor_saturated_axis_substeps": 0,
+      "prior_nonzero_rows": 2000,
+      "strict_Contact": {
+        "gates": {
+          "full32pairs64requests": true,
+          "native50_all64_first25": true,
+          "native50_all64_real_qualified": true,
+          "pipeline200_all64_earliest_first25": true,
+          "cached50_coordinate_all64_first25": true,
+          "earliest200_all_LAND": true,
+          "all64_air80": true,
+          "all64_measured_lift15": true,
+          "all32_true_paired_air_other_two_12N": true,
+          "all32_LOAD80": true,
+          "no_guard": true,
+          "no_self_contact": true,
+          "no_motor_clip": true,
+          "all105_current_and_snapshot_SHA": true,
+          "full40_actual2000_rows": true,
+          "final1s_all_four_loaded": true,
+          "final1s_root_XY_drift50mm": true,
+          "B_removed_actual217": true,
+          "neutral55_actual_target_post_prepare": true
+        },
+        "physical_first": 64,
+        "native50_first": 64,
+        "published_pairs": 32,
+        "LOAD_complete": 32,
+        "min_contiguous_air_s": 0.335,
+        "min_lift_m": 0.06620723754167557,
+        "min_LOAD_s": 0.08,
+        "min_true_diagonal_air_other_two_12N_s": 0.335,
+        "native_replay_sparse_snapshots_exact": 400,
+        "final_hold": {
+          "samples": 50,
+          "height_roll_pitch_RMS_m_rad": [
+            0.003861597819929799,
+            8.552802443409575e-05,
+            0.004092171205219429
+          ],
+          "root_XY_max_from_start_m": 3.666219812151438e-05,
+          "four_ground_12N_samples": 50,
+          "final_loaded_support_norms_N": [
+            179.43240356445312,
+            158.0078887939453,
+            206.31991577148438,
+            179.7288055419922
+          ],
+          "end_s": 40.00000000000201
+        }
+      }
+    },
+    "B_only": {
+      "run": "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "technical_OS_exit": 0,
+      "root_terminal": "outputs/motor_interface/paper_demo_20261028/user_review_repair_v1_20261029/root_CPU_queue/joint_B_only_terminal.json",
+      "root_wall_s": 25.025560033041984,
+      "duration_s": 40.00000000000201,
+      "native_samples": 2000,
+      "motor_samples": 8000,
+      "physical_guard": false,
+      "first_terminal": null,
+      "observation_only_samples": 0,
+      "Actor_calls": 2000,
+      "own_Actor_prior_weight": 0.1,
+      "weights_and_norm_frozen": true,
+      "PPO_updates": 0,
+      "body_active": true,
+      "Contact_active": false,
+      "master_B_windows": 9,
+      "master_C_pairs": 32,
+      "master_C_requests": 64,
+      "actual_B_windows": 9,
+      "actual_C_pairs": 0,
+      "actual_C_requests": 0,
+      "body_passed": 9,
+      "Body_active_qualified": true,
+      "Contact_active_qualified": null,
+      "Contact_first_errors": null,
+      "raw_generic_qualified": false,
+      "raw_strict_contact_status": "PENDING_REAL_FIRST_AIR_LOAD_LEDGER_REVIEW",
+      "overall_combination_status": "partial_C_removed",
+      "root_displacement_m": [
+        -0.011718886454955994,
+        -0.000668711741088757,
+        -0.04583300560237058
+      ],
+      "body_windows": [
+        {
+          "index": 0,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 1.6505227157605737,
+          "RMS_R_deg": 0.0746858896701601,
+          "RMS_P_deg": 0.7017551175158888,
+          "passed": true
+        },
+        {
+          "index": 1,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.6,
+            0.0,
+            0.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 1.467613500734447,
+          "RMS_R_deg": 0.05365823718464286,
+          "RMS_P_deg": 0.48908659580125746,
+          "passed": true
+        },
+        {
+          "index": 2,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.4,
+            0.0,
+            0.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 3.2695867175090325,
+          "RMS_R_deg": 0.10727686066790398,
+          "RMS_P_deg": 1.311700554103264,
+          "passed": true
+        },
+        {
+          "index": 3,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.55,
+            10.0,
+            0.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 1.9277536076237105,
+          "RMS_R_deg": 0.14011060311661994,
+          "RMS_P_deg": 0.69870415158157,
+          "passed": true
+        },
+        {
+          "index": 4,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.55,
+            -10.0,
+            0.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 1.4859883158348428,
+          "RMS_R_deg": 0.016115732250324328,
+          "RMS_P_deg": 0.6905269236274715,
+          "passed": true
+        },
+        {
+          "index": 5,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.55,
+            0.0,
+            10.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 1.5478737820011004,
+          "RMS_R_deg": 0.07016936212138787,
+          "RMS_P_deg": 0.5600048055650522,
+          "passed": true
+        },
+        {
+          "index": 6,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.55,
+            0.0,
+            -10.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 1.8041716188680341,
+          "RMS_R_deg": 0.07367169158934048,
+          "RMS_P_deg": 0.7394116265754547,
+          "passed": true
+        },
+        {
+          "index": 7,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.45,
+            8.0,
+            -8.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 3.064483642032774,
+          "RMS_R_deg": 0.1468314174871723,
+          "RMS_P_deg": 1.1153736888056853,
+          "passed": true
+        },
+        {
+          "index": 8,
+          "active": true,
+          "target_H_m_R_P_deg": [
+            0.55,
+            0.0,
+            0.0
+          ],
+          "tail_samples": 50,
+          "complete": true,
+          "RMS_H_mm": 1.780046603230961,
+          "RMS_R_deg": 0.06529455528886932,
+          "RMS_P_deg": 0.6912403804497244,
+          "passed": true
+        }
+      ],
+      "mask_actual217_exact": true,
+      "g_range": [
+        0.0,
+        0.0
+      ],
+      "C_mask_rows": 0,
+      "B_mask_rows": 2000,
+      "actual_target_range_H_R_P": [
+        [
+          0.4,
+          -0.17453292519943295,
+          -0.17453292519943295
+        ],
+        [
+          0.6,
+          0.17453292519943295,
+          0.17453292519943295
+        ]
+      ],
+      "final1s": {
+        "samples": 50,
+        "four_ground_12N_samples": 50,
+        "root_XY_max_drift_m": 3.1856424530288495e-05
+      },
+      "motor_to_trace_exact": true,
+      "qtarget_to_trace_exact": true,
+      "motor_saturated_axis_substeps": 0,
+      "prior_nonzero_rows": 2000
+    }
+  },
+  "CB_reused": {
+    "run": "outputs/motor_interface/paper_demo_20261028/e469_joint_large_hybrid_v1_20261029/joint9_full40",
+    "body9of9": true,
+    "all_strict_gates": true,
+    "physical_first": 64,
+    "planned_requests": 64,
+    "planned_pairs": 32,
+    "LOAD_complete": 32,
+    "source_compact": "docs/evidence/paper_demo_formal_CB11650_20261028/e469_joint_large_hybrid_v1_actual_strict_compact_20261029.json",
+    "source_compact_sha256": "44ed780a1a7c24b83e744350d35fb476249360826c1af6593e275d2be8648d93"
+  },
+  "data_integrity_notes": [
+    "C_only internal_neutral_support_observation retains historical master TARGET labels despite actual neutral55 scoring;actual target and recomputed neutral errors verified;not userBody/9requested successes",
+    "raw generic qualified=false/PENDING preserved;independent strict Contact result separate",
+    "Body_withoutC has zero published C requests;inactive null not0of64failure",
+    "No output/source/registry/builder changed"
+  ],
+  "input_sha256": {
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/contract.json": "51af19f414efeba1a9ddf89d32a2835cde775dd5d698fee5bd97bde75f081abe",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/result.json": "aa0e235341253e6bdd361cf79db26c787b1211661e62e9dd41b747adc8ced439",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/plan.json": "bf042b7ee5052dfb2e1d406b471e3ed7f5f00d971ae91207d4dc83a1e5374321",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/trace.npz": "f329e18ab632ddac7496886d7d0e9d0fe4ec19bae5b1827fc4df24d539b916bc",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/taskspace_execution.npz": "ce13323aba092062fa401033b4bede22990075f32e0f6498aae5eb82494e3b75",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/diagonal_trot_physics200hz.npz": "d7cbe852380c4c11290a953a302d7fdf2909be1d76ad21651d166126dba53d72",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/diagonal_trot_v4_load200hz.npz": "426395431208308051015d86de42ae3783560dbb699957204251b5d6f74c52c9",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/taskspace_motor.npz": "0f5271ad42faea5603265511dfa8bf6026cafbdc576a8f3dad2e3d2fb7fb529c",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/diagonal_trot_v5_substep_ff.npz": "1c388a1e47241f37a5342b01bbb597cff6af95a77492c7b2e38dc2291e437a9c",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/prepare_vertical_brake200hz.npz": "93b6c878da33100044359daa14a06dee9380e6e727fd65e3efc02a06b51b06ce",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/ceiling_actor_prior50hz.npz": "4fffd8fe52adb13ad61ffd5b051fe39de3a929e37cdd157f3c640d4d5edcac42",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/ceiling_hybrid50hz.npz": "cca413979042ffff1b147dce088a23184c4826d97040a4805235cc1a333bc0c8",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/ceiling_hybrid_preview.npz": "f6e21c6f70a2c56b46f1ceb9d42522a0b6e66a9e504ee71fd80461266ca69356",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/fastcadence50hz.npz": "7f49b67e23c883c3c6197fdc428622f25b49d176685a11614e02cbc755064d9c",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/joint_body_schedule50hz.npz": "1fd548376d3669f693813b2496458cc9da993d1475c0a212682b0b8aed2493c6",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/diagonal_trot.json": "b52dbd20347192c634fe8207a3bf1cafe5681a7143db4c9fc4945faa06a1d447",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/functional_joint_receipt.json": "15c5db634a8747427d927f65a80b0453a26364596a7cbf859aabceeb57822403",
+    "outputs/motor_interface/paper_demo_20261028/user_review_repair_v1_20261029/root_CPU_queue/joint_C_only_terminal.json": "8a4fba36cde71ac0bebd16a7202fd9751a3e8d2421c50b153d2b3ea29595aa9e",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/result.json": "99f16d7614c345f1039ef831f49f8c4ac8b61c8eddc6cafade83d68bae1b0a33",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/contract.json": "94a71369a3d5556169d468865b6fe6a2374297546564ee68a30a0644e8e627b9",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/functional_joint_receipt.json": "917bd7b94ea57cae18760d68e6cb55d05b75388b69630f517ac7914ab960257e",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/diagonal_trot.json": "0de3437a7d902b6354a120b102543c491e31b6b022bd4ac26f81f62f68a7c591",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/trace.npz": "cbd0c71fe6d0e93bd9f183995cbf9330df39ed90395c7917f4ca2b51ecfeab86",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/taskspace_execution.npz": "103ad2f137391b8cbcffada36fa81a59a763e8309289d8feeac941fcb63763f3",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/diagonal_trot_physics200hz.npz": "3f5dee1734e5520ad1d7a852e3010ac6296b4ebd16e79c31c2b61ac898174e7c",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/taskspace_motor.npz": "98cdd10733a0a1bab45eaed9fca69bc4aaceb7465c97d2da6baabeb6e4867915",
+    "outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/ceiling_actor_prior50hz.npz": "dae6e2fc3228cb6388de29f6ecb644b7edf05071a0485aef1e85365074417e1c",
+    "outputs/motor_interface/paper_demo_20261028/user_review_repair_v1_20261029/root_CPU_queue/joint_B_only_terminal.json": "291c72c56f17579608505ecf21a86560c70dbd53c77b8857c9c9cfff908f4fbc"
+  },
+  "analysis_source_sha256": "cdc3d8129220e0163230d9fd727fd687d27c89f789fa9cb589ee37c7f7afa5a0",
+  "raw_NPZ_reads": {
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/trace.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/taskspace_execution.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/diagonal_trot_physics200hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/diagonal_trot_v4_load200hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/taskspace_motor.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/diagonal_trot_v5_substep_ff.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/prepare_vertical_brake200hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/ceiling_actor_prior50hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/ceiling_hybrid50hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/ceiling_hybrid_preview.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/fastcadence50hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/C_only/joint_body_schedule50hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/trace.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/taskspace_execution.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/diagonal_trot_physics200hz.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/taskspace_motor.npz": 1,
+    "/home/user/isaac/capability_research/outputs/motor_interface/paper_demo_20261028/joint_functional_ablation_v1_20261029/B_only/ceiling_actor_prior50hz.npz": 1
+  },
+  "PT_reads": 0,
+  "Actor_or_model_loads": 0,
+  "Actor_forward": 0,
+  "physics": 0,
+  "GPU": 0
+}

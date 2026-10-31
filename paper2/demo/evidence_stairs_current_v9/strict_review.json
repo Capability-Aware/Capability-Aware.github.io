@@ -1,0 +1,752 @@
+{
+  "status": "STRICT_CB_PASS_CONLY_EARLIEST_FIRST_NOT_PASS",
+  "groups": {
+    "CB": {
+      "status": "FULL_STRICT84_42_PASS",
+      "run": "outputs/motor_interface/paper_demo_20261028/capability_contact_stairs_v7_20261029/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "c25dfa4eab8ca4f6290912348a52dbdd911b6cf6b417103d5dbd3968de7c6195",
+      "contract_sha256": "16d6166760ed23e2ebfa9a6b013fdb99cb2c82ce4d61837e5e13147e2acdeaac",
+      "root_terminal_sha256": "3059b60f00756c5373bed2f5d43012c68466d89f76d86c0c4ecc4fb20ac655a8",
+      "summary": {
+        "planned_requests": 84,
+        "planned_pairs": 42,
+        "published_requests": 84,
+        "published_pairs": 42,
+        "not_started": 0,
+        "completed_pairs": 42,
+        "completed_foot_requests": 84,
+        "all_planned_completed": true,
+        "LOAD80ms_passes": 42
+      },
+      "qualification": {
+        "checks": {
+          "full_plan_published": true,
+          "full42_LOAD_complete": true,
+          "three_first_ledgers84_all25": true,
+          "true_pair_air80": true,
+          "LOAD80_actual12N": true,
+          "original_Trot": true,
+          "original_patch_exit": true,
+          "full_plan_then_real1s_support": true,
+          "no_failure": true,
+          "no_support_fault_catch": true,
+          "core_consistent": true,
+          "original_motor_formula": true,
+          "strict_group_and_original_source_receipt": true
+        },
+        "failed": []
+      },
+      "first_ledgers": {
+        "formal50hz": {
+          "denominator": 84,
+          "first_count": 84,
+          "within25mm": 84,
+          "measurement_available": true,
+          "bad_ids": [],
+          "missing_ids": [],
+          "error_m": {
+            "n": 84,
+            "mean": 0.007947178603588453,
+            "p95": 0.01132912177272524,
+            "maximum": 0.014185461443233571
+          }
+        },
+        "earliest200hz_allphase": {
+          "denominator": 84,
+          "first_count": 84,
+          "within25mm": 84,
+          "measurement_available": true,
+          "bad_ids": [],
+          "missing_ids": [],
+          "error_m": {
+            "n": 84,
+            "mean": 0.007588445984284249,
+            "p95": 0.011060576512752267,
+            "maximum": 0.012801480426777463
+          }
+        },
+        "later_pair_first": {
+          "denominator": 84,
+          "first_count": 84,
+          "within25mm": 84,
+          "measurement_available": true,
+          "bad_ids": [],
+          "missing_ids": [],
+          "error_m": {
+            "n": 84,
+            "mean": 0.007588445984284249,
+            "p95": 0.011060576512752267,
+            "maximum": 0.012801480426777463
+          }
+        }
+      },
+      "hold": {
+        "available": true,
+        "start_sim_s": 61.64000000001308,
+        "end_sim_s": 62.64000000001359,
+        "samples": 51,
+        "all_actual_ground12N": true,
+        "minimum_force_norm_N": 47.10343933105469,
+        "anchors": [
+          [
+            7.843833894978321,
+            0.191634450317046,
+            -0.0005704859783700611
+          ],
+          [
+            7.762376149630499,
+            -0.19039909999530397,
+            -0.0016864492034514567
+          ],
+          [
+            6.945937749138743,
+            0.19094180683273582,
+            -0.00127579847843165
+          ],
+          [
+            7.262029841548733,
+            -0.18964343820244906,
+            -0.0017986688626804997
+          ]
+        ],
+        "maximum_perfoot_drift_from_window_start_m": [
+          0.015170239843428135,
+          0.00919074285775423,
+          0.019235782325267792,
+          0.009769951924681664
+        ],
+        "maximum_perfoot_distance_to_frozen_actual_anchor_m": [
+          0.017603492180490225,
+          0.016762387166484354,
+          0.026619837029168907,
+          0.012021561605990508
+        ],
+        "maximum_root_XY_drift_from_start_m": 0.13649715231673828,
+        "scope": "Same51 actual50Hzsamples spanning1s; anchor/drift descriptive, no new tolerance or altered qualification. Originaltaskpatchsupport hold remains separate in result.",
+        "full_plan_real1s": true,
+        "independent200Hz_samples": 200,
+        "all200Hz_ground12N": true
+      },
+      "last_record_1s": {
+        "start_sim_s": 122.99999999996062,
+        "end_sim_s": 123.99999999995971,
+        "root_XY_drift_m": 5.615038922298927e-07,
+        "all_50Hz_ground12N": true
+      },
+      "timing": {
+        "launch_sim_s": 4.0,
+        "original_exit_task_s": 56.38000000001244,
+        "last_pair_LOAD_sim_s": 61.64000000001308,
+        "record_end_sim_s": 123.99999999995971
+      },
+      "speed": {
+        "exit": {
+          "task_s": 56.38000000001244,
+          "dx_m": 7.195301449016255,
+          "actual_vx_m_s": 0.12762152268560958
+        },
+        "full_hold": {
+          "task_s": 58.64000000001359,
+          "dx_m": 7.46587697239272,
+          "actual_vx_m_s": 0.12731713800121058
+        }
+      },
+      "pose200Hz": {
+        "available": true,
+        "max_abs_roll_deg": 15.859128076828938,
+        "max_abs_pitch_deg": 24.9889445153553,
+        "signed_roll_peak_deg": 15.859128076828938,
+        "roll_peak_task_s": 13.960000000000711,
+        "roll_peak_phase": 1,
+        "root_Z_min_m": 0.4485026527912664,
+        "root_Z_max_m": 1.1433613138707803,
+        "semantics": "Actualpost-step200Hzqpos; worldrootZ,not varyingterrain-relativeBodyheight."
+      },
+      "self_contact": {
+        "rows": 0,
+        "raw_peak_N": null,
+        "official_peak_N": 0.0
+      },
+      "physical": {
+        "support_fault_steps": 0,
+        "catch_floor_contact": false,
+        "contact_peaks_N": {
+          "ceiling": 0.0,
+          "robot_self": 0.0,
+          "prop": 0.0
+        }
+      },
+      "motor": {
+        "available": true,
+        "samples": 24800,
+        "corrected_samples": 126,
+        "formula_max_error_Nm": 0.0,
+        "FF_log_max_error_Nm": 0.0,
+        "FF_sum_max_error_Nm": 0.0,
+        "only_UNLOAD_corrections": true,
+        "removed_only_requested_airborne": true,
+        "saturation_substeps": 0,
+        "max_actual_abs_joint_speed_rad_s": [
+          1.688720165870709,
+          1.9103170249164303,
+          2.2280433844723775,
+          1.7754897853895182,
+          8.271368327023032,
+          9.179644884470864,
+          11.10271673621822,
+          11.664984282616935,
+          11.473577529649132,
+          12.085020655184996,
+          9.353746654212248,
+          9.150956113575027
+        ],
+        "max_abs_applied_torque_Nm": [
+          61.44872032942498,
+          80.5939657044505,
+          74.47044557180874,
+          71.15719600609742,
+          89.84891944151549,
+          105.38017558938608,
+          111.48579751706892,
+          167.81963688341745,
+          197.34737376271548,
+          161.48979002104602,
+          183.05203997257658,
+          196.17710745787954
+        ]
+      },
+      "packet_audit": {
+        "reference_packets": 12400,
+        "P1_calls": 6200,
+        "gate_calls": 6200,
+        "Actor_calls": 6200,
+        "B111_exact": true,
+        "original_reference_packets_unmodified": true,
+        "original_P1_enabled": true,
+        "original_gate_output_unmodified": true,
+        "task": "contact_stairs",
+        "group": "CB",
+        "actual_P1_enabled": true,
+        "actual_Actor_forward": "原CB masked_forward；未重绑"
+      },
+      "source_snapshot_proof": {
+        "original_XML_exact": true,
+        "original_initial_env_clock_and_gates_exact": true,
+        "full_source_snapshot_exact": true,
+        "planned_requests": 84,
+        "planned_pairs": 42,
+        "same_common_executor_both_groups": true
+      },
+      "core_issues": {
+        "missing": [],
+        "inconsistent": []
+      },
+      "strict_air80": {
+        "planned_pairs": 42,
+        "passed_pairs": 42,
+        "minimum_pair_max_observed_span_s": 0.34,
+        "predicate": "Same request identity; both !ground,Fn<8N,lift>=15mm from publication actualfeet; otherdiagonal actualground andFn>=12N; 17 real5ms samples span>=80ms. Solver-pipeline positions, eventend−5ms; original gait evaluator remains separate."
+      },
+      "LOAD80": {
+        "pairs": 42,
+        "passed": 42,
+        "all_samples_each": [
+          16
+        ],
+        "minimum_force_N": 13.002724908488567,
+        "minimum_confirm_s": 0.08
+      },
+      "detail_ledger_local_path": "docs/evidence/paper_demo_formal_CB11650_20261028/capability_stairs_v6_v7_strict_review_20261029/CB_strict_compact.json",
+      "detail_ledger_sha256": "df30fdf0a5b6331e0210991c898efdb3595a4876333084d735ad426c9c95f25e",
+      "cache_index_sha256": "667347425249d9974e1eb3e89f516aaba336e46e099d05f7921926b0843e161c",
+      "bad_earliest_requests": []
+    },
+    "C_only": {
+      "status": "STRICT_NOT_PASS",
+      "run": "outputs/motor_interface/paper_demo_20261028/capability_contact_stairs_v6_20261029/C_only",
+      "checkpoint_sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+      "result_sha256": "f9e66e82e8ae4926e9c30764f8874d24d06bf61a13b4f3ac7c8ced57ece6eeaa",
+      "contract_sha256": "694bc7eaa9a4493102b13343ad4b8457e700cb6ac7bd047a1a5ac4c75514e1e4",
+      "root_terminal_sha256": "5d7fb2b02d384dc531aeeba5102b51eb7ea48afb63b5624e8610d1b251c8e3d9",
+      "summary": {
+        "planned_requests": 84,
+        "planned_pairs": 42,
+        "published_requests": 84,
+        "published_pairs": 42,
+        "not_started": 0,
+        "completed_pairs": 42,
+        "completed_foot_requests": 84,
+        "all_planned_completed": true,
+        "LOAD80ms_passes": 42
+      },
+      "qualification": {
+        "checks": {
+          "full_plan_published": true,
+          "full42_LOAD_complete": true,
+          "three_first_ledgers84_all25": false,
+          "true_pair_air80": true,
+          "LOAD80_actual12N": true,
+          "original_Trot": true,
+          "original_patch_exit": true,
+          "full_plan_then_real1s_support": true,
+          "no_failure": true,
+          "no_support_fault_catch": true,
+          "core_consistent": true,
+          "original_motor_formula": true,
+          "strict_group_and_original_source_receipt": true
+        },
+        "failed": [
+          "three_first_ledgers84_all25"
+        ]
+      },
+      "first_ledgers": {
+        "formal50hz": {
+          "denominator": 84,
+          "first_count": 84,
+          "within25mm": 84,
+          "measurement_available": true,
+          "bad_ids": [],
+          "missing_ids": [],
+          "error_m": {
+            "n": 84,
+            "mean": 0.007881391578064452,
+            "p95": 0.011422770971285363,
+            "maximum": 0.013835361733451115
+          }
+        },
+        "earliest200hz_allphase": {
+          "denominator": 84,
+          "first_count": 84,
+          "within25mm": 83,
+          "measurement_available": true,
+          "bad_ids": [
+            20
+          ],
+          "missing_ids": [],
+          "error_m": {
+            "n": 84,
+            "mean": 0.012717795310053695,
+            "p95": 0.011157077450041478,
+            "maximum": 0.4435766650659322
+          }
+        },
+        "later_pair_first": {
+          "denominator": 84,
+          "first_count": 84,
+          "within25mm": 84,
+          "measurement_available": true,
+          "bad_ids": [],
+          "missing_ids": [],
+          "error_m": {
+            "n": 84,
+            "mean": 0.0075315851257267575,
+            "p95": 0.011010835006795009,
+            "maximum": 0.01295855208525125
+          }
+        }
+      },
+      "hold": {
+        "available": true,
+        "start_sim_s": 62.12000000001333,
+        "end_sim_s": 63.12000000001384,
+        "samples": 51,
+        "all_actual_ground12N": true,
+        "minimum_force_norm_N": 42.99461364746094,
+        "anchors": [
+          [
+            7.843981634366338,
+            0.19152688915633348,
+            -0.0008578588688752109
+          ],
+          [
+            7.762400344615585,
+            -0.18956898481905754,
+            -0.001806148123605883
+          ],
+          [
+            6.945713286476663,
+            0.19161827086560787,
+            -0.0013037007202649775
+          ],
+          [
+            7.262243013265199,
+            -0.18970237650415048,
+            -0.0017778445585334285
+          ]
+        ],
+        "maximum_perfoot_drift_from_window_start_m": [
+          0.014312499202787876,
+          0.00813893973827362,
+          0.018614789471030235,
+          0.009930719621479511
+        ],
+        "maximum_perfoot_distance_to_frozen_actual_anchor_m": [
+          0.016118458556182595,
+          0.016643386675267643,
+          0.024522799403916745,
+          0.012581779976519455
+        ],
+        "maximum_root_XY_drift_from_start_m": 0.13377167024701778,
+        "scope": "Same51 actual50Hzsamples spanning1s; anchor/drift descriptive, no new tolerance or altered qualification. Originaltaskpatchsupport hold remains separate in result.",
+        "full_plan_real1s": true,
+        "independent200Hz_samples": 200,
+        "all200Hz_ground12N": true
+      },
+      "last_record_1s": {
+        "start_sim_s": 122.99999999996062,
+        "end_sim_s": 123.99999999995971,
+        "root_XY_drift_m": 1.6275688445933181e-07,
+        "all_50Hz_ground12N": true
+      },
+      "timing": {
+        "launch_sim_s": 4.0,
+        "original_exit_task_s": 56.9000000000127,
+        "last_pair_LOAD_sim_s": 62.12000000001333,
+        "record_end_sim_s": 123.99999999995971
+      },
+      "speed": {
+        "exit": {
+          "task_s": 56.9000000000127,
+          "dx_m": 7.204986504025706,
+          "actual_vx_m_s": 0.12662542186334091
+        },
+        "full_hold": {
+          "task_s": 59.12000000001384,
+          "dx_m": 7.463612965054759,
+          "actual_vx_m_s": 0.12624514487572755
+        }
+      },
+      "pose200Hz": {
+        "available": true,
+        "max_abs_roll_deg": 23.22909531042685,
+        "max_abs_pitch_deg": 25.115281863532587,
+        "signed_roll_peak_deg": 23.22909531042685,
+        "roll_peak_task_s": 21.79999999999915,
+        "roll_peak_phase": 6,
+        "root_Z_min_m": 0.4482743272106523,
+        "root_Z_max_m": 1.1432861185112828,
+        "semantics": "Actualpost-step200Hzqpos; worldrootZ,not varyingterrain-relativeBodyheight."
+      },
+      "self_contact": {
+        "rows": 0,
+        "raw_peak_N": null,
+        "official_peak_N": 0.0
+      },
+      "physical": {
+        "support_fault_steps": 0,
+        "catch_floor_contact": false,
+        "contact_peaks_N": {
+          "ceiling": 0.0,
+          "robot_self": 0.0,
+          "prop": 0.0
+        }
+      },
+      "motor": {
+        "available": true,
+        "samples": 24800,
+        "corrected_samples": 126,
+        "formula_max_error_Nm": 0.0,
+        "FF_log_max_error_Nm": 0.0,
+        "FF_sum_max_error_Nm": 0.0,
+        "only_UNLOAD_corrections": true,
+        "removed_only_requested_airborne": true,
+        "saturation_substeps": 4,
+        "max_actual_abs_joint_speed_rad_s": [
+          2.1037930573697414,
+          2.009917108114376,
+          2.315305995334747,
+          2.0281790259042554,
+          8.319182905978042,
+          9.211831131474977,
+          10.687074030457124,
+          11.941298660433938,
+          12.590517870674624,
+          12.04600187781621,
+          9.461866348095164,
+          9.197459572109565
+        ],
+        "max_abs_applied_torque_Nm": [
+          60.198839572062056,
+          83.41369038634052,
+          79.80252815258113,
+          80.80602378996629,
+          89.54213221422076,
+          95.51987604572624,
+          196.6043787844329,
+          114.68702421306304,
+          189.136926807711,
+          160.45817229276753,
+          188.08598680605533,
+          198.28242958158563
+        ]
+      },
+      "packet_audit": {
+        "reference_packets": 12400,
+        "P1_calls": 6200,
+        "gate_calls": 6200,
+        "Actor_calls": 6200,
+        "B0_exact": true,
+        "P1_identity": true,
+        "other_columns_exact": true,
+        "task": "contact_stairs",
+        "group": "C_only",
+        "actual_Actor_forward": "原组masked_forward；未重绑",
+        "actual_P1_enabled": false
+      },
+      "source_snapshot_proof": {
+        "original_XML_exact": true,
+        "original_initial_env_clock_and_gates_exact": true,
+        "full_source_snapshot_exact": true,
+        "planned_requests": 84,
+        "planned_pairs": 42,
+        "same_common_executor_both_groups": true
+      },
+      "core_issues": {
+        "missing": [],
+        "inconsistent": []
+      },
+      "strict_air80": {
+        "planned_pairs": 42,
+        "passed_pairs": 42,
+        "minimum_pair_max_observed_span_s": 0.335,
+        "predicate": "Same request identity; both !ground,Fn<8N,lift>=15mm from publication actualfeet; otherdiagonal actualground andFn>=12N; 17 real5ms samples span>=80ms. Solver-pipeline positions, eventend−5ms; original gait evaluator remains separate."
+      },
+      "LOAD80": {
+        "pairs": 42,
+        "passed": 42,
+        "all_samples_each": [
+          16
+        ],
+        "minimum_force_N": 12.45012801353669,
+        "minimum_confirm_s": 0.08
+      },
+      "detail_ledger_local_path": "docs/evidence/paper_demo_formal_CB11650_20261028/capability_stairs_v6_v7_strict_review_20261029/C_only_strict_compact.json",
+      "detail_ledger_sha256": "8f0bf490a50a9be3bbbb654740739ce3b5813f44b38104b2780d3d3a715b89f8",
+      "cache_index_sha256": "f168725225b82cfe7447dcbba1905d4e36902e6d0f8d4a020cee4bc016276d31",
+      "bad_earliest_requests": [
+        {
+          "planned_request_id": 20,
+          "stage": 11,
+          "foot": 1,
+          "foot_name": "FR",
+          "goal_world_m": [
+            2.22999906539917,
+            -0.18986667692661285,
+            0.47999998927116394
+          ],
+          "previous_goal_world_m": [
+            1.789999008178711,
+            -0.18986667692661285,
+            0.3199999928474426
+          ],
+          "published": true,
+          "publication_sim_s": 17.62000000000078,
+          "formal_request_id": 20,
+          "formal50hz": {
+            "publication_task_s": 13.640000000000775,
+            "first_task_s": 15.460000000000413,
+            "error_3D_m": 0.007935016078606116,
+            "position_world_m": [
+              2.236501932144165,
+              -0.18571504950523376,
+              0.47814494371414185
+            ],
+            "supported": true
+          },
+          "earliest200hz_allphase": {
+            "event_end_sim_s": 17.72000000000076,
+            "event_end_task_s": 13.72000000000076,
+            "phase": 1,
+            "position_world_m": [
+              1.8169124421038616,
+              -0.1772268362004141,
+              0.318879121994729
+            ],
+            "error_3D_m": 0.4435766650659322,
+            "solver_pose_sim_s": 17.71500000000076,
+            "first_air_sim_s": 17.71500000000076,
+            "prior_ground12N_under_request": true
+          },
+          "later_pair_first": {
+            "event_end_sim_s": 19.465000000000412,
+            "event_end_task_s": 15.465000000000412,
+            "phase": "LAND",
+            "position_world_m": [
+              2.2365019191033446,
+              -0.18571504835770933,
+              0.4781449283552227
+            ],
+            "error_3D_m": 0.007935009582469777
+          },
+          "completed_pair": true,
+          "formal50hz_error_3D_m": 0.007935016078606116,
+          "earliest200hz_error_3D_m": 0.4435766650659322,
+          "later_pair_first_error_3D_m": 0.007935009582469777,
+          "earliest_before_later_pair_first": true
+        }
+      ]
+    }
+  },
+  "common_control": {
+    "status": "CACHED_ONLY_BAD_FIRST_AND_COMMON_CONTROL_CONFIRMATION",
+    "C_only_bad_planned_request": {
+      "planned_request_id": 20,
+      "stage": 11,
+      "foot": 1,
+      "foot_name": "FR",
+      "goal_world_m": [
+        2.22999906539917,
+        -0.18986667692661285,
+        0.47999998927116394
+      ],
+      "previous_goal_world_m": [
+        1.789999008178711,
+        -0.18986667692661285,
+        0.3199999928474426
+      ],
+      "published": true,
+      "publication_sim_s": 17.62000000000078,
+      "formal_request_id": 20,
+      "formal50hz": {
+        "publication_task_s": 13.640000000000775,
+        "first_task_s": 15.460000000000413,
+        "error_3D_m": 0.007935016078606116,
+        "position_world_m": [
+          2.236501932144165,
+          -0.18571504950523376,
+          0.47814494371414185
+        ],
+        "supported": true
+      },
+      "earliest200hz_allphase": {
+        "event_end_sim_s": 17.72000000000076,
+        "event_end_task_s": 13.72000000000076,
+        "phase": 1,
+        "position_world_m": [
+          1.8169124421038616,
+          -0.1772268362004141,
+          0.318879121994729
+        ],
+        "error_3D_m": 0.4435766650659322,
+        "solver_pose_sim_s": 17.71500000000076,
+        "first_air_sim_s": 17.71500000000076,
+        "prior_ground12N_under_request": true
+      },
+      "later_pair_first": {
+        "event_end_sim_s": 19.465000000000412,
+        "event_end_task_s": 15.465000000000412,
+        "phase": "LAND",
+        "position_world_m": [
+          2.2365019191033446,
+          -0.18571504835770933,
+          0.4781449283552227
+        ],
+        "error_3D_m": 0.007935009582469777
+      },
+      "completed_pair": true,
+      "formal50hz_error_3D_m": 0.007935016078606116,
+      "earliest200hz_error_3D_m": 0.4435766650659322,
+      "later_pair_first_error_3D_m": 0.007935009582469777,
+      "earliest_before_later_pair_first": true
+    },
+    "raw200Hz_event_window": [
+      {
+        "global_s": 17.705000000000762,
+        "foot": "FR",
+        "phase": 1,
+        "ground": true,
+        "force_norm_N": 72.6727956935133,
+        "pipeline_sole_m": [
+          1.8113835144878507,
+          -0.17901512669573977,
+          0.3193144901557725
+        ]
+      },
+      {
+        "global_s": 17.71000000000076,
+        "foot": "FR",
+        "phase": 1,
+        "ground": true,
+        "force_norm_N": 67.37231750480854,
+        "pipeline_sole_m": [
+          1.8123583386244007,
+          -0.17850572164661516,
+          0.3197575825628627
+        ]
+      },
+      {
+        "global_s": 17.71500000000076,
+        "foot": "FR",
+        "phase": 1,
+        "ground": false,
+        "force_norm_N": 0.0,
+        "pipeline_sole_m": [
+          1.8135108927329937,
+          -0.17799883322533702,
+          0.32009692662931066
+        ]
+      },
+      {
+        "global_s": 17.72000000000076,
+        "foot": "FR",
+        "phase": 1,
+        "ground": true,
+        "force_norm_N": 101.87873184947688,
+        "pipeline_sole_m": [
+          1.8169124421038616,
+          -0.1772268362004141,
+          0.318879121994729
+        ]
+      },
+      {
+        "global_s": 17.725000000000758,
+        "foot": "FR",
+        "phase": 1,
+        "ground": true,
+        "force_norm_N": 57.11381438195029,
+        "pipeline_sole_m": [
+          1.8191315624862638,
+          -0.1768673186393381,
+          0.3184689557293858
+        ]
+      },
+      {
+        "global_s": 17.730000000000757,
+        "foot": "FR",
+        "phase": 1,
+        "ground": true,
+        "force_norm_N": 50.832101978822195,
+        "pipeline_sole_m": [
+          1.8205691077868824,
+          -0.17657254169825623,
+          0.3184768988921707
+        ]
+      }
+    ],
+    "remaining_runtime_common_except_declared_provenance_reference_and_P": true,
+    "actual_P_config_differences": {
+      "enabled": [
+        true,
+        false
+      ]
+    },
+    "initial_state_exact": true,
+    "XML_sha256_same": true,
+    "plan_sha256_same": true,
+    "new_raw_reads": 0,
+    "models_PT_physics_GPU": 0,
+    "plan_sha256": "c3a0c00f2de4e5614f445ee46855911bdf2fefb1097a78a77ba08b37e89ffa5f"
+  },
+  "read_audit": {
+    "raw_NPZ_reads_per_original": 1,
+    "successful_core_calls_each": 1,
+    "original_model_PT_actor_FK_IK_QP_physics_GPU_PPO": 0,
+    "metadata_from_V6_previous_cache": true,
+    "postprocess_attempts": [
+      "system3.10 numpy ABI不匹配，在CB raw已缓存后失败，未core；SDK3.11各core一次成功，最终汇总ndarray序列化失败；从持久化JSON完成汇总，无raw重读/无core重跑"
+    ]
+  },
+  "current_analysis_source_sha256": "704a9e8381bcba8780740cf84aa1fe47fde28d62fcacca5405bd50ce25a6fa30",
+  "qualification_boundary": "genericqualified/完整路线与三账严格资格分开；首1s漂移136/134mm另列，不放宽/新增原保持门；不能宣布18项总goal完成。"
+}

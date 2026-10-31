@@ -1,0 +1,47 @@
+{
+  "revision": "paper-demo-e469-matched-adaptation/1-reuse-CB-C-repair-B-H50",
+  "common_parent": {
+    "update": 10650,
+    "sha256": "623074a539b6317988f8f773eaeee4d8fdd8aba678d0624d61af5bd00a8ed6bf"
+  },
+  "budget": {
+    "start": 10650,
+    "updates_each": 1000,
+    "formal_endpoint": 11650,
+    "num_envs": 8192,
+    "rollout_steps": 32,
+    "transitions_each": 262144000,
+    "seed": 44
+  },
+  "groups": {
+    "CB": {
+      "status": "FORMAL1000_COMPLETE",
+      "sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "evaluation": "既有六套同协议冻结评价直接复用"
+    },
+    "C_only": {
+      "status": "FORMAL1000_COMPLETE",
+      "sha256": "f5789c945ada477fd9c488d691a62a27969b55b4652c51cbe2e68ac954096dc8",
+      "evaluation": "既有六套同协议冻结评价直接复用"
+    },
+    "B_only": {
+      "status": "H50修复已通过技术检查，正式1000已启动，终点待完成",
+      "sha256": null,
+      "output": "outputs/motor_interface/paper_demo_20261028/B_only_h50_repair_v1_20261029/formal1000",
+      "evaluation": "终点后沿原相同六套评价，尚未运行"
+    }
+  },
+  "same": "完整父学习态、网络/F参数范围、PPO、物理、显式奖励系数和新增更新预算",
+  "removal": "C-only删除Body目标/监督/参考并保留公开55cm几何先验；B-only删除全部Contact目标/监督/计划/事件期限，保留Body，timed两池按身份给H50",
+  "clock_disclosure": "B-only无C后原6秒窗口；CB/C-only其余C任务按原Contact完成/失败/期限，不能声称逐回合逐拍同钟",
+  "not_scratch": "同预训练历史后的目标移除与适应对照，不是从零学习因子发现",
+  "old_B_only": "旧B-only H55错位原结果留存，不作本轮匹配对照",
+  "historical_v4": "V4为另一条历史准备/试验路线，不用于当前e469配套消融；来源保留，不覆盖历史",
+  "technical_smoke_separate": {
+    "updates": 2,
+    "training_transitions": 524288,
+    "extra_collect_transitions": 1835008,
+    "formal_parent": false
+  },
+  "training_complete_is_behavior_pass": false
+}

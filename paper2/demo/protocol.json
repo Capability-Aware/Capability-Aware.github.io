@@ -1,0 +1,188 @@
+{
+  "status": "showcase_v2三组8192技术短训全部通过；CB正式1000正在运行，之后顺序C-only/B-only正式1000",
+  "execution_now": {
+    "training": true,
+    "physics": true,
+    "recording": false
+  },
+  "three_groups": [
+    {
+      "id": "CB",
+      "goals": [
+        "B",
+        "C"
+      ],
+      "mask_B": false,
+      "mask_C": false,
+      "fixed_final_checkpoint": null
+    },
+    {
+      "id": "C_only",
+      "goals": [
+        "C"
+      ],
+      "mask_B": true,
+      "mask_C": false,
+      "fixed_final_checkpoint": null
+    },
+    {
+      "id": "B_only",
+      "goals": [
+        "B"
+      ],
+      "mask_B": false,
+      "mask_C": true,
+      "fixed_final_checkpoint": null
+    }
+  ],
+  "matched_fields": [
+    "网络结构",
+    "共同训练起点及完整学习状态",
+    "种子集合",
+    "环境数",
+    "rollout步数",
+    "新增PPO更新与transitions",
+    "优化器与探索配置",
+    "共有物理、执行器和反馈",
+    "适用任务的目标分布、课程与非目标奖励",
+    "固定终点评价协议"
+  ],
+  "training_budget": {
+    "updates_per_group": 1000,
+    "num_envs": 8192,
+    "rollout_steps": 32,
+    "seeds": [
+      44
+    ],
+    "start_update": 10650,
+    "final_update": 11650,
+    "new_transitions_per_group": 262144000,
+    "new_transitions_all_groups": 786432000,
+    "save_interval": 100,
+    "smoke_separate_budget": {
+      "control_steps_without_PPO_per_group": 224,
+      "transitions_without_PPO_per_group": 1835008,
+      "PPO_updates_per_group": 2,
+      "PPO_transitions_per_group": 524288
+    },
+    "reason": "新三组仍共同完整10650，各新增1000；旧v1已耗468完整记录更新+未记录尝试未知另列，不覆盖、不接续，不修改旧来源。新版本只改训练分布并正确处理静态Body行。"
+  },
+  "mask_contract": {
+    "scope": "训练期持续mask对应目标/掩码和对应目标监督，保留共有稳定项；每组单独保存固定终点。",
+    "inactive_axes": "未指定轴允许自主协调，不自动解释为强制零姿态。",
+    "leakage_check": "关闭的Body或Contact目标不得绕过Actor，从参考生成/IK/WBC/奖励进入被消融分支；共有维持稳定机制须统一披露。",
+    "test_time_mask": "完整策略播放时临时mask只能另列执行诊断，不替代分别训练的正式自我消融。"
+  },
+  "single_policy_contract": {
+    "primary": "主方法所有18项使用同一权重SHA、同一执行版本；仅切换公开任务目标及预登记的任务配置。",
+    "prohibited": "不按场景换权重或专家；不得以历史不同执行链的合成片充当同权重复跑。",
+    "external_baseline": "限高三列中的GeCCo是独立外部基线，不计作C+B Actor的能力。"
+  },
+  "comparison": {
+    "same_world": true,
+    "same_eval_cases_and_seed_set": true,
+    "same_time_budgets_and_thresholds": true,
+    "unchanged_failure_denominators": true,
+    "metrics": [
+      "任务完成率",
+      "Body高度/roll/pitch误差",
+      "真实首次触地误差与覆盖",
+      "实际净位移与速度",
+      "足序匹配",
+      "支撑滑移与身体漂移",
+      "碰撞/终止",
+      "最终保持"
+    ],
+    "failure_videos": "在新页对应位置保留失败与实测，不按成功筛选替代固定终点评价。"
+  },
+  "selection_note": "10650仅为共同学习父模型及执行链调试候选；正式CB11650为首个统一主方法候选，行为验收前不得命名最终冻结。全部18项需同一最终权重SHA及公开执行版本。",
+  "parent": {
+    "path": "outputs/motor_interface/cb_speed6_period24_curriculum_5090_20261028/formal250/model_update_10650.pt",
+    "sha256": "623074a539b6317988f8f773eaeee4d8fdd8aba678d0624d61af5bd00a8ed6bf",
+    "restore": [
+      "Actor",
+      "Critic",
+      "Adam",
+      "normalizer",
+      "exploration",
+      "learning_rate",
+      "update_and_transition_counts",
+      "torch_cpu_rng",
+      "torch_cuda_rng",
+      "python_rng",
+      "numpy_rng"
+    ],
+    "physics_snapshot_restored": false
+  },
+  "weight_publication": {
+    "when": "选定最终统一候选后、正式录制前",
+    "content": [
+      "完整原始checkpoint",
+      "SHA256",
+      "实际加载入口与执行配置",
+      "源码来源和父训练历史"
+    ],
+    "do_not": "不能把仅有Actor或未验收父模型写成整页已通过的最终策略"
+  },
+  "superseded_v1": {
+    "receipt": "research/motor_interface/paper_demo_20261028/v1_distribution_abort_receipt.json",
+    "not_formal_complete": true,
+    "midpoint_result": {
+      "parent_requested_task_complete": 4,
+      "CB200_requested_task_complete": 1,
+      "cases": 16,
+      "seed": 44,
+      "strict_both": 0
+    },
+    "reason": "实际50%6m/s，宽静态Body曝光0，与本轮3/5m/s和宽Body保持不对齐；中点退化为风险信号，非唯一依据"
+  },
+  "planned_v2_distribution": [
+    {
+      "task": "3m/s .32s",
+      "fraction": 0.25,
+      "envs": 2048
+    },
+    {
+      "task": "5m/s .24s",
+      "fraction": 0.25,
+      "envs": 2048
+    },
+    {
+      "task": "纯Body宽目标保持",
+      "fraction": 0.25,
+      "envs": 2048
+    },
+    {
+      "task": "旧BodyTrot",
+      "fraction": 0.125,
+      "envs": 1024
+    },
+    {
+      "task": "旧Single",
+      "fraction": 0.0625,
+      "envs": 512
+    },
+    {
+      "task": "旧moderate",
+      "fraction": 0.0625,
+      "envs": 512
+    }
+  ],
+  "active_training_profile": {
+    "revision": "paper-demo-showcase/2-full10650-body-retention-no6",
+    "profile": "scripts/locomotion/paper_demo_showcase_v2_profile.py",
+    "profile_sha256": "4a7df2d20ef3b7c42d8d8c1bf9ef4a5286996d25cacdd8493f20f563c8a317aa",
+    "runner": "scripts/locomotion/paper_demo_showcase_v2_train.py",
+    "runner_sha256": "6ecc6b9a92d585a7e4ee05c5c74fafc8c5ee9214672cefd662d0a407401ce6a3",
+    "standalone_loader": "paper_demo_showcase_v2_profile.load_checkpoint",
+    "showcase_loader": "paper_demo_showcase_loader_v3.load_selected",
+    "formal_source": "original10650_not_aborted_v1",
+    "formal_queue": "outputs/motor_interface/paper_demo_20261028/learning_queue_showcase_v2",
+    "source_commit": "150dfa99",
+    "formal_runs": {
+      "CB": "outputs/motor_interface/paper_demo_20261028/CB_showcase_formal1000_v2",
+      "C_only": "outputs/motor_interface/paper_demo_20261028/C_only_showcase_formal1000_v2",
+      "B_only": "outputs/motor_interface/paper_demo_20261028/B_only_showcase_formal1000_v2"
+    }
+  }
+}

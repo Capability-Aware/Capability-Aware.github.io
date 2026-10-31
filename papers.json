@@ -61,14 +61,17 @@
       "caption": "Four learned temporal supports feed a shared encoder and a body-state-conditioned gate. Strides are learned during training; fusion weights adapt online."
     },
     "video": {
-      "src": "assets/videos/tempoloco.mp4",
-      "poster": "assets/videos/tempoloco.png",
+      "src": "assets/videos/tempoloco/tempoloco.mp4",
+      "poster": "assets/videos/tempoloco/tempoloco.png",
       "caption": "TempoLoco demonstration compilation on complex terrain."
     }
   },
   {
     "slug": "paper2",
-    "name": "Paper 2"
+    "name": "Paper 2",
+    "title": "Paper 2",
+    "status": "Interactive demo available · paper in preparation",
+    "demo": "demo/"
   },
   {
     "slug": "paper3",

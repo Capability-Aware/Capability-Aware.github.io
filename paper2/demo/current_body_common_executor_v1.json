@@ -1,0 +1,1025 @@
+{
+  "revision": "current-body-common-executor/1-eight-original-tasks-same11650-weights",
+  "original_registry_sha256": "6295ba9504b80aa9c5055103efb0fbaf73037b7d6051d48223aef8715749edff",
+  "original_results_preserved": true,
+  "execution_config_sha256": "cba8816f58f174232def03f846af4405f61e30cb200a0ac884694b7d97b826d1",
+  "attribution": "公开的共同执行器系统对照，非新增RL收益；原直接Actor失败在每卡保留。",
+  "results": [
+    {
+      "task": "body_height",
+      "group": "CB",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_height/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "80fa81b107edb9750ff3c2e2ddf619db095cba01347b63323eb908cf70d4c52f",
+      "contract_sha256": "97b2e896a4186aad80f053f5155d9b34131653d4de400fc93b34e1cb910ee687",
+      "execution_receipt_sha256": "8fcc8b5854c6fb198427d0840def150b7f6439700aad395952499451c1da8cf8",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028066231999873056,
+              7.47613206940497e-05,
+              0.0018962037024352662
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.45,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0033909380938817466,
+              0.00010945175079735427,
+              0.006095433782393094
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.6,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.004980040473891045,
+              3.338474583828957e-05,
+              0.0003103370933810621
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0026709984381973876,
+              7.410304411363326e-05,
+              0.0018150403158150874
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_height_CB_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_height_CB_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_height/CB/video.mp4",
+        "asset": "media_body_common_v2/body_height_CB.mp4",
+        "sha256": "7a209d36dc3b829690169e517350a72ddafed77c056321b67b556960d6afb671",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "高度55→45→60→55cm，连续升降。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    },
+    {
+      "task": "body_height",
+      "group": "B_only",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_height/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "13bab29a68fe9d69e89dc2c7155ef25bfe042ab337516898fea3138fb211d119",
+      "contract_sha256": "64db0ab3d53253a150d01b2759f433c9d17ca5b2e462f5af0cbba5220c324d14",
+      "execution_receipt_sha256": "8acec6ac8e38e2aa4a85b065798409a8db3361564f98c65688aa63a1486bf695",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028386252989849327,
+              0.00010440767763273758,
+              0.002086689677572667
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.45,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0033847358726970516,
+              0.00014668539281799473,
+              0.0061014716623274375
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.6,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.00495285958317225,
+              9.220467164731917e-06,
+              0.00025357159177999845
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0027031746075234626,
+              0.00010391222114131257,
+              0.002005609659221171
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_height_B_only_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_height_B_only_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_height/B_only/video.mp4",
+        "asset": "media_body_common_v2/body_height_B_only.mp4",
+        "sha256": "92f36fa97e5c3d7b37c42ecdb3157d27f0646280b6b86c972e7ff9f9a4fde4b2",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "高度55→45→60→55cm，连续升降。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    },
+    {
+      "task": "body_roll",
+      "group": "CB",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_roll/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "19a0be5a438e08eb52508523f9446396e98b87b82eb29bffe76a89280b2e3bdb",
+      "contract_sha256": "e0d8f312a4a5555383b379ec6884106ef60a2eab959b3efeb3062d3afb9a0c5d",
+      "execution_receipt_sha256": "d3dee7cfb18663213e1fd093bd402fb5aeb10e1c4ccbb80346584b4c4ed1e856",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028066231999873056,
+              7.47613206940497e-05,
+              0.0018962037024352662
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.55,
+              10,
+              0
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0034653403229215366,
+              0.003277192683667008,
+              0.0020524430733082515
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.55,
+              -10,
+              0
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0031686675381627245,
+              0.0054313276335417925,
+              0.001923851574360053
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0033018129825674713,
+              0.0024555582777441606,
+              0.001870193345071912
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_roll_CB_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_roll_CB_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_roll/CB/video.mp4",
+        "asset": "media_body_common_v2/body_roll_CB.mp4",
+        "sha256": "3e723730d39573578ba193791817614207b6fdc058f2d8102f2105b6861eb59b",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "55cm，roll 0°→+10°→−10°→0°。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    },
+    {
+      "task": "body_roll",
+      "group": "B_only",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_roll/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "c821a0f9b32f9d831641ee39b86adbff59ab17bc4eb101443a77c97edfc5338c",
+      "contract_sha256": "6e5f1e856ecace80adaa5951ec3cdf02b92ccd36d36e022789cf6ff0647a31c9",
+      "execution_receipt_sha256": "aed9e4c262f891221ef3f39c0e84991bf41ad1320096a2f12788106a2e3030eb",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028386252989849327,
+              0.00010440767763273758,
+              0.002086689677572667
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.55,
+              10,
+              0
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.003484728565490641,
+              0.003322474617189564,
+              0.0019509265058189071
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.55,
+              -10,
+              0
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0031609886184259246,
+              0.005355552036253826,
+              0.0019097244456191395
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0033346132222716305,
+              0.00249633508250241,
+              0.0020694985608119506
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_roll_B_only_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_roll_B_only_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_roll/B_only/video.mp4",
+        "asset": "media_body_common_v2/body_roll_B_only.mp4",
+        "sha256": "69c919133e6c06ffc184b2dda666d5a62f131b2705b937dce0e75ac54f6dd51e",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "55cm，roll 0°→+10°→−10°→0°。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    },
+    {
+      "task": "body_pitch",
+      "group": "CB",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_pitch/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "27ea0d4c295bd1f15e4725e31b126af666117f3e9af31f2b81c8e1dd1333bb8b",
+      "contract_sha256": "b53847da66be4c641d9d780356527ef67e232b4e791b3b2c4caf335598784d49",
+      "execution_receipt_sha256": "29663a91529f2063adc865bd910b9815ee824760b66ae3dfe4949ce95b454b6d",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028066231999873056,
+              7.47613206940497e-05,
+              0.0018962037024352662
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.55,
+              0,
+              10
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.002653113066701437,
+              4.255584853740425e-05,
+              0.0017704043936588075
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.55,
+              0,
+              -10
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0038952939823091795,
+              8.64256113199248e-05,
+              0.00702504088705575
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0033302389696962084,
+              7.275847430599447e-05,
+              0.0009133033037142383
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_pitch_CB_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_pitch_CB_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_pitch/CB/video.mp4",
+        "asset": "media_body_common_v2/body_pitch_CB.mp4",
+        "sha256": "a69b9e9a1a6b62091951b667bc09196d5236222abaf95ddf6f8fceccfb4a5a95",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "55cm，pitch 0°→+10°→−10°→0°。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    },
+    {
+      "task": "body_pitch",
+      "group": "B_only",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_pitch/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "db65683e25aa46b5495bbec12cebf2f9927cacc47481a502cd15850fb617678a",
+      "contract_sha256": "2f8e10f3dab4aabe4e8f16eac7c37908537a104ca451df10eb69ddf2dbde496e",
+      "execution_receipt_sha256": "bdba445154bcdcdb2e52712f2d8fa9b33ce58a465306b8c68afcb739d8f622cf",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028386252989849327,
+              0.00010440767763273758,
+              0.002086689677572667
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.55,
+              0,
+              10
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0026498010861810465,
+              2.141578264970965e-05,
+              0.0018387732598746035
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.55,
+              0,
+              -10
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.003920611514014065,
+              0.00010969860369649975,
+              0.007076305605029611
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0033628708621834375,
+              0.00010152425212750775,
+              0.0008445625044693979
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_pitch_B_only_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_pitch_B_only_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_pitch/B_only/video.mp4",
+        "asset": "media_body_common_v2/body_pitch_B_only.mp4",
+        "sha256": "24b8ca517a673f649d74a15d131d685a2f73d318c6da9e5bb99bc2c80c358195",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "55cm，pitch 0°→+10°→−10°→0°。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    },
+    {
+      "task": "body_mixed",
+      "group": "CB",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_mixed/CB",
+      "checkpoint_sha256": "e469b10b11da21ef93cf3c74d3747d9da824dc1b26286293738139a5a6db3849",
+      "result_sha256": "d5a71570f70e64a410304b7bfe6b00e444d4b1ed2edf9b736ac91fb0deced428",
+      "contract_sha256": "47576b3e294b8fe60e9873eb0c22e950d63429c8a36004d039be621bac729a7a",
+      "execution_receipt_sha256": "3d969906b991848bd1837f8625af03ed36e98288f0e01ebd141899a31f204b5e",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028066231999873056,
+              7.47613206940497e-05,
+              0.0018962037024352662
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.5,
+              5,
+              -5
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.003657055522126954,
+              0.001642141481560766,
+              0.005443495240240441
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.5,
+              -5,
+              5
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.00352118304148827,
+              0.0028357184563741547,
+              0.0014450494881885804
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.003968539779035283,
+              0.001262725945223085,
+              0.003043143841807038
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_mixed_CB_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_mixed_CB_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_mixed/CB/video.mp4",
+        "asset": "media_body_common_v2/body_mixed_CB.mp4",
+        "sha256": "60e61f92174b5c95578d1b3f17b5a62228648360a97a64438ab9206b8e837db4",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "50cm＋roll±5°＋pitch∓5°联合变化。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    },
+    {
+      "task": "body_mixed",
+      "group": "B_only",
+      "status": "recorded",
+      "run": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_v2_20261029/body_mixed/B_only",
+      "checkpoint_sha256": "fdda7f7ea66e7126505e26123fd8c1c642ed9ff57c0d40eaa4457512b102952b",
+      "result_sha256": "3a9c13a8dbb53a69bc420287f3466017c367c1d5281a72cbd84029d63b9cff92",
+      "contract_sha256": "fe6b94192c7d60eeb0cd05a955beeecb8793734da613a1bb98f01c3639f19469",
+      "execution_receipt_sha256": "b593d73b91aae7a986ef51fb3830bdc6492fa489b2665d4e1e09db690bccfdc4",
+      "behavior_pass": true,
+      "scientific_seconds": 16.0,
+      "OS_exit_code": 0,
+      "actual_metrics": {
+        "stop_reason": "finite_horizon",
+        "physical_failure": false,
+        "all_windows_pass": true,
+        "windows": [
+          {
+            "window": 0,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              0.0,
+              4.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0028386252989849327,
+              0.00010440767763273758,
+              0.002086689677572667
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 1,
+            "target_m_deg": [
+              0.5,
+              5,
+              -5
+            ],
+            "task_interval_s": [
+              4.0,
+              8.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.003653160149407284,
+              0.0017755925400103913,
+              0.005387101111849588
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 2,
+            "target_m_deg": [
+              0.5,
+              -5,
+              5
+            ],
+            "task_interval_s": [
+              8.0,
+              12.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.003442634960839069,
+              0.002691736264935924,
+              0.0015336508745243025
+            ],
+            "Body_pass": true
+          },
+          {
+            "window": 3,
+            "target_m_deg": [
+              0.55,
+              0,
+              0
+            ],
+            "task_interval_s": [
+              12.0,
+              16.0
+            ],
+            "samples": 200,
+            "expected_samples": 200,
+            "complete": true,
+            "tail_s": 1.0,
+            "tail_RMSE_m_rad": [
+              0.0040019749456389,
+              0.001303682880830048,
+              0.003241840183737779
+            ],
+            "Body_pass": true
+          }
+        ]
+      },
+      "execution_layer": "相同协调IK/SRB-QP，各自Actor0.10先验；两组Actor均纯C0，无外部Contact请求；0PPO",
+      "root_actual_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_body_mixed_B_only_actual_20261029.json",
+      "root_render_terminal": "docs/evidence/paper_demo_formal_CB11650_20261028/root_body_common_v2_native_render_body_mixed_B_only_actual_20261029.json",
+      "video": {
+        "source": "outputs/motor_interface/paper_demo_20261028/body_common_static_support_media_v2_20261029/body_mixed/B_only/video.mp4",
+        "asset": "media_body_common_v2/body_mixed_B_only.mp4",
+        "sha256": "0de9fa102586be75a031610eb4be0b9f085f150e94377cc95065d97373af642b",
+        "frames": 800,
+        "fps": 50,
+        "duration_s": 16.0,
+        "caption": "50cm＋roll±5°＋pitch∓5°联合变化。"
+      },
+      "actual_video_probe": {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "50/1",
+        "duration": "16.000000",
+        "nb_read_frames": "800"
+      }
+    }
+  ]
+}

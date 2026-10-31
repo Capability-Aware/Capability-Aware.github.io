@@ -48,7 +48,10 @@ def build_home():
 def build_placeholder(p):
     folder = ROOT / p['slug']
     folder.mkdir(exist_ok=True)
-    body = f'''<main id="main" class="placeholder-page"><header class="hero container"><h1>{e(p['name'])}</h1><p>Capability Aware</p></header><section class="text-section"><div class="empty-video"><span aria-hidden="true">▷</span><p>Video coming soon</p></div><h2>Coming soon</h2><p class="center">This project page is a placeholder. Paper, code, and video links will be added here.</p><div class="buttons">{button('← Capability Aware', '../')}</div></section></main>'''
+    if p.get('demo'):
+        body = f'''<main id="main" class="placeholder-page"><header class="hero container"><h1>{e(p['name'])}</h1><p>Capability Aware</p></header><section class="text-section"><h2>Interactive demo</h2><p class="center">The paper is in preparation. Explore the current results and demonstrations below.</p><div class="buttons">{button('Open the demo showcase', p['demo'])}{button('← Capability Aware', '../')}</div></section></main>'''
+    else:
+        body = f'''<main id="main" class="placeholder-page"><header class="hero container"><h1>{e(p['name'])}</h1><p>Capability Aware</p></header><section class="text-section"><div class="empty-video"><span aria-hidden="true">▷</span><p>Video coming soon</p></div><h2>Coming soon</h2><p class="center">This project page is a placeholder. Paper, code, and video links will be added here.</p><div class="buttons">{button('← Capability Aware', '../')}</div></section></main>'''
     (folder/'index.html').write_text(shell(p['name']+' | Capability Aware', body, '../'))
 
 def build_research(p):
