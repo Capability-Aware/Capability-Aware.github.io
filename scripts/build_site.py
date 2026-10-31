@@ -56,7 +56,7 @@ def build_placeholder(p):
     folder = ROOT / p['slug']
     folder.mkdir(exist_ok=True)
     if p.get('demo'):
-        if p['slug'] == 'paper2':
+        if p['slug'] == '2':
             build_demo_landing(p)
         else:
             build_placeholder_paper(p)

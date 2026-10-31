@@ -67,7 +67,7 @@
     }
   },
   {
-    "slug": "paper2",
+    "slug": "2",
     "name": "Paper 2",
     "title": "Paper 2",
     "status": "Interactive demo available · paper in preparation",
@@ -75,7 +75,7 @@
     "discoverable": false
   },
   {
-    "slug": "paper3",
+    "slug": "3",
     "name": "Paper 3",
     "status": "Interactive demo available · paper in preparation",
     "demo": "demo/",

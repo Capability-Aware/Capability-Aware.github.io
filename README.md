@@ -8,7 +8,7 @@ A minimal academic showcase: Research Projects dropdown, centered title and auth
 
 - `featured-video.json`: main homepage video (currently TempoLoco).
 - `links.json`: homepage black buttons. Fill the empty YouTube/Bilibili `url` values to activate them.
-- `papers.json`: research page titles, paths, status, and content. The first paper has a standalone page at `/beyond-fixed-visual-history/`; `/paper1/` redirects there. Paper 2 has a demo showcase at `/paper2/demo/`; its paper is in preparation. Paper 3 remains a placeholder.
+- `papers.json`: research page titles, paths, status, and content. The first paper has a standalone page at `/beyond-fixed-visual-history/`; `/paper1/` redirects there. Paper 2 lives at `/2/` with its demo showcase at `/2/demo/`; its paper is in preparation. Paper 3 lives at `/3/` and remains a placeholder. The old `/paper2/` and `/paper3/` roots redirect to the shorter paths.
 - `scripts/build_site.py`: homepage text, link buttons, teaser, and project page content.
 - `assets/site.css` and `assets/site.js`: shared layout and dropdown/carousel behavior.
 - `projects.json`: archived Nerfies and HyperNeRF demonstration content. These are not Capability Aware publications.
