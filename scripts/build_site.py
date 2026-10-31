@@ -59,34 +59,46 @@ def build_demo_landing(p):
     folder = ROOT / p['slug']
     folder.mkdir(exist_ok=True)
     videos = [
-        ('Variable-height stairs', 'media_stage/random_height_width_stairs_L0.mp4', 'stairs.jpg', 'Terrain', 'Traversal across stairs with changing step geometry.'),
-        ('Low-clearance passage', 'media_stage/low_ceiling_success35_v16.mp4', 'low_clearance.jpg', 'Terrain', 'A low ceiling calls for a crouched body posture.'),
-        ('Pillar contact', 'media_capability_v5/contact_pillars_CB.mp4', 'pillars.jpg', 'Terrain', 'Contact-rich traversal among discrete pillars.'),
-        ('High-speed command', 'media_stage/speed5_goals.mp4', 'high_speed.jpg', 'Motion', 'Locomotion with a high-speed velocity target.'),
-        ('Body-height and attitude', 'media_stage/joint_body_flat_walk_large_H40_60_RP10_v1.mp4', 'body_motion.jpg', 'Motion', 'Walking with changes in body height and orientation.'),
-        ('Fixed-arm setup', 'media_stage/arm_five_application_REVIEW_v18.mp4', 'fixed_arm.jpg', 'Robot setup', 'Locomotion with an arm mounted on the robot.'),
+        ('Variable-height stairs', 'media_stage/random_height_width_stairs_L0.mp4', 'stairs.jpg', 'Terrain Traversal', 'Traversal across stairs with changing step geometry.'),
+        ('Low-clearance passage', 'media_stage/low_ceiling_success35_v16.mp4', 'low_clearance.jpg', 'Terrain Traversal', 'A low ceiling calls for a crouched body posture.'),
+        ('Pillar contact', 'media_capability_v5/contact_pillars_CB.mp4', 'pillars.jpg', 'Terrain Traversal', 'Contact-rich traversal among discrete pillars.'),
+        ('High-speed command', 'media_stage/speed5_goals.mp4', 'high_speed.jpg', 'Motion & Posture', 'Locomotion with a high-speed velocity target.'),
+        ('Body-height and attitude', 'media_stage/joint_body_flat_walk_large_H40_60_RP10_v1.mp4', 'body_motion.jpg', 'Motion & Posture', 'Walking with changes in body height and orientation.'),
+        ('Fixed-arm setup', 'media_stage/arm_five_application_REVIEW_v18.mp4', 'fixed_arm.jpg', 'Robot Configuration', 'Locomotion with an arm mounted on the robot.'),
     ]
-    cards = ''.join(f'''<article class="p2-demo-card" data-category="{e(category)}"><video controls playsinline muted preload="none" poster="../assets/videos/paper2/posters/{e(poster)}" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><div class="p2-demo-copy"><span class="p2-demo-category">{e(category)}</span><h3>{e(title)}</h3><p>{e(caption)}</p></div></article>''' for title,src,poster,category,caption in videos)
+    def video_card(video):
+        title,src,poster,category,caption = video
+        return f'''<article class="p2-demo-card"><video controls playsinline muted preload="none" poster="../assets/videos/paper2/posters/{e(poster)}" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><div class="p2-demo-copy"><span class="p2-demo-category">{e(category)}</span><h3>{e(title)}</h3><p>{e(caption)}</p></div></article>'''
+    result_groups = [
+        ('terrain', 'Terrain Traversal', 'Selected simulation demonstrations across stairs, low-clearance passages, and discrete pillars.', 'Terrain Traversal'),
+        ('motion', 'Motion & Posture', 'Clips illustrating changes in velocity targets, body height, and body orientation.', 'Motion & Posture'),
+        ('robot', 'Robot Configuration', 'A locomotion demonstration with an arm mounted on the robot.', 'Robot Configuration'),
+    ]
+    result_tabs = ''.join(f'<button class="p2-tab{" is-active" if i == 0 else ""}" id="tab-{key}" type="button" role="tab" aria-selected="{"true" if i == 0 else "false"}" aria-controls="panel-{key}" tabindex="{0 if i == 0 else -1}">{e(title)}</button>' for i,(key,title,_,_) in enumerate(result_groups))
+    result_panels = ''.join(f'''<section class="p2-result-panel" id="panel-{key}" role="tabpanel" aria-labelledby="tab-{key}"{" hidden" if i else ""}><h3>{e(title)}</h3><p>{e(description)}</p><div class="p2-clip-grid">{''.join(video_card(video) for video in videos if video[3] == match)}</div></section>''' for i,(key,title,description,match) in enumerate(result_groups))
     body = f'''<main id="main" class="research-page paper2-page">
 <header class="hero paper-hero p2-hero"><p class="paper-kicker">Capability Aware · Interactive Research Preview</p>
-<h1 class="research-title">Paper 2</h1>
+<h1 class="research-title"><span>Paper 2</span><span class="research-subtitle">Research title in preparation</span></h1>
 <p class="authors"><a href="https://haozhangrobotics.github.io/">Hao Zhang</a></p>
 <p class="affiliations">Westlake University</p>
 <p class="publication-status">Manuscript in preparation · Demonstrations available</p>
 <p class="p2-intro">The paper is in preparation. Selected simulation demonstrations are available below.</p>
-<div class="buttons"><a class="button" href="{e(p['demo'])}">Open the demo showcase</a><a class="button" href="#videos">Browse demonstrations</a><a class="button" href="../">← Capability Aware</a></div></header>
+<div class="buttons"><a class="button" href="{e(p['demo'])}">Open the demo showcase</a><a class="button" href="#results">Browse results</a><a class="button" href="../">← Capability Aware</a></div></header>
 <section class="p2-coming" aria-label="Upcoming real robot demonstration"><div class="empty-video p2-empty" role="img" aria-label="Real robot video coming soon"><span aria-hidden="true">▷</span><p>Video coming soon</p><small>Real-robot demonstration</small></div></section>
-<section class="p2-library" id="videos" aria-label="Simulation video demonstrations"><div class="p2-library-heading"><div><p class="paper-kicker">Simulation videos</p><h2>Selected demonstrations</h2></div><div class="p2-filters" role="group" aria-label="Filter demonstrations"><button class="is-active" type="button" data-filter="All" aria-pressed="true">All <span>6</span></button><button type="button" data-filter="Terrain" aria-pressed="false">Terrain <span>3</span></button><button type="button" data-filter="Motion" aria-pressed="false">Motion <span>2</span></button><button type="button" data-filter="Robot setup" aria-pressed="false">Robot setup <span>1</span></button></div></div>
-<div class="p2-clip-grid">{cards}</div></section>
+<nav class="section-nav p2-section-nav" aria-label="Paper sections"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#results">Results</a></nav>
+<section class="paper-section p2-abstract" id="abstract"><h2>Abstract</h2><p class="pending-copy">Abstract in preparation.</p></section>
+<section class="paper-section section-tinted p2-method" id="method"><div class="section-inner"><h2>Method Overview</h2><div class="p2-method-placeholder"><span aria-hidden="true">◇</span><strong>Method diagram coming soon</strong><small>Framework overview in preparation</small></div></div></section>
+<section class="p2-results" id="results"><h2>Results</h2><p class="p2-results-intro">Explore selected simulation demonstrations by task family. The full showcase includes the current experiment pages and supporting details.</p><div class="p2-tabs" role="tablist" aria-label="Result categories">{result_tabs}</div>{result_panels}</section>
 <section class="p2-footer-cta"><p>The full collection includes the current experiment pages and supporting details.</p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></section>
 <nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
 <script>
-(()=>{{const cards=[...document.querySelectorAll('.p2-demo-card')],filters=[...document.querySelectorAll('.p2-filters button')];
-filters.forEach(filter=>filter.addEventListener('click',()=>{{filters.forEach(f=>{{f.classList.toggle('is-active',f===filter);f.setAttribute('aria-pressed',String(f===filter))}});cards.forEach(card=>card.hidden=filter.dataset.filter!=='All'&&card.dataset.category!==filter.dataset.filter)}}));}})();
+(()=>{{const tabs=[...document.querySelectorAll('.p2-tab')],panels=[...document.querySelectorAll('.p2-result-panel')];
+const activate=tab=>{{tabs.forEach(t=>{{const active=t===tab;t.classList.toggle('is-active',active);t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1}});panels.forEach(p=>p.hidden=p.id!==tab.getAttribute('aria-controls'))}};
+tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();tabs[next].focus();activate(tabs[next])}})}});}})();
 </script>
 </main>'''
     page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
-    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v4')
+    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v5')
     (folder/'index.html').write_text(page)
 
 def build_research(p):
