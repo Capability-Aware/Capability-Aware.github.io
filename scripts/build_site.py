@@ -62,23 +62,62 @@ def build_demo_landing(p):
     folder = ROOT / p['slug']
     folder.mkdir(exist_ok=True)
     videos = [
-        ('Variable-height stairs', 'media_stage/random_height_width_stairs_L0.mp4', 'stairs.jpg', 'Terrain Traversal', 'Traversal across stairs with changing step geometry.'),
-        ('Low-clearance passage', 'media_stage/low_ceiling_success35_v16.mp4', 'low_clearance.jpg', 'Terrain Traversal', 'A low ceiling calls for a crouched body posture.'),
-        ('Pillar contact', 'media_capability_v5/contact_pillars_CB.mp4', 'pillars.jpg', 'Terrain Traversal', 'Contact-rich traversal among discrete pillars.'),
-        ('High-speed command', 'media_stage/speed5_goals.mp4', 'high_speed.jpg', 'Motion & Posture', 'Locomotion with a high-speed velocity target.'),
-        ('Body-height and attitude', 'media_stage/joint_body_flat_walk_large_H40_60_RP10_v1.mp4', 'body_motion.jpg', 'Motion & Posture', 'Walking with changes in body height and orientation.'),
-        ('Fixed-arm setup', 'media_stage/arm_five_application_REVIEW_v18.mp4', 'fixed_arm.jpg', 'Robot Configuration', 'Locomotion with an arm mounted on the robot.'),
+        ('低矮通道｜俯身穿越', 'media_stage/low_ceiling_success35_v16.mp4', 'result_low_clearance.jpg', 'terrain', '降低身体姿态，通过受限净空区域。'),
+        ('稀疏梅花桩', 'media_stage/pillars_60mm_trot.mp4', 'result_pillars.jpg', 'terrain', '稀疏离散落脚点上的连续通过。'),
+        ('中空不规则楼梯', 'media_stage/random_height_width_stairs_L0.mp4', 'result_stairs.jpg', 'terrain', '踏面尺寸与台阶高度变化的楼梯。'),
+        ('窄梁行走', 'media_stage/beam_30cm_trot.mp4', 'result_beam.jpg', 'terrain', '沿窄梁保持连续步态并通过路线。'),
+        ('0.5 m/s', 'media_stage/speed05_goals.mp4', 'result_speed05.jpg', 'motion', '低速目标下的四足落脚目标演示。'),
+        ('1 m/s', 'media_stage/speed1_goals.mp4', 'result_speed1.jpg', 'motion', '1 m/s 目标速度演示。'),
+        ('3 m/s', 'media_stage/speed3_goals.mp4', 'result_speed3.jpg', 'motion', '3 m/s 目标速度演示。'),
+        ('5 m/s', 'media_stage/speed5_goals.mp4', 'result_speed5.jpg', 'motion', '5 m/s 目标速度与实际落脚演示。'),
+        ('行走中切换步态', 'media_stage/combined_gait_transition_REVIEW_reference55_v8.mp4', 'result_gait_transition.jpg', 'motion', '在行走过程中依次请求不同步态。'),
+        ('身体高度｜连续 20–68 cm', 'media_body_frontier_v1/body_height_CB_B_only.mp4', 'result_body_height.jpg', 'body', '连续高度变化；画面保留 C+B 与单 Body 对照。'),
+        ('身体俯仰｜连续 ±28°', 'media_body_frontier_v1/body_pitch_CB_B_only.mp4', 'result_body_pitch.jpg', 'body', '连续俯仰变化；画面保留 C+B 与单 Body 对照。'),
+        ('左右侧倾｜连续 ±40°', 'media_body_frontier_v1/body_roll_CB_B_only.mp4', 'result_body_roll.jpg', 'body', '连续侧倾变化；画面保留 C+B 与单 Body 对照。'),
+        ('高度＋roll＋pitch 联合姿态', 'media_stage/body_three_axes_explicit_v17.mp4', 'result_body_combined.jpg', 'body', '高度、roll、pitch 及三轴联合姿态演示。'),
     ]
+    arm_tasks = [
+        ('升高身体触达', 'arm_height', '高度变化时四足与机械臂协同触达；同屏对比固定 Body 与调用 Body。'),
+        ('侧倾身体触达', 'arm_roll', '侧倾姿态下协同触达；同屏对比固定 Body 与调用 Body。'),
+        ('俯仰身体触达', 'arm_pitch', '俯仰姿态下协同触达；同屏对比固定 Body 与调用 Body。'),
+        ('组合姿态触达', 'arm_combined', '高度、roll 与 pitch 组合变化下协同触达；同屏对比两种 Body 配置。'),
+        ('行走中触达', 'arm_moving_reach', '移动过程中完成四足行走与机械臂触达；同屏对比两种 Body 配置。'),
+    ]
+    videos.extend((title, f'media_arm_tasks/{slug}.mp4', f'result_{slug}.jpg', 'coordination', caption) for title,slug,caption in arm_tasks)
+    ablation_titles = {
+        'body': ('纯 Body（无臂）', '固定身体控制、不含机械臂的对照任务'),
+        'contact': ('Contact 路线', '离散接触与落脚路线任务'),
+        'joint': ('Body＋Contact 联合', '身体姿态与接触路线同时变化的任务'),
+    }
+    for suite,(suite_title,suite_caption) in ablation_titles.items():
+        for variant,label in [('CB','完整 C+B'),('C_only','mask B｜C-only'),('B_only','mask C｜B-only')]:
+            videos.append((f'{suite_title}｜{label}', f'media_stage_ablation/native_three_v2/{variant}_{suite}.mp4', f'result_ablation_{suite}_{variant}.jpg', 'ablation', f'{suite_caption}；当前展示已有阶段素材。'))
     def video_card(video):
         title,src,poster,category,caption = video
-        return f'''<article class="p2-demo-card"><video controls playsinline muted preload="none" poster="../assets/videos/paper2/posters/{e(poster)}" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><div class="p2-demo-copy"><span class="p2-demo-category">{e(category)}</span><h3>{e(title)}</h3><p>{e(caption)}</p></div></article>'''
+        return f'''<article class="p2-demo-card"><video controls playsinline muted preload="none" poster="../assets/videos/paper2/posters/{e(poster)}" aria-label="{e(title)}"><source src="../assets/videos/paper2/{e(src)}" type="video/mp4">Your browser does not support this video.</video><div class="p2-demo-copy"><h4>{e(title)}</h4><p>{e(caption)}</p></div></article>'''
     result_groups = [
-        ('terrain', 'Terrain Traversal', 'Selected simulation demonstrations across stairs, low-clearance passages, and discrete pillars.', 'Terrain Traversal'),
-        ('motion', 'Motion & Posture', 'Clips illustrating changes in velocity targets, body height, and body orientation.', 'Motion & Posture'),
-        ('robot', 'Robot Configuration', 'A locomotion demonstration with an arm mounted on the robot.', 'Robot Configuration'),
+        ('terrain', '挑战地形', '俯身穿越、稀疏梅花桩、不规则楼梯与窄梁。', 'terrain'),
+        ('motion', '运动与步态', '0.5、1、3、5 m/s 速度目标，以及行走中的步态切换。', 'motion'),
+        ('body', '身体姿态', '连续高度、俯仰、侧倾变化与多轴联合姿态。', 'body'),
+        ('coordination', 'B+C 协同', '将合并展示中的五项四足—机械臂协同任务拆成独立视频卡片。', 'coordination'),
+        ('ablation', '自我消融', '按 Body、Contact、Body＋Contact 三类任务查看已有 C+B、C-only 与 B-only 阶段素材。', 'ablation'),
     ]
     result_tabs = ''.join(f'<button class="p2-tab{" is-active" if i == 0 else ""}" id="tab-{key}" type="button" role="tab" aria-selected="{"true" if i == 0 else "false"}" aria-controls="panel-{key}" tabindex="{0 if i == 0 else -1}">{e(title)}</button>' for i,(key,title,_,_) in enumerate(result_groups))
-    result_panels = ''.join(f'''<section class="p2-result-panel" id="panel-{key}" role="tabpanel" aria-labelledby="tab-{key}"{" hidden" if i else ""}><h3>{e(title)}</h3><p>{e(description)}</p><div class="p2-clip-grid">{''.join(video_card(video) for video in videos if video[3] == match)}</div></section>''' for i,(key,title,description,match) in enumerate(result_groups))
+    def result_panel(i, group):
+        key,title,description,match = group
+        hidden = ' hidden' if i else ''
+        if key == 'ablation':
+            groups = []
+            for suite,(suite_title,_) in ablation_titles.items():
+                cards = [video_card(video) for video in videos if video[3] == match and video[0].startswith(suite_title + '｜')]
+                groups.append(f'<div class="p2-ablation-group"><h4>{e(suite_title)}</h4><div class="p2-clip-grid">{"".join(cards)}</div></div>')
+            content = '<p class="p2-ablation-note">以下为当前已有的阶段对照视频；完整实验范围与指标请见 demo showcase。</p>' + ''.join(groups)
+        else:
+            cards = [video_card(video) for video in videos if video[3] == match]
+            grid_class = ' p2-grid-4' if len(cards) == 4 else ''
+            content = f'<div class="p2-clip-grid{grid_class}">{"".join(cards)}</div>'
+        return f'<section class="p2-result-panel" id="panel-{key}" role="tabpanel" aria-labelledby="tab-{key}"{hidden}><h3>{e(title)}</h3><p>{e(description)}</p>{content}</section>'
+    result_panels = ''.join(result_panel(i, group) for i,group in enumerate(result_groups))
     body = f'''<main id="main" class="research-page paper2-page">
 <header class="hero paper-hero p2-hero"><p class="paper-kicker">Capability Aware · Interactive Research Preview</p>
 <h1 class="research-title"><span>Paper 2</span><span class="research-subtitle">Research title in preparation</span></h1>
@@ -91,7 +130,7 @@ def build_demo_landing(p):
 <nav class="section-nav p2-section-nav" aria-label="Paper sections"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#results">Results</a></nav>
 <section class="paper-section p2-abstract" id="abstract"><h2>Abstract</h2><p class="pending-copy">Abstract in preparation.</p></section>
 <section class="paper-section section-tinted p2-method" id="method"><div class="section-inner"><h2>Method Overview</h2><div class="p2-method-placeholder"><span aria-hidden="true">◇</span><strong>Method diagram coming soon</strong><small>Framework overview in preparation</small></div></div></section>
-<section class="p2-results" id="results"><h2>Results</h2><p class="p2-results-intro">Explore selected simulation demonstrations by task family. The full showcase includes the current experiment pages and supporting details.</p><div class="p2-tabs" role="tablist" aria-label="Result categories">{result_tabs}</div>{result_panels}</section>
+<section class="p2-results" id="results"><h2>Results</h2><p class="p2-results-intro">按任务类别浏览仿真演示。点击下方标签切换视频组。</p><div class="p2-tabs" role="tablist" aria-label="Result categories">{result_tabs}</div>{result_panels}</section>
 <section class="p2-footer-cta"><p>The full collection includes the current experiment pages and supporting details.</p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></section>
 <nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
 <script>
@@ -101,7 +140,7 @@ tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>activate(tab));tab.
 </script>
 </main>'''
     page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
-    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v5')
+    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v6')
     (folder/'index.html').write_text(page)
 
 def build_placeholder_paper(p):
