@@ -1,0 +1,300 @@
+{
+  "frames": 34132,
+  "end_s": 170.6599999999173,
+  "first_completed_s": 169.6599999999182,
+  "correct_bin_id": "bin_0_can",
+  "public_target_id": "visual_249a1c2697c24d689d19f8fd4fe9b8c9",
+  "stages": [
+    {
+      "stage": "warmup",
+      "time_s": 0.005,
+      "sim_frame_id": 1
+    },
+    {
+      "stage": "stow_entry",
+      "time_s": 1.9999999999999793,
+      "sim_frame_id": 400
+    },
+    {
+      "stage": "coarse_navigation",
+      "time_s": 6.384999999999886,
+      "sim_frame_id": 1277
+    },
+    {
+      "stage": "front_approach_and_tail_turn",
+      "time_s": 29.739999999998368,
+      "sim_frame_id": 5948
+    },
+    {
+      "stage": "tail_quiet",
+      "time_s": 46.50500000000534,
+      "sim_frame_id": 9301
+    },
+    {
+      "stage": "wrist_observation",
+      "time_s": 46.51000000000534,
+      "sim_frame_id": 9302
+    },
+    {
+      "stage": "wrist_reverse",
+      "time_s": 54.43000000000939,
+      "sim_frame_id": 10886
+    },
+    {
+      "stage": "final_wrist_recheck",
+      "time_s": 72.52000000000653,
+      "sim_frame_id": 14504
+    },
+    {
+      "stage": "pickup",
+      "time_s": 72.5500000000065,
+      "sim_frame_id": 14510
+    },
+    {
+      "stage": "carry_turn",
+      "time_s": 117.93999999996522,
+      "sim_frame_id": 23588
+    },
+    {
+      "stage": "carry_walk",
+      "time_s": 133.56999999995102,
+      "sim_frame_id": 26714
+    },
+    {
+      "stage": "deposit_scene",
+      "time_s": 155.40499999993116,
+      "sim_frame_id": 31081
+    },
+    {
+      "stage": "deposit",
+      "time_s": 155.49999999993108,
+      "sim_frame_id": 31100
+    },
+    {
+      "stage": "completed",
+      "time_s": 169.6599999999182,
+      "sim_frame_id": 33932
+    }
+  ],
+  "actual_carry_net_m": 1.074658488534501,
+  "schema_version": 1,
+  "task_id": "multiagent-grabgarbage",
+  "run_id": "continuous_single_target_flow_v23_20261031",
+  "source_run": "/media/user/DATA/runs/capability_research/outputs/multiagent-grabgarbage/continuous_single_target_flow_v23_20261031",
+  "selected_target_completed": 1,
+  "selected_target_total": 1,
+  "catalog_completed": 1,
+  "catalog_total": 24,
+  "single_target_completed": true,
+  "single_target_flow_completed": true,
+  "full_task_success": false,
+  "deposit_observed_occupancy": {
+    "enabled": true,
+    "scope": "existing transfer_up/bin_above and release/wait_bin holding only",
+    "freeze_rule": "runtime actual own base at reviewer construction, plus/minus 2m on each world axis",
+    "workspace_half_extent_m": 2.0,
+    "workspace": {
+      "assumption_id": "controlled-static-grass-deposit-own-base-cube-2m-v1",
+      "bounds_world": [
+        [
+          -42.718345642089844,
+          -52.51822280883789,
+          -0.1543138027191162
+        ],
+        [
+          -38.718345642089844,
+          -48.51822280883789,
+          3.845686197280884
+        ]
+      ],
+      "half_extent_m": 2.0,
+      "freeze_sim_frame_id": 31081,
+      "freeze_time_s": 155.40499999993116,
+      "actual_base_pose_world": {
+        "position": [
+          -40.718345642089844,
+          -50.51822280883789,
+          1.8456861972808838
+        ],
+        "quaternion_wxyz": [
+          -0.9950084090232849,
+          0.007640487514436245,
+          -0.06819280982017517,
+          -0.07245534658432007
+        ]
+      },
+      "derived_from": "runtime actual own base only",
+      "frozen_before_candidate_ik_or_path_review": true,
+      "candidate_dependent_bounds": false,
+      "static_workspace_is_engineering_assumption": true,
+      "unknown_space_certified_free": false
+    },
+    "unknown_space_certified_free": false,
+    "static_workspace_is_engineering_assumption": true,
+    "observed_occupied_source_overlap_and_five_known_bin_walls_still_reject": true
+  },
+  "arm_profile": {
+    "own_base_replan": true,
+    "known_bin_safe_release": true,
+    "task_arm_damping": 12.0,
+    "own_base_replan_max_count": 512,
+    "own_base_replan_max_wall_s": 5.0,
+    "own_base_replan_total_wall_s": 300.0,
+    "joint_speed_rad_s": 0.15,
+    "finger_speed_m_s": 0.01,
+    "waypoint_timeout_s": 30.0,
+    "total_timeout_s": 120.0,
+    "finger_contact_dwell_s": 0.1,
+    "close_timeout_s": 3.0,
+    "physical_grasp_wait_s": 3.0,
+    "bin_wait_s": 6.0,
+    "close_preload_m": 0.01,
+    "release_clearance_m": 0.1,
+    "minimum_finger_contact_n": 0.01,
+    "max_expected_finger_force_n": 140.0,
+    "baseline_extended_compute_budget": true,
+    "baseline_carry_clearance": true,
+    "carry_clearance_back_m": 0.5,
+    "carry_clearance_height_m": 0.3,
+    "camera_grasp_tcp_up_m": 0.015,
+    "mode": "controlled_single_target_static_last_seen",
+    "known_bin_release_rule": "project_own_base_into_safe_opening",
+    "own_base_replan_trigger_translation_m": 0.002,
+    "own_base_replan_trigger_rotation_rad": 0.004,
+    "original_plan_drift_guard_translation_m": 0.005,
+    "original_plan_drift_guard_rotation_rad": 0.01,
+    "own_base_replan_source": "actual own base/q only; camera world targets/capture never refreshed",
+    "own_base_replan_ik_position_tolerance_m": 0.003,
+    "own_base_replan_ik_orientation_tolerance_rad": 0.02,
+    "own_base_replan_max_ik_iterations_per_seed": 120,
+    "own_base_replan_max_ik_seeds": 3,
+    "own_base_replan_scope": "current waypoint only; force current-base IK/full review at next waypoint entry",
+    "own_base_replan_compute_budget_scope": "explicit computation resource envelope only; cumulative wall/count never reset; physical phase/total clocks, precision, IK/path and contact gates unchanged",
+    "stage_deadline_policy": "check before stage success; numerical comparison tolerance 1e-9s",
+    "close_dwell_policy": "both camera-derived preload desired targets fully issued, then actual bilateral force dwell; not actual q at preload",
+    "carry_clearance_scope": "explicit split pickup only; after trusted transporting, own-base-relative TCP tuck/raise then actual settled before yielding; not a clearance certificate",
+    "camera_grasp_tcp_up_scope": "explicit world-up tool offset only; camera center/axis/height/UQ/exposure/identity unchanged; new three-pose IK and full staged source/seed-depth review",
+    "payload_envelope_scope": "nonzero tool offset uses observed asymmetric bounds in gripper frame, including current orientation at release; no object truth or refreshed seed",
+    "hover_mode": "own_body_reset",
+    "aerial_report_position_3d_rms_m": 0.1,
+    "desired_actuator": "task_implicit_gravity_bias Kp60 Kd12 with declared own-model G",
+    "grasp_coordinates": "current local RGBD cylinder candidate only",
+    "bucket_coordinates": "explicit known task bin; controlled near-bin layout permitted",
+    "complete_scope": "one public target physically completed; not all24 mission success"
+  },
+  "camera_grasp_tcp_up_m": 0.015,
+  "stationary_carry_turn": {
+    "enabled": true,
+    "scope": "carry_turn only; current actual own XY plus public parking heading",
+    "entry_distance_m": 0.04,
+    "entry_yaw_error_rad": 0.08,
+    "hold_max_distance_m": 0.1,
+    "hold_max_yaw_error_rad": 0.16,
+    "actual_consumed_zero_and_quiet_dwell_s": 0.5,
+    "max_duration_s": 25.0,
+    "max_actual_path_m": 2.0,
+    "carry_total_budget_s": 60.0,
+    "not_original_precision": true,
+    "grants_grasp": false,
+    "grants_deposit": false
+  },
+  "stationary_bin_docking": {
+    "enabled": true,
+    "scope": "carry_walk known_bin parking only",
+    "entry_distance_m": 0.04,
+    "entry_yaw_error_rad": 0.08,
+    "hold_max_distance_m": 0.1,
+    "hold_max_yaw_error_rad": 0.16,
+    "actual_consumed_zero_and_quiet_dwell_s": 0.5,
+    "minimum_actual_walk_net_m": 1.0,
+    "grants_deposit": false,
+    "current_docked_camera_and_actual_ik_path_review_required": true
+  },
+  "deposit_scene_refresh": {
+    "enabled": true,
+    "mode": "native_four_camera_scene_refresh_during_deposit",
+    "trigger_fraction_of_original_bounds": 0.5,
+    "original_translation_bound_m": 0.05,
+    "original_rotation_bound_rad": 0.08,
+    "original_snapshot_age_s": 60.0,
+    "same_exposure_actual_own_pose_required": true,
+    "actual_consumed_zero_quiet_required": true,
+    "maximum_actual_arm_speed_rad_s": 0.15,
+    "original_grasp_camera_model_unchanged": true,
+    "fixed_workspace_unchanged": true,
+    "original_path_and_physical_clocks_unchanged": true,
+    "invalid_new_scene_revokes_snapshot": true,
+    "source_unknown_not_certified_free": true
+  },
+  "deposit_scene_refresh_runtime": {
+    "attempted": 2,
+    "accepted": 2,
+    "first_at_s": 156.39999999993026,
+    "last_at_s": 157.9999999999288
+  },
+  "external_current_image_prompts": true,
+  "known_bin_position": true,
+  "autonomous_discovery_claimed": false,
+  "report_sha256": "7ad77bdc6ba1d58dfee3bf13bac966b083b9af64eec2f5bc5f73e52dc9d1e0eb",
+  "runtime_input_verification_sha256": "563727eea616a291c3ca109315aaee5e1d498663d0eaaeae0367f67d858e3e9b",
+  "evidence_sha256": "42d50a4ea270a298dd83906c59b70556ef5550d45dd8ee8584243b69351d31b9",
+  "media_manifest_sha256": "cb7522b0689fda4ebda2557b3be54999fafe4e80de5905ad50ad5bec32eb00d5",
+  "jumps": [
+    {
+      "label": "走近",
+      "stage": "coarse_navigation",
+      "presentation_time_s": 6.4,
+      "actual_sim_time_s": 6.399999999999886,
+      "sim_frame_id": 1280
+    },
+    {
+      "label": "接近与转身",
+      "stage": "front_approach_and_tail_turn",
+      "presentation_time_s": 29.8,
+      "actual_sim_time_s": 29.799999999998356,
+      "sim_frame_id": 5960
+    },
+    {
+      "label": "腕部复查",
+      "stage": "wrist_observation",
+      "presentation_time_s": 46.6,
+      "actual_sim_time_s": 46.60000000000539,
+      "sim_frame_id": 9320
+    },
+    {
+      "label": "抓取",
+      "stage": "pickup",
+      "presentation_time_s": 72.6,
+      "actual_sim_time_s": 72.60000000000646,
+      "sim_frame_id": 14520
+    },
+    {
+      "label": "携物转向",
+      "stage": "carry_turn",
+      "presentation_time_s": 118.0,
+      "actual_sim_time_s": 117.99999999996517,
+      "sim_frame_id": 23600
+    },
+    {
+      "label": "携物行走",
+      "stage": "carry_walk",
+      "presentation_time_s": 133.6,
+      "actual_sim_time_s": 133.599999999951,
+      "sim_frame_id": 26720
+    },
+    {
+      "label": "投桶",
+      "stage": "deposit",
+      "presentation_time_s": 155.5,
+      "actual_sim_time_s": 155.49999999993108,
+      "sim_frame_id": 31100
+    },
+    {
+      "label": "桶内完成",
+      "stage": "completed",
+      "presentation_time_s": 169.7,
+      "actual_sim_time_s": 169.69999999991816,
+      "sim_frame_id": 33940
+    }
+  ]
+}

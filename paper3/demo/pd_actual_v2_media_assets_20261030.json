@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "source_html": "docs/evidence/multiagent_grabgarbage_task_flow_20261030/index.html",
+  "before_sha256": "25e165d8019aa17dc3b3471514ad700bc5952b1214c99741e9ad68e50300ff21",
+  "after_sha256": "f568e88e6277c470de8170f864e9544fd1e6c26a3610c07fe0bbd74809613165",
+  "previous_modes": [
+    "greenSide",
+    "greenWide",
+    "greenSideOnly",
+    "greenOverviewOnly",
+    "greenUav",
+    "greenFront",
+    "greenRear",
+    "greenWrist",
+    "side",
+    "overview",
+    "sync",
+    "syncwide",
+    "uav",
+    "front",
+    "rear",
+    "wrist",
+    "independentv4",
+    "brakingv3",
+    "oldcombo",
+    "failure",
+    "previous",
+    "comparison",
+    "previousrecovery",
+    "previousapproach",
+    "pdPreviewSync",
+    "pdPreviewWide",
+    "pdPreviewSide",
+    "pdPreviewOverview",
+    "pdPreviewUav",
+    "pdPreviewFront",
+    "pdPreviewRear",
+    "pdPreviewWrist",
+    "pdStartupFailureV1"
+  ],
+  "added_modes": [
+    "pdActualV2Sync",
+    "pdActualV2Wide",
+    "pdActualV2Side",
+    "pdActualV2Overview",
+    "pdActualV2Uav",
+    "pdActualV2Front",
+    "pdActualV2Rear",
+    "pdActualV2Wrist"
+  ],
+  "mode_count": 41,
+  "default_mode": "side",
+  "assets": [
+    {
+      "alias": "pd_actual_v2_team_side.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_side.mp4",
+      "sha256": "57152edd0379828ef481ba6fbc5be09b43a114af5d3d79cecfed8c5d6469caca",
+      "bytes": 1291380
+    },
+    {
+      "alias": "pd_actual_v2_team_side.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_side.jpg",
+      "sha256": "d1aeaa5aed8ed146e9a08a4befe0094080aeba4d6dfecf3f6869e7e0d6260c5e",
+      "bytes": 336216
+    },
+    {
+      "alias": "pd_actual_v2_team_side.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_side.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_team_overview.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_overview.mp4",
+      "sha256": "1ea768e105265dd63cebe173c57475fbe2f2064b92a8e0c6733893a9733f8a2d",
+      "bytes": 1383328
+    },
+    {
+      "alias": "pd_actual_v2_team_overview.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_overview.jpg",
+      "sha256": "a583dc09c21f93e22d7f0b0dd287239846cfd0be176736d18227994a79916a4d",
+      "bytes": 377670
+    },
+    {
+      "alias": "pd_actual_v2_team_overview.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_overview.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_team_side_only.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_side_only.mp4",
+      "sha256": "6496434ecbc21be8e33c83e6c89fce597def3bd013039ad6cba3c006bd0c8d24",
+      "bytes": 854927
+    },
+    {
+      "alias": "pd_actual_v2_team_side_only.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_side_only.jpg",
+      "sha256": "3557b16926ad27774cccd155488a3c00115ed6ec7aed75ab0464efc6a2f87588",
+      "bytes": 200806
+    },
+    {
+      "alias": "pd_actual_v2_team_side_only.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_side_only.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_team_overview_only.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_overview_only.mp4",
+      "sha256": "e4bb2d2649ec8717c5ac1b3799fc9d77631c64beae3328b28110c207b699a017",
+      "bytes": 965221
+    },
+    {
+      "alias": "pd_actual_v2_team_overview_only.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_overview_only.jpg",
+      "sha256": "c4df2b7366d41da21df3caffc526e69f56109f94eed9feffd7de6381ab36509d",
+      "bytes": 243328
+    },
+    {
+      "alias": "pd_actual_v2_team_overview_only.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/team_overview_only.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_first_uav.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_uav.mp4",
+      "sha256": "3e1e7b389abc82dfdee1802903383c1218e061bd49314758768f3f88626ec4c5",
+      "bytes": 1129388
+    },
+    {
+      "alias": "pd_actual_v2_first_uav.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_uav.jpg",
+      "sha256": "70f98876110cb056a85d66dad20ca6a7400ea35dd0468844be4aabb4b703a429",
+      "bytes": 288443
+    },
+    {
+      "alias": "pd_actual_v2_first_uav.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_uav.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_first_front.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_front.mp4",
+      "sha256": "a3759a246904c17888d80660c37d3e1bdcbb040d390e909f786b6befb1661ebc",
+      "bytes": 422046
+    },
+    {
+      "alias": "pd_actual_v2_first_front.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_front.jpg",
+      "sha256": "c4eeca10d458a7d54f11a7df8af4418ec843603bd76092ee87e4828d61b33bb8",
+      "bytes": 104481
+    },
+    {
+      "alias": "pd_actual_v2_first_front.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_front.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_first_rear.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_rear.mp4",
+      "sha256": "f4867fe8b8113cf1b5b28155bb5d6296de96d1f519666242b3a2c1a711daac3c",
+      "bytes": 285330
+    },
+    {
+      "alias": "pd_actual_v2_first_rear.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_rear.jpg",
+      "sha256": "663b7f1f81724d2f28deebaf14103f1af10f682ed634c7e43b905b79fb920119",
+      "bytes": 88316
+    },
+    {
+      "alias": "pd_actual_v2_first_rear.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_rear.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_first_wrist.mp4",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_wrist.mp4",
+      "sha256": "2cc24fea2a1724996ac225e9cde9bde5b9211adfe21fe39d653bb23272b7f95d",
+      "bytes": 355587
+    },
+    {
+      "alias": "pd_actual_v2_first_wrist.jpg",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_wrist.jpg",
+      "sha256": "4533f943971bdf32c83285cb200fc1f6b8d1a1461c5592c9427f20ab33024e1a",
+      "bytes": 123921
+    },
+    {
+      "alias": "pd_actual_v2_first_wrist.frames.jsonl",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/first_wrist.frames.jsonl",
+      "sha256": "37002e8c99c3208dc37f37bceee1ea97906b3ca23a904ab012ab9f57d0020782",
+      "bytes": 276151
+    },
+    {
+      "alias": "pd_actual_v2_multiview_manifest.json",
+      "source": "docs/evidence/camera_pd_rear_actual_video_v2_20261030/multiview_manifest.json",
+      "sha256": "9677e1ffc5885f8205ccf43841e1618326c0ab2cb2d2e774687f593ca163182a",
+      "bytes": 344134
+    }
+  ],
+  "source_archive_sha256": "0b8b32fc6f1a4189f26fa1bef72a9e71f88f47dc649fa5173ae1d9a51eeeb4d3",
+  "source_multiview_sha256": "9677e1ffc5885f8205ccf43841e1618326c0ab2cb2d2e774687f593ca163182a",
+  "stage05_text_update": "camera RGB-D/local model to Kp/Kd; historical offline absolute-coordinate baseline retained; v2 rejected, no PD/grasp",
+  "old_modes_preserved": true,
+  "desktop_export_performed": false
+}

@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "case": "continuous_single_target_camera_flow",
+  "run_id": "continuous_single_target_flow_v3_20261030",
+  "completed": 0,
+  "total": 24,
+  "single_target_completed": false,
+  "single_target_flow_completed": false,
+  "physical_frames": 1877,
+  "physical_end_s": 9.385,
+  "shared_groups": 94,
+  "shared_exposure_range_s": [
+    0.005,
+    9.300000000000054
+  ],
+  "first_failure_at_s": 8.384999999999911,
+  "failure": "bounded_navigation_observation_wait_expired",
+  "body_command_nonzero_frames": 0,
+  "locomotion_consumed_nonzero_frames": 0,
+  "final_actual_body": {
+    "net_displacement_xy_m": 0.008564987634891039,
+    "accumulated_path_xy_m": 0.06523968811425207,
+    "accumulated_yaw_rad": 0.20166325394092022,
+    "actual_carry_net_m": 0.0,
+    "linear_velocity_body": [
+      -0.001408423064276576,
+      0.0014313287101686,
+      0.0006833855295553803
+    ],
+    "angular_velocity_body": [
+      -0.0013664644211530685,
+      -0.0010216757655143738,
+      0.001140038832090795
+    ],
+    "applied_ground_command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "consumed_ground_command": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "actual_coarse_net_m": 0.002476264533310047,
+  "flow_events": [
+    {
+      "time_s": 1.9999999999999793,
+      "from_stage": "warmup",
+      "stage": "stow_entry"
+    },
+    {
+      "time_s": 6.384999999999886,
+      "from_stage": "stow_entry",
+      "stage": "coarse_navigation",
+      "stow_actual_q": {
+        "arm_joint_1": -8.440561941824853e-05,
+        "arm_joint_2": 1.5696367025375366,
+        "arm_joint_3": -2.739781379699707,
+        "arm_joint_4": 0.002498332876712084,
+        "arm_joint_5": -0.15706491470336914,
+        "arm_joint_6": 0.017455654218792915
+      }
+    }
+  ],
+  "final_corridor_review": {
+    "accepted": false,
+    "reason": "new swept footprint lacks nearby actually observed ground support",
+    "sample_frame_id": 1677,
+    "checked_at_s": 8.384999999999911,
+    "observation_captured_at_s": 8.299999999999898,
+    "source_frame_ids": [
+      "uav_down:uav_down:00000166",
+      "ground_front:ground_front:00000166",
+      "ground_rear:ground_rear:00000166",
+      "ground_wrist:ground_wrist:00000167"
+    ],
+    "ingest_errors": {},
+    "ground_support_points": 22166,
+    "maximum_probe_gap_m": 0.16339123905664815,
+    "checked_boxes": 126,
+    "new_surface_probes": 821,
+    "direct_free_probes": 243,
+    "unknown_probes": 578,
+    "self_occlusion_conditioned_probes": 578,
+    "unexplained_probes": 0,
+    "conditional_occlusion_review": {
+      "cameras": [
+        {
+          "camera_id": "uav_down",
+          "frame_id": "uav_down:00000166",
+          "captured_at_s": 8.299999999999898,
+          "own_pose_at_exposure_s": 8.299999999999898,
+          "inside_frustum_probes": 578,
+          "outside_frustum_probes": 0,
+          "complete_valid_neighborhood_probes": 578,
+          "self_explained_foreground_probes": 578,
+          "unexplained_foreground_probes": 0,
+          "blocking_pixel_samples": 4708,
+          "self_explained_blocking_pixel_samples": 4708,
+          "unexplained_blocking_pixel_samples": 0,
+          "unique_native_blocking_pixels": 2462,
+          "new_native_pixel_classifications": 8,
+          "interpretation": "own-explained foreground/retained 8 mm depth margin; hidden space remains unobserved"
+        },
+        {
+          "camera_id": "ground_front",
+          "frame_id": "ground_front:00000166",
+          "captured_at_s": 8.299999999999898,
+          "own_pose_at_exposure_s": 8.299999999999898,
+          "inside_frustum_probes": 0,
+          "outside_frustum_probes": 578,
+          "complete_valid_neighborhood_probes": 0,
+          "self_explained_foreground_probes": 0,
+          "unexplained_foreground_probes": 0,
+          "blocking_pixel_samples": 0,
+          "self_explained_blocking_pixel_samples": 0,
+          "unexplained_blocking_pixel_samples": 0,
+          "unique_native_blocking_pixels": 0,
+          "new_native_pixel_classifications": 0
+        },
+        {
+          "camera_id": "ground_rear",
+          "frame_id": "ground_rear:00000166",
+          "captured_at_s": 8.299999999999898,
+          "own_pose_at_exposure_s": 8.299999999999898,
+          "inside_frustum_probes": 0,
+          "outside_frustum_probes": 578,
+          "complete_valid_neighborhood_probes": 0,
+          "self_explained_foreground_probes": 0,
+          "unexplained_foreground_probes": 0,
+          "blocking_pixel_samples": 0,
+          "self_explained_blocking_pixel_samples": 0,
+          "unexplained_blocking_pixel_samples": 0,
+          "unique_native_blocking_pixels": 0,
+          "new_native_pixel_classifications": 0
+        },
+        {
+          "camera_id": "ground_wrist",
+          "frame_id": "ground_wrist:00000167",
+          "captured_at_s": 8.349999999999905,
+          "own_pose_at_exposure_s": 8.349999999999905,
+          "inside_frustum_probes": 2,
+          "outside_frustum_probes": 576,
+          "complete_valid_neighborhood_probes": 0,
+          "self_explained_foreground_probes": 0,
+          "unexplained_foreground_probes": 0,
+          "blocking_pixel_samples": 0,
+          "self_explained_blocking_pixel_samples": 0,
+          "unexplained_blocking_pixel_samples": 0,
+          "unique_native_blocking_pixels": 0,
+          "new_native_pixel_classifications": 0,
+          "interpretation": "own-explained foreground/retained 8 mm depth margin; hidden space remains unobserved"
+        }
+      ],
+      "self_occlusion_conditioned_probes": 578,
+      "unexplained_probes": 0,
+      "self_conditioned_but_other_camera_external_veto": 0,
+      "any_unexplained_finite_foreground_veto": 0,
+      "free_space_certified": false,
+      "conditional_assumption": "unseen incremental volume behind identified current own foreground is assumed locally empty for one bounded step; not observed free"
+    },
+    "conditional_occlusion_evidence_available": true,
+    "conditional_action_permission": false,
+    "free_space_certified": false,
+    "effective_horizon_s": 0.5,
+    "nominal_horizon_s": 0.5,
+    "maximum_source_outer_radius_m": 0.5568701172653302,
+    "maximum_outer_edge_displacement_bound_m": 0.025,
+    "ground_support_mode": "foot_contact_regions",
+    "ground_support_foot_bodies": [
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "ground_support_probe_counts_by_body": {
+      "FL_foot": 52,
+      "FR_foot": 52,
+      "RL_foot": 52,
+      "RR_foot": 52
+    },
+    "bounded_self_occluded_policy": true
+  },
+  "report_sha256": "61e48f3af13ea1687fb5669ae0e9ffd1f775c6219d1f2a3ba2afca2a22e95145",
+  "evidence_sha256": "8e1e03d0598f3081fc274b73a3dbd0f6a426b6a5a79068bc8f7a94c18eae6129",
+  "media_manifest_sha256": "6ac584267754087412a6f246bf4a67b3e05e7900fff5862b270fd0159580754c",
+  "source_verification": {
+    "verified": true,
+    "changed_files": []
+  },
+  "runtime_input_verification": {
+    "verified": true,
+    "all_listed_input_dependencies_rehashed": true,
+    "rehashed_file_entries": 63,
+    "changed_files": [],
+    "scope": "all listed actual runtime inputs; unresolved assets and unlisted SDK binaries remain outside scope"
+  },
+  "diagnosis_note": {
+    "source": "root CPU-only inspection after v3 closure; not integrated physical validation",
+    "detail": "近脚地面受机身遮挡，稀疏深度抽样漏掉细缝内有效地面样本；native局部加密仅CPU子检查，未接入物理"
+  },
+  "limitations": [
+    "已通过收臂与前视目标交接，尚未迈步；足下支持采样不足导致拒绝",
+    "零身体移动命令但有真实动态站立漂移；不称导航、转身、携物或投桶完成",
+    "初始外部图像提示；无人机报告约10cm三维RMS合成误差",
+    "v8原地1/24成功单列，本轮连续流程0/24；收尾后暂停，不启动新实验"
+  ]
+}

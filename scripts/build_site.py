@@ -49,7 +49,10 @@ def build_placeholder(p):
     folder = ROOT / p['slug']
     folder.mkdir(exist_ok=True)
     if p.get('demo'):
-        build_demo_landing(p)
+        if p['slug'] == 'paper2':
+            build_demo_landing(p)
+        else:
+            build_placeholder_paper(p)
         return
     else:
         body = f'''<main id="main" class="placeholder-page"><header class="hero container"><h1>{e(p['name'])}</h1><p>Capability Aware</p></header><section class="text-section"><div class="empty-video"><span aria-hidden="true">▷</span><p>Video coming soon</p></div><h2>Coming soon</h2><p class="center">This project page is a placeholder. Paper, code, and video links will be added here.</p><div class="buttons">{button('← Capability Aware', '../')}</div></section></main>'''
@@ -99,6 +102,28 @@ tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>activate(tab));tab.
 </main>'''
     page = shell(p['name']+' | Capability Aware', body, '../', 'Interactive research preview and robot demonstrations from Capability Aware.')
     page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper2-showcase-v5')
+    (folder/'index.html').write_text(page)
+
+def build_placeholder_paper(p):
+    folder = ROOT / p['slug']
+    folder.mkdir(exist_ok=True)
+    body = f'''<main id="main" class="research-page paper2-page paper3-page">
+<header class="hero paper-hero p2-hero"><p class="paper-kicker">Capability Aware · Interactive Research Preview</p>
+<h1 class="research-title"><span>{e(p['name'])}</span><span class="research-subtitle">Research title in preparation</span></h1>
+<p class="authors pending-meta">Authors in preparation</p><p class="affiliations pending-meta">Affiliations in preparation</p>
+<p class="publication-status">Manuscript in preparation</p>
+<p class="p2-intro">Project overview, method, and results are being prepared.</p>
+<div class="buttons"><a class="button" href="{e(p['demo'])}">Open the demo showcase</a><a class="button" href="../">← Capability Aware</a></div></header>
+<section class="p2-coming" aria-label="Upcoming project demonstration"><div class="empty-video p2-empty" role="img" aria-label="Project video coming soon"><span aria-hidden="true">▷</span><p>Video coming soon</p><small>Project demonstration</small></div></section>
+<nav class="section-nav p2-section-nav" aria-label="Paper sections"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#results">Results</a></nav>
+<section class="paper-section p2-abstract" id="abstract"><h2>Abstract</h2><p class="pending-copy">Abstract in preparation.</p></section>
+<section class="paper-section section-tinted p2-method" id="method"><div class="section-inner"><h2>Method Overview</h2><div class="p2-method-placeholder"><span aria-hidden="true">◇</span><strong>Method diagram coming soon</strong><small>Framework overview in preparation</small></div></div></section>
+<section class="p2-results p3-results" id="results"><h2>Results</h2><p class="p2-results-intro">Results and selected demonstrations will be added here.</p><div class="p3-results-placeholder"><span aria-hidden="true">▷</span><strong>Results coming soon</strong></div></section>
+<section class="p2-footer-cta"><p>Explore the current project demo.</p><a class="button" href="{e(p['demo'])}">Open the demo showcase</a></section>
+<nav class="paper-back" aria-label="Back to project collection"><a href="../">← All research projects</a></nav>
+</main>'''
+    page = shell(p['name']+' | Capability Aware', body, '../', 'Paper 3 project page and demo showcase.')
+    page = page.replace('site.css?v=paper-layout-v1', 'site.css?v=paper3-layout-v1')
     (folder/'index.html').write_text(page)
 
 def build_research(p):

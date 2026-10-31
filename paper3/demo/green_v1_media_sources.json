@@ -1,0 +1,141 @@
+{
+  "task_id": "multiagent-grabgarbage",
+  "source_run": "grass_front_noisy_v1_20261030",
+  "source_archive": "docs/evidence/grass_front_noisy_v1_video_20261030",
+  "actual_physics_seconds": 7.9,
+  "actual_physics_frames": 1580,
+  "encoded_seconds": 8.0,
+  "same_exposure_groups": 80,
+  "first_failure_s": 7.4,
+  "failure": "continuation:actual_approach_heading_error_limit",
+  "full_task_success": false,
+  "aerial_report_position_3d_rms_m": 0.1,
+  "successful_aerial_localizations": 22,
+  "successful_ground_localizations": 55,
+  "original_manifest": {
+    "path": "docs/evidence/grass_front_noisy_v1_video_20261030/multiview_manifest.json",
+    "sha256": "49516e29841e3c05fa4670b9be364e39ae91ce732577a9710e220484899680c8"
+  },
+  "files": [
+    {
+      "file": "green_v1_team_side.mp4",
+      "sha256": "68fc6989423b3377a6616ebb6ca5f0b6e11f13288e7dd7db1a118c0425a8d5f3",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_side.mp4"
+    },
+    {
+      "file": "green_v1_team_side.jpg",
+      "sha256": "4dfe10ede8d3220274235684766b44cb764b7c5a923095abe5a361395fc0e79c",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_side.jpg"
+    },
+    {
+      "file": "green_v1_team_side.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_side.frames.jsonl"
+    },
+    {
+      "file": "green_v1_team_overview.mp4",
+      "sha256": "d420858c61e07572340193e03e4576f2f74df5f90b7d1c744765e856321fc2dc",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_overview.mp4"
+    },
+    {
+      "file": "green_v1_team_overview.jpg",
+      "sha256": "ad804f9feb2f4e50fdbc2f5a82872336dad9d580c2ad7f03ded66404214cd4cb",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_overview.jpg"
+    },
+    {
+      "file": "green_v1_team_overview.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_overview.frames.jsonl"
+    },
+    {
+      "file": "green_v1_team_side_only.mp4",
+      "sha256": "387eaf581195f32766e257e17ae9c417982ba9e2a0013cd58e88b1a9ffbc7fb4",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_side_only.mp4"
+    },
+    {
+      "file": "green_v1_team_side_only.jpg",
+      "sha256": "e07d9ed766822f90c241f0f669663ceea50ef8015050c8efd5841e76a081eb64",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_side_only.jpg"
+    },
+    {
+      "file": "green_v1_team_side_only.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_side_only.frames.jsonl"
+    },
+    {
+      "file": "green_v1_team_overview_only.mp4",
+      "sha256": "1172fd8be67a79f35d2755477980adbf0d9968687e37d484245d402242812e8b",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_overview_only.mp4"
+    },
+    {
+      "file": "green_v1_team_overview_only.jpg",
+      "sha256": "2856166d1c521d6e0c7f35336683a4d50e20d7a80c56af7d31b320fd8c0cfa37",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_overview_only.jpg"
+    },
+    {
+      "file": "green_v1_team_overview_only.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/team_overview_only.frames.jsonl"
+    },
+    {
+      "file": "green_v1_first_uav.mp4",
+      "sha256": "a9a07a45980ea654424671557b431fc6ec9a764d8bd2d362a2fb48911f12a1a5",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_uav.mp4"
+    },
+    {
+      "file": "green_v1_first_uav.jpg",
+      "sha256": "8150d541c4c2f3fc284e9f5d41f752ed2807e8cbf3fd0606ca9e5d5e3121c5cd",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_uav.jpg"
+    },
+    {
+      "file": "green_v1_first_uav.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_uav.frames.jsonl"
+    },
+    {
+      "file": "green_v1_first_front.mp4",
+      "sha256": "ca1192c0a8bc18548c820797b051370df8e939134c438f53a9a4580d57f7730a",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_front.mp4"
+    },
+    {
+      "file": "green_v1_first_front.jpg",
+      "sha256": "596fe1c244f6e43ffa280252a1e07e94539833a81bebca605710afd41880bb61",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_front.jpg"
+    },
+    {
+      "file": "green_v1_first_front.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_front.frames.jsonl"
+    },
+    {
+      "file": "green_v1_first_rear.mp4",
+      "sha256": "9be2d6140f1eb75bbadcb5892bbcb3d49b7ea8497a3f6fbd17d6fee9f3ba2c92",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_rear.mp4"
+    },
+    {
+      "file": "green_v1_first_rear.jpg",
+      "sha256": "0c1102c8d2cd04c020c1606d60511f18cd4986b2773e7b6a5dc132db52e7e3f2",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_rear.jpg"
+    },
+    {
+      "file": "green_v1_first_rear.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_rear.frames.jsonl"
+    },
+    {
+      "file": "green_v1_first_wrist.mp4",
+      "sha256": "eb9681e0a97d52d2c5274f7e1953b2a5daadd93e025a0fc68b7620ec47f85c07",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_wrist.mp4"
+    },
+    {
+      "file": "green_v1_first_wrist.jpg",
+      "sha256": "490f09da854daef13cea0914983d5454f4389962f86f58c66f60bda674abf023",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_wrist.jpg"
+    },
+    {
+      "file": "green_v1_first_wrist.frames.jsonl",
+      "sha256": "bfdbe978642868a3f1a77a8ba9bdd4813b3985bf3a11fe7c1029c6b18384020d",
+      "source": "docs/evidence/grass_front_noisy_v1_video_20261030/first_wrist.frames.jsonl"
+    }
+  ]
+}

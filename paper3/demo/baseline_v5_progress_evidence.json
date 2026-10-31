@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "task_id": "multiagent-grabgarbage",
+  "case": "controlled_single_target_camera_baseline",
+  "run_id": "single_target_camera_baseline_v5_20261030",
+  "source_run": "/media/user/DATA/runs/capability_research/outputs/multiagent-grabgarbage/single_target_camera_baseline_v5_20261030",
+  "result_scope": "真实抓起及搬运进展；未释放、未完成投桶；四足原地零移动指令，机身未焊死；不是全场任务成功",
+  "completed": 0,
+  "total": 24,
+  "single_target_completed": false,
+  "full_task_success": false,
+  "real_walk_or_turn_executed": false,
+  "actual_arm_gains": {
+    "kp": 60,
+    "kd": 6,
+    "gravity_compensation": "实际当前自体模型 G/60 drive target bias，仅6臂关节"
+  },
+  "controlled_setup": {
+    "can_rear_distance_m": 0.75,
+    "known_near_bin": "bin_0_can",
+    "time_zero_can_and_bin_fixture": true,
+    "target_truth_forwarded_to_arm_planner": false,
+    "aerial_report_position_3d_rms_m": 0.1
+  },
+  "camera_seed": {
+    "frame_id": "ground_wrist:00000218",
+    "captured_at_s": 10.9,
+    "policy": "一次真实腕RGB-D/初始外部罐假设，后续静态last-seen；自体base IK补偿不刷新目标观测"
+  },
+  "external_initial_visual_inputs": [
+    {
+      "kind": "aerial_box",
+      "frame_id": "uav_down:00000020",
+      "captured_at_s": 1.0000000000000007,
+      "rgb_file_sha256": "caaf2cfdecb5641596c6560a1fd19b9dea5e867df9a0fddd24a31651fcd3c896",
+      "mask_binary_sha256": null,
+      "source_id": "assistant_visual_annotation:green_agent_v5_aerial_can_20261030",
+      "reply": {
+        "frame_id": "uav_down:00000020",
+        "public_target_id": null,
+        "rgb_file_sha256": "caaf2cfdecb5641596c6560a1fd19b9dea5e867df9a0fddd24a31651fcd3c896",
+        "source_id": "assistant_visual_annotation:green_agent_v5_aerial_can_20261030",
+        "box": [
+          490,
+          353,
+          504,
+          367
+        ]
+      },
+      "pause_unchanged": true,
+      "request_sha256": "091023a6e4b919da4426c26a1be18d51e5c40e194dd237047d2f66be75b1bf06",
+      "reply_sha256": "98574e055a50fcc5da6b56608a82f9ed4833ddc7f438b0fff195e575758e5a49",
+      "pause_sha256": "8bf3b05ee03a5421cbc124afac726062f51b1b29bf1551cfabb0d88dd13e5349"
+    },
+    {
+      "kind": "wrist_box",
+      "frame_id": "ground_wrist:00000218",
+      "captured_at_s": 10.900000000000304,
+      "rgb_file_sha256": "35d19948ebf57955b5758585d1f111a814fa75712873ca0e0602d3a594a4877f",
+      "mask_binary_sha256": null,
+      "source_id": "assistant_visual_annotation:green_agent_v5_wrist_can_20261030",
+      "reply": {
+        "frame_id": "ground_wrist:00000218",
+        "public_target_id": "visual_441cb5835fee4aedaa6c8401e73d08ac",
+        "rgb_file_sha256": "35d19948ebf57955b5758585d1f111a814fa75712873ca0e0602d3a594a4877f",
+        "source_id": "assistant_visual_annotation:green_agent_v5_wrist_can_20261030",
+        "box": [
+          123,
+          291,
+          176,
+          330
+        ]
+      },
+      "pause_unchanged": true,
+      "request_sha256": "815318d6490072ebf50c93f42d3f6213025b9ba9a4c8d8322e4c55d123ce0aa5",
+      "reply_sha256": "0c35e44896af05d14760ada6836299637f850345bdf86feb2caab013878d85e5",
+      "pause_sha256": "e773e74c2c1f8593c38d43d9dbe89dfb53083d186aed434d13b35c05c9ff83d1"
+    },
+    {
+      "kind": "wrist_mask_model",
+      "frame_id": "ground_wrist:00000218",
+      "captured_at_s": 10.900000000000304,
+      "rgb_file_sha256": "35d19948ebf57955b5758585d1f111a814fa75712873ca0e0602d3a594a4877f",
+      "mask_binary_sha256": "97f0c8190a5588885666e07606d6c4eb5c1178b07e2f746375ff9a3b7926e01c",
+      "source_id": "assistant_visual_annotation:green_agent_v5_current_wrist_can_model_20261030",
+      "reply": {
+        "frame_id": "ground_wrist:00000218",
+        "public_target_id": "visual_441cb5835fee4aedaa6c8401e73d08ac",
+        "rgb_file_sha256": "35d19948ebf57955b5758585d1f111a814fa75712873ca0e0602d3a594a4877f",
+        "source_id": "assistant_visual_annotation:green_agent_v5_current_wrist_can_model_20261030",
+        "mask_binary_sha256": "97f0c8190a5588885666e07606d6c4eb5c1178b07e2f746375ff9a3b7926e01c",
+        "accepted": true,
+        "upright_can_confirmed": true
+      },
+      "pause_unchanged": true,
+      "request_sha256": "18f2b7f29739a4b3a5ff058c2a6e00822d57e3dd10e4bcc96b3e62973e0097a3",
+      "reply_sha256": "4666ae44b7cffdf06b43cd72c74e7970f4737deabd87e6da2fc7385d4028d7ff",
+      "pause_sha256": "51dc9d3201447a15d584b61cdd98246c6537f0e47d358ad9f0a08af8d9935d5e"
+    }
+  ],
+  "first_actual_transporting": {
+    "sim_frame_id": 7821,
+    "captured_at_s": 39.10500000000155,
+    "actual_finger_feedback": {
+      "captured_at_s": 39.10500000000155,
+      "sim_frame_id": 7821,
+      "left_force_n": 8.571668674445824,
+      "right_force_n": 8.553684778600381,
+      "bilateral_same_body": true,
+      "unexpected_contact_violation": false,
+      "source": "trusted synchronous IsaacWitnessAdapter filtered-force scalar cache; no object pose or ID forwarded"
+    },
+    "public_target_state": {
+      "phase": "transporting",
+      "last_known_position": [
+        -41.516489511922046,
+        -50.50198837171359,
+        1.5141739063400075
+      ],
+      "category": "can",
+      "last_seen_time": 39.10000000000155,
+      "observation_age_s": 0.005000000000002558,
+      "needs_reobserve": false,
+      "owner_robot_id": "b2rm_0",
+      "attempts": 1,
+      "completed_bin": null
+    }
+  },
+  "baseline_events": [
+    {
+      "time_s": 10.900000000000304,
+      "event": "phase",
+      "phase": "begin_attempt",
+      "reason": "current camera plan; no grasp success implied"
+    },
+    {
+      "time_s": 10.905000000000305,
+      "event": "phase",
+      "phase": "pregrasp",
+      "reason": "actual mission accepted grasp attempt"
+    },
+    {
+      "time_s": 32.499999999998174,
+      "event": "phase",
+      "phase": "descend",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 35.179999999999545,
+      "event": "phase",
+      "phase": "close",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 36.28000000000011,
+      "event": "phase",
+      "phase": "lift",
+      "reason": "camera preload desired fully issued then actual bilateral dwell; not yet grasp confirmation"
+    },
+    {
+      "time_s": 39.52500000000177,
+      "event": "phase",
+      "phase": "wait_transporting",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 39.53000000000177,
+      "event": "phase",
+      "phase": "transfer_up",
+      "reason": "trusted mission confirmed physical lift/contact"
+    },
+    {
+      "time_s": 47.4050000000058,
+      "event": "phase",
+      "phase": "bin_above",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 77.41000000000209,
+      "event": "failed",
+      "reason": "waypoint_timeout"
+    }
+  ],
+  "first_failure_at_s": 77.41000000000209,
+  "failure": "waypoint_timeout",
+  "failed_stage": "bin_above",
+  "physical_end_s": 78.41,
+  "shared_exposure_end_s": 78.40000000000119,
+  "encoded_duration_s": 78.5,
+  "physical_frames": 15682,
+  "source_verification": {
+    "verified": true,
+    "changed_files": []
+  },
+  "runtime_input_verification": {
+    "verified": true,
+    "all_listed_input_dependencies_rehashed": true,
+    "rehashed_file_entries": 61,
+    "changed_files": [],
+    "scope": "all listed actual runtime inputs; unresolved assets and unlisted SDK binaries remain outside scope"
+  },
+  "source_recording_sha256": {
+    "run.json": "931559cf5feea698afe7c9a1625d6508161aebdab68312f72770e0c2fab00e1b",
+    "report.json": "4063c12fbfd000d940f14e65fb31d9dcc9f343621e3328896c69a6100e46c68b",
+    "evidence_summary.json": "4cde1cabd087c40104efd23b5acb9ff14dea20ac91e652a8bcbe39f91567cc91",
+    "controlled_setup.json": "9e2b32037bafcb3189ff8b1b21a99db9be92efc5c44a01608b36c61390264dbf",
+    "physics_witness.jsonl": "6a5449b2b9be1736ca9346adb5434fb4ff378cc3dd27c19a259e0886a6e70d39",
+    "single_target_trace.jsonl": "0b6354cc3fb012a63adb8015b29d2424d51dc96a0bd25d6c5deef827e7a34940",
+    "rgbd/recording.json": "f0e3c3beb97f7812641d8ac1c5fa7f207cde5c27d42f74ca5aee2a08b43b059c",
+    "rgbd/manifest.jsonl": "badb0f30ed614a2e2025ac825cfefd1dc29eee41e2f553a4ce6bcc961a417e2b",
+    "observer_rgb/summary.json": "95a1330b4f8a9e3fcfb4bf0564150925c3fcd56cde9783ed6bd97482d224ac31",
+    "observer_rgb/manifest.jsonl": "e58df370bccd6e7589d01cea19f421143bace3c9df5650a247072a858fb9a764",
+    "runtime_input_contract.json": "a20de8763dcce356d81b53d78abc0597955fec94299826ec142b90d15da90b7e",
+    "runtime_input_verification.json": "4ade0b616db92f628db50309786a04c72b1f981db1fca7288163a503fe58d2c9",
+    "failure.json": "c4ae1efb7562d245f09270bcca7e61f184f4e938d5c6bd5224cb270b0121111e",
+    "camera_static_seed.json": "1d4480313898fe8dd7266a9c1fbeebfcd9d26ebf98c5145ded5b77b13e8cacb5",
+    "perception.jsonl": "b591606a604e58879a2fb87f3a9ae0c4ee3a1f9e313cdf018948680b54845349",
+    "camera_pregrasp_candidates.jsonl": "c2ad66e790329f02c392acd134e4491eb886915fba9c37aa7587fe35699664a0",
+    "native_local_observations.jsonl": "70dd1ab250cf57e81be195deab811266741eadb1ac248bc084aaf305ca262ca9"
+  },
+  "movie_sha256": "885cf47674cd74ed1cf91240e108f4603c429d60f2ec960d2eddf52b97cbcdec",
+  "qualification_note": "report.physical_pickup_validated=false为通用控制器资格默认；本次局部实际抓起由grasp_confirmed事件、public transporting与实际双指接触/抬升见证支持，不改原report、不扩展为通用抓取资格。"
+}

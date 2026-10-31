@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>multiagent-grabgarbage · 当前任务流与真实录像</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1420;--panel:#142131;--line:#2d4055;--text:#e8f0f7;--muted:#afbed0;--green:#77dec0;--amber:#ffce7d;--blue:#89bfff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif}main{max-width:1320px;margin:auto;padding:38px 30px 60px}a{color:var(--blue);text-underline-offset:4px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,video:focus-visible{outline:3px solid var(--amber);outline-offset:4px}h1{font-size:36px;line-height:1.25;margin:10px 0 15px;letter-spacing:-1px}h2{font-size:24px;margin:0 0 12px}h3{font-size:19px;margin:0 0 8px}p{margin:8px 0 14px}.eyebrow{font-size:12px;letter-spacing:1.5px;color:var(--green);text-transform:uppercase}.muted{color:var(--muted)}.lead{font-size:18px;max-width:1000px}.pill{display:inline-block;font-size:12px;padding:3px 9px;border:1px solid var(--line);border-radius:20px;margin:0 6px 5px 0}.ok{color:var(--green)}.partial{color:var(--amber)}.pending{color:var(--muted)}.toprow{display:flex;justify-content:space-between;gap:16px;align-items:start}.quicklinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}.banner{border:1px solid #8f6c34;background:#332c20;border-radius:12px;padding:16px 20px;margin:24px 0}.banner strong{color:var(--amber)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 30px}.metric,.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px}.metric{padding:16px}.metric b{display:block;font-size:27px;line-height:1.3}.metric span{font-size:13px;color:var(--muted)}section{scroll-margin-top:20px;margin-top:36px}.flow{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:18px 0}.step{background:var(--panel);color:var(--text);border:1px solid var(--line);border-top:3px solid var(--line);border-radius:9px;padding:15px 10px;text-align:left;position:relative}.step[aria-pressed="true"]{border-color:var(--blue);background:#203b53}.step i{font-style:normal;font-size:12px;color:var(--muted)}.step strong{display:block;font-size:15px;margin:5px 0}.step small{display:block;font-size:12px}.step .arrow{position:absolute;right:7px;top:12px;color:#7291ac}.detail{padding:24px;min-height:270px}.detailtop{display:flex;justify-content:space-between;gap:20px;align-items:center}.detailcols{display:grid;grid-template-columns:1fr 1fr;gap:28px}.detail ul{padding-left:21px;margin:6px 0 12px}.detail li{margin:6px 0}.message{font-family:ui-monospace,monospace;font-size:14px;color:#cde2fa;background:#0b1927;border-radius:6px;padding:12px;margin-top:10px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel.pad{padding:22px}.role{border-left:3px solid var(--blue);padding-left:15px;margin:18px 0}.role.ground{border-color:var(--green)}.role b{display:block}.path{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0}.path span{border:1px solid var(--line);border-radius:8px;padding:10px 13px;background:#0e1b29}.path em{font-style:normal;color:var(--muted)}.fork{border-left:2px solid var(--amber);padding-left:18px;margin-top:18px}.fork p{font-size:14px}.videohead{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.tabs{display:flex;gap:8px}.tabs button,.seek{color:var(--text);background:#213449;border:1px solid #48617a;border-radius:7px;padding:8px 14px}.tabs button[aria-pressed="true"]{background:#315b75;border-color:var(--blue)}.videobox{background:#080c12;border:1px solid var(--line);border-radius:12px;margin-top:16px;overflow:hidden}video{display:block;width:100%;max-height:760px}#videoDescription{font-size:14px;color:var(--muted);padding:13px 18px;margin:0}.timepoints{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.seek{font-size:13px}.seek:disabled{opacity:.45;cursor:default}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{color:var(--muted);font-weight:500}td strong{color:var(--green)}.map{width:100%;display:block;border-radius:8px}.caption{font-size:13px;color:var(--muted)}details{border-top:1px solid var(--line);margin-top:20px;padding-top:15px}summary{cursor:pointer;color:var(--blue)}.chart{display:block;width:100%;margin-top:15px}footer{border-top:1px solid var(--line);padding-top:20px;margin-top:35px;font-size:13px;color:var(--muted)}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:950px){.flow{grid-template-columns:repeat(4,1fr)}.two,.detailcols{grid-template-columns:1fr}h1{font-size:29px}.toprow{display:block}}@media(max-width:560px){main{padding:24px 16px}.metrics{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.detail{padding:18px}.detailtop{display:block}.lead{font-size:16px}h1{font-size:26px}.tabs{flex-wrap:wrap}.metric b{font-size:22px}}
+</style>
+</head>
+<body><main>
+<header>
+ <div class="toprow"><div class="eyebrow">任务实况 · 2026-10-30 · feat/grab-garbage</div><span class="pill partial">研发中的局部闭环</span></div>
+ <h1>multiagent-grabgarbage</h1>
+ <p class="lead">无人机找垃圾、提供带噪候选位置；带臂四足靠近、复查、抓取，再送入分类桶。<br><strong>最新v8：原地一罐已抓起并投进正确桶，1/24。</strong> 相机坐标 → Kp60/Kd12 → 真实夹持抬升 → 释放入桶；从远处走近、尾向转身、携物行走与停靠仍待连续接通。</p>
+ <div class="quicklinks"><a href="single_target_baseline_progress.html">看最新原地抓投完成 →</a><a href="#greenLatest">看绿地新版 ↓</a> <a href="#recordings">看真实录像 ↓</a><a href="#flow">看完整任务流 ↓</a><a href="#blindspot">看盲区怎么处理 ↓</a><a href="#scene">看大场景布局 ↓</a></div>
+</header>
+<section id="latestPickupProgress" class="panel pad" style="border-color:#528d7e;background:#142d30;margin-top:24px">
+ <p class="eyebrow">最新物理结果 · 独立单目标 v8 · 1/24</p>
+ <h2>原地一罐已抓起，并投进正确桶</h2>
+ <p>38.400秒物理确认抓起，54.985秒请求释放，56.990秒正确桶内稳定完成。四足全程零移动指令、机身未焊死；助手初始图像提示，垃圾坐标来自腕RGB-D，使用已知近桶。</p>
+ <p><a href="single_target_baseline_progress.html" style="font-size:19px;font-weight:650">看实际抓投：独立第三视角大画面＋四相机四宫格 →</a></p>
+ <p class="caption">这是原地受控单罐成功，未执行走近／转身／携物行走；从远处到投桶的整链仍待接线。<a href="single_target_baseline_v8_result.html">v8独立结果页</a> · <a href="single_target_baseline_v5_progress.html">v5桶口超时原记录（0/24）</a>。下方41种历史视图与原验收独立保留。</p>
+</section>
+
+<div class="banner"><strong>历史接近／转身主片：已到接近距离，停车验收仍失败。</strong> 默认 34.0 秒连续实录：24.65 秒三次新腕曝光启动接近，32.825 秒进入 0.95 米阈值；32.940 秒因机身角速度超过 0.5 rad/s，停车验收失败。视觉仍有效，不把到达距离等同于稳定停靠。保留失败及后续真实恢复；未抓取，清理 0/24。</div>
+<div class="metrics">
+ <div class="metric"><b>2 个物理智能体</b><span>无人机 ＋ 带机械臂的四足</span></div>
+ <div class="metric"><b>4 + 2 路视角</b><span>四路机载 ＋ 全景 / 近侧第三人称</span></div>
+ <div class="metric"><b>24 件 / 9 个桶</b><span>独立场景；3 个分类回收站</span></div>
+ <div class="metric"><b class="ok">1 / 24</b><span>最新v8原地单罐；历史接近主片仍0/24</span></div>
+</div>
+
+<section id="flow">
+ <h2>从搜索到投桶，整条链怎么走</h2>
+ <p class="muted">点击阶段，查看谁负责、交出什么信息，以及目前接通到哪里。阶段编号表示设计流程，不代表全部已经验证。</p>
+ <nav class="flow" aria-label="任务阶段" id="steps">
+  <button class="step" type="button" data-step="0" aria-pressed="false"><i>01 <span class="arrow">→</span></i><strong>场景与起点</strong><small class="ok">分项物理已验证</small></button>
+  <button class="step" type="button" data-step="1" aria-pressed="false"><i>02 <span class="arrow">→</span></i><strong>无人机发现</strong><small class="partial">人工提示下定位</small></button>
+  <button class="step" type="button" data-step="2" aria-pressed="false"><i>03 <span class="arrow">→</span></i><strong>交接与接近</strong><small class="partial">局部闭环已实测</small></button>
+  <button class="step" type="button" data-step="3" aria-pressed="true"><i>04 <span class="arrow">→</span></i><strong>盲区与腕接管</strong><small class="partial">受控自动复观已通过</small></button>
+  <button class="step" type="button" data-step="4" aria-pressed="false"><i>05 <span class="arrow">→</span></i><strong>抓取与确认</strong><small class="ok">原地单罐已实际抓起</small></button>
+  <button class="step" type="button" data-step="5" aria-pressed="false"><i>06 <span class="arrow">→</span></i><strong>携带与投桶</strong><small class="ok">原地单罐已投进正确桶</small></button>
+  <button class="step" type="button" data-step="6" aria-pressed="false"><i>07 ↺</i><strong>复核与下一件</strong><small class="pending">多目标闭环未运行</small></button>
+ </nav>
+ <article class="panel detail" id="detail" aria-live="polite"><div class="detailtop"><h3>04 · 盲区处理与腕部接管</h3><span class="pill partial">达到接近距离 · 停车角速度验收失败</span></div><div class="detailcols"><div><b>这一阶段应该发生什么</b><ul><li>狗前相机快看不到时，先减速或停车。</li><li>结合当前可见性、后续接近风险和动作能力选择新前视、后视、腕部或空中补看。</li><li>用新的地面曝光重新检查目标，保持时效；操作授权另行验收。</li></ul></div><div><b>现在实际到哪里</b><ul><li>2.40秒预测前视风险，经新曝光短续行后4.70秒再次停车，5.59秒选择转身＋腕。</li><li>24.52秒腕姿态到位，24.55／24.60／24.65秒三次新腕曝光形成实验假设，并驱动真实尾向接近。</li><li>实测倒退约34厘米，32.825秒进入0.95米阈值；32.940秒机身角速度越界，视觉仍有效，未稳定停靠或抓取。</li></ul></div></div><div class="message">观测恢复、距离到位、实际停稳和抓取投放分别验收；本轮停车资格失败</div></article>
+</section>
+
+<section id="recordings">
+ <div class="videohead"><div><h2>先看整个队伍，再切机器人眼睛</h2><span class="muted">历史接近／转身主片（独立于最新原地抓取搬运）：预测停车 → 转身／腕部复观 → 航向纠偏接近 → 距离到位 → 停车验收失败。八种视图来自同次连续物理，可单独放大、全屏。</span></div></div>
+ <div class="tabs" aria-label="第三人称与同步视角" style="margin-top:16px;flex-wrap:wrap"><button type="button" data-video="side" aria-pressed="true">第三人称 · 近侧主画面</button><button type="button" data-video="overview" aria-pressed="false">第三人称 · 场景全景</button><button type="button" data-video="sync" aria-pressed="false">六路同步 · 近侧主画面</button><button type="button" data-video="syncwide" aria-pressed="false">六路同步 · 全景主画面</button></div>
+ <div id="greenLatest" class="tabs" aria-label="绿地新版独立短程试验" style="margin-top:16px;flex-wrap:wrap"><button type="button" data-video="greenSide" aria-pressed="false">绿地新版 · 六路同步</button><button type="button" data-video="greenWide" aria-pressed="false">绿地 · 全景同步</button><button type="button" data-video="greenSideOnly" aria-pressed="false">绿地 · 第三视角近景</button><button type="button" data-video="greenOverviewOnly" aria-pressed="false">绿地 · 第三视角全景</button><button type="button" data-video="greenUav" aria-pressed="false">绿地 · 无人机</button><button type="button" data-video="greenFront" aria-pressed="false">绿地 · 狗前</button><button type="button" data-video="greenRear" aria-pressed="false">绿地 · 狗后</button><button type="button" data-video="greenWrist" aria-pressed="false">绿地 · 腕部</button></div>
+ <div id="cameraPDResearch" class="panel pad" style="margin-top:16px"><b>机械臂与相机 · 独立研发片</b><p class="caption">受控后侧夹具中的相机展开与操作接口分项，独立于上面的接近／转身主片。展开预览没有运行NN或相机PD；这些历史独立片均为0/24。最新v8原地抓投1/24见页首入口。</p><div class="tabs" aria-label="真实展开预览八视图" style="flex-wrap:wrap"><button type="button" data-video="pdPreviewSync" aria-pressed="false">展开预览 · 侧主同步</button><button type="button" data-video="pdPreviewWide" aria-pressed="false">展开预览 · 全景同步</button><button type="button" data-video="pdPreviewSide" aria-pressed="false">展开预览 · 第三视角近景</button><button type="button" data-video="pdPreviewOverview" aria-pressed="false">展开预览 · 第三视角全景</button><button type="button" data-video="pdPreviewUav" aria-pressed="false">展开预览 · 无人机</button><button type="button" data-video="pdPreviewFront" aria-pressed="false">展开预览 · 狗前</button><button type="button" data-video="pdPreviewRear" aria-pressed="false">展开预览 · 狗后</button><button type="button" data-video="pdPreviewWrist" aria-pressed="false">展开预览 · 腕部</button></div><div class="tabs" aria-label="相机PD启动失败原记录" style="margin-top:10px;flex-wrap:wrap"><button type="button" data-video="pdStartupFailureV1" aria-pressed="false">PD v1 · 启动失败（未执行PD）</button></div><p class="caption"><a href="pd_preview_v1_multiview_manifest.json">展开预览逐帧清单</a> · <a href="pd_startup_failure_v1_multiview_manifest.json">启动失败逐帧清单</a> · <a href="references/docs/evidence/camera_pd_rear_preview_video_v1_20261030/README.md">展开预览验证边界</a> · <a href="references/docs/evidence/camera_pd_rear_actual_failure_video_v1_20261030/README.md">启动失败原始记录</a></p><h3 style="margin-top:20px">相机 PD v2 · 当前模型候选被拒，未执行 PD</h3><p class="caption">本次已有实际腕 SAM、RGB-D 和实验局部模型；操作桥因曝光帧不匹配拒绝候选，未启动 PD。13.85 秒等待预算耗尽，物理实录到 14.35 秒；不是完成预抓取或接近。八视角与真实失败独立保留，0/24。</p><div class="tabs" aria-label="相机PD v2候选拒绝八视图" style="flex-wrap:wrap"><button type="button" data-video="pdActualV2Sync" aria-pressed="false">PD v2 · 侧主同步</button><button type="button" data-video="pdActualV2Wide" aria-pressed="false">PD v2 · 全景同步</button><button type="button" data-video="pdActualV2Side" aria-pressed="false">PD v2 · 第三视角近景</button><button type="button" data-video="pdActualV2Overview" aria-pressed="false">PD v2 · 第三视角全景</button><button type="button" data-video="pdActualV2Uav" aria-pressed="false">PD v2 · 无人机</button><button type="button" data-video="pdActualV2Front" aria-pressed="false">PD v2 · 狗前</button><button type="button" data-video="pdActualV2Rear" aria-pressed="false">PD v2 · 狗后</button><button type="button" data-video="pdActualV2Wrist" aria-pressed="false">PD v2 · 腕部</button></div><p class="caption"><a href="pd_actual_v2_multiview_manifest.json">v2 同拍逐帧清单</a> · <a href="pd_actual_v2_media_assets_20261030.json">v2 媒体来源与 SHA</a> · <a href="references/docs/evidence/camera_pd_rear_actual_video_v2_20261030/README.md">v2 原失败与归档边界</a></p><!-- CAMERA_PD_ACTUAL_V3_SLOT --></div>
+ <div class="tabs" aria-label="研发试验录像" style="margin-top:10px;flex-wrap:wrap"><button type="button" data-video="independentv4" aria-pressed="false">研发补片：独立转向与停车失败（35.0 s）</button><button type="button" data-video="brakingv3" aria-pressed="false">研发补片：减速与停稳失败（34.9 s）</button></div>
+ <div class="tabs" aria-label="放大单个机载相机" style="margin-top:10px;flex-wrap:wrap"><button type="button" data-video="uav" aria-pressed="false">无人机下视</button><button type="button" data-video="front" aria-pressed="false">狗前相机</button><button type="button" data-video="rear" aria-pressed="false">狗后相机</button><button type="button" data-video="wrist" aria-pressed="false">机械臂腕相机</button><button type="button" data-video="previousapproach" aria-pressed="false">上一版：5厘米后航向失败（26.7 s）</button><button type="button" data-video="previousrecovery" aria-pressed="false">上一版：自动腕部复观（25.1 s）</button><button type="button" data-video="oldcombo" aria-pressed="false">旧版：固定尾腕展开（25.2 s）</button><button type="button" data-video="failure" aria-pressed="false">策略 v1：停车超时（10.6 s）</button><button type="button" data-video="previous" aria-pressed="false">上一轮：接近＋转身（15.7 s）</button><button type="button" data-video="comparison" aria-pressed="false">上一轮：前视接近对照</button></div>
+ <div class="videobox"><video id="demo" controls playsinline preload="metadata" poster="heading_v2_team_side_only.jpg" aria-label="真实第三人称与机载同步实验录像"><source src="heading_v2_team_side_only.mp4" type="video/mp4">浏览器不支持播放，请下载下方 MP4。</video><p id="videoDescription">近侧第三人称：腕部复观后带臂四足持续尾向接近，实际倒退约34厘米，32.825秒进入0.95米阈值；停车时角速度守护失败。未稳定停靠，未抓取，0/24。</p></div>
+ <div class="timepoints"><button class="seek" type="button" data-time="1.0">1 s · 前视定位</button><button class="seek" type="button" data-time="2.005">2.005 s · 开始接近</button><button class="seek" type="button" data-time="2.4">2.4 s · 预测风险停车</button><button class="seek" type="button" data-time="4.5">4.5 s · 前视三帧后续行</button><button class="seek" type="button" data-time="4.7">4.7 s · 再次预测停车</button><button class="seek" type="button" data-time="5.59">5.59 s · 选择转身＋腕</button><button class="seek" type="button" data-time="15.67">15.67 s · 尾向站稳</button><button class="seek" type="button" data-time="24.52">24.52 s · 腕姿态就绪</button><button class="seek" type="button" data-time="24.65">24.65 s · 三新曝光→接近</button><button class="seek" type="button" data-time="32.825">32.825 s · 距离进入0.95米</button><button class="seek" type="button" data-time="32.94">32.94 s · 角速守护失败</button><button class="seek" type="button" data-time="33.9">33.9 s · 失败后真实恢复</button></div>
+ <p class="caption">主片（航向反馈 v2）为 6788 个连续物理步、340 组同期展示画面；第三视角、无人机、前后相机 10 Hz，腕相机 20 Hz。无人机／前视运行 SAM/AOT；姿态到位后的腕部使用自动颜色候选、每帧独立 SAM 与 RGB-D 三帧复查。结构相符属于实验关联假设，尚未进入原来的地面操作授权。推理期间仿真暂停，不证明实时性能。本轮保持当前腕观测走到0.95米距离阈值，但突然归零后角速度守护失败，未满足连续0.5秒低速静止。实际原图完整保留，native机载片新增独立运动状态行；推理暂停物理，未执行抓取。</p>
+ <p class="caption"><a href="heading_v2_team_side_only.mp4" download>下载第三视角近景</a> · <a href="heading_v2_team_overview_only.mp4" download>下载第三视角全景</a> · <a href="heading_v2_team_side.mp4" download>下载六路同步</a> · <a href="heading_v2_media_sources.json">媒体来源与 SHA</a> · <a href="references/docs/research/multiagent_grabgarbage/HEADING_FEEDBACK_PAIR_20261030.md">接近与停稳失败记录</a> · <a href="references/docs/research/multiagent_grabgarbage/ACTIVE_HANDOFF_METHOD_20261030.md">算法与原失败</a></p>
+ <p class="caption">研发接口：前／后／腕共用的当前证据、身体续行与累计预算已完成CPU联通，<a href="references/docs/research/multiagent_grabgarbage/LOCAL_CONTINUATION_20261030.md">查看实现与实际验收缺口</a>。这些接口尚未接入本页录像，不把CPU检查计为真实三视角运动成功。</p>
+ <p class="caption">绿地新版是独立前视短程试验：源物理7.9秒，保留首曝后编码8.0秒；22次带噪空中定位、55次独立地面定位。7.4秒首次续行时航向误差越界，所有行走请求及实际消费为零，未完成2厘米；原失败与真实尾录保留。<a href="green_v1_team_side.mp4" download>下载绿地同步录像</a> · <a href="green_v1_media_sources.json">媒体来源与SHA</a> · <a href="references/docs/research/multiagent_grabgarbage/CAMERA_PD_AND_AERIAL_NOISE_20261030.md">10cm误差与实测记录</a> · <a href="references/docs/research/multiagent_grabgarbage/CAMERA_PD_CONTROL_20261030.md">相机坐标到PD接口</a>。上方旧主片仍按原实验口径展示，绿地片使用自己的时间轴。</p>
+ <p class="caption">新增独立转向试验保留350组真实同期画面；到点后实际角速度守护失败，仍未稳定停靠。<a href="independent_v4_team_side.mp4" download>下载35.0秒试验</a> · <a href="independent_v4_media_sources.json">本片来源与SHA</a> · <a href="references/docs/research/multiagent_grabgarbage/INDEPENDENT_BRAKING_HEADING_20261030.md">独立转向与停靠审计</a>。两张研发补片均使用自己的播放器时间轴。</p>
+ <p class="caption">新增减速试验保留349组真实同期画面；短暂到点后重新起步并触发角度守护，未通过停稳验收。<a href="braking_v3_team_side.mp4" download>下载34.9秒试验</a> · <a href="braking_v3_media_sources.json">本片来源与SHA</a> · <a href="references/docs/research/multiagent_grabgarbage/DISTANCE_BRAKING_PAIR_20261030.md">减速与重新起步分析</a>。上方事件快捷键对应主片，切至本片时禁用。</p>
+ <p class="caption">保留旧片：<a href="combo_v3_team_side_only.mp4">25.2 秒固定尾腕展开</a> · <a href="tail_v2_team_side_only.mp4">15.7 秒接近＋转身</a> · <a href="team_side.mp4">10 秒局部接近</a>。下方旧对照及其成绩保持原有实验口径。</p><h3 style="margin-top:26px">上一轮的接近对照（2026-10-29）</h3><p class="caption">下面数值对应“上一轮：前视接近对照”，与本轮接近＋尾向转身分别保存，不混用时刻和成绩。</p>
+ <div class="tablewrap"><table><thead><tr><th>相同条件下的结果</th><th>持续接近</th><th>边缘预警后停车</th></tr></thead><tbody>
+ <tr><td>接受的前视局部定位 / 处理曝光</td><td>23 / 91</td><td><strong>89 / 91</strong></td></tr>
+ <tr><td>AOT 跟踪</td><td>4.7 s 首次空掩码，之后需重新初始化</td><td>本次未失跟；5.6 / 5.7 s 定位曾被拒绝</td></tr>
+ <tr><td>实际世界 X 前移</td><td>1.031 m</td><td>0.106 m；保持视野的代价是停止推进</td></tr>
+ <tr><td>实际后退恢复</td><td>未执行</td><td class="partial">严格验收未通过：负命令期间仍向前约 8 mm</td></tr>
+ <tr><td>完整拾取投放</td><td>0 / 24</td><td>0 / 24</td></tr>
+ </tbody></table></div>
+</section>
+
+<section id="blindspot">
+ <h2>近处看不到时，谁来补这一眼</h2>
+ <div class="two">
+  <div class="panel pad"><h3>目标流程：把观察安排进动作</h3><div class="path"><span>前视发现失视风险</span><em>→</em><span>停车，撤销过时抓取计划</span></div><div class="fork"><p><b class="ok">腕相机能到合适姿态</b><br>移动机械臂去观察 → 独立识别与定位 → 新计划 → 继续操作。</p><p><b class="ok">身体换位更合适</b><br>在碰撞、地形和距离预算内换位 → 前/后视重新关联 → 新定位。</p><p><b class="ok">地面仍看不到</b><br>无人机补充视角并更新候选记忆；地面仍需自己确认抓取坐标。</p><p><b class="partial">都不可行或预算耗尽</b><br>明确报告本次失败/延后目标，再调度其他目标；不能无限重试。</p></div><p class="caption">本轮完成前视复查、转身及腕部三帧复观，航向反馈支持实际接近约34厘米并进入0.95米距离阈值，但停车角速度验收失败。后视近地盲区仍在；自动身份假设尚未标定，观察恢复不等于到达可抓距离或抓取成功。</p></div>
+  <div class="panel pad"><h3>两个智能体，三层信息</h3><div class="role"><b>无人机 · 搜索与补视</b>“某个位置附近可能有垃圾。”<br><span class="muted">候选世界坐标 + 来源/时间 + 不确定性；用于地面搜索和调度。</span></div><div class="role ground"><b>带臂四足 · 前/后/腕复查</b>“这个新实例与原目标结构相符；这是当前可见表面的位置。”<br><span class="muted">地面相机独立测量；旧坐标、其他相机的新帧不能替代当前证据。</span></div><div class="role ground"><b>操作模块 · 可达抓取计划</b>“机械臂按这个姿态、开口与轨迹执行。”<br><span class="muted">结合局部几何与机械臂约束生成；仍须接触、抬升和入桶证据验收。</span></div><p class="caption">机械臂及前/后/腕相机属于同一个地面机器人。论文关注不同机器人何时提供有效观察；当前已实现受控主动观察原型；跨布局泛化、身份标定与完整论文对照尚未完成。</p></div>
+ </div>
+</section>
+
+<section id="scene">
+ <div class="two"><div class="panel pad"><h2>任务场景已独立</h2><img class="map" src="references/source/capabilitylab/capabilitylab/cooperative/assets/multiagent-grabgarbage/topdown.svg" alt="multiagent-grabgarbage 任务静态布局：核心200乘200米及东侧原有迷宫，含垃圾和回收站"><p class="caption">来自任务配置的静态布局图，不是这些局部实验的行走轨迹。核心 200 × 200 m，东侧原有迷宫使全场 X 范围扩到 166 m。录像在 reset 时单独摆放了一个近处罐子用于受控比较。</p></div><div class="panel pad"><h2>接下来补哪几段</h2><div class="role ground"><b>从观察恢复推进到有效接近</b>有界航向纠偏已让机器人走到接近距离，但停车角速度仍失败。下一步验证临近目标的减速停止，再补统一前／后／腕视续行；被动组仍看得见却未推进须分开解释。历史绝对坐标操作分项保留作对照；当前研发使用地面相机坐标和 Kp/Kd 预抓取控制。</div><div class="role"><b>补自动发现与同物关联</b>替换当前人工首帧框及人工空地配对，评估识别错误、重识别与位置误差。</div><div class="role ground"><b>接通走近、尾向转身、携物行走与投桶</b>v8已在原地完成真实单罐抓投。下一步在同一连续仿真中接入远处带噪提示、观察接管、真实携物行走与近桶停靠，保留失抓、掉落和恢复。</div><div class="role"><b>再做多目标协同与论文对照</b>比较无人机继续搜新目标还是回头补视，固定低层控制器与预算，评价真正投放率和清理效率。</div></div></div>
+ <details><summary>展开原始对照图与证据入口</summary><img class="chart" src="references/docs/evidence/multiagent_grabgarbage_framework_20261029/comparison.png" alt="两组真实前视定位、位移、速度命令和6秒画面对照图"><p><a href="references/docs/evidence/multiagent_grabgarbage_framework_20261029/guard_v3/evaluation.json">停车组严格验收 JSON</a> · <a href="references/docs/evidence/multiagent_grabgarbage_framework_20261029/fixed_v3/evaluation.json">持续接近组验收 JSON</a> · <a href="references/docs/research/multiagent_grabgarbage/GOAL.md">完整研究目标</a> · <a href="references/docs/research/multiagent_grabgarbage/MANIPULATION_INTERFACE.md">操作模块接口</a> · <a href="references/docs/research/multiagent_grabgarbage/TASK_FLOW_DEMO_20261030.md">本演示制作记录</a></p></details>
+</section>
+<footer>最新v8原地单罐真实抓投完成1/24见页首独立入口；整段移动任务尚未接通。以下为历史默认主片：bounded_wrist_heading_feedback_v2_20261030；34.0秒、6788连续物理步。24.65秒当前腕三帧支持接近，32.825秒进入0.95米；32.940秒停车角速度守护失败，未稳定停靠。未抓取，0/24；初始提示仍人工配对，旧失败全部保留。</footer>
+</main>
+<script>
+'use strict';
+const stages = [
+ {title:'01 · 场景、机器人与任务起点',status:'平台分项已验证',kind:'ok',plan:['载入独立多材质大图，放置可物理交互的垃圾和开口桶。','无人机从起降区出发，带臂四足保持稳定站立。','初始化任务、相机、目标记忆与物理验收。'],actual:['已生成 24 件动态垃圾、3 个回收站共 9 个桶。','原图受控落物/入桶、无人机起飞悬停及冻结运控短测分别通过。','当前尾向转身与历史对照均采用近处单目标夹具，并非全场自主巡航。'],message:'已有平台分项 ≠ 已经完成全场清理'},
+ {title:'02 · 无人机搜索与候选定位',status:'人工提示下视觉定位已实测',kind:'partial',plan:['无人机搜索尚未覆盖区域，发现候选垃圾。','根据真实图像、同次深度与相机位姿，发布世界坐标和不确定性。','保留目标来源和观测时间，决定继续搜索还是为地面补看。'],actual:['真实无人机下视图像、SAM/AOT 跟踪及 RGB-D 可见表面定位已接通。','当前首帧目标框、类别由人工给定，无人机在受控位置悬停观察。','自主全场搜索、自动候选检测与搜寻/回访联合调度尚未完成。'],message:'无人机输出：候选位置 + 实际曝光时间 + 来源 + 不确定性'},
+ {"title": "03 · 空地交接、地面复查与接近", "status": "人工初始配对＋真实闭环接近", "kind": "partial", "plan": ["四足认领目标，利用无人机候选位置接近目标区域。", "前相机独立检查当前表面坐标和时效，预测继续移动的可见性。", "失视风险触发停车，允许一次三帧新前视后有界续行。"], "actual": ["真实无人机与前视分别进行 SAM/AOT 和 RGB-D 定位；初始对应由人工给定。", "2.40秒预测风险后停车，4.30／4.40／4.50秒三个新前视曝光支持一次短续行。", "4.70秒再次预测风险并停车，5.59秒选择转身及腕部观察；不把短续行写成全场导航。"], "message": "空中候选 → 当前地面观测 → 预测风险 → 实际动作反馈"},
+ {"title": "04 · 盲区处理与腕部接管", "status": "达到接近距离 · 停车角速度验收失败", "kind": "partial", "plan": ["狗前相机快看不到时，先减速或停车。", "结合当前可见性、后续接近风险和动作能力选择新前视、后视、腕部或空中补看。", "用新的地面曝光重新检查目标，保持时效；操作授权另行验收。"], "actual": ["2.40秒预测前视风险，经新曝光短续行后4.70秒再次停车，5.59秒选择转身＋腕。", "24.52秒腕姿态到位，24.55／24.60／24.65秒三次新腕曝光形成实验假设，并驱动真实尾向接近。", "实测倒退约34厘米，32.825秒进入0.95米阈值；32.940秒机身角速度越界，视觉仍有效，未稳定停靠或抓取。"], "message": "观测恢复、距离到位、实际停稳和抓取投放分别验收；本轮停车资格失败"},
+ {"title": "05 · 机械臂抓取与携物确认", "status": "v8原地单罐已实际抓起", "kind": "ok", "plan": ["从地面相机RGB-D和局部罐模型生成抓取目标，以Kp/Kd驱动机械臂。", "真实同物双指接触、抬升和携物必须经过物理见证。"], "actual": ["v8使用10.100秒腕RGB-D种子及Kp60/Kd12，38.400秒实际grasp_confirmed。", "原地零移动、机身未焊死；助手初始图像提示，之后有界静态last-seen操作。", "本轮单次抓起已验证，历史失败和资格模板不改写。"], "message": "当前单轮物理抓起成立；连续视觉认证与通用抓取资格另行验证"},
+ {"title": "06 · 携物移动、分类投放与恢复", "status": "v8原地近桶投放完成 · 携物行走未接通", "kind": "partial", "plan": ["携物行走到正确分类桶，持续检查接触和掉落。", "停稳后释放，确认完整进入正确桶并稳定停留。"], "actual": ["v8从原地真实搬运到已知近桶，未执行身体导航移动。", "54.985秒release_requested，56.990秒bin_0_can内稳定completed；1/24。", "远处接近、尾向转身、携物行走和近桶停靠尚未串成连续流程。"], "message": "原地抓投一罐成功；整段携物导航仍待接线"},
+ {"title": "07 · 清理复核、恢复与下一个目标", "status": "v8正确桶完成1/24 · 多目标闭环未运行", "kind": "partial", "plan": ["依据真实物理完成计分，避免重复目标或重复得分。", "失败时保留原始目标与历史，恢复或安排稍后处理。", "无人机与地面调度下一个目标，直至结束或耗尽预算。"], "actual": ["v8本轮single_target_completed=true，正确桶bin_0_can占用1；分母仍为24。", "v5和41种历史独立局部片保留各自0/24，不能与新轮合并累计。", "全场搜索、多目标调度、携物导航和论文统计对照仍待完成。"], "message": "当前原地一罐1/24；整场任务与论文统计尚未完成"}
+];
+const detail = document.querySelector('#detail');
+const escape = text => text.replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+document.querySelectorAll('[data-step]').forEach(button => button.addEventListener('click', () => {
+ const s = stages[Number(button.dataset.step)];
+ document.querySelectorAll('[data-step]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+ const list = values => values.map(value => '<li>'+escape(value)+'</li>').join('');
+ detail.innerHTML = '<div class="detailtop"><h3>'+escape(s.title)+'</h3><span class="pill '+s.kind+'">'+escape(s.status)+'</span></div><div class="detailcols"><div><b>这一阶段应该发生什么</b><ul>'+list(s.plan)+'</ul></div><div><b>现在实际到哪里</b><ul>'+list(s.actual)+'</ul></div></div><div class="message">'+escape(s.message)+'</div>';
+}));
+const video = document.querySelector('#demo');
+let currentVideoMode = 'side';
+const videos = {
+ "greenSide": {
+  "src": "green_v1_team_side.mp4",
+  "poster": "green_v1_team_side.jpg",
+  "text": "绿地新版 · 六路同步：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "greenWide": {
+  "src": "green_v1_team_overview.mp4",
+  "poster": "green_v1_team_overview.jpg",
+  "text": "绿地 · 全景同步：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "greenSideOnly": {
+  "src": "green_v1_team_side_only.mp4",
+  "poster": "green_v1_team_side_only.jpg",
+  "text": "绿地 · 第三视角近景：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "greenOverviewOnly": {
+  "src": "green_v1_team_overview_only.mp4",
+  "poster": "green_v1_team_overview_only.jpg",
+  "text": "绿地 · 第三视角全景：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "greenUav": {
+  "src": "green_v1_first_uav.mp4",
+  "poster": "green_v1_first_uav.jpg",
+  "text": "绿地 · 无人机：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "greenFront": {
+  "src": "green_v1_first_front.mp4",
+  "poster": "green_v1_first_front.jpg",
+  "text": "绿地 · 狗前：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "greenRear": {
+  "src": "green_v1_first_rear.mp4",
+  "poster": "green_v1_first_rear.jpg",
+  "text": "绿地 · 狗后：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "greenWrist": {
+  "src": "green_v1_first_wrist.mp4",
+  "poster": "green_v1_first_wrist.jpg",
+  "text": "绿地 · 腕部：实际绿地前视短程试验，源仿真7.9秒；7.4秒首次续行因航向误差守护失败，未发非零行走命令，未完成2厘米、未抓取。空中报告额外加入约10cm三维RMS误差，地面独立RGB-D复查。"
+ },
+ "side": {
+  "src": "heading_v2_team_side_only.mp4",
+  "poster": "heading_v2_team_side_only.jpg",
+  "text": "近侧第三人称：腕部复观后带臂四足持续尾向接近，实际倒退约34厘米，32.825秒进入0.95米阈值；停车时角速度守护失败。未稳定停靠，未抓取，0/24。"
+ },
+ "overview": {
+  "src": "heading_v2_team_overview_only.mp4",
+  "poster": "heading_v2_team_overview_only.jpg",
+  "text": "全景第三视角：同次连续仿真的场景、空地位置与转身动作。展示相机不向算法供给观测。"
+ },
+ "sync": {
+  "src": "heading_v2_team_side.mp4",
+  "poster": "heading_v2_team_side.jpg",
+  "text": "六路同步：当前腕观测持续支持接近，距离到位后机身角速度超限；新鲜视觉与运动失败分开显示，全部是真实同期画面。"
+ },
+ "syncwide": {
+  "src": "heading_v2_team_overview.mp4",
+  "poster": "heading_v2_team_overview.jpg",
+  "text": "六路同步：全景为主，所有画面来自同次实际物理状态。"
+ },
+ "uav": {
+  "src": "heading_v2_first_uav.mp4",
+  "poster": "heading_v2_first_uav.jpg",
+  "text": "无人机下视：人工初始提示后 SAM/AOT 持续观察，提供粗候选记忆；不能替代地面确认。"
+ },
+ "front": {
+  "src": "heading_v2_first_front.mp4",
+  "poster": "heading_v2_first_front.jpg",
+  "text": "前视：2.40秒预测风险，停车后4.3／4.4／4.5秒三个新曝光恢复短续行；4.70秒再次停车，随后选择转身及腕部观察。"
+ },
+ "rear": {
+  "src": "heading_v2_first_rear.mp4",
+  "poster": "heading_v2_first_rear.jpg",
+  "text": "后视：已核对转身后15.7、24.6、32.8秒原图；对应目标点落在画面下边界之外，本轮由腕部复观接管。没有把后视颜色条带当作已确认目标。"
+ },
+ "wrist": {
+  "src": "heading_v2_first_wrist.mp4",
+  "poster": "heading_v2_first_wrist.jpg",
+  "text": "腕部：24.55／24.60／24.65秒三个真实新曝光形成实验假设，接近期间持续看到黄罐。32.940秒运动守护失败时视觉仍有效；原图、视觉行和独立运动行分别显示。"
+ },
+ "independentv4": {
+  "src": "independent_v4_team_side.mp4",
+  "poster": "independent_v4_team_side.jpg",
+  "text": "新增35.0秒独立转向试验：33.750秒进入距离阈值，33.765秒腿策略消费零命令；33.910秒实际角速度超过0.5rad/s，未停稳通过。腕部新观测仍有效，未抓取。事件快捷键对应原主片，本片请用时间轴。"
+ },
+ "brakingv3": {
+  "src": "braking_v3_team_side.mp4",
+  "poster": "braking_v3_team_side.jpg",
+  "text": "新增34.9秒减速试验：33.745秒短暂进入0.95米阈值，尚未停稳；33.840秒测量回到阈值外后重新起步，33.850秒尾向角误差越界，资格失败。腕部当前视觉仍有效，未抓取。主片的事件快捷键不用于本片。"
+ },
+ "oldcombo": {
+  "src": "combo_v3_team_side_only.mp4",
+  "poster": "combo_v3_team_side_only.jpg",
+  "text": "历史25.2秒固定尾向展开：腕图能看到黄色罐子，当轮未运行腕部识别；请用播放器时间轴查看。"
+ },
+ "failure": {
+  "src": "active_v1_team_side.mp4",
+  "poster": "active_v1_team_side.jpg",
+  "text": "策略v1真实失败：停车被错误赋予新观测收益，3.56秒选择停步并在9.56秒超时。未执行腕部SAM，旧失败完整保留。"
+ },
+ "previous": {
+  "src": "tail_v2_team_side_only.mp4",
+  "poster": "tail_v2_team_side_only.jpg",
+  "text": "历史15.7秒接近与尾向转身，腕部收拢；请使用播放器时间轴。"
+ },
+ "comparison": {
+  "src": "front_fixed_vs_guard.mp4",
+  "poster": "front_fixed_vs_guard.jpg",
+  "text": "历史接近对照：左持续接近，右边缘预警后停车；没有抓取。"
+ },
+ "previousrecovery": {
+  "src": "active_v2_team_side_only.mp4",
+  "poster": "active_v2_team_side_only.jpg",
+  "text": "历史25.1秒自动腕部复观：24秒形成三帧实验假设，当轮没有腕视支持下的身体接近。"
+ },
+ "previousapproach": {
+  "src": "bounded_v1_team_side_only.mp4",
+  "poster": "bounded_v1_team_side_only.jpg",
+  "text": "历史26.7秒零转向接近：约5.2厘米后尾向误差越界，停车后另触身体守护。原失败完整保留。"
+ },
+ "pdPreviewSync": {
+  "src": "pd_preview_v1_team_side.mp4",
+  "poster": "pd_preview_v1_team_side.jpg",
+  "text": "展开预览 · 侧主同步：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdPreviewWide": {
+  "src": "pd_preview_v1_team_overview.mp4",
+  "poster": "pd_preview_v1_team_overview.jpg",
+  "text": "展开预览 · 全景同步：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdPreviewSide": {
+  "src": "pd_preview_v1_team_side_only.mp4",
+  "poster": "pd_preview_v1_team_side_only.jpg",
+  "text": "展开预览 · 第三视角近景：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdPreviewOverview": {
+  "src": "pd_preview_v1_team_overview_only.mp4",
+  "poster": "pd_preview_v1_team_overview_only.jpg",
+  "text": "展开预览 · 第三视角全景：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdPreviewUav": {
+  "src": "pd_preview_v1_first_uav.mp4",
+  "poster": "pd_preview_v1_first_uav.jpg",
+  "text": "展开预览 · 无人机：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdPreviewFront": {
+  "src": "pd_preview_v1_first_front.mp4",
+  "poster": "pd_preview_v1_first_front.jpg",
+  "text": "展开预览 · 狗前：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdPreviewRear": {
+  "src": "pd_preview_v1_first_rear.mp4",
+  "poster": "pd_preview_v1_first_rear.jpg",
+  "text": "展开预览 · 狗后：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdPreviewWrist": {
+  "src": "pd_preview_v1_first_wrist.mp4",
+  "poster": "pd_preview_v1_first_wrist.jpg",
+  "text": "展开预览 · 腕部：受控后侧夹具中真实展开机械臂，10.85秒腕姿态到位；源仿真11.35秒，六路共享末拍11.3秒，编码11.4秒。未加载NN、未执行相机PD、接近或转身；未抓取，0/24。"
+ },
+ "pdStartupFailureV1": {
+  "src": "pd_startup_failure_v1_team_side.mp4",
+  "poster": "pd_startup_failure_v1_team_side.jpg",
+  "text": "启动失败原记录：源仿真1.5秒，1.0秒因初始提示重复登记被守护拒绝，保留其后0.5秒真实尾录；NN未加载、相机PD未开始，未抓取，0/24。此工程启动失败不作为视觉或机械臂算法结果。"
+ },
+ "pdActualV2Sync": {
+  "src": "pd_actual_v2_team_side.mp4",
+  "poster": "pd_actual_v2_team_side.jpg",
+  "text": "相机 PD v2 · 侧主同步：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ },
+ "pdActualV2Wide": {
+  "src": "pd_actual_v2_team_overview.mp4",
+  "poster": "pd_actual_v2_team_overview.jpg",
+  "text": "相机 PD v2 · 全景同步：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ },
+ "pdActualV2Side": {
+  "src": "pd_actual_v2_team_side_only.mp4",
+  "poster": "pd_actual_v2_team_side_only.jpg",
+  "text": "相机 PD v2 · 第三视角近景：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ },
+ "pdActualV2Overview": {
+  "src": "pd_actual_v2_team_overview_only.mp4",
+  "poster": "pd_actual_v2_team_overview_only.jpg",
+  "text": "相机 PD v2 · 第三视角全景：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ },
+ "pdActualV2Uav": {
+  "src": "pd_actual_v2_first_uav.mp4",
+  "poster": "pd_actual_v2_first_uav.jpg",
+  "text": "相机 PD v2 · 无人机：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ },
+ "pdActualV2Front": {
+  "src": "pd_actual_v2_first_front.mp4",
+  "poster": "pd_actual_v2_first_front.jpg",
+  "text": "相机 PD v2 · 狗前：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ },
+ "pdActualV2Rear": {
+  "src": "pd_actual_v2_first_rear.mp4",
+  "poster": "pd_actual_v2_first_rear.jpg",
+  "text": "相机 PD v2 · 狗后：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ },
+ "pdActualV2Wrist": {
+  "src": "pd_actual_v2_first_wrist.mp4",
+  "poster": "pd_actual_v2_first_wrist.jpg",
+  "text": "相机 PD v2 · 腕部：真实绿地受控后侧试验，2870物理步／14.35秒，共享末拍14.3秒、编码14.4秒。10.85秒腕姿态就绪，实际 SAM／RGB-D 与实验罐模型产生；全部预抓取候选因 observation_actual_frame_mismatch 被拒。13.85秒达到候选等待预算，保留失败和真实尾录；PD未启动、未接近／转身／抓取，0/24。无人机报告额外约10cm三维RMS合成误差。"
+ }
+};
+document.querySelectorAll('[data-video]').forEach(button => button.addEventListener('click', () => {
+ currentVideoMode = button.dataset.video;
+ document.querySelectorAll('[data-time]').forEach(b => {b.disabled = ((currentVideoMode.startsWith('green') || currentVideoMode.startsWith('pd')) || ['comparison','previous','oldcombo','failure','previousrecovery','previousapproach','brakingv3','independentv4'].includes(currentVideoMode));});
+ const selected = videos[button.dataset.video]; video.pause(); video.src = selected.src; video.poster = selected.poster; video.load();
+ document.querySelector('#videoDescription').textContent = selected.text;
+ document.querySelectorAll('[data-video]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+}));
+document.querySelectorAll('[data-time]').forEach(button => button.addEventListener('click', () => {
+ if(((currentVideoMode.startsWith('green') || currentVideoMode.startsWith('pd')) || ['comparison','previous','oldcombo','failure','previousrecovery','previousapproach','brakingv3','independentv4'].includes(currentVideoMode))) return;
+ const seek = () => {video.currentTime = Math.min(Math.ceil(Number(button.dataset.time)*10-1e-7)/10, Math.max(0,video.duration-.01)); video.pause();};
+ if(video.readyState >= 1) seek(); else video.addEventListener('loadedmetadata', seek, {once:true});
+}));
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "task_id": "multiagent-grabgarbage",
+  "run_id": "bounded_wrist_independent_heading_v4_20261030",
+  "source_directory": "/media/user/DATA/runs/capability_research/outputs/multiagent-grabgarbage/independent_heading_v4_multiview_20261030",
+  "original_manifest_sha256": "136d4961863c4d3a216bda873d950f030c045704f41f7136411d2246d354cb3e",
+  "qualification": "Goal reached but angular-speed guard failed at stopping; no grasp; cleanup 0/24.",
+  "filename_resolution": "Original manifest bytes preserved. Display aliases must be resolved with files[].display rather than original relative names.",
+  "files": [
+    {
+      "original": "active_display_audit.json",
+      "display": "independent_v4_active_display_audit.json",
+      "bytes": 66618,
+      "sha256": "463fa89c22bd443c29af94d5bef905a0f524ae58f69f246c9371e20aa2f4c190"
+    },
+    {
+      "original": "controlled_motion_audit.json",
+      "display": "independent_v4_controlled_motion_audit.json",
+      "bytes": 3550,
+      "sha256": "a55e804e027c03a6e6b1914202d967e9c6b17f0c34f02cf96e5fe5ce9d7ac9b8"
+    },
+    {
+      "original": "multiview_manifest.json",
+      "display": "independent_v4_multiview_manifest.json",
+      "bytes": 5204,
+      "sha256": "136d4961863c4d3a216bda873d950f030c045704f41f7136411d2246d354cb3e"
+    },
+    {
+      "original": "team_side.frames.jsonl",
+      "display": "independent_v4_team_side.frames.jsonl",
+      "bytes": 2504520,
+      "sha256": "34d0a22c4c0572c72ba812d6e621d457eab39ca3fb57751cc1f21d6e85308eda"
+    },
+    {
+      "original": "team_side.jpg",
+      "display": "independent_v4_team_side.jpg",
+      "bytes": 236393,
+      "sha256": "b7ccce21832ab2845eaacc72236c28ece49cebafec8cedfc23742512322aaf82"
+    },
+    {
+      "original": "team_side.mp4",
+      "display": "independent_v4_team_side.mp4",
+      "bytes": 4407254,
+      "sha256": "f78f1a9cec954bc28927c34e54791100ff36a64b05c08ca3d651e3b2eff5535b"
+    }
+  ]
+}

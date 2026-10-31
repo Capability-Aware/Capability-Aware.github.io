@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "task_id": "multiagent-grabgarbage",
+  "run_id": "bounded_wrist_heading_feedback_v2_20261030",
+  "source_directory": "/media/user/DATA/runs/capability_research/outputs/multiagent-grabgarbage/heading_feedback_v2_multiview_20261030",
+  "original_manifest_sha256": "899c2c09cce5ad6440bfbc9683de9bd6cb7a07ff4419dd4f462631b7c2b9dd86",
+  "qualification": "Distance reached; stationary physical qualification failed; full cleanup 0/24.",
+  "files": [
+    {
+      "original": "active_display_audit.json",
+      "display": "heading_v2_active_display_audit.json",
+      "bytes": 65409,
+      "sha256": "494a64cbe05ccabf9c435219b608cacfb33c523622ef37c455a39f75eba14c23"
+    },
+    {
+      "original": "controlled_motion_audit.json",
+      "display": "heading_v2_controlled_motion_audit.json",
+      "bytes": 3534,
+      "sha256": "3cb2b632d8efd5bd60935d2a4546bbcd76d03922e9ea13e948f1efe86e577230"
+    },
+    {
+      "original": "first_front.frames.jsonl",
+      "display": "heading_v2_first_front.frames.jsonl",
+      "bytes": 1392627,
+      "sha256": "1ac92d0f0a68328c3b0e6e08e68db00dc563fc370ef3a086f55e6d94a044aaff"
+    },
+    {
+      "original": "first_front.jpg",
+      "display": "heading_v2_first_front.jpg",
+      "bytes": 18873,
+      "sha256": "9c39a3d52e66cb480486c5b1960779c8324d22339438219241a7d66249b799cf"
+    },
+    {
+      "original": "first_front.mp4",
+      "display": "heading_v2_first_front.mp4",
+      "bytes": 592118,
+      "sha256": "ba7b2656aa78a104fdc09a55a3325d11b5645f70fd8bd4f5a2d06c86cb76d07a"
+    },
+    {
+      "original": "first_rear.frames.jsonl",
+      "display": "heading_v2_first_rear.frames.jsonl",
+      "bytes": 1391607,
+      "sha256": "a9db3cd79f84fe3a24d63873d42c59634e8034f95c0bdff14c63060088d16999"
+    },
+    {
+      "original": "first_rear.jpg",
+      "display": "heading_v2_first_rear.jpg",
+      "bytes": 18437,
+      "sha256": "4584d4efc2165ac87f36cdcc1f155b34913dfa6748f4b0c7f52edbd34c984d2f"
+    },
+    {
+      "original": "first_rear.mp4",
+      "display": "heading_v2_first_rear.mp4",
+      "bytes": 526080,
+      "sha256": "03263995564f4962c09a3080cca2dea028cc3bb0fe1003a05cfb6a9109c3e2fe"
+    },
+    {
+      "original": "first_uav.frames.jsonl",
+      "display": "heading_v2_first_uav.frames.jsonl",
+      "bytes": 1389567,
+      "sha256": "08b96985f1eb15a39248b3b1877bb00171ab710ed0081c11ecb8c1ad8371433a"
+    },
+    {
+      "original": "first_uav.jpg",
+      "display": "heading_v2_first_uav.jpg",
+      "bytes": 35462,
+      "sha256": "0cf5de9bf3c28f619dbc0911e40f02c73e598c6ac132373978e5ea8ed6cecddf"
+    },
+    {
+      "original": "first_uav.mp4",
+      "display": "heading_v2_first_uav.mp4",
+      "bytes": 1101033,
+      "sha256": "df7f814c423759d9f77bb1e0c85b4c66f53318ee1628df0b73d8478554a3c103"
+    },
+    {
+      "original": "first_wrist.frames.jsonl",
+      "display": "heading_v2_first_wrist.frames.jsonl",
+      "bytes": 1392627,
+      "sha256": "3aefec52a7700f31a2cc03ca566fcd3c04b9945388e0918168539d2c39781ffc"
+    },
+    {
+      "original": "first_wrist.jpg",
+      "display": "heading_v2_first_wrist.jpg",
+      "bytes": 20388,
+      "sha256": "d0de24b6bf08c43adbed7887e22cef520245f34a908df2d17516b02475f1de79"
+    },
+    {
+      "original": "first_wrist.mp4",
+      "display": "heading_v2_first_wrist.mp4",
+      "bytes": 381811,
+      "sha256": "e52f1970f85b00d23089493b909f7f03481d0a208592d50029b9490b5f3489b5"
+    },
+    {
+      "original": "multiview_manifest.json",
+      "display": "heading_v2_multiview_manifest.json",
+      "bytes": 12389,
+      "sha256": "899c2c09cce5ad6440bfbc9683de9bd6cb7a07ff4419dd4f462631b7c2b9dd86"
+    },
+    {
+      "original": "team_overview.frames.jsonl",
+      "display": "heading_v2_team_overview.frames.jsonl",
+      "bytes": 2387047,
+      "sha256": "242cd3aba436fdafa8714570fd4d07d75e749d74c3cf07c5c78ceefb367348b9"
+    },
+    {
+      "original": "team_overview.jpg",
+      "display": "heading_v2_team_overview.jpg",
+      "bytes": 294278,
+      "sha256": "89c2548f848d52bd6913b6b8411ad5a71541ac7ed421ccc4a8bb9323f61f9696"
+    },
+    {
+      "original": "team_overview.mp4",
+      "display": "heading_v2_team_overview.mp4",
+      "bytes": 4429399,
+      "sha256": "f47a7c7045f904153e4860b66b089b2e8e95dc2be1c7fa3cf064ec67f598d987"
+    },
+    {
+      "original": "team_overview_only.frames.jsonl",
+      "display": "heading_v2_team_overview_only.frames.jsonl",
+      "bytes": 1346534,
+      "sha256": "d89f513449ee19be65ea15a2fd420eae8dfa1c535b717be2ea7f1c2e839387db"
+    },
+    {
+      "original": "team_overview_only.jpg",
+      "display": "heading_v2_team_overview_only.jpg",
+      "bytes": 218359,
+      "sha256": "d842d44b3f7afcd79b2c8471d05218de841805e9868ec3b773c42513ed07a7b6"
+    },
+    {
+      "original": "team_overview_only.mp4",
+      "display": "heading_v2_team_overview_only.mp4",
+      "bytes": 3599858,
+      "sha256": "dd9b0e9c8259d2b73c8ad0d878447eceba39d0ab3815da49483d1b287fdb2e3f"
+    },
+    {
+      "original": "team_side.frames.jsonl",
+      "display": "heading_v2_team_side.frames.jsonl",
+      "bytes": 2387047,
+      "sha256": "24f7a63594bb96f20e7ab4d4246c70542fb0dd1ea6383ac13bffcc8ddb14e177"
+    },
+    {
+      "original": "team_side.jpg",
+      "display": "heading_v2_team_side.jpg",
+      "bytes": 237347,
+      "sha256": "8a5783ceb3f232e1c0a2d28b81b7ffc6cff04d0742c3302c616359b3186edc6a"
+    },
+    {
+      "original": "team_side.mp4",
+      "display": "heading_v2_team_side.mp4",
+      "bytes": 4289953,
+      "sha256": "09590517fbcb97b9e5368d4f77241b32ccc6a245c792c0bcf651613fb029574f"
+    },
+    {
+      "original": "team_side_only.frames.jsonl",
+      "display": "heading_v2_team_side_only.frames.jsonl",
+      "bytes": 1346534,
+      "sha256": "980a326de8c49b8ce4c747c2041dac30da89c9ca3ae141beac7f0dfce4803b74"
+    },
+    {
+      "original": "team_side_only.jpg",
+      "display": "heading_v2_team_side_only.jpg",
+      "bytes": 160200,
+      "sha256": "3d8f5637533f5a82043c7ac39bc9ac75fc78224be1ac62ccfd00aeddcbd26e88"
+    },
+    {
+      "original": "team_side_only.mp4",
+      "display": "heading_v2_team_side_only.mp4",
+      "bytes": 3444321,
+      "sha256": "9852f9e8145528f67a42048c2d601340b810fd33f1120e90888de4ea9f93e49e"
+    }
+  ]
+}

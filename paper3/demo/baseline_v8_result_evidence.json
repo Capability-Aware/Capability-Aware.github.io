@@ -1,0 +1,677 @@
+{
+  "schema_version": 1,
+  "run_id": "single_target_camera_baseline_v8_20261030",
+  "case": "controlled_single_target_camera_baseline",
+  "source_run": "/media/user/DATA/runs/capability_research/outputs/multiagent-grabgarbage/single_target_camera_baseline_v8_20261030",
+  "completed": 1,
+  "total": 24,
+  "single_target_completed": true,
+  "full_task_success": false,
+  "real_walk_or_turn_executed": false,
+  "known_bin_id": "bin_0_can",
+  "bin_occupancy": {
+    "bin_0_plastic_bottle": 0,
+    "bin_0_can": 1,
+    "bin_0_paper": 0,
+    "bin_1_plastic_bottle": 0,
+    "bin_1_can": 0,
+    "bin_1_paper": 0,
+    "bin_2_plastic_bottle": 0,
+    "bin_2_can": 0,
+    "bin_2_paper": 0
+  },
+  "critical_physical_events": {
+    "grasp_confirmed": {
+      "time": 38.40000000000119,
+      "event": "grasp_confirmed",
+      "waste_id": "visual_cc9057b558404b6b92ade881792ff602",
+      "reward": 1.0,
+      "robot_id": "b2rm_0"
+    },
+    "release_requested": {
+      "time": 54.98500000000968,
+      "event": "release_requested",
+      "waste_id": "visual_cc9057b558404b6b92ade881792ff602",
+      "reward": 0.0,
+      "robot_id": "b2rm_0",
+      "bin_id": "bin_0_can"
+    },
+    "completed": {
+      "time": 56.9900000000107,
+      "event": "completed",
+      "waste_id": "visual_cc9057b558404b6b92ade881792ff602",
+      "reward": 10.0,
+      "bin_id": "bin_0_can"
+    }
+  },
+  "first_public_phases": {
+    "approaching": {
+      "time_s": 10.100000000000179,
+      "sim_frame_id": 2020,
+      "completed_bin": null,
+      "finger_feedback": {
+        "captured_at_s": 10.100000000000179,
+        "sim_frame_id": 2020,
+        "left_force_n": 0.0,
+        "right_force_n": 0.0,
+        "bilateral_same_body": false,
+        "unexpected_contact_violation": false,
+        "source": "trusted synchronous IsaacWitnessAdapter filtered-force scalar cache; no object pose or ID forwarded"
+      }
+    },
+    "grasping": {
+      "time_s": 10.10500000000018,
+      "sim_frame_id": 2021,
+      "completed_bin": null,
+      "finger_feedback": {
+        "captured_at_s": 10.10500000000018,
+        "sim_frame_id": 2021,
+        "left_force_n": 0.0,
+        "right_force_n": 0.0,
+        "bilateral_same_body": false,
+        "unexpected_contact_violation": false,
+        "source": "trusted synchronous IsaacWitnessAdapter filtered-force scalar cache; no object pose or ID forwarded"
+      }
+    },
+    "transporting": {
+      "time_s": 38.40000000000119,
+      "sim_frame_id": 7680,
+      "completed_bin": null,
+      "finger_feedback": {
+        "captured_at_s": 38.40000000000119,
+        "sim_frame_id": 7680,
+        "left_force_n": 8.761131462260856,
+        "right_force_n": 8.807007690456317,
+        "bilateral_same_body": true,
+        "unexpected_contact_violation": false,
+        "source": "trusted synchronous IsaacWitnessAdapter filtered-force scalar cache; no object pose or ID forwarded"
+      }
+    },
+    "released": {
+      "time_s": 54.99000000000968,
+      "sim_frame_id": 10998,
+      "completed_bin": null,
+      "finger_feedback": {
+        "captured_at_s": 54.99000000000968,
+        "sim_frame_id": 10998,
+        "left_force_n": 8.60065492920797,
+        "right_force_n": 8.648787828856735,
+        "bilateral_same_body": true,
+        "unexpected_contact_violation": false,
+        "source": "trusted synchronous IsaacWitnessAdapter filtered-force scalar cache; no object pose or ID forwarded"
+      }
+    },
+    "completed": {
+      "time_s": 56.9900000000107,
+      "sim_frame_id": 11398,
+      "completed_bin": "bin_0_can",
+      "finger_feedback": {
+        "captured_at_s": 56.9900000000107,
+        "sim_frame_id": 11398,
+        "left_force_n": 0.0,
+        "right_force_n": 0.0,
+        "bilateral_same_body": false,
+        "unexpected_contact_violation": false,
+        "source": "trusted synchronous IsaacWitnessAdapter filtered-force scalar cache; no object pose or ID forwarded"
+      }
+    }
+  },
+  "execution_events": [
+    {
+      "time_s": 10.100000000000179,
+      "event": "phase",
+      "phase": "begin_attempt",
+      "reason": "current camera plan; no grasp success implied"
+    },
+    {
+      "time_s": 10.10500000000018,
+      "event": "phase",
+      "phase": "pregrasp",
+      "reason": "actual mission accepted grasp attempt"
+    },
+    {
+      "time_s": 31.68499999999798,
+      "event": "phase",
+      "phase": "descend",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 34.419999999999156,
+      "event": "phase",
+      "phase": "close",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 35.51999999999972,
+      "event": "phase",
+      "phase": "lift",
+      "reason": "camera preload desired fully issued then actual bilateral dwell; not yet grasp confirmation"
+    },
+    {
+      "time_s": 38.57500000000128,
+      "event": "phase",
+      "phase": "wait_transporting",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 38.580000000001284,
+      "event": "phase",
+      "phase": "transfer_up",
+      "reason": "trusted mission confirmed physical lift/contact"
+    },
+    {
+      "time_s": 46.41500000000529,
+      "event": "phase",
+      "phase": "bin_above",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 54.980000000009674,
+      "event": "phase",
+      "phase": "release",
+      "reason": "actual TCP/joints settled"
+    },
+    {
+      "time_s": 54.99000000000968,
+      "event": "phase",
+      "phase": "wait_bin",
+      "reason": "actual mission accepted release"
+    },
+    {
+      "time_s": 56.9900000000107,
+      "event": "phase",
+      "phase": "completed",
+      "reason": "trusted mission confirmed correct-bin physical dwell"
+    }
+  ],
+  "arm_control": {
+    "variant": "task_implicit_gravity_bias",
+    "robot_present": true,
+    "requested_task_arm_damping": 12.0,
+    "actuator_type": "ImplicitActuatorCfg",
+    "parameters": {
+      "joint_names_expr": [
+        "arm_joint_.*"
+      ],
+      "stiffness": 60.0,
+      "damping": 12.0,
+      "armature": 0.001,
+      "effort_limit": null,
+      "effort_limit_sim": 60.0,
+      "velocity_limit": null,
+      "velocity_limit_sim": 3.14,
+      "saturation_effort": null,
+      "friction_static": null,
+      "activation_vel": null,
+      "friction_dynamic": null
+    },
+    "parameter_source": "task-specific ArticulationCfg before actual actuator initialization",
+    "implementation": "PhysX implicit position/velocity drive; no explicit DC torque-speed clipping",
+    "gravity_compensation": {
+      "source": "current PhysX get_gravity_compensation_forces",
+      "application": "six arm joints only; drive_target=desired_target+G/60; desired remains unchanged",
+      "total_drive_effort_cap_nm": 60.0,
+      "generalized_root_columns_skipped": 6,
+      "reject_nonfinite_or_over_cap": true,
+      "reject_drive_outside_hard_limits": true,
+      "external_forces_or_extra_efforts_applied": false
+    },
+    "original_B2RM_CFG_modified": false,
+    "leg_actuators_modified": false,
+    "joint_limits_modified": false,
+    "physically_qualified": false
+  },
+  "physics_solver": {
+    "requested_external_forces_every_iteration": true,
+    "actual_startup_readback": {
+      "actual_usd_attributes": {
+        "/physicsScene": {
+          "physxScene:enableExternalForcesEveryIteration": true,
+          "physxScene:enableStabilization": false,
+          "physxScene:solverType": "TGS"
+        },
+        "/World/GroundRobot/base_link": {
+          "physxArticulation:solverPositionIterationCount": 8,
+          "physxArticulation:solverVelocityIterationCount": 4,
+          "physxArticulation:stabilizationThreshold": 9.999999747378752e-06,
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_1": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_2": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_3": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_4": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_5": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_6": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/gripper_base_link": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/gripper_finger1_link": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/gripper_finger2_link": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        }
+      },
+      "simulation_cfg": {
+        "solver_type": 1,
+        "enable_external_forces_every_iteration": true,
+        "enable_stabilization": false,
+        "min_position_iteration_count": 1,
+        "max_position_iteration_count": 255,
+        "min_velocity_iteration_count": 0,
+        "max_velocity_iteration_count": 255
+      },
+      "parameters_modified": false
+    },
+    "scope": "explicit TGS candidate only; original Kp/Kd, iterations, physical and settle gates retained",
+    "actual_final_readback": {
+      "actual_usd_attributes": {
+        "/physicsScene": {
+          "physxScene:enableExternalForcesEveryIteration": true,
+          "physxScene:enableStabilization": false,
+          "physxScene:solverType": "TGS"
+        },
+        "/World/GroundRobot/base_link": {
+          "physxArticulation:solverPositionIterationCount": 8,
+          "physxArticulation:solverVelocityIterationCount": 4,
+          "physxArticulation:stabilizationThreshold": 9.999999747378752e-06,
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FL_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/FR_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RL_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_hip": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_thigh": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_calf": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/RR_foot": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_1": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_2": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_3": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_4": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_5": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/arm_link_6": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/gripper_base_link": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/gripper_finger1_link": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        },
+        "/World/GroundRobot/gripper_finger2_link": {
+          "physxRigidBody:solverPositionIterationCount": 16,
+          "physxRigidBody:solverVelocityIterationCount": 1,
+          "physxRigidBody:stabilizationThreshold": 9.999999747378752e-06
+        }
+      },
+      "simulation_cfg": {
+        "solver_type": 1,
+        "enable_external_forces_every_iteration": true,
+        "enable_stabilization": false,
+        "min_position_iteration_count": 1,
+        "max_position_iteration_count": 255,
+        "min_velocity_iteration_count": 0,
+        "max_velocity_iteration_count": 255
+      },
+      "parameters_modified": false
+    }
+  },
+  "actual_solver_scene_startup": {
+    "physxScene:enableExternalForcesEveryIteration": true,
+    "physxScene:enableStabilization": false,
+    "physxScene:solverType": "TGS"
+  },
+  "actual_solver_scene_final": {
+    "physxScene:enableExternalForcesEveryIteration": true,
+    "physxScene:enableStabilization": false,
+    "physxScene:solverType": "TGS"
+  },
+  "aerial_report_noise": {
+    "configuration": {
+      "seed": 20261030,
+      "position_rms_m": 0.1,
+      "persistent_rms_fraction": 0.8
+    },
+    "model": "persistent_route_bias_plus_exposure_gaussian",
+    "position_3d_rms_m": 0.1,
+    "persistent_3d_rms_m": 0.08000000000000002,
+    "exposure_3d_rms_m": 0.05999999999999999,
+    "additive_report_uncertainty_radius_m": 0.1616580753730952,
+    "uncertainty_scope": "approximately 95 percent radial Gaussian report error, added to original radius",
+    "clean_position_or_offset_published": false,
+    "ground_localization_modified": false,
+    "same_clean_exposure_deterministic": true,
+    "repeated_application_to_noisy_surface_supported": false,
+    "source": "synthetic reporting error, not measured UAV accuracy"
+  },
+  "camera_seed_frame_id": "ground_wrist:00000202",
+  "camera_seed_captured_at_s": 10.100000000000179,
+  "controlled_rear_distance_m": 0.75,
+  "initial_visual_inputs": [
+    {
+      "kind": "aerial_box",
+      "frame_id": "uav_down:00000020",
+      "captured_at_s": 1.0000000000000007,
+      "rgb_file_sha256": "0447e8da1ba7cb29000ca7e824d66d8e9d67b1428f4ab37406a33aa8dda6cf2a",
+      "mask_binary_sha256": null,
+      "reply": {
+        "frame_id": "uav_down:00000020",
+        "rgb_file_sha256": "0447e8da1ba7cb29000ca7e824d66d8e9d67b1428f4ab37406a33aa8dda6cf2a",
+        "public_target_id": null,
+        "source_id": "assistant_visual_annotation:root_v8_aerial_20261030",
+        "box": [
+          490,
+          353,
+          504,
+          367
+        ]
+      },
+      "pause_unchanged": true,
+      "request_sha256": "8df15dd1da2c8bc717b0b429c64bc3ea93fb66c8a1e1a7ecd80f29a34ae07e32",
+      "reply_sha256": "f06c782c0611fdca0f0d1f9d8a4f4e3868e1cb94e05cd6703908300372d187b6",
+      "pause_sha256": "d5cf98b83f0e1b552c57bf005d2f3e60ae6e8f8f262535ce902ca1d30b13602e"
+    },
+    {
+      "kind": "wrist_box",
+      "frame_id": "ground_wrist:00000202",
+      "captured_at_s": 10.100000000000179,
+      "rgb_file_sha256": "54113da7ccf70c663f0c2ede67a6102d025e3d2f1a883da221179cc6fe5f9359",
+      "mask_binary_sha256": null,
+      "reply": {
+        "frame_id": "ground_wrist:00000202",
+        "rgb_file_sha256": "54113da7ccf70c663f0c2ede67a6102d025e3d2f1a883da221179cc6fe5f9359",
+        "public_target_id": "visual_cc9057b558404b6b92ade881792ff602",
+        "source_id": "assistant_visual_annotation:root_v8_wrist_20261030",
+        "box": [
+          120,
+          285,
+          173,
+          322
+        ]
+      },
+      "pause_unchanged": true,
+      "request_sha256": "db40a134b201c5e965e44f8d579df1d77e9ce793a131daa3bf4439fb286a0e22",
+      "reply_sha256": "cfe42cd6c8fd2eb30dd429c1bc518353fa6b84b9d8bc0ab8ba9ed2fb78665d01",
+      "pause_sha256": "cb6d4495c05c6352f99406b9c51fae2344561c571c6e0350271131c0b9296b96"
+    },
+    {
+      "kind": "wrist_mask_model",
+      "frame_id": "ground_wrist:00000202",
+      "captured_at_s": 10.100000000000179,
+      "rgb_file_sha256": "54113da7ccf70c663f0c2ede67a6102d025e3d2f1a883da221179cc6fe5f9359",
+      "mask_binary_sha256": "305c061be466ac701e11e5e3dc36af332dd3331dc2931b723b59ccf8e7ed6dc4",
+      "reply": {
+        "frame_id": "ground_wrist:00000202",
+        "rgb_file_sha256": "54113da7ccf70c663f0c2ede67a6102d025e3d2f1a883da221179cc6fe5f9359",
+        "public_target_id": "visual_cc9057b558404b6b92ade881792ff602",
+        "source_id": "assistant_visual_annotation:root_v8_current_mask_20261030",
+        "mask_binary_sha256": "305c061be466ac701e11e5e3dc36af332dd3331dc2931b723b59ccf8e7ed6dc4",
+        "accepted": true,
+        "upright_can_confirmed": true
+      },
+      "pause_unchanged": true,
+      "request_sha256": "2bce19d5b351db92aed0024ad684c698af8650f653201e4cd9219f7ed705430c",
+      "reply_sha256": "c8fbf66729affb827e4a62c222d6c2d849570fa033e026366c6fbdf0b1a58c8b",
+      "pause_sha256": "5f8e6d811845f4d3f2288b98aefc6b0d252b02a3f427e9de9757d6166e6f925a"
+    }
+  ],
+  "physical_frames": 11598,
+  "physical_end_s": 57.99,
+  "shared_groups": 580,
+  "shared_exposure_range_s": [
+    0.005,
+    57.90000000001117
+  ],
+  "encoded_duration_s": 58.0,
+  "failure": null,
+  "cleanup_error_files_present": false,
+  "source_verification": {
+    "verified": true,
+    "changed_files": []
+  },
+  "runtime_input_verification": {
+    "verified": true,
+    "all_listed_input_dependencies_rehashed": true,
+    "rehashed_file_entries": 61,
+    "changed_files": [],
+    "scope": "all listed actual runtime inputs; unresolved assets and unlisted SDK binaries remain outside scope"
+  },
+  "source_recording_sha256": {
+    "run.json": "9b2e603463eb3acb6192dbcf38aa09d6ba7d0f7d19464acc458a2dce85b95757",
+    "report.json": "7553b54f61d2b3f5c344209c16271af01b5b8a5517d71bbb9f01afbb92609c73",
+    "evidence_summary.json": "116647adc743f92a461c24e0db071c69fd807baac0b70521c4b5ec1f2424f97e",
+    "controlled_setup.json": "9e2b32037bafcb3189ff8b1b21a99db9be92efc5c44a01608b36c61390264dbf",
+    "physics_witness.jsonl": "89e6065139bd920c48d9b5013e8579c02c379f07611ccad8be7cfde7c97d9276",
+    "single_target_trace.jsonl": "66d480fe5f400a62357458a2a183d700df77d81620316a62224fbc1303aca829",
+    "rgbd/recording.json": "482f261d50b7c5989734e23452e231647779ee54058c2b4d33161aec27fe2c07",
+    "rgbd/manifest.jsonl": "0ea729d8d01afffe2014e45181a30c882d8285c076754028ed5c483f8c7f5f5a",
+    "observer_rgb/summary.json": "608aaecb6460b3a2382264219eec876c7e2fe29cf8d974bd2fd2729a06ddbd68",
+    "observer_rgb/manifest.jsonl": "dc182f0f0a1b7472984d3f667ed2aa9578e57b86fb1434ded5274997aa3bf7bb",
+    "runtime_input_contract.json": "2c6d59b51361aa00909be7a17aacbef29e40894af07e80231cbed85b5c5770a9",
+    "runtime_input_verification.json": "4ade0b616db92f628db50309786a04c72b1f981db1fca7288163a503fe58d2c9",
+    "camera_static_seed.json": "d3c078759409cd78c286f53f81935ed849013285e9770537b66f628085b9b86f",
+    "perception.jsonl": "80a61092a640cb5571abc84489fdad4b3ae7f299782c29df5767adf943411128",
+    "camera_pregrasp_candidates.jsonl": "c4444ceac922b9668571b23de3d97d443fd2d5775f4e50287a39102258ea78cf",
+    "native_local_observations.jsonl": "118971b95625bdf0306751228bd4e3720cc6e0a122c7449b0c4d69aa8e46c884",
+    "events.jsonl": "7b109934434a80f1c78b23cac8613d1c203b071799fa95180893e16aa4d112b1"
+  },
+  "limits": [
+    "原地零移动指令，机身未焊死；未走近、转身或携物行走",
+    "助手当前图像初始提示；一次腕RGB-D种子的有界静态last-seen，不是持续视觉认证",
+    "时间零受控后方单罐与已知近桶；未验证全场搜索或24件循环",
+    "本轮single_target_completed实际成立，不改通用控制器qualification模板字段"
+  ]
+}

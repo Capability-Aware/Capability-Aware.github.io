@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "task_id": "multiagent-grabgarbage",
+  "run_id": "bounded_wrist_distance_braking_v3_20261030",
+  "source_directory": "/media/user/DATA/runs/capability_research/outputs/multiagent-grabgarbage/distance_braking_v3_multiview_20261030",
+  "original_manifest_sha256": "f7047aa03ab8e30db899fb834501e44aec00c47937c7a452212e8f2964d9f3b9",
+  "qualification": "Brief distance crossing; standstill qualification failed after restart and heading guard. No grasp; full cleanup 0/24.",
+  "files": [
+    {
+      "original": "active_display_audit.json",
+      "display": "braking_v3_active_display_audit.json",
+      "bytes": 67309,
+      "sha256": "b682c062da3b7dfa2935f60069111180884eff3667e15884f99542486c4e47cb"
+    },
+    {
+      "original": "controlled_motion_audit.json",
+      "display": "braking_v3_controlled_motion_audit.json",
+      "bytes": 3546,
+      "sha256": "3dedad43dbbe74cea8836b820e5ccfc17fb64b3a680cd355ed74add6450c6c6d"
+    },
+    {
+      "original": "multiview_manifest.json",
+      "display": "braking_v3_multiview_manifest.json",
+      "bytes": 5206,
+      "sha256": "f7047aa03ab8e30db899fb834501e44aec00c47937c7a452212e8f2964d9f3b9"
+    },
+    {
+      "original": "team_side.frames.jsonl",
+      "display": "braking_v3_team_side.frames.jsonl",
+      "bytes": 2491435,
+      "sha256": "d536be87ade28822f551cc78a6f30d5709c2863b9dffa74e790e2cbeb087227d"
+    },
+    {
+      "original": "team_side.jpg",
+      "display": "braking_v3_team_side.jpg",
+      "bytes": 238014,
+      "sha256": "c2f373a5bd1440b27ca7ed70408d162d1f9db473c7a3487db7a6bf6100c556be"
+    },
+    {
+      "original": "team_side.mp4",
+      "display": "braking_v3_team_side.mp4",
+      "bytes": 4398604,
+      "sha256": "14ae310e2b6b07b1586d03b33cc2c8f90a7daccb57847a468b4eb5b22788ca31"
+    }
+  ]
+}

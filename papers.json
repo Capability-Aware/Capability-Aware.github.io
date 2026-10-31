@@ -75,6 +75,8 @@
   },
   {
     "slug": "paper3",
-    "name": "Paper 3"
+    "name": "Paper 3",
+    "status": "Interactive demo available · paper in preparation",
+    "demo": "demo/"
   }
 ]
