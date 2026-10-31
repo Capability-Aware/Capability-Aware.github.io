@@ -71,9 +71,9 @@ def build_demo_landing(p):
         ('3 m/s', 'media_stage/speed3_goals.mp4', 'result_speed3.jpg', 'motion', '3 m/s 目标速度演示。'),
         ('5 m/s', 'media_stage/speed5_goals.mp4', 'result_speed5.jpg', 'motion', '5 m/s 目标速度与实际落脚演示。'),
         ('行走中切换步态', 'media_stage/combined_gait_transition_REVIEW_reference55_v8.mp4', 'result_gait_transition.jpg', 'motion', '在行走过程中依次请求不同步态。'),
-        ('身体高度｜连续 20–68 cm', 'media_body_frontier_v1/body_height_CB_B_only.mp4', 'result_body_height.jpg', 'body', '连续高度变化；画面保留 C+B 与单 Body 对照。'),
-        ('身体俯仰｜连续 ±28°', 'media_body_frontier_v1/body_pitch_CB_B_only.mp4', 'result_body_pitch.jpg', 'body', '连续俯仰变化；画面保留 C+B 与单 Body 对照。'),
-        ('左右侧倾｜连续 ±40°', 'media_body_frontier_v1/body_roll_CB_B_only.mp4', 'result_body_roll.jpg', 'body', '连续侧倾变化；画面保留 C+B 与单 Body 对照。'),
+        ('身体高度｜连续 20–68 cm', 'media_body_frontier_v1/body_height_main_trim_v1.mp4', 'result_body_height.jpg', 'body', '单画面展示连续高度变化：20–68 cm。'),
+        ('身体俯仰｜连续 ±28°', 'media_body_frontier_v1/body_pitch_main_trim_v1.mp4', 'result_body_pitch.jpg', 'body', '单画面展示连续俯仰变化：±28°。'),
+        ('左右侧倾｜连续 ±40°', 'media_body_frontier_v1/body_roll_CB.mp4', 'result_body_roll.jpg', 'body', '单画面展示左右侧倾变化：±40°。'),
         ('高度＋roll＋pitch 联合姿态', 'media_stage/body_combined.mp4', 'result_body_combined.jpg', 'body', '40 cm 高度，roll +5°、pitch −5°联合静态姿态。'),
     ]
     arm_tasks = [
@@ -99,7 +99,7 @@ def build_demo_landing(p):
         ('terrain', '挑战地形', '俯身穿越、稀疏梅花桩、不规则楼梯与窄梁。', 'terrain'),
         ('motion', '运动与步态', '0.5、1、3、5 m/s 速度目标，以及行走中的步态切换。', 'motion'),
         ('body', '身体姿态', '连续高度、俯仰、侧倾变化与多轴联合姿态。', 'body'),
-        ('coordination', 'B+C 协同', '将合并展示中的五项四足—机械臂协同任务拆成独立视频卡片。', 'coordination'),
+        ('coordination', 'B+C 协同', '每段视频保留左右对照；放大查看四足与机械臂协同任务。', 'coordination'),
         ('ablation', '自我消融', '按 Body、Contact、Body＋Contact 三类任务查看已有 C+B、C-only 与 B-only 阶段素材。', 'ablation'),
     ]
     result_tabs = ''.join(f'<button class="p2-tab{" is-active" if i == 0 else ""}" id="tab-{key}" type="button" role="tab" aria-selected="{"true" if i == 0 else "false"}" aria-controls="panel-{key}" tabindex="{0 if i == 0 else -1}">{e(title)}</button>' for i,(key,title,_,_) in enumerate(result_groups))
