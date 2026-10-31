@@ -1,0 +1,79 @@
+{
+  "version": "v24_two_target_partial",
+  "run_id": "collection_flow_goal_v2_20261031",
+  "date": "2026-10-31",
+  "status": "partial_failure",
+  "success": false,
+  "scope": {
+    "requested_collection_count": 2,
+    "scene_catalog_count": 24,
+    "public_targets_discovered": 2,
+    "public_targets_completed": 1,
+    "full_task_success": false
+  },
+  "simulation": {
+    "isaac_sim": "5.1",
+    "renderer": "RTX 5080",
+    "physics": "CPU PhysX",
+    "duration_s": 256.26499999983946,
+    "gpu_reset_during_run": false,
+    "session_count": 1
+  },
+  "first_target": {
+    "public_target_id": "visual_2b5d8b2862f24415aec13c78ae61bdf4",
+    "event": "completed",
+    "completed_at_s": 203.81499999988714,
+    "bin_id": "bin_0_can",
+    "carry_net_displacement_m": 1.2730454524300632,
+    "empty_hand_return_completed_at_s": 225.25499999986764,
+    "actual_finger_feedback_same_body": true,
+    "approx_bilateral_finger_force_n": [
+      8.6,
+      8.6
+    ]
+  },
+  "second_target": {
+    "public_target_id": "visual_f99cc1e182bd4ab7aa542bd0eda5aec6",
+    "discovered_at_s": 225.2999999998676,
+    "assigned_and_approaching": true,
+    "completed": false
+  },
+  "stop": {
+    "sim_frame_id": 51253,
+    "time_s": 256.26499999983946,
+    "stage": "departure",
+    "reason": "body_navigation_cumulative_budget_exhausted",
+    "details": "body_navigation_cumulative_budget_exhausted during second-cycle departure; second coarse approach had not started"
+  },
+  "perception_scope": {
+    "sensor_input": "actual RGB-D",
+    "uav_detection": "external manual box annotation on each cycle current frame",
+    "ground_front_and_wrist": "first cycle external manual box annotations",
+    "final_sam_mask_review": "first cycle external visual confirmation",
+    "autonomous_uav_detection_proven": false,
+    "autonomous_cross_view_identity_proven": false
+  },
+  "arm_control": "temporary joint PD baseline (Kp=60, Kd=12); team grasp algorithm is not yet delivered",
+  "video": {
+    "file": "continuous_flow_v24_two_target_partial.mp4",
+    "observer_views": [
+      "observer_wide",
+      "observer_side"
+    ],
+    "frame_rate_fps": 5,
+    "resolution": "2560x720",
+    "policy_input": false,
+    "scoring_input": false
+  },
+  "evidence_source": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v2_20261031",
+  "authoritative_files": [
+    "report.json",
+    "continuous_flow_trace.jsonl",
+    "events.jsonl",
+    "flow_events.jsonl",
+    "collection_cycles.jsonl",
+    "physics_witness.jsonl",
+    "observer_rgb/manifest.jsonl",
+    "source_snapshot/"
+  ]
+}

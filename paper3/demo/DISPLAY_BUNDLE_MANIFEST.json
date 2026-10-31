@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source": "capability_research/docs/evidence/multiagent_grabgarbage_task_flow_20261030",
+  "files": {
+    "continuous_flow_v23_media_manifest.json": {
+      "bytes": 4302125,
+      "sha256": "cb7522b0689fda4ebda2557b3be54999fafe4e80de5905ad50ad5bec32eb00d5"
+    },
+    "continuous_flow_v23_onboard.jpg": {
+      "bytes": 176087,
+      "sha256": "c28798251fe5f8593b00a5aaedb00104848ed1bb73c637bc0bc73d6ef192511a"
+    },
+    "continuous_flow_v23_onboard.mp4": {
+      "bytes": 21678840,
+      "sha256": "733fb31e503d1f9b97061952cae002a734e1da05a4c6ffda54c79ad6557f49db"
+    },
+    "continuous_flow_v23_result.json": {
+      "bytes": 10484,
+      "sha256": "89ca79e2bfc9b8b152be45382d2497ef2e38f25cad4eba53ec6da8df31e77ae2"
+    },
+    "continuous_flow_v23_third.jpg": {
+      "bytes": 421762,
+      "sha256": "7067235a1be3db7b58ca406d83782ffe21e20c6fd04253561d7516e50fdddec4"
+    },
+    "continuous_flow_v23_third.mp4": {
+      "bytes": 27376530,
+      "sha256": "7b93632918f599764ad69215e5148baa6d079af477cdc20a22164b24b5f3e06f"
+    },
+    "continuous_flow_v23_timeline.json": {
+      "bytes": 1410383,
+      "sha256": "0c72c0dc0dd97bf52fdf04ae348dcdf00765b1ee5c1852b03473a12f11c949b6"
+    },
+    "continuous_flow_v24_two_target_partial.jpg": {
+      "bytes": 325657,
+      "sha256": "f0a1ef032d67f34ce09ce447e57ed591a5c6b035e6c16b03cacc11af54b72641"
+    },
+    "continuous_flow_v24_two_target_partial.mp4": {
+      "bytes": 17658292,
+      "sha256": "24f9ac785377cebe69a43c4f1bbc195238a8d42ade41ddce19046433c47bc8c4"
+    },
+    "continuous_flow_v24_two_target_partial_result.json": {
+      "bytes": 2629,
+      "sha256": "a9041c47b82bbd9a25cf98a68337a07f8238bfd1cda0d034cad44a241afa581d"
+    },
+    "continuous_flow_v25_two_target_time_budget_partial.jpg": {
+      "bytes": 308150,
+      "sha256": "99d3fd6e6f96cdc9e732f3c2ed8187bbaad32a3fbd37b0266344211d42efd2c8"
+    },
+    "continuous_flow_v25_two_target_time_budget_partial.mp4": {
+      "bytes": 9845678,
+      "sha256": "e8b07cd7046c6a49a23355c4e8b1379265082df541c4485b4202e319597f5d2e"
+    },
+    "continuous_flow_v25_two_target_time_budget_partial_result.json": {
+      "bytes": 2948,
+      "sha256": "6a34dab9b42ed01cfa997431fe0f0117b941a7109b35f70af7c594fa82c2bb73"
+    },
+    "continuous_flow_v26_two_target_collection_complete.jpg": {
+      "bytes": 309047,
+      "sha256": "de79248314bb296fe53b919ad91caed7f165e90dba20ab8b503b4893e46e69c7"
+    },
+    "continuous_flow_v26_two_target_collection_complete.mp4": {
+      "bytes": 13355943,
+      "sha256": "98a7993377b97bb871a0c09526c0e2116b1a5ba657297c091940e87dc79ae358"
+    },
+    "continuous_flow_v26_two_target_collection_complete_result.json": {
+      "bytes": 4328,
+      "sha256": "651ac076a52ddc9d09f2227b61e4a6f55a9c9349cdbcc2d4d748f80b5b823798"
+    },
+    "index.html": {
+      "bytes": 129684,
+      "sha256": "d46d53da2e80c6babd90ed859b888b0437dd93517fd42adfa536e7008eca33b1"
+    },
+    "展示说明.md": {
+      "bytes": 1790,
+      "sha256": "894ac7c4e19414249ac372d1f75b602bb5d530e4ccf2577e4096dedc17356ae3"
+    },
+    "版本记录.md": {
+      "bytes": 6743,
+      "sha256": "d9ddfe2ea9dec41983f7ab22862b8becd83434d9f385a58fb622f25df477d3b1"
+    }
+  },
+  "updated_for": "v26_two_target_collection_complete_20261031"
+}

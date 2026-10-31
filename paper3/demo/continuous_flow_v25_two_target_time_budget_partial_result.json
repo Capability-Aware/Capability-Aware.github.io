@@ -1,0 +1,73 @@
+{
+  "version": "v25_two_target_time_budget_partial",
+  "run_id": "collection_flow_goal_v3_20261031",
+  "source_output": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v3_20261031",
+  "sim_duration_s": 276.3199999998212,
+  "wall_seconds": 3953.055089250207,
+  "runner_finished": true,
+  "requested_collection_count": 2,
+  "collection_completed": false,
+  "collection_flow_completed": false,
+  "sticky_failure": "body_navigation_cumulative_budget_exhausted",
+  "cycles": [
+    {
+      "cycle_index": 1,
+      "public_target_id": "visual_f09cab154c874e98834a6af9d4312423",
+      "completed_at_s": 204.5149999998865,
+      "completed_bin": "bin_0_can",
+      "continuous_flow_qualified": true,
+      "actual_empty_hand_net_m": 2.381987373147409,
+      "actual_coarse_net_m": 1.5035941388835652,
+      "actual_carry_net_m": 1.2954758613971789
+    }
+  ],
+  "public_queue": {
+    "observed_public_targets": 2,
+    "completed_public_targets": 1,
+    "failed_targets": 1,
+    "configured_goal_reached": false,
+    "declared_scene_total": null,
+    "full_task_success": false
+  },
+  "full_scene_catalog_total": 24,
+  "full_task_success": false,
+  "autonomous_perception": false,
+  "current_image_external_annotations": true,
+  "temporary_grasp_controller": "关节 PD，Kp=60、Kd=12；正式抓取算法仍待负责同学交付",
+  "quadruped_controller": "冻结 MoE 26399 运控",
+  "observer_recording": {
+    "wide_frames": 1382,
+    "side_frames": 1382,
+    "fps": 5,
+    "policy_input": false,
+    "scoring_input": false
+  },
+  "runtime_input_verification": {
+    "verified": true,
+    "all_listed_input_dependencies_rehashed": true,
+    "rehashed_file_entries": 71,
+    "changed_files": [],
+    "scope": "all listed actual runtime inputs; unresolved assets and unlisted SDK binaries remain outside scope"
+  },
+  "evidence_summary": {
+    "schema_version": 1,
+    "runner_finished": true,
+    "collection_mission_success": false,
+    "mission_outcome": "running",
+    "physics_frames": 55264,
+    "complete_physics_frames": 55264,
+    "continuous_physics_frames": true,
+    "all_logged_frames_complete": true,
+    "last_physics_frame": 55264,
+    "last_physics_time_s": 276.3199999998212,
+    "visual_events": 5096,
+    "mission_events": 2886,
+    "source": "trusted simulator side channel; not policy observation",
+    "limitations": "No NN masks or RGB arrays are logged; frame references alone cannot reproduce recognition"
+  },
+  "notes": [
+    "首件在 204.515 s 投入 bin_0_can；第二件发现并分配后，离桶 departure 阶段于 276.320 s 触发 body_navigation_cumulative_budget_exhausted，第二次接近未开始。",
+    "第二件首次进入 10 cm 到点区间后，冻结步态漂移使其无法维持原严格到位门限与静止驻留；累计路径预算达到 2 m。",
+    "这轮用于定位失效原因，不能算双目标完成。"
+  ]
+}

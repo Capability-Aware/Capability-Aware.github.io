@@ -1,0 +1,103 @@
+{
+  "version": "v26_two_target_collection_complete",
+  "run_id": "collection_flow_goal_v4_20261031",
+  "source_output": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v4_20261031",
+  "sim_duration_s": 381.50499999972556,
+  "wall_seconds": 6138.829896157142,
+  "runner_finished": true,
+  "requested_collection_count": 2,
+  "collection_completed": true,
+  "collection_flow_completed": true,
+  "sticky_failure": null,
+  "cycles": [
+    {
+      "cycle_index": 1,
+      "public_target_id": "visual_992482ed6cd44213acc4fa2766fa7476",
+      "completed_at_s": 201.36499999988936,
+      "completed_bin": "bin_0_can",
+      "continuous_flow_qualified": true,
+      "actual_empty_hand_net_m": 2.372881572372393,
+      "actual_coarse_net_m": 1.4988204650891952,
+      "actual_carry_net_m": 1.2848025583271145
+    },
+    {
+      "cycle_index": 2,
+      "public_target_id": "visual_cb2d89edb4ca42a58ae3165aaff8e0f2",
+      "completed_at_s": 380.50499999972646,
+      "completed_bin": "bin_0_can",
+      "continuous_flow_qualified": true,
+      "actual_empty_hand_net_m": 1.3295218040622583,
+      "actual_coarse_net_m": 0.0025102968896770833,
+      "actual_carry_net_m": 1.336139290499799
+    }
+  ],
+  "public_queue": {
+    "observed_public_targets": 2,
+    "completed_public_targets": 2,
+    "failed_targets": 0,
+    "configured_goal_reached": true,
+    "declared_scene_total": null,
+    "full_task_success": false
+  },
+  "full_scene_catalog_total": 24,
+  "full_task_success": false,
+  "autonomous_perception": false,
+  "current_image_external_annotations": true,
+  "temporary_grasp_controller": "关节 PD，Kp=60、Kd=12；正式抓取算法仍待负责同学交付",
+  "quadruped_controller": "冻结 MoE 26399 运控",
+  "observer_recording": {
+    "wide_frames": 1908,
+    "side_frames": 1908,
+    "fps": 5,
+    "policy_input": false,
+    "scoring_input": false
+  },
+  "runtime_input_verification": {
+    "verified": true,
+    "all_listed_input_dependencies_rehashed": true,
+    "rehashed_file_entries": 71,
+    "changed_files": [],
+    "scope": "all listed actual runtime inputs; unresolved assets and unlisted SDK binaries remain outside scope"
+  },
+  "evidence_summary": {
+    "schema_version": 1,
+    "runner_finished": true,
+    "collection_mission_success": false,
+    "mission_outcome": "running",
+    "physics_frames": 76301,
+    "complete_physics_frames": 76301,
+    "continuous_physics_frames": true,
+    "all_logged_frames_complete": true,
+    "last_physics_frame": 76301,
+    "last_physics_time_s": 381.50499999972556,
+    "visual_events": 8362,
+    "mission_events": 3044,
+    "source": "trusted simulator side channel; not policy observation",
+    "limitations": "No NN masks or RGB arrays are logged; frame references alone cannot reproduce recognition"
+  },
+  "notes": [
+    "同一 Session 中，两件公开目标均完成接近、复观、PD 抓取、携物行走并在物理任务事件中投到正确的 bin_0_can；空手收臂后第二轮继续执行。",
+    "departure 阶段到点后锁存 ZERO，保持在 16 cm 有界包络内并实际停稳，再进入第二目标导航；未触发累计导航预算失败。",
+    "目标框及腕部 SAM mask/罐模型由当前真实图像外部标注与复核；observer 视频只用于展示，不是策略输入或评分输入。",
+    "场景共有 24 件，仅观察并完成其中 2 件；full_task_success=false，不能声称全场清理完成。",
+    "mission outcome 在 evidence_summary 中仍是 running；这里只声明连续双目标 collection flow 完成，按 full_task_success 仍未完成完整任务。"
+  ],
+  "events": {
+    "cycle_1_grasp_confirmed_s": 140.02499999994515,
+    "cycle_1_completed_s": 201.36499999988936,
+    "cycle_1_bin": "bin_0_can",
+    "cycle_2_grasp_confirmed_s": 312.0999999997887,
+    "cycle_2_release_requested_s": 377.9449999997288,
+    "cycle_2_completed_s": 380.50499999972646,
+    "cycle_2_bin": "bin_0_can"
+  },
+  "departure_latch": {
+    "entry_radius_m": 0.1,
+    "hold_envelope_m": 0.16,
+    "actual_arrival_s": 235.89499999985796,
+    "zero_quiet_dwell_completed_s": 236.70499999985722,
+    "result": "passed; advanced to next target approach"
+  },
+  "source_commit": "11f1f7d2",
+  "source_branch": "dev/grab-garbage-5080-20261031"
+}
