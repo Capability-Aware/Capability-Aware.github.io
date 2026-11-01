@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "source": "Grab-Garbage curated desktop showcase bundle (media and summaries only)",
+  "source": "curated Grab-Garbage showcase bundle",
   "files": {
     "3/demo/README.md": {
-      "bytes": 758,
-      "sha256": "6d689f2ec66c7e7a1ff5d527071984a0f6cde6ada2b381051af3994abc62dc5b"
+      "bytes": 546,
+      "sha256": "4970f35eb209d0327247a5d203cbd49220dcffd3af8e8d22fa18c39c0bb320ac"
     },
     "3/demo/continuous_flow_v23_media_manifest.json": {
       "bytes": 4302125,
@@ -163,12 +163,12 @@
       "sha256": "2726fc18b4cd701d85f0ef860229747ed826df0594f0fc8f8b6f91d82f62bcf4"
     },
     "3/demo/index.html": {
-      "bytes": 141756,
-      "sha256": "1833795aad3bb09d3df8ce5e4751319fcaf14707613632ae9f7ef0f42f93c756"
+      "bytes": 19930,
+      "sha256": "89da1e85516984bc7b439cb0292f5cb639326eb2628c9f898627a54cfad26bc4"
     },
     "3/demo/展示说明.md": {
-      "bytes": 4258,
-      "sha256": "9139fd48f355c66f2db44cb3bb114e46dc977704fc0bd53692bba3f2f62f3a91"
+      "bytes": 4654,
+      "sha256": "35182ddf7bdb42eb94674cf134b5b0eccef68c95c05d866c50504522f5f82635"
     },
     "3/demo/版本记录.md": {
       "bytes": 15894,
@@ -235,6 +235,6 @@
       "sha256": "52baff5b7b3087b118fcd8454905fb583fdb6283b472a0626fd95e513b8b5082"
     }
   },
-  "updated_for": "v36_three_target_partial",
+  "updated_for": "v36_featured_partial",
   "updated_at": "2026-11-01"
 }
