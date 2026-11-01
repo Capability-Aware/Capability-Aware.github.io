@@ -1,0 +1,77 @@
+{
+  "version": "v37",
+  "run_id": "collection_flow_v37_20261101",
+  "status": "two_target_flow_completed_full_scene_partial",
+  "duration_sim_s": 374.14499999973225,
+  "requested_targets": 2,
+  "discovered_public_targets": 2,
+  "completed_targets": 2,
+  "scene_catalog_targets": 24,
+  "collection_rate": 0.08333333333333333,
+  "collection_flow_completed": true,
+  "full_task_success": false,
+  "bin_occupancy": {
+    "bin_0_plastic_bottle": 0,
+    "bin_0_can": 2,
+    "bin_0_paper": 0,
+    "bin_1_plastic_bottle": 0,
+    "bin_1_can": 0,
+    "bin_1_paper": 0,
+    "bin_2_plastic_bottle": 0,
+    "bin_2_can": 0,
+    "bin_2_paper": 0
+  },
+  "event_counts": {
+    "discovered": 2,
+    "claimed": 2,
+    "approaching": 2,
+    "reobserved": 2845,
+    "grasp_requested": 2,
+    "physical_contact_associated": 2,
+    "grasp_confirmed": 2,
+    "observation_stale": 2,
+    "release_requested": 2,
+    "completed": 2
+  },
+  "videos": {
+    "observer": "continuous_flow_v37_two_target_complete.mp4",
+    "onboard": "continuous_flow_v37_onboard_four_view.mp4",
+    "fps": 5.0,
+    "frame_count": 1871,
+    "duration_s": 374.2,
+    "observer_layout": "observer_wide + observer_side",
+    "onboard_layout": "uav_down + ground_front + ground_rear + ground_wrist; nearest actual exposures within 55ms",
+    "six_view": {
+      "file": "continuous_flow_v37_six_view_3x2.mp4",
+      "layout": "3 rows x 2 columns: UAV, ground-front, ground-rear, wrist, observer-wide, observer-side",
+      "width": 1600,
+      "height": 1350,
+      "fps": 5.0,
+      "frame_count": 1871,
+      "duration_s": 374.2
+    }
+  },
+  "evidence": {
+    "report_sha256": "fe6f64a13c336c8151d96cca98488e00b45c467fe27f2af4be6c940a5d3bc6a7",
+    "task_manifest_sha256": "7306741e02161064f16bc72bb10771128b8ae91d01f2d1018920d18e6ccb7b04",
+    "observer_manifest_sha256": "d5c019b0291749715bac12d85bfbe689b63c16449d2c6516a63a52265e0706e9",
+    "rgbd_camera_frame_counts": {
+      "ground_front": 3742,
+      "ground_rear": 3742,
+      "ground_wrist": 7483,
+      "uav_down": 3742
+    },
+    "observer_camera_frame_counts": {
+      "observer_side": 1871,
+      "observer_wide": 1871
+    },
+    "sync_frame_manifest": "continuous_flow_v37_sync_frames.jsonl",
+    "source_run_directory": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-v37-20261101/outputs/multiagent-grabgarbage/collection_flow_v37_20261101"
+  },
+  "input_and_algorithm_boundaries": [
+    "UAV、四足前视、腕视目标框和腕部 SAM/直立罐确认均来自确切当前图像的外部人工标注/复核；非自主识别。",
+    "四足复用冻结 MoE 26399；正式抓取算法尚未交付，机械臂使用临时关节 PD（Kp=60、Kd=12）。",
+    "observer 双视角仅用于展示，不进入策略或评分；同一 session 未中途重置。",
+    "两件均正确投进 bin_0_can；场景目录 24 件只完成 2 件，不能称全场任务完成。"
+  ]
+}

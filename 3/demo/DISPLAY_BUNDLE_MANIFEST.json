@@ -3,8 +3,8 @@
   "source": "curated Grab-Garbage showcase bundle",
   "files": {
     "3/demo/README.md": {
-      "bytes": 546,
-      "sha256": "4970f35eb209d0327247a5d203cbd49220dcffd3af8e8d22fa18c39c0bb320ac"
+      "bytes": 817,
+      "sha256": "d3deb1182047522eeff10d594b7a1a815ffaf0704d0b9ba68f1e040d3a25d4c4"
     },
     "3/demo/continuous_flow_v23_media_manifest.json": {
       "bytes": 4302125,
@@ -163,16 +163,16 @@
       "sha256": "2726fc18b4cd701d85f0ef860229747ed826df0594f0fc8f8b6f91d82f62bcf4"
     },
     "3/demo/index.html": {
-      "bytes": 19930,
-      "sha256": "89da1e85516984bc7b439cb0292f5cb639326eb2628c9f898627a54cfad26bc4"
+      "bytes": 20978,
+      "sha256": "d47f36b3747e246774d7f3a718609b624faa79dde86702e32146d26a393c45b2"
     },
     "3/demo/展示说明.md": {
-      "bytes": 4654,
-      "sha256": "35182ddf7bdb42eb94674cf134b5b0eccef68c95c05d866c50504522f5f82635"
+      "bytes": 4988,
+      "sha256": "c4ba9138db193586ce746ee69d8136a2906297efe9e5f8c74c479a680ae87394"
     },
     "3/demo/版本记录.md": {
-      "bytes": 15894,
-      "sha256": "a8622f734feae41231989cc8e6660a54de84f74a7746e45d925c7f6b496b45e1"
+      "bytes": 16933,
+      "sha256": "f16470046cc80353335043f341c80029a93a10eeadb66d9532c2836a32ce49bd"
     },
     "assets/videos/paper3/continuous_flow_v23_onboard.mp4": {
       "bytes": 21678840,
@@ -233,6 +233,38 @@
     "assets/videos/paper3/continuous_flow_v36_three_target_partial.mp4": {
       "bytes": 19579246,
       "sha256": "52baff5b7b3087b118fcd8454905fb583fdb6283b472a0626fd95e513b8b5082"
+    },
+    "assets/videos/paper3/continuous_flow_v37_six_view_3x2.mp4": {
+      "bytes": 42199163,
+      "sha256": "50a1661c6f111779f6a80d745b977d0b3974b45114895c3f7766851277493602"
+    },
+    "assets/videos/paper3/continuous_flow_v37_two_target_complete.mp4": {
+      "bytes": 47030741,
+      "sha256": "5149f07a0b3f09f6ffd685e0c3f2ff32e0b053803c5ddc07d8da22f91164c7ff"
+    },
+    "assets/videos/paper3/continuous_flow_v37_onboard_four_view.mp4": {
+      "bytes": 36421807,
+      "sha256": "b0fb1cce1a340c770bed8466bf25f7b3654dab0a892590ff11d5d49f4e6e1693"
+    },
+    "3/demo/continuous_flow_v37_six_view_3x2.jpg": {
+      "bytes": 301523,
+      "sha256": "c44fd384f2315590f3cb7b01aba11a12ebe6f3759467d595d7eb6be72aa20f19"
+    },
+    "3/demo/continuous_flow_v37_two_target_complete.jpg": {
+      "bytes": 344592,
+      "sha256": "3dc517a4f4afa9c5a897d78505a0fa0a9b0abd26c55a233974013fbd4e64cd72"
+    },
+    "3/demo/continuous_flow_v37_onboard_four_view.jpg": {
+      "bytes": 192692,
+      "sha256": "5641d5a07927e6a82093db1dfec86066a3443cc193d33715c99156090a851d16"
+    },
+    "3/demo/continuous_flow_v37_result.json": {
+      "bytes": 2904,
+      "sha256": "2afd5fc00f0804838e44de5b13e908bd1b83947256500417fcecc28875983428"
+    },
+    "3/demo/continuous_flow_v37_sync_frames.jsonl": {
+      "bytes": 2057379,
+      "sha256": "82732d0d2a0efa80ba3bc4f81e178915963e9e3166ec1f3ff393d472dd82aba9"
     }
   },
   "updated_for": "v36_featured_partial",
