@@ -1,0 +1,24 @@
+{
+  "version": "v31",
+  "run_id": "collection_flow_goal_v9_20261101",
+  "source_run_directory": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v9_20261101",
+  "title": "目标框提交后代码异常",
+  "status": "partial_or_failed",
+  "requested_targets": 3,
+  "actual_capture_frames_per_view": 182,
+  "encoded_fps": 5.0,
+  "video_duration_s": 36.4,
+  "description": "启动到首次航拍输入附近后遇未定义变量，未进入地面闭环。",
+  "failure": "NameError: local_target_paired",
+  "actual_physics_report_available": false,
+  "external_current_frame_annotations": true,
+  "locomotion": "冻结 MoE 26399",
+  "grasp_controller": "临时关节 PD（Kp=60, Kd=12）；正式抓取算法尚未交付",
+  "full_task_success": false,
+  "media": {
+    "video": "continuous_flow_v31_goal_partial.mp4",
+    "poster": "continuous_flow_v31_goal_partial.jpg"
+  },
+  "raw_evidence": "原始 RGB-D、逐拍轨迹、物理见证和请求/回复保留在 capability_research outputs 运行目录。",
+  "encoded_frame_count": 182
+}

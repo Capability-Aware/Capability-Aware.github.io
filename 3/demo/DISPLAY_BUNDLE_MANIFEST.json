@@ -1,83 +1,240 @@
 {
   "schema_version": 1,
-  "source": "capability_research/docs/evidence/multiagent_grabgarbage_task_flow_20261030",
+  "source": "Grab-Garbage curated desktop showcase bundle (media and summaries only)",
   "files": {
-    "continuous_flow_v23_media_manifest.json": {
+    "3/demo/README.md": {
+      "bytes": 758,
+      "sha256": "6d689f2ec66c7e7a1ff5d527071984a0f6cde6ada2b381051af3994abc62dc5b"
+    },
+    "3/demo/continuous_flow_v23_media_manifest.json": {
       "bytes": 4302125,
       "sha256": "cb7522b0689fda4ebda2557b3be54999fafe4e80de5905ad50ad5bec32eb00d5"
     },
-    "continuous_flow_v23_onboard.jpg": {
+    "3/demo/continuous_flow_v23_onboard.jpg": {
       "bytes": 176087,
       "sha256": "c28798251fe5f8593b00a5aaedb00104848ed1bb73c637bc0bc73d6ef192511a"
     },
-    "continuous_flow_v23_onboard.mp4": {
-      "bytes": 21678840,
-      "sha256": "733fb31e503d1f9b97061952cae002a734e1da05a4c6ffda54c79ad6557f49db"
-    },
-    "continuous_flow_v23_result.json": {
+    "3/demo/continuous_flow_v23_result.json": {
       "bytes": 10484,
       "sha256": "89ca79e2bfc9b8b152be45382d2497ef2e38f25cad4eba53ec6da8df31e77ae2"
     },
-    "continuous_flow_v23_third.jpg": {
+    "3/demo/continuous_flow_v23_third.jpg": {
       "bytes": 421762,
       "sha256": "7067235a1be3db7b58ca406d83782ffe21e20c6fd04253561d7516e50fdddec4"
     },
-    "continuous_flow_v23_third.mp4": {
-      "bytes": 27376530,
-      "sha256": "7b93632918f599764ad69215e5148baa6d079af477cdc20a22164b24b5f3e06f"
-    },
-    "continuous_flow_v23_timeline.json": {
+    "3/demo/continuous_flow_v23_timeline.json": {
       "bytes": 1410383,
       "sha256": "0c72c0dc0dd97bf52fdf04ae348dcdf00765b1ee5c1852b03473a12f11c949b6"
     },
-    "continuous_flow_v24_two_target_partial.jpg": {
+    "3/demo/continuous_flow_v24_two_target_partial.jpg": {
       "bytes": 325657,
       "sha256": "f0a1ef032d67f34ce09ce447e57ed591a5c6b035e6c16b03cacc11af54b72641"
     },
-    "continuous_flow_v24_two_target_partial.mp4": {
-      "bytes": 17658292,
-      "sha256": "24f9ac785377cebe69a43c4f1bbc195238a8d42ade41ddce19046433c47bc8c4"
-    },
-    "continuous_flow_v24_two_target_partial_result.json": {
+    "3/demo/continuous_flow_v24_two_target_partial_result.json": {
       "bytes": 2629,
       "sha256": "a9041c47b82bbd9a25cf98a68337a07f8238bfd1cda0d034cad44a241afa581d"
     },
-    "continuous_flow_v25_two_target_time_budget_partial.jpg": {
+    "3/demo/continuous_flow_v25_two_target_time_budget_partial.jpg": {
       "bytes": 308150,
       "sha256": "99d3fd6e6f96cdc9e732f3c2ed8187bbaad32a3fbd37b0266344211d42efd2c8"
     },
-    "continuous_flow_v25_two_target_time_budget_partial.mp4": {
-      "bytes": 9845678,
-      "sha256": "e8b07cd7046c6a49a23355c4e8b1379265082df541c4485b4202e319597f5d2e"
-    },
-    "continuous_flow_v25_two_target_time_budget_partial_result.json": {
+    "3/demo/continuous_flow_v25_two_target_time_budget_partial_result.json": {
       "bytes": 2948,
       "sha256": "6a34dab9b42ed01cfa997431fe0f0117b941a7109b35f70af7c594fa82c2bb73"
     },
-    "continuous_flow_v26_two_target_collection_complete.jpg": {
+    "3/demo/continuous_flow_v26_two_target_collection_complete.jpg": {
       "bytes": 309047,
       "sha256": "de79248314bb296fe53b919ad91caed7f165e90dba20ab8b503b4893e46e69c7"
     },
-    "continuous_flow_v26_two_target_collection_complete.mp4": {
-      "bytes": 13355943,
-      "sha256": "98a7993377b97bb871a0c09526c0e2116b1a5ba657297c091940e87dc79ae358"
-    },
-    "continuous_flow_v26_two_target_collection_complete_result.json": {
+    "3/demo/continuous_flow_v26_two_target_collection_complete_result.json": {
       "bytes": 4328,
       "sha256": "651ac076a52ddc9d09f2227b61e4a6f55a9c9349cdbcc2d4d748f80b5b823798"
     },
-    "index.html": {
-      "bytes": 129684,
-      "sha256": "d46d53da2e80c6babd90ed859b888b0437dd93517fd42adfa536e7008eca33b1"
+    "3/demo/continuous_flow_v27_three_target_timeout_partial.jpg": {
+      "bytes": 224283,
+      "sha256": "54b9b93af61cb0e50f3d45ec4f038047d4b58fbea03f44b0f9acbacda61a5709"
     },
-    "展示说明.md": {
-      "bytes": 1790,
-      "sha256": "894ac7c4e19414249ac372d1f75b602bb5d530e4ccf2577e4096dedc17356ae3"
+    "3/demo/continuous_flow_v27_three_target_timeout_partial_result.json": {
+      "bytes": 4731,
+      "sha256": "c10a6935cd326a07aefb084888252f8fe2590c9dfa89860db515fe78a760161f"
     },
-    "版本记录.md": {
-      "bytes": 6743,
-      "sha256": "d9ddfe2ea9dec41983f7ab22862b8becd83434d9f385a58fb622f25df477d3b1"
+    "3/demo/continuous_flow_v28_two_target_third_not_visible_partial.jpg": {
+      "bytes": 224846,
+      "sha256": "06c551bfedde05910040ee9bae4d2e13c8bd0b4f937d44a979aef8d1bb7ffafe"
+    },
+    "3/demo/continuous_flow_v28_two_target_third_not_visible_partial_result.json": {
+      "bytes": 12060,
+      "sha256": "70845827dc560d3acb34a3f8b758c83e391dc0fdcc4475a678e74d51709a239b"
+    },
+    "3/demo/continuous_flow_v29_goal_partial.jpg": {
+      "bytes": 221878,
+      "sha256": "b665adb6eec2c7f24a295c0bf11e4852d25bbd389e3c6be5380b8c79a4616a22"
+    },
+    "3/demo/continuous_flow_v29_goal_partial.json": {
+      "bytes": 1448,
+      "sha256": "2726bb6eca9d315f406916fe2d75f2434846dd1d88f141188b6390d47ce5697c"
+    },
+    "3/demo/continuous_flow_v30_goal_partial.jpg": {
+      "bytes": 223201,
+      "sha256": "b70d74ec1f958b18d471ba9bbbff63321e0673d964570f50e77ec5d55ff77741"
+    },
+    "3/demo/continuous_flow_v30_goal_partial.json": {
+      "bytes": 1492,
+      "sha256": "d6bb80d45c81c8e20c942bf40867d6a7a11d3239cec1401d2ed166185cb5dcc1"
+    },
+    "3/demo/continuous_flow_v31_goal_partial.jpg": {
+      "bytes": 224806,
+      "sha256": "14f9144c8284f9d32b60c9012c7bb252c26171f4cc85cfc4be8d54672383de41"
+    },
+    "3/demo/continuous_flow_v31_goal_partial.json": {
+      "bytes": 1116,
+      "sha256": "42631d34d69f13613ee99e3ad915f95fba13af989696acab901a1db1edb6d8b4"
+    },
+    "3/demo/continuous_flow_v32_goal_partial.jpg": {
+      "bytes": 204880,
+      "sha256": "03b3c79711f574e8f1dbd84f2b0ec331e1fdbd97de6287cee9c0e6e2be89e60b"
+    },
+    "3/demo/continuous_flow_v32_goal_partial.json": {
+      "bytes": 1126,
+      "sha256": "e767c5872ff89e2211565786a4fef2443b5dc24a6b03a98d8e9b0c1677b68d42"
+    },
+    "3/demo/continuous_flow_v33_goal_partial.jpg": {
+      "bytes": 208231,
+      "sha256": "81a5a1769defe192347e17bee8267369e8e1229f2568781d23e715d27df3cc7e"
+    },
+    "3/demo/continuous_flow_v33_goal_partial.json": {
+      "bytes": 2922,
+      "sha256": "30e5ef58fa6eea943652af86ad2496b59b1a556f87437b6d2a0fc6924ae80e54"
+    },
+    "3/demo/continuous_flow_v34_single_target_deposit.jpg": {
+      "bytes": 484377,
+      "sha256": "b9b39f3d631c56a6f65ef96de2262377f939957aa718dcf4cad1501285846f0c"
+    },
+    "3/demo/continuous_flow_v34_single_target_deposit.json": {
+      "bytes": 3181,
+      "sha256": "152f779dac263899df3fead9151c4ccff0c67a2bd6b642d54e19a483aafb1354"
+    },
+    "3/demo/continuous_flow_v35_two_target_complete.jpg": {
+      "bytes": 484238,
+      "sha256": "c29ab30a9f173fe2de108b62c80921952bd8717bcdcd06d7b2b2d767ce612f97"
+    },
+    "3/demo/continuous_flow_v35_two_target_complete.json": {
+      "bytes": 10049,
+      "sha256": "a3b2c4bb09807bfd7d96f7bb0e3ba30e4fae314438171b95362a2eb3138d0279"
+    },
+    "3/demo/continuous_flow_v36_three_target_partial.jpg": {
+      "bytes": 485403,
+      "sha256": "ee1a372af45495455b1f0e0b574034715dfb2eff83456481a52586f7da483e69"
+    },
+    "3/demo/continuous_flow_v36_three_target_partial.json": {
+      "bytes": 1953,
+      "sha256": "0433350e8e49bafddf86ec86cc1c447c40c1138c4c29c810ea2d15add9c224ed"
+    },
+    "3/demo/continuous_flow_v3_diagnostic.html": {
+      "bytes": 86445,
+      "sha256": "347d0c12277ca3191d89f7bbfbbfec17d1aebd92713e70297d8cc013b942aacb"
+    },
+    "3/demo/continuous_flow_v3_media_manifest.json": {
+      "bytes": 272713,
+      "sha256": "6ac584267754087412a6f246bf4a67b3e05e7900fff5862b270fd0159580754c"
+    },
+    "3/demo/continuous_flow_v3_onboard.jpg": {
+      "bytes": 152441,
+      "sha256": "329e9ed1a9805496621305db7623719f8bf8ba8062a1a9f4c62edf4cd088edea"
+    },
+    "3/demo/continuous_flow_v3_onboard.mp4": {
+      "bytes": 430906,
+      "sha256": "91dae2884de3a20723c984e0ec178f6cad985caf8af0fbcc9ee66a4a0526c1ce"
+    },
+    "3/demo/continuous_flow_v3_result.json": {
+      "bytes": 7857,
+      "sha256": "12845c50abf98478893305386fa69c8b0ac84325cf47654cd9a35c8703f14542"
+    },
+    "3/demo/continuous_flow_v3_third.jpg": {
+      "bytes": 423474,
+      "sha256": "4feedf72bbe8d9bf2f604fc124fdb1f7506990bf5cfbbfa001a9b4b1f8dfc763"
+    },
+    "3/demo/continuous_flow_v3_third.mp4": {
+      "bytes": 358453,
+      "sha256": "5d64989dd2822c5818c4d8f2640bf5988e173503c092c04f8d8425ec32e0101e"
+    },
+    "3/demo/continuous_flow_v3_timeline.json": {
+      "bytes": 76822,
+      "sha256": "2726fc18b4cd701d85f0ef860229747ed826df0594f0fc8f8b6f91d82f62bcf4"
+    },
+    "3/demo/index.html": {
+      "bytes": 141756,
+      "sha256": "1833795aad3bb09d3df8ce5e4751319fcaf14707613632ae9f7ef0f42f93c756"
+    },
+    "3/demo/展示说明.md": {
+      "bytes": 4258,
+      "sha256": "9139fd48f355c66f2db44cb3bb114e46dc977704fc0bd53692bba3f2f62f3a91"
+    },
+    "3/demo/版本记录.md": {
+      "bytes": 15894,
+      "sha256": "a8622f734feae41231989cc8e6660a54de84f74a7746e45d925c7f6b496b45e1"
+    },
+    "assets/videos/paper3/continuous_flow_v23_onboard.mp4": {
+      "bytes": 21678840,
+      "sha256": "733fb31e503d1f9b97061952cae002a734e1da05a4c6ffda54c79ad6557f49db"
+    },
+    "assets/videos/paper3/continuous_flow_v23_third.mp4": {
+      "bytes": 27376530,
+      "sha256": "7b93632918f599764ad69215e5148baa6d079af477cdc20a22164b24b5f3e06f"
+    },
+    "assets/videos/paper3/continuous_flow_v24_two_target_partial.mp4": {
+      "bytes": 17658292,
+      "sha256": "24f9ac785377cebe69a43c4f1bbc195238a8d42ade41ddce19046433c47bc8c4"
+    },
+    "assets/videos/paper3/continuous_flow_v25_two_target_time_budget_partial.mp4": {
+      "bytes": 9845678,
+      "sha256": "e8b07cd7046c6a49a23355c4e8b1379265082df541c4485b4202e319597f5d2e"
+    },
+    "assets/videos/paper3/continuous_flow_v26_two_target_collection_complete.mp4": {
+      "bytes": 13355943,
+      "sha256": "98a7993377b97bb871a0c09526c0e2116b1a5ba657297c091940e87dc79ae358"
+    },
+    "assets/videos/paper3/continuous_flow_v27_three_target_timeout_partial.mp4": {
+      "bytes": 4528593,
+      "sha256": "e055b63f29f6de9edc0a06fc609768af014f7493732ae95277701728a7b8e4b0"
+    },
+    "assets/videos/paper3/continuous_flow_v28_two_target_third_not_visible_partial.mp4": {
+      "bytes": 14300324,
+      "sha256": "4e248be2e1d9ad27aa9abde00fa3f5fd7cd5ca2b04868146dc1ae5e36988103c"
+    },
+    "assets/videos/paper3/continuous_flow_v29_goal_partial.mp4": {
+      "bytes": 1916435,
+      "sha256": "0e0d751daed5532addd3c1706c0b606a52af04d100a8cd45d356c3003fce7893"
+    },
+    "assets/videos/paper3/continuous_flow_v30_goal_partial.mp4": {
+      "bytes": 4602902,
+      "sha256": "fddf90cb2e27f5aef5847d4fa8e28f6d8a116b953b41099241072632c1925a73"
+    },
+    "assets/videos/paper3/continuous_flow_v31_goal_partial.mp4": {
+      "bytes": 1684646,
+      "sha256": "7c7b68d52b4fa5cd8085d9089857778dc85f14e73b2939fd44bab5b2170668e0"
+    },
+    "assets/videos/paper3/continuous_flow_v32_goal_partial.mp4": {
+      "bytes": 1054350,
+      "sha256": "64bc1f55df2a1a88ed3b2077e70d4f768667ecf633b34a73131d65f244940697"
+    },
+    "assets/videos/paper3/continuous_flow_v33_goal_partial.mp4": {
+      "bytes": 4695732,
+      "sha256": "cf5236ae1b2cbab160cf9b07629465a5a6b3174a79e445c1bda97fad7bb8f857"
+    },
+    "assets/videos/paper3/continuous_flow_v34_single_target_deposit.mp4": {
+      "bytes": 15090981,
+      "sha256": "792e31059f4a50840b5421506446a604e37300abe268a3063d737cdc458d5ab9"
+    },
+    "assets/videos/paper3/continuous_flow_v35_two_target_complete.mp4": {
+      "bytes": 26965460,
+      "sha256": "91a80384a811369f5f307ca386b6c1d97c4ab3eacb87cf6655d6792c7b9a9750"
+    },
+    "assets/videos/paper3/continuous_flow_v36_three_target_partial.mp4": {
+      "bytes": 19579246,
+      "sha256": "52baff5b7b3087b118fcd8454905fb583fdb6283b472a0626fd95e513b8b5082"
     }
   },
-  "updated_for": "v26_two_target_collection_complete_20261031"
+  "updated_for": "v36_three_target_partial",
+  "updated_at": "2026-11-01"
 }

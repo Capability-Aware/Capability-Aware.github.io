@@ -1,0 +1,135 @@
+{
+  "version": "v27",
+  "run_id": "collection_flow_goal_v5_20261031",
+  "status": "partial",
+  "summary": "三目标第 1 轮外部视觉标注超时；没有完成任何目标",
+  "runner_finished": true,
+  "run_duration_sim_s": 109.64999999997276,
+  "physics_frames": 21930,
+  "observer_frames_per_view": {
+    "observer_side": 549,
+    "observer_wide": 549
+  },
+  "requested_targets": null,
+  "public_targets_observed": 1,
+  "completed_targets": 0,
+  "scene_catalog_size": 24,
+  "full_task_success": false,
+  "completed_actual_count": 0,
+  "flow_stage_transitions": [
+    {
+      "time_s": 36.21000000000007,
+      "from_stage": "aerial_takeoff",
+      "stage": "warmup",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 38.210000000001095,
+      "from_stage": "warmup",
+      "stage": "stow_entry",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 42.58500000000333,
+      "from_stage": "stow_entry",
+      "stage": "coarse_navigation",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 64.0950000000142,
+      "from_stage": "coarse_navigation",
+      "stage": "front_acquisition_turn",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 66.36500000001213,
+      "from_stage": "front_acquisition_turn",
+      "stage": "front_approach_and_tail_turn",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 83.89499999999619,
+      "from_stage": "front_approach_and_tail_turn",
+      "stage": "tail_quiet",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 83.89999999999618,
+      "from_stage": "tail_quiet",
+      "stage": "wrist_observation",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 91.82499999998898,
+      "from_stage": "wrist_observation",
+      "stage": "wrist_reverse",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 108.62999999997369,
+      "from_stage": "wrist_reverse",
+      "stage": "final_wrist_recheck",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    }
+  ],
+  "failure": {
+    "type": "ContinuousSingleTargetFlowFailed",
+    "error": "actual_flow_perception_error:RuntimeError('current-frame external visual annotation deadline expired')"
+  },
+  "perception_input_semantics": "Current task-camera RGB boxes and SAM-mask confirmation were external annotations; observer video is display-only and not policy or scoring input.",
+  "grasp_semantics": "Temporary arm joint PD Kp=60, Kd=12; colleague grasp algorithm not delivered. Quadruped locomotion uses frozen MoE 26399.",
+  "perception_prompts": [
+    {
+      "kind": "current_aerial_box",
+      "frame_id": "uav_down:00000726",
+      "captured_at_s": 36.30000000000012,
+      "public_target_id": null,
+      "rgb_file_sha256": "2c2620cba409901089c134ddfd2c6b44b57a3c0832573e090be9a461690e39da",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_front_box_paired_with_current_aerial",
+      "frame_id": "ground_front:00001328",
+      "captured_at_s": 66.4000000000121,
+      "public_target_id": "visual_5b9888739e3548248b20a5485d076d20",
+      "rgb_file_sha256": "4388f3628ad1f5cefe2049f5aaabbe5be27751af7000f0287b9f37fabb523625",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_wrist_box_paired_with_public_target",
+      "frame_id": "ground_wrist:00001837",
+      "captured_at_s": 91.84999999998895,
+      "public_target_id": "visual_5b9888739e3548248b20a5485d076d20",
+      "rgb_file_sha256": "aa4873dc4c9b0db6edea2a4543c9f213af540f47a51a1a4be1e98c5949e7cf35",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_wrist_sam_mask_and_upright_can_model",
+      "frame_id": "ground_wrist:00002173",
+      "captured_at_s": 108.64999999997367,
+      "public_target_id": "visual_5b9888739e3548248b20a5485d076d20",
+      "rgb_file_sha256": "64df84a1e786106011b14a90e99bc0f73a9339c5abce7f3fe1e681ada90346b9",
+      "mask_binary_sha256": "6af7347a64a6b122e9d684f439fe6875db3ffde6d05c5ed2e5e9aeeb03902337"
+    }
+  ],
+  "raw_evidence_directory": "capability_research/outputs/multiagent-grabgarbage/collection_flow_goal_v5_20261031/",
+  "evidence_summary": {
+    "mission_outcome": "running",
+    "collection_mission_success": false,
+    "continuous_physics_frames": true,
+    "all_logged_frames_complete": true
+  },
+  "limitations": [
+    "This run is not a full-scene autonomous cleanup demonstration.",
+    "The aerial detector does not automatically discover or classify objects; current images were externally annotated."
+  ]
+}

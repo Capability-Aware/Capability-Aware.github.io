@@ -1,0 +1,62 @@
+{
+  "version": "v34",
+  "run_id": "multiagent-grabgarbage_collection_flow_goal_v12_20261101",
+  "source_run_directory": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v12_20261101",
+  "title": "单目标抓取投桶闭环完成（全场仍为1/24）",
+  "status": "single_target_completed_full_scene_partial",
+  "description": "同一连续 Isaac Sim 会话中完成一件经人工图像确认的罐类目标：无人机提示坐标，四足接近，机械臂临时 PD 抓取，携物并投入 bin_0_can。冻结 USD capsule 碰撞几何纳入来源包络审查后，投放 review 通过。场景目录共24件，仅完成1件。",
+  "video": "continuous_flow_v34_single_target_deposit.mp4",
+  "poster": "continuous_flow_v34_single_target_deposit.jpg",
+  "actual_capture_frames_per_view": 2017,
+  "encoded_fps": 5.0,
+  "video_duration_s": 201.6,
+  "duration_sim_s": 201.60999999988914,
+  "requested_targets": 1,
+  "visible_public_targets": 1,
+  "completed_targets": 1,
+  "scene_catalog_targets": 24,
+  "collection_rate": 0.041666666666666664,
+  "full_task_success": false,
+  "collection_flow_completed": true,
+  "completed_bin": "bin_0_can",
+  "completed_at_s": 200.60999999989005,
+  "grasp_confirmed_at_s": 139.11499999994598,
+  "actual_empty_hand_net_m": 2.3768493870475904,
+  "actual_coarse_net_m": 1.4993641237721729,
+  "actual_carry_net_m": 1.2842946812073335,
+  "deposit_review": {
+    "accepted": true,
+    "reason": "accepted_with_unobserved_risk_in_declared_static_workspace",
+    "phase": "wait_bin",
+    "environment_box_hits": 0,
+    "known_bin_wall_hits": 0,
+    "observed_free_ray_probes": 618,
+    "unobserved_probes": 114,
+    "source_geometry": "63 frozen USD collider bounds; exact capsule/capsule and supported capsule/box narrow phase; 4 nearby capsule/capsule checks per sampled state",
+    "limitations": [
+      "accepted under declared static 2 m workspace assumption despite unobserved probes",
+      "finite depth/ray samples; no continuous/cooked PhysX clearance qualification",
+      "not a fresh current visual certificate at final consumption"
+    ]
+  },
+  "external_current_frame_annotations": true,
+  "human_inputs": [
+    "UAV down camera box: uav_down:00000726",
+    "ground front target box: ground_front:00001338",
+    "ground wrist target box: ground_wrist:00001863",
+    "wrist mask/object upright confirmation: ground_wrist:00002170"
+  ],
+  "locomotion": "冻结 MoE 26399",
+  "grasp_controller": "临时关节 PD（Kp=60, Kd=12）；正式抓取算法尚未交付",
+  "observer_policy_input": false,
+  "actual_physics_report_available": true,
+  "failure": null,
+  "known_boundaries": [
+    "非自主航拍识别演示，目标框与腕部目标确认有人在环",
+    "只验证单目标 1/24，完整多目标全场清理未完成",
+    "observer 视频只作展示，不作为策略或评分输入",
+    "抓取控制器仍为临时 PD，未完成物理资格认证"
+  ],
+  "raw_evidence": "原始 RGB-D、逐拍轨迹、物理见证、审查证明与人工请求/回复保存在 capability_research outputs 运行目录。",
+  "encoded_frame_count": 1008
+}

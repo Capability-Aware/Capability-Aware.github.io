@@ -1,0 +1,36 @@
+{
+  "version": "v36",
+  "title": "三目标连续收集尝试（部分完成）",
+  "date": "2026-11-01",
+  "video": "continuous_flow_v36_three_target_partial.mp4",
+  "poster": "continuous_flow_v36_three_target_partial.jpg",
+  "requested_targets": 3,
+  "public_targets_discovered": 2,
+  "completed_targets": 1,
+  "scene_total_targets": 24,
+  "scene_completed_targets": 1,
+  "full_task_success": false,
+  "sim_time_s": 267.295,
+  "evidence": {
+    "first_target": "visual_165dd1255451421aafe8ffc2c9d38657",
+    "first_grasp_confirmed_sim_s": 140.735,
+    "first_correct_bin_deposit_sim_s": 204.29,
+    "second_target": "visual_cc32bb030e0a4b26b0d6008cedb66139",
+    "second_target_uav_frame": "uav_down:00004514",
+    "second_target_front_frame": "ground_front:00005038",
+    "second_target_grasp_or_deposit": false,
+    "third_target_cycle_reached": false
+  },
+  "run_status": "partial_incomplete",
+  "termination_note": "物理轨迹最后记录至 267.295 s，仍处于 front_approach_and_tail_turn，failure 字段为空；未生成可用的最终 report，现有证据无法确定运行停止原因。",
+  "recording_note": "side observer 最后一张图像损坏；演示视频使用宽/侧两路均可读的 0–267.2 s 配对帧，保留有效轨迹，不补帧。",
+  "input_and_algorithm_boundaries": [
+    "UAV/front/wrist 当前帧目标框来自外部人工标注/复核，不是自主识别结果。",
+    "四足复用冻结 MoE 26399。",
+    "正式机械臂抓取算法尚未交付，使用临时关节 PD（Kp=60、Kd=12）。",
+    "仅第一件完成抓取并正确投放；第二件只完成航拍与前视当前帧目标确认，未完成抓取。",
+    "该运行不是三目标成功，也不是 24 件全场清理成功。"
+  ],
+  "raw_run_directory": "outputs/multiagent-grabgarbage/collection_flow_goal_v14_20261101",
+  "source_commit": "8c017c62f（v35 archive HEAD；v36 run was not finalized into a repository commit）"
+}

@@ -1,0 +1,274 @@
+{
+  "version": "v35",
+  "run_id": "collection_flow_goal_v13_20261101",
+  "source_run_directory": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v13_20261101",
+  "title": "双目标同一连续会话抓取投桶完成（场景 2/24）",
+  "status": "two_target_flow_completed_full_scene_partial",
+  "description": "首件完成投桶、空手收回并触发无人机路线恢复；cycle 2 获得新的航拍帧与另一目标外部框选；第二件也经四足前视/腕视复核、物理抓取并投入正确桶。",
+  "media": {
+    "video": "continuous_flow_v35_two_target_complete.mp4",
+    "poster": "continuous_flow_v35_two_target_complete.jpg",
+    "views": [
+      "observer_wide",
+      "observer_side"
+    ],
+    "encoded_fps": 5.0,
+    "duration_s": 372.0,
+    "encoded_frame_count": 1860,
+    "per_view_observer_frames": {
+      "observer_side": 3720,
+      "observer_wide": 3720
+    },
+    "raw_observer_recording": true,
+    "observer_policy_input": false
+  },
+  "duration_sim_s": 371.95999999973424,
+  "requested_targets": 2,
+  "discovered_public_targets": 2,
+  "completed_targets": 2,
+  "scene_catalog_targets": 24,
+  "collection_rate": 0.08333333333333333,
+  "full_task_success": false,
+  "collection_flow_completed": true,
+  "bin_occupancy": {
+    "bin_0_plastic_bottle": 0,
+    "bin_0_can": 2,
+    "bin_0_paper": 0,
+    "bin_1_plastic_bottle": 0,
+    "bin_1_can": 0,
+    "bin_1_paper": 0,
+    "bin_2_plastic_bottle": 0,
+    "bin_2_can": 0,
+    "bin_2_paper": 0
+  },
+  "event_counts": {
+    "discovered": 2,
+    "claimed": 2,
+    "approaching": 2,
+    "reobserved": 2811,
+    "grasp_requested": 2,
+    "physical_contact_associated": 2,
+    "grasp_confirmed": 2,
+    "observation_stale": 2,
+    "release_requested": 2,
+    "completed": 2
+  },
+  "cycles": [
+    {
+      "cycle_index": 1,
+      "public_target_id": "visual_6443448fdfe14e3fa67241fb18e676af",
+      "inputs": {
+        "aerial_box": {
+          "frame_id": "uav_down:00000726",
+          "camera_id": "uav_down",
+          "captured_at_s": 36.30000000000012,
+          "rgb_sha256": "1ead9d16dca0f8fcc8a4d9f68a096d9a134a075d1b688a46fdee64e876d28aa9",
+          "box": [
+            1070,
+            557,
+            1110,
+            584
+          ],
+          "mask_sha256": null,
+          "annotation_source": "codex_external_visual_annotation_20261101_v13_cycle001_aerial"
+        },
+        "front_box": {
+          "frame_id": "ground_front:00001258",
+          "camera_id": "ground_front",
+          "captured_at_s": 62.900000000013726,
+          "rgb_sha256": "e5e5670c48b3b301951fc2e6b919d4c9e968732e5d45c9a44d37cdd29febd558",
+          "box": [
+            352,
+            213,
+            388,
+            255
+          ],
+          "mask_sha256": null,
+          "annotation_source": "codex_external_visual_annotation_20261101_v13_cycle001_front"
+        },
+        "wrist_box": {
+          "frame_id": "ground_wrist:00001782",
+          "camera_id": "ground_wrist",
+          "captured_at_s": 89.09999999999145,
+          "rgb_sha256": "e7301f0f61eba2adbe832dc6b3f124962b499355f9fbc9df546eac7c25c855d5",
+          "box": [
+            350,
+            260,
+            405,
+            296
+          ],
+          "mask_sha256": null,
+          "annotation_source": "codex_external_visual_annotation_20261101_v13_cycle001_wrist"
+        },
+        "wrist_mask_model": {
+          "frame_id": "ground_wrist:00002123",
+          "camera_id": "ground_wrist",
+          "captured_at_s": 106.14999999997595,
+          "rgb_sha256": "8486db2e3cb80be0c4034dd8a2f1dba44f2831244d29e1ffd490fa45abd37cfc",
+          "box": null,
+          "mask_sha256": "2abc2e1195e77ca8d7174435cd690745320a97a8d9c3618257afc224b2dc46af",
+          "annotation_source": "codex_visual_annotation_20261101_v13_cycle001_wrist_mask_model"
+        }
+      },
+      "physical_events_s": {
+        "physical_contact_associated": 132.40999999995208,
+        "grasp_confirmed": 136.61499999994825,
+        "release_requested": 206.0599999998851,
+        "completed": 208.2499999998831
+      },
+      "completed_bin": "bin_0_can",
+      "actual_empty_hand_net_m": 2.2060759733960444,
+      "actual_coarse_net_m": 1.3154515951552077,
+      "actual_carry_net_m": 1.2461885386661196,
+      "continuous_flow_qualified": true
+    },
+    {
+      "cycle_index": 2,
+      "public_target_id": "visual_73e9a21c162844b0a511e5c44e6a863a",
+      "inputs": {
+        "aerial_box": {
+          "frame_id": "uav_down:00004594",
+          "camera_id": "uav_down",
+          "captured_at_s": 229.6999999998636,
+          "rgb_sha256": "799352cd68f94293b3944ee2521db6784ce0fd86728f448e6c25d34312407615",
+          "box": [
+            1074,
+            128,
+            1113,
+            165
+          ],
+          "mask_sha256": null,
+          "annotation_source": "codex_external_visual_annotation_20261101_v13_cycle002_aerial"
+        },
+        "front_box": {
+          "frame_id": "ground_front:00004926",
+          "camera_id": "ground_front",
+          "captured_at_s": 246.2999999998485,
+          "rgb_sha256": "98125aeb0c3026c5d4334bc1f273210d7628de3b9e08ac1ad0b637f7e0a701b3",
+          "box": [
+            386,
+            237,
+            435,
+            298
+          ],
+          "mask_sha256": null,
+          "annotation_source": "codex_external_visual_annotation_20261101_v13_cycle002_front"
+        },
+        "wrist_box": {
+          "frame_id": "ground_wrist:00005425",
+          "camera_id": "ground_wrist",
+          "captured_at_s": 271.24999999982583,
+          "rgb_sha256": "aa237b25a757b9e54c2f5e9878e22c024a345591e539c20e1f0960a30e7eb3fa",
+          "box": [
+            282,
+            250,
+            345,
+            298
+          ],
+          "mask_sha256": null,
+          "annotation_source": "codex_external_visual_annotation_20261101_v13_cycle002_wrist"
+        },
+        "wrist_mask_model": {
+          "frame_id": "ground_wrist:00005622",
+          "camera_id": "ground_wrist",
+          "captured_at_s": 281.0999999998169,
+          "rgb_sha256": "0c87175bc77d45b2200822a2a854a2f17a096f2f5c22664564b0cb3a187796eb",
+          "box": null,
+          "mask_sha256": "36abf4ec9cd09b3b4de12878911e27012d1cebde58458e3d8d398ee982ad45d7",
+          "annotation_source": "codex_visual_annotation_20261101_v13_cycle002_wrist_mask_model"
+        }
+      },
+      "physical_events_s": {
+        "physical_contact_associated": 307.51499999979285,
+        "grasp_confirmed": 311.8499999997889,
+        "release_requested": 368.29499999973757,
+        "completed": 370.95999999973515
+      },
+      "completed_bin": "bin_0_can",
+      "actual_empty_hand_net_m": 1.2649523875445696,
+      "actual_coarse_net_m": 0.004540515431163785,
+      "actual_carry_net_m": 1.2705386985379423,
+      "continuous_flow_qualified": true
+    }
+  ],
+  "aerial_handoff": {
+    "after_first_target_completed_at_s": 208.2499999998831,
+    "cycle_2_fresh_aerial_frame_at_s": 229.6999999998636,
+    "cycle_2_aerial_frame_id": "uav_down:00004594",
+    "route_was_restarted_for_next_cycle": true,
+    "new_target_box_was_external_annotation": true,
+    "route_is_complete_after_run": false,
+    "note": "第二轮在路线重启后产生新的当前航拍帧并接受外部正框；这不等同于无人机自主目标检测，也不表示预定覆盖路线全部飞完。"
+  },
+  "deposit_review": {
+    "refreshed_transfer_and_bin_above_reviews": [
+      {
+        "time_s": 195.69999999989452,
+        "phase": "transfer_up",
+        "accepted": true,
+        "scene_frame_ids": [
+          "uav_down:00003914",
+          "ground_front:00003914",
+          "ground_rear:00003914",
+          "ground_wrist:00003914"
+        ]
+      },
+      {
+        "time_s": 198.29999999989215,
+        "phase": "bin_above",
+        "accepted": true,
+        "scene_frame_ids": [
+          "uav_down:00003966",
+          "ground_front:00003966",
+          "ground_rear:00003966",
+          "ground_wrist:00003966"
+        ]
+      },
+      {
+        "time_s": 357.19999999974766,
+        "phase": "transfer_up",
+        "accepted": true,
+        "scene_frame_ids": [
+          "uav_down:00007144",
+          "ground_front:00007144",
+          "ground_rear:00007144",
+          "ground_wrist:00007144"
+        ]
+      },
+      {
+        "time_s": 360.59999999974457,
+        "phase": "bin_above",
+        "accepted": true,
+        "scene_frame_ids": [
+          "uav_down:00007212",
+          "ground_front:00007212",
+          "ground_rear:00007212",
+          "ground_wrist:00007212"
+        ]
+      }
+    ],
+    "final_review_accepted": true,
+    "final_review_reason": "accepted_with_unobserved_risk_in_declared_static_workspace",
+    "environment_box_hits": 0,
+    "known_bin_wall_hits": 0,
+    "observed_free_ray_probes": 618,
+    "unobserved_probes": 108,
+    "workspace_assumption": "actual base ±2m static controlled-workspace cube",
+    "limitations": [
+      "finite sampled review, not cooked/dynamic/continuous PhysX clearance",
+      "108 final probes remain unobserved; accepted under explicit static-workspace assumption",
+      "source geometry review does not certify unknown space free"
+    ]
+  },
+  "locomotion": "冻结 MoE 26399",
+  "grasp_controller": "临时关节 PD（Kp=60,Kd=12）；正式抓取算法尚未交付",
+  "external_current_frame_annotations": true,
+  "known_boundaries": [
+    "每轮航拍目标框、四足前视框、腕视框和 upright can/SAM mask复核均由外部当前帧标注",
+    "只完成被分配的两个目标，场景目录24件仍完成2件，full_task_success=false",
+    "物理 grasp association 依据唯一双侧接触，不能验证视觉身份；目标身份由当前图像外部配对",
+    "observer 双视角仅作展示，不作为策略或评分输入",
+    "投放 review 保留静态假设与未观测深度风险"
+  ],
+  "raw_evidence": "RGB-D、observer原始帧、物理轨迹、各轮人工提示请求/回复和报告保留在仓库 outputs 运行目录。"
+}

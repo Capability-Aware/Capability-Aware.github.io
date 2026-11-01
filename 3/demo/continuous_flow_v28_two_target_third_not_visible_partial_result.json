@@ -1,0 +1,376 @@
+{
+  "version": "v28",
+  "run_id": "collection_flow_goal_v6_20261031",
+  "status": "partial",
+  "summary": "完成 2/3；第三轮航拍当前帧没有明确地面垃圾候选，桶内可见物体疑似前序投放目标，未错误复用为新目标",
+  "runner_finished": true,
+  "run_duration_sim_s": 405.89999999970337,
+  "physics_frames": 81180,
+  "observer_frames_per_view": {
+    "observer_side": 2030,
+    "observer_wide": 2030
+  },
+  "requested_targets": null,
+  "public_targets_observed": 2,
+  "completed_targets": 2,
+  "scene_catalog_size": 24,
+  "full_task_success": false,
+  "completed_actual_count": 2,
+  "flow_stage_transitions": [
+    {
+      "time_s": 36.21000000000007,
+      "from_stage": "aerial_takeoff",
+      "stage": "warmup",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 38.210000000001095,
+      "from_stage": "warmup",
+      "stage": "stow_entry",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 42.58500000000333,
+      "from_stage": "stow_entry",
+      "stage": "coarse_navigation",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 64.13500000001416,
+      "from_stage": "coarse_navigation",
+      "stage": "front_acquisition_turn",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 66.92500000001162,
+      "from_stage": "front_acquisition_turn",
+      "stage": "front_approach_and_tail_turn",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 84.90999999999526,
+      "from_stage": "front_approach_and_tail_turn",
+      "stage": "tail_quiet",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 84.91499999999526,
+      "from_stage": "tail_quiet",
+      "stage": "wrist_observation",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 93.21499999998771,
+      "from_stage": "wrist_observation",
+      "stage": "wrist_reverse",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 109.2849999999731,
+      "from_stage": "wrist_reverse",
+      "stage": "final_wrist_recheck",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 109.29999999997308,
+      "from_stage": "final_wrist_recheck",
+      "stage": "pickup",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 155.4749999999311,
+      "from_stage": "pickup",
+      "stage": "carry_turn",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 170.27999999991764,
+      "from_stage": "carry_turn",
+      "stage": "carry_align",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 178.27499999991036,
+      "from_stage": "carry_align",
+      "stage": "carry_walk",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 189.2449999999004,
+      "from_stage": "carry_walk",
+      "stage": "deposit_scene",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 189.29999999990034,
+      "from_stage": "deposit_scene",
+      "stage": "deposit",
+      "cycle_index": 1,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 205.6099999998855,
+      "from_stage": "deposit",
+      "stage": "empty_return",
+      "cycle_index": 1,
+      "public_completed_target_id": "visual_6f328e7a79674110b168b42856bf8aaa"
+    },
+    {
+      "time_s": 227.049999999866,
+      "from_stage": "empty_return",
+      "stage": "departure",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 241.359999999853,
+      "from_stage": "departure",
+      "stage": "coarse_navigation",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 241.86499999985253,
+      "from_stage": "coarse_navigation",
+      "stage": "front_acquisition_turn",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 253.50999999984194,
+      "from_stage": "front_acquisition_turn",
+      "stage": "front_approach_and_tail_turn",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 269.36499999982755,
+      "from_stage": "front_approach_and_tail_turn",
+      "stage": "tail_quiet",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 269.36999999982754,
+      "from_stage": "tail_quiet",
+      "stage": "wrist_observation",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 277.29499999982033,
+      "from_stage": "wrist_observation",
+      "stage": "wrist_reverse",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 285.1249999998132,
+      "from_stage": "wrist_reverse",
+      "stage": "final_wrist_recheck",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 285.1499999998132,
+      "from_stage": "final_wrist_recheck",
+      "stage": "pickup",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 330.28999999977214,
+      "from_stage": "pickup",
+      "stage": "carry_turn",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 350.7999999997535,
+      "from_stage": "carry_turn",
+      "stage": "carry_align",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 357.5999999997473,
+      "from_stage": "carry_align",
+      "stage": "carry_walk",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 369.0149999997369,
+      "from_stage": "carry_walk",
+      "stage": "deposit_scene",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 369.09999999973684,
+      "from_stage": "deposit_scene",
+      "stage": "deposit",
+      "cycle_index": 2,
+      "public_completed_target_id": null
+    },
+    {
+      "time_s": 383.3099999997239,
+      "from_stage": "deposit",
+      "stage": "empty_return",
+      "cycle_index": 2,
+      "public_completed_target_id": "visual_8157962e3d894bf4a58f0ac309fdf20a"
+    },
+    {
+      "time_s": 404.8849999997043,
+      "from_stage": "empty_return",
+      "stage": "departure",
+      "cycle_index": 3,
+      "public_completed_target_id": null
+    }
+  ],
+  "failure": {
+    "type": "ContinuousSingleTargetFlowFailed",
+    "error": "actual_flow_perception_error:ValueError('current actual RGB bounded box required')"
+  },
+  "perception_input_semantics": "Current task-camera RGB boxes and SAM-mask confirmation were external annotations; observer video is display-only and not policy or scoring input.",
+  "grasp_semantics": "Temporary arm joint PD Kp=60, Kd=12; colleague grasp algorithm not delivered. Quadruped locomotion uses frozen MoE 26399.",
+  "perception_prompts": [
+    {
+      "kind": "current_aerial_box",
+      "frame_id": "uav_down:00000726",
+      "captured_at_s": 36.30000000000012,
+      "public_target_id": null,
+      "rgb_file_sha256": "18ed102fa1172b1461f2f055bc7f9f1191ae9e002af3a1ccbce2aec240891f0e",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_front_box_paired_with_current_aerial",
+      "frame_id": "ground_front:00001340",
+      "captured_at_s": 67.00000000001155,
+      "public_target_id": "visual_6f328e7a79674110b168b42856bf8aaa",
+      "rgb_file_sha256": "7fd11efe2cd3d8a76ae74a5520d3649048ba9aa721751dece03649cddc84b77b",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_wrist_box_paired_with_public_target",
+      "frame_id": "ground_wrist:00001865",
+      "captured_at_s": 93.24999999998768,
+      "public_target_id": "visual_6f328e7a79674110b168b42856bf8aaa",
+      "rgb_file_sha256": "c2c301891c7f6c9eee385bee047b209517c414d2de3f3ca182b0a6c8e9a98dd3",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_wrist_sam_mask_and_upright_can_model",
+      "frame_id": "ground_wrist:00002186",
+      "captured_at_s": 109.29999999997308,
+      "public_target_id": "visual_6f328e7a79674110b168b42856bf8aaa",
+      "rgb_file_sha256": "8913bed9544344bf2ae83285fac2fd5f9108b48296b5465e917c1f07245296ff",
+      "mask_binary_sha256": "f64e384f3219d1c730c8677c25eea3fe304d57f65f9e3dfe7073ca0b7161a3f7"
+    },
+    {
+      "kind": "current_aerial_box",
+      "frame_id": "uav_down:00004542",
+      "captured_at_s": 227.09999999986596,
+      "public_target_id": null,
+      "rgb_file_sha256": "3842d81f3d761a0dd99678a6b558b37080750299debc96d15eb75483454db417",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_front_box_paired_with_current_aerial",
+      "frame_id": "ground_front:00005072",
+      "captured_at_s": 253.59999999984186,
+      "public_target_id": "visual_8157962e3d894bf4a58f0ac309fdf20a",
+      "rgb_file_sha256": "a7de9c6632390a63a3092c89e681ed2321bda5dd785cad660e1a375bfe1eb27b",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_wrist_box_paired_with_public_target",
+      "frame_id": "ground_wrist:00005546",
+      "captured_at_s": 277.29999999982033,
+      "public_target_id": "visual_8157962e3d894bf4a58f0ac309fdf20a",
+      "rgb_file_sha256": "f88656ac69503dad48a48acd66b62ae4d71d821875932cac247c4d90cb3c8dc6",
+      "mask_binary_sha256": null
+    },
+    {
+      "kind": "current_wrist_sam_mask_and_upright_can_model",
+      "frame_id": "ground_wrist:00005703",
+      "captured_at_s": 285.1499999998132,
+      "public_target_id": "visual_8157962e3d894bf4a58f0ac309fdf20a",
+      "rgb_file_sha256": "c7cb712e4116f243879ec30c3bcd9271115ee30a24fc8980584dcdc97d71ad7b",
+      "mask_binary_sha256": "10de200ee9c242e9c8c2c927bf40c715b3b6b2916d367a4ff5ababab560c567b"
+    },
+    {
+      "kind": "current_aerial_box",
+      "frame_id": "uav_down:00008098",
+      "captured_at_s": 404.8999999997043,
+      "public_target_id": null,
+      "rgb_file_sha256": "b1fe50a8199cad1716196b79fd2be7f86e2f5e655197b2c355ae801277a07518",
+      "mask_binary_sha256": null
+    }
+  ],
+  "raw_evidence_directory": "capability_research/outputs/multiagent-grabgarbage/collection_flow_goal_v6_20261031/",
+  "evidence_summary": {
+    "mission_outcome": "running",
+    "collection_mission_success": false,
+    "continuous_physics_frames": true,
+    "all_logged_frames_complete": true
+  },
+  "limitations": [
+    "This run is not a full-scene autonomous cleanup demonstration.",
+    "The aerial detector does not automatically discover or classify objects; current images were externally annotated."
+  ],
+  "completed_public_targets": 2,
+  "third_target_review": "No clear ground litter candidate in the current aerial RGB. The only can-like shape was inside the bin and may be the previous deposited object, so no target box was fabricated.",
+  "collection_events": [
+    {
+      "time_s": 140.50499999994472,
+      "event": "grasp_confirmed",
+      "public_target_id": "visual_6f328e7a79674110b168b42856bf8aaa",
+      "bin_id": null
+    },
+    {
+      "time_s": 200.95999999988973,
+      "event": "release_requested",
+      "public_target_id": "visual_6f328e7a79674110b168b42856bf8aaa",
+      "bin_id": "bin_0_can"
+    },
+    {
+      "time_s": 205.6099999998855,
+      "event": "completed",
+      "public_target_id": "visual_6f328e7a79674110b168b42856bf8aaa",
+      "bin_id": "bin_0_can"
+    },
+    {
+      "time_s": 315.5849999997855,
+      "event": "grasp_confirmed",
+      "public_target_id": "visual_8157962e3d894bf4a58f0ac309fdf20a",
+      "bin_id": null
+    },
+    {
+      "time_s": 381.30499999972574,
+      "event": "release_requested",
+      "public_target_id": "visual_8157962e3d894bf4a58f0ac309fdf20a",
+      "bin_id": "bin_0_can"
+    },
+    {
+      "time_s": 383.3099999997239,
+      "event": "completed",
+      "public_target_id": "visual_8157962e3d894bf4a58f0ac309fdf20a",
+      "bin_id": "bin_0_can"
+    }
+  ]
+}

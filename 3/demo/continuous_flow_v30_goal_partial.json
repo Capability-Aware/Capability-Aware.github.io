@@ -1,0 +1,36 @@
+{
+  "version": "v30",
+  "run_id": "collection_flow_goal_v8_20261101",
+  "source_run_directory": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v8_20261101",
+  "title": "腕部视觉恢复超时",
+  "status": "partial_or_failed",
+  "requested_targets": 3,
+  "actual_capture_frames_per_view": 519,
+  "encoded_fps": 5.0,
+  "video_duration_s": 103.8,
+  "description": "四足进入接近后，腕部视觉恢复超出预算；未完成抓取投放。",
+  "failure": "wrist_visual_recovery_timeout",
+  "actual_physics_report_available": true,
+  "external_current_frame_annotations": true,
+  "locomotion": "冻结 MoE 26399",
+  "grasp_controller": "临时关节 PD（Kp=60, Kd=12）；正式抓取算法尚未交付",
+  "full_task_success": false,
+  "media": {
+    "video": "continuous_flow_v30_goal_partial.mp4",
+    "poster": "continuous_flow_v30_goal_partial.jpg"
+  },
+  "raw_evidence": "原始 RGB-D、逐拍轨迹、物理见证和请求/回复保留在 capability_research outputs 运行目录。",
+  "duration_sim_s": 103.74999999997813,
+  "discovered": 1,
+  "completed_targets": 0,
+  "event_counts": {
+    "discovered": 1,
+    "claimed": 1,
+    "approaching": 1,
+    "reobserved": 544,
+    "observation_stale": 1
+  },
+  "mission_failure": "wrist_visual_recovery_timeout",
+  "aerial_search_policy": "pause_when_target_assigned_until_front_localized_then_resume_public_serpentine",
+  "encoded_frame_count": 519
+}

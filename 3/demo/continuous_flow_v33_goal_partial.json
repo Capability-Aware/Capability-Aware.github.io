@@ -1,0 +1,60 @@
+{
+  "version": "v33",
+  "run_id": "collection_flow_goal_v11_20261101",
+  "source_run_directory": "/home/zh/isaac/capability_research/.worktrees/grab-garbage-5080-20261031/outputs/multiagent-grabgarbage/collection_flow_goal_v11_20261101",
+  "title": "抓起后桶前深度审查拒绝",
+  "status": "partial_or_failed",
+  "requested_targets": 3,
+  "actual_capture_frames_per_view": 1896,
+  "encoded_fps": 5.002638522427441,
+  "video_duration_s": 189.5,
+  "description": "一件目标有实际抓取确认并携物到桶边；桶上方路径因当前深度命中候选包络且冻结碰撞凸包不支持而拒绝。未投桶，完成 0/3。",
+  "failure": "fresh_deposit_depth_path_review_rejected",
+  "actual_physics_report_available": true,
+  "external_current_frame_annotations": true,
+  "locomotion": "冻结 MoE 26399",
+  "grasp_controller": "临时关节 PD（Kp=60, Kd=12）；正式抓取算法尚未交付",
+  "full_task_success": false,
+  "media": {
+    "video": "continuous_flow_v33_goal_partial.mp4",
+    "poster": "continuous_flow_v33_goal_partial.jpg"
+  },
+  "raw_evidence": "原始 RGB-D、逐拍轨迹、物理见证和请求/回复保留在 capability_research outputs 运行目录。",
+  "duration_sim_s": 189.49999999990015,
+  "discovered": 1,
+  "completed_targets": 0,
+  "event_counts": {
+    "discovered": 1,
+    "claimed": 1,
+    "approaching": 1,
+    "reobserved": 2346,
+    "grasp_requested": 1,
+    "physical_contact_associated": 1,
+    "grasp_confirmed": 1,
+    "observation_stale": 1
+  },
+  "mission_failure": "deposit_entry_rejected:ValueError('fresh_deposit_depth_path_review_rejected')",
+  "deposit_review": {
+    "accepted": false,
+    "reason": "observed_environment_intersects_sampled_arm_or_finger_bounds",
+    "phase": "bin_above",
+    "scene_frame_id": "ground_front:00003770",
+    "environment_box_hits": 58,
+    "known_bin_wall_hits": 0,
+    "raw_environment_AABB_box_hits": 58,
+    "source_hull_resolved_environment_AABB_box_hits": 0,
+    "source_hull_unsupported_environment_AABB_box_hits": 58
+  },
+  "aerial_search_policy": "pause_when_target_assigned_until_front_localized_then_resume_public_serpentine",
+  "detected_and_completed": "observed 1 target; physically grasp-confirmed 1; correctly deposited 0",
+  "grasp_confirmed_time_s": 140.275,
+  "bin_entry_attempt_s": 188.47,
+  "deposit_review_reason": "observed_environment_intersects_sampled_arm_or_finger_bounds; 58 sampled observed points retained because 4 frozen collision-shape hulls are unsupported",
+  "limitations": [
+    "58 observed-depth points overlap sampled bin_above arm/finger envelopes; conservatively rejected",
+    "frozen source collision Mesh hull support unavailable for the intersecting capsule-shaped colliders",
+    "known bin wall hits were 0; this does not clear the other observed-depth intersections",
+    "no deposit, collection complete, or full-scene success"
+  ],
+  "encoded_frame_count": 948
+}
