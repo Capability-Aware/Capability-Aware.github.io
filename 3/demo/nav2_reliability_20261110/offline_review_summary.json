@@ -278,18 +278,22 @@
       "bytes": 1037
     },
     {
-      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_shutdown_smoke_20261110_v2/report.json",
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_shutdown_smoke_20261110_v3/report.json",
       "archive_href": "post_run_shutdown_smoke.json",
-      "sha256": "791bea5e4422a10e66c283f0364a3685cc194e7b308ed3e14907a3475973b478",
-      "bytes": 403
+      "sha256": "4998626768bb544f596c3ef3b6c7c493e210305ab1abf39eef77c24039057dda",
+      "bytes": 599
     }
   ],
   "post_run_shutdown_fix_validation": {
     "archive_file": "post_run_shutdown_smoke.json",
+    "validation_version": "v3",
     "success": true,
-    "scope": "empty headless Kit + real telemetry/rclpy initialization; no robots",
+    "process_exit_code": 0,
+    "scope": "real empty Kit + rclpy SIGINT cleanup; no robot",
+    "sdk_close_mode": "default native fast shutdown; close is not required to return",
+    "app_close_returned": false,
     "navigation_route_repeated": false,
     "original_run_report_reconstructed": false,
-    "note": "后续修复通过空场景Kit＋实际ROS短检查：信号停机、finally、遥测关闭、应用关闭及信号处理器恢复；未重跑完整导航路线。"
+    "note": "最终短检查由外层核验退出码0；finally与ROS遥测关闭完成。SDK保留默认原生快速退出，不要求app.close返回；未验证关闭后恢复信号处理器。未重跑完整导航路线。"
   }
 }

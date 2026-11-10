@@ -1,15 +1,19 @@
 {
   "success": true,
-  "scope": "empty headless Kit + real telemetry/rclpy initialization; no robots",
-  "pid": 1116750,
-  "sdk_initialized": true,
-  "ros_initialized": true,
-  "stop_observed": true,
-  "finally_entered": true,
-  "telemetry_closed": true,
-  "app_closed": true,
-  "signal": "SIGINT",
-  "sdk_still_running_at_stop": true,
-  "ros_still_running_at_stop": true,
-  "handlers_restored": true
+  "scope": "real empty Kit + rclpy SIGINT cleanup; no robot",
+  "process_exit_code": 0,
+  "lifecycle": {
+    "scope": "empty headless Kit + real telemetry/rclpy initialization; no robots",
+    "pid": 1118821,
+    "sdk_initialized": true,
+    "ros_initialized": true,
+    "stop_observed": true,
+    "finally_entered": true,
+    "telemetry_closed": true,
+    "app_close_returned": false,
+    "signal": "SIGINT",
+    "sdk_still_running_at_stop": true,
+    "ros_still_running_at_stop": true
+  },
+  "sdk_close_mode": "default native fast shutdown; close is not required to return"
 }

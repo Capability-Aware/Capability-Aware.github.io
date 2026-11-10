@@ -10,6 +10,6 @@
 <h2>调整布局后的真实RViz画面</h2><a href="rviz_final.png"><img src="rviz_final.png" width="1600" height="1100" alt="同轮后段重启RViz并调整布局后的实际截图，显示前视RGB、B2RM模型、雷达与地图"></a>
 <p class="muted">这是同轮后段重启RViz并调整布局后的截图，不是视频中的同一布局；机器人与点云未合成。<a href="readonly_ros_visual_health.json">只读ROS检查</a>记录了图像、相机参数、URDF、TF和订阅证据。</p>
 <p class="note"><strong>退出汇总缺失：</strong>原运行停止时没有写出report.json。本页依据两个原始goal结果、trace和事件离线整理，<a href="offline_review_summary.json">offline_review_summary.json</a>明确标注证据来源与哈希，不代替运行程序的退出汇总。</p>
-<p>后续退出修复通过了<a href="post_run_shutdown_smoke.json">空场景Kit＋实际ROS短检查</a>，确认信号停机、finally和资源关闭。该检查没有机器人，未重跑完整导航；原run汇总没有补造。</p>
+<p>后续退出修复的最终v3<a href="post_run_shutdown_smoke.json">空场景Kit＋实际ROS短检查</a>由外层核验退出码0，finally与ROS遥测关闭完成。SDK使用默认原生快速退出，不要求app.close返回。该检查没有机器人，未重跑完整导航；原run汇总没有补造。</p>
 <h2>验证边界</h2><p>本轮是短距离导航与目标切换复核，不是全场垃圾收集、100/200m或真机成功。真实断流注入、死路恢复、精确到达yaw和整机接触仍未验证。静态地图来自场景清单，odom来自Isaac位姿，没有运行SLAM。</p><p>当前15cm圆半径未覆盖真实全机身；低水平面完全遮挡近地面时，仍可能与机身离地高度变化混淆。不能用本轮到点结果证明无碰撞或任意场景可靠。</p>
 <p class="muted">运行代码：<a href="https://github.com/HaoZhangRobotics/capability_research/commit/bcf8a2070926c70885d4a7289faf69313c056c80"><code>bcf8a2070926c70885d4a7289faf69313c056c80</code></a>。历史v37垃圾收集展示保留在总页。</p></main></body></html>
