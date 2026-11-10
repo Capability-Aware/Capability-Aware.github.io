@@ -1,0 +1,33 @@
+{
+  "goal_id": "343a0cbf06db4262b08398ec6ad108f3:1",
+  "sim_run_id": "0e22683c9bd14336b049807f3a217bf9",
+  "session_id": "343a0cbf06db4262b08398ec6ad108f3",
+  "source": "cli",
+  "goal_world_xy_m": [
+    -39.5,
+    -50.8
+  ],
+  "goal_yaw_rad": 0.0,
+  "outcome": "succeeded",
+  "success": true,
+  "reason": "nav2_and_independent_stable_pose",
+  "accepted_at_sim_s": 14.605000000000883,
+  "terminal_message_at_sim_s": 51.0,
+  "result_observed_at_sim_s": 51.17500000000773,
+  "final_pose_world_m": [
+    -39.818931579589844,
+    -51.33582305908203,
+    1.8558087348937988
+  ],
+  "final_goal_distance_m": 0.6235572973702592,
+  "actual_path_length_m": 17.80197648793793,
+  "body_speed_m_s": 0.020280387951500094,
+  "tilt_rad": 0.1450826985730294,
+  "goal_tolerance_m": 0.75,
+  "stable_hold_s": 1.0,
+  "navigation_state": "succeeded",
+  "simulated_duration_s": 36.57000000000684,
+  "wall_seconds": 154.22818214500148,
+  "measured_realtime_factor": 0.2371161968674742,
+  "recovery_motion_count": 0
+}

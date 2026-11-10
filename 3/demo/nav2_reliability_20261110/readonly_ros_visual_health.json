@@ -1,0 +1,217 @@
+{
+  "success": true,
+  "scope": "read-only live ROS message/TF/graph checks; no navigation commands or image streams saved",
+  "ros_domain_id": 84,
+  "observed_wall_seconds": 24.020836948999204,
+  "counts": {
+    "uav_description": 1,
+    "robot_description": 1,
+    "info": 54,
+    "odom": 234,
+    "uav_odom": 234,
+    "rgb": 51,
+    "obstacle_cloud": 28,
+    "raw_cloud": 28
+  },
+  "checks": {
+    "rgb_received": true,
+    "info_received": true,
+    "rgb_info_matching_exposures": true,
+    "projection_consistent": true,
+    "odom_received": true,
+    "raw_points_received": true,
+    "obstacle_points_received": true,
+    "robot_urdf_received": true,
+    "all_required_tf": true,
+    "rviz_rgb_subscribed": true,
+    "rviz_robot_description_subscribed": true
+  },
+  "samples": {
+    "uav_description": {
+      "valid_urdf": true,
+      "name": "scout_quadrotor",
+      "links": 13,
+      "joints": 12,
+      "bytes": 4091
+    },
+    "robot_description": {
+      "valid_urdf": true,
+      "name": "b2rm",
+      "links": 53,
+      "joints": 52,
+      "bytes": 46621
+    },
+    "info": {
+      "frame_id": "ground_front_optical_frame",
+      "width": 640,
+      "height": 360,
+      "p": [
+        321.6080322265625,
+        0.0,
+        320.0,
+        0.0,
+        0.0,
+        321.6080322265625,
+        180.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "k": [
+        321.6080322265625,
+        0.0,
+        320.0,
+        0.0,
+        321.6080322265625,
+        180.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "max_projection_error_px": 0.0
+    },
+    "odom": {
+      "frame_id": "odom",
+      "child_frame_id": "base_link",
+      "position": [
+        -47.05879211425781,
+        -51.510677337646484,
+        1.8020365238189697
+      ],
+      "linear_twist": [
+        0.48103055357933044,
+        -0.019251130521297455,
+        0.05354383587837219
+      ]
+    },
+    "uav_odom": {
+      "frame_id": "odom",
+      "child_frame_id": "scout_base_link",
+      "position": [
+        -40.75,
+        -50.5,
+        9.318140029907227
+      ],
+      "linear_twist": [
+        0.0,
+        0.0,
+        9.43988561630249e-06
+      ]
+    },
+    "rgb": {
+      "frame_id": "ground_front_optical_frame",
+      "width": 640,
+      "height": 360,
+      "encoding": "rgb8",
+      "byte_count": 691200,
+      "sample_std": 44.283230728882145
+    },
+    "obstacle_cloud": {
+      "frame_id": "lidar_link",
+      "width": 70,
+      "height": 1,
+      "point_step": 12,
+      "byte_count": 840
+    },
+    "raw_cloud": {
+      "frame_id": "odom",
+      "width": 1120,
+      "height": 1,
+      "point_step": 12,
+      "byte_count": 13440
+    }
+  },
+  "matched_camera_exposure_count": 51,
+  "matched_camera_exposure_range_ns": [
+    28800000000,
+    34000000000
+  ],
+  "transforms": {
+    "odom<-base_link": {
+      "ok": true,
+      "translation": [
+        -47.05879211425781,
+        -51.510677337646484,
+        1.8020365238189697
+      ],
+      "stamp_ns": 34025000000
+    },
+    "base_link<-lidar_link": {
+      "ok": true,
+      "translation": [
+        0.34218,
+        0.0,
+        0.17851
+      ],
+      "stamp_ns": 0
+    },
+    "odom<-ground_front_optical_frame": {
+      "ok": true,
+      "translation": [
+        -46.76449203491211,
+        -51.2246208190918,
+        1.7784634828567505
+      ],
+      "stamp_ns": 34000000000
+    },
+    "odom<-scout_base_link": {
+      "ok": true,
+      "translation": [
+        -40.75,
+        -50.5,
+        9.318140029907227
+      ],
+      "stamp_ns": 34025000000
+    },
+    "camera_at_exposure": {
+      "ok": true,
+      "stamp_ns": 34000000000
+    }
+  },
+  "rviz_subscriptions": {
+    "/robot_description": [
+      {
+        "node": "rviz2",
+        "namespace": "/",
+        "reliability": "ReliabilityPolicy.RELIABLE",
+        "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+      }
+    ],
+    "/uav/robot_description": [],
+    "/cameras/ground_front/image_raw": [
+      {
+        "node": "rviz2",
+        "namespace": "/",
+        "reliability": "ReliabilityPolicy.BEST_EFFORT",
+        "durability": "DurabilityPolicy.VOLATILE"
+      }
+    ],
+    "/lidar/points": [
+      {
+        "node": "rviz2",
+        "namespace": "/",
+        "reliability": "ReliabilityPolicy.BEST_EFFORT",
+        "durability": "DurabilityPolicy.VOLATILE"
+      }
+    ],
+    "/lidar/obstacles": [
+      {
+        "node": "rviz2",
+        "namespace": "/",
+        "reliability": "ReliabilityPolicy.RELIABLE",
+        "durability": "DurabilityPolicy.VOLATILE"
+      }
+    ],
+    "/navigation/local_inflated_points": [
+      {
+        "node": "rviz2",
+        "namespace": "/",
+        "reliability": "ReliabilityPolicy.RELIABLE",
+        "durability": "DurabilityPolicy.VOLATILE"
+      }
+    ],
+    "/ground_robot/odom": []
+  }
+}

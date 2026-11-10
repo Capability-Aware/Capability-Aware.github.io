@@ -1,0 +1,85 @@
+{
+  "start_world_xy_m": [
+    -50.25,
+    -60.25
+  ],
+  "goal_world_xy_m": [
+    -39.5,
+    -50.8
+  ],
+  "start_ground_z_m": 1.4749284982681274,
+  "goal_ground_z_m": 1.3250789642333984,
+  "start_support_ray_heights_m": [
+    1.4749284982681274,
+    1.4774880409240723,
+    1.4724090099334717,
+    1.4686353206634521,
+    1.4812865257263184,
+    1.4722799062728882,
+    1.4813282489776611,
+    1.4687166213989258,
+    1.4775463342666626
+  ],
+  "goal_support_ray_heights_m": [
+    1.3250789642333984,
+    1.3252495527267456,
+    1.3249130249023438,
+    1.3171653747558594,
+    1.3329863548278809,
+    1.319573998451233,
+    1.3308221101760864,
+    1.3193455934524536,
+    1.3305796384811401
+  ],
+  "start_yaw_rad": 0.7211303570494346,
+  "goal_tolerance_m": 0.75,
+  "map_frame": "odom (Isaac world frame)",
+  "map_resolution_m": 0.5,
+  "map_provenance": "raw static terrain-manifest geometry; Nav2 costmap inflation applied once",
+  "global_planner": "Nav2 NavFn A*",
+  "local_controller": "Nav2 DWB",
+  "local_obstacles": "Nav2 VoxelLayer from ground-filtered L2 point cloud",
+  "voxel_layer_z_origin_world_m": 0.0,
+  "voxel_layer_z_resolution_m": 0.4,
+  "voxel_layer_z_voxels": 16,
+  "voxel_layer_world_z_bounds_m": [
+    0.0,
+    6.4
+  ],
+  "pointcloud_height_filter_m": [
+    0.1,
+    2.0
+  ],
+  "pointcloud_height_filter_reference": "connected trusted ground planes from 0.5 m XY cells; unsupported cells retained as uncertain obstacles",
+  "ground_filter": "near-body seed plane and bounded residual expansion; no independent platform-top fits or root-height fallback classification",
+  "observation_stop_gate": "fresh distinct lidar frame, finite current pose, single supervisor and fresh structured goal heartbeat; only running motion may drive",
+  "global_live_lidar": "marking and clearing both enabled; raw hit rays clear previously observed free space",
+  "robot_radius_m": 0.15,
+  "inflation_clearance_m": 0.05,
+  "local_inflation": "Nav2 InflationLayer radius 0.20 m (0.15 m body radius plus 0.05 m clearance), cost scaling 0.8; local cells projected to /navigation/local_inflated_points",
+  "global_inflation_radius_m": 0.2,
+  "local_inflation_radius_m": 0.2,
+  "inflation_cost_scaling_factor": 0.8,
+  "dwb_base_obstacle_scale": 0.2,
+  "rgb_camera_ids": [
+    "ground_front"
+  ],
+  "rgb_topic": "/cameras/ground_front/image_raw",
+  "rgb_camera_role": "RViz visualization only; not used by navigation policy",
+  "rgb_camera_rate_hz": 10.0,
+  "recovery": "Nav2 BackUp recovery; supervisor backtracks to last safe odometry pose, then scores reachable side waypoints with Nav2 planner",
+  "locomotion": "frozen MoE 26399",
+  "ros2_control_topic": "/cmd_vel",
+  "ros2_sensor_topics": [
+    "/lidar/clear_rays",
+    "/lidar/obstacles"
+  ],
+  "control_bridge": "ROS 2 commands flow to the existing Isaac Python locomotion controller",
+  "requested_realtime_factor": 1.0,
+  "whole_body_contact_monitor_available": false,
+  "collision_free_claim": false,
+  "session_sim_ceiling_s": 300.0,
+  "nav2_startup_timeout_wall_s": 300.0,
+  "sim_run_id": "0e22683c9bd14336b049807f3a217bf9",
+  "goal_state_topic": "/navigation/goal_state"
+}

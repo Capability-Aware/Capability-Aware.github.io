@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Nav2 联合仿真复核 · 2026-11-10</title><style>html{color-scheme:dark}body{margin:0;background:#0b1420;color:#edf4f8;font:16px/1.65 system-ui,"Noto Sans CJK SC",sans-serif}main{max-width:1180px;margin:auto;padding:26px 20px 48px}a{color:#b8dcff;text-underline-offset:4px}h1{font-size:28px;margin:14px 0}h2{font-size:20px;margin-top:30px}.muted{color:#adbfce}.status{color:#9ce7c3}.note{padding:14px 18px;border-left:3px solid #e8bb6b;background:#182332}video,img{display:block;width:100%;height:auto;border-radius:9px;background:#080e15}table{border-collapse:collapse;width:100%;margin:20px 0}th,td{padding:10px;border-bottom:1px solid #344a5c;text-align:left}.scroll{overflow:auto}code{overflow-wrap:anywhere}nav{display:flex;gap:18px;flex-wrap:wrap}@media(max-width:650px){main{padding:18px 12px}h1{font-size:23px}th,td{padding:8px;font-size:14px}}</style></head>
+<body><main><nav><a href="../index.html">← 返回演示总页</a><a href="README.md">说明与复现</a><a href="offline_review_summary.json">离线复核与SHA-256</a></nav>
+<h1>Isaac＋Nav2＋RViz：两个导航目标通过</h1><p class="status">2026-11-10 · 冻结 MoE 26399 · 0次恢复 · 实时系数约0.237</p>
+<p>从(-50.25, -60.25)出发，四足到达(-39.5, -50.8)，再通过waypoint返回本轮已走过的点。每个目标分别检查Nav2结果、实际位置、低速及稳定保持1秒；容差0.75m。</p>
+<div class="scroll"><table><thead><tr><th>目标</th><th>实际路程</th><th>仿真 / 墙钟耗时</th><th>终点误差</th></tr></thead><tbody><tr><td>首个CLI目标</td><td>17.802 m</td><td>36.570 / 154.228 s</td><td>0.624 m</td></tr><tr><td>第二个waypoint</td><td>4.620 m</td><td>32.785 / 137.846 s</td><td>0.644 m</td></tr></tbody></table></div>
+<p>还验证了无效waypoint (10000,10000)：没有全局路径时拒绝请求，保留原目标编号并继续完成。</p>
+<h2>原始同轮双窗口录屏</h2><video controls playsinline preload="metadata" width="1920" height="660" src="../../../assets/videos/paper3/nav2_reliability_20261110_joint_demo.mp4" aria-label="同轮Isaac与RViz并排窗口原始录屏，保留等待和较窄布局"></video>
+<p class="muted">610.7秒 · 1920×660 · 10 fps · 4.88MB。采集时将两个窗口并排缩放，归档未剪辑；等待和较窄布局保留。视频时长不等于两段导航耗时。</p>
+<h2>调整布局后的真实RViz画面</h2><a href="rviz_final.png"><img src="rviz_final.png" width="1600" height="1100" alt="同轮后段重启RViz并调整布局后的实际截图，显示前视RGB、B2RM模型、雷达与地图"></a>
+<p class="muted">这是同轮后段重启RViz并调整布局后的截图，不是视频中的同一布局；机器人与点云未合成。<a href="readonly_ros_visual_health.json">只读ROS检查</a>记录了图像、相机参数、URDF、TF和订阅证据。</p>
+<p class="note"><strong>退出汇总缺失：</strong>原运行停止时没有写出report.json。本页依据两个原始goal结果、trace和事件离线整理，<a href="offline_review_summary.json">offline_review_summary.json</a>明确标注证据来源与哈希，不代替运行程序的退出汇总。</p>
+<p>后续退出修复通过了<a href="post_run_shutdown_smoke.json">空场景Kit＋实际ROS短检查</a>，确认信号停机、finally和资源关闭。该检查没有机器人，未重跑完整导航；原run汇总没有补造。</p>
+<h2>验证边界</h2><p>本轮是短距离导航与目标切换复核，不是全场垃圾收集、100/200m或真机成功。真实断流注入、死路恢复、精确到达yaw和整机接触仍未验证。静态地图来自场景清单，odom来自Isaac位姿，没有运行SLAM。</p><p>当前15cm圆半径未覆盖真实全机身；低水平面完全遮挡近地面时，仍可能与机身离地高度变化混淆。不能用本轮到点结果证明无碰撞或任意场景可靠。</p>
+<p class="muted">运行代码：<a href="https://github.com/HaoZhangRobotics/capability_research/commit/bcf8a2070926c70885d4a7289faf69313c056c80"><code>bcf8a2070926c70885d4a7289faf69313c056c80</code></a>。历史v37垃圾收集展示保留在总页。</p></main></body></html>

@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "document_kind": "offline_review_summary",
+  "created_at": "2026-11-10T17:17:54.108239+08:00",
+  "archive_version": "nav2_reliability_20261110",
+  "source_code_commit": "bcf8a2070926c70885d4a7289faf69313c056c80",
+  "source_run_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110",
+  "source_repository": "https://github.com/HaoZhangRobotics/capability_research",
+  "summary_origin": "离线读取原始逐目标结果、trace、事件及只读ROS检查生成；不是运行程序的report.json。",
+  "original_exit_summary": {
+    "report_json_present": false,
+    "expected_path": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/report.json",
+    "limitation": "原运行停止时未写出report.json；原有两个goal结果保留，不能据此声称退出汇总已通过。"
+  },
+  "result_scope": {
+    "independently_passed_navigation_goals": 2,
+    "recovery_motion_count": 0,
+    "garbage_collection_tested": false,
+    "full_scene_collection_success": null,
+    "collision_free_claim": false,
+    "real_robot_tested": false,
+    "long_distance_100_200m_tested": false
+  },
+  "goals": [
+    {
+      "archive_file": "goals/73ab0844151c6eb1d3d6.json",
+      "goal_id": "343a0cbf06db4262b08398ec6ad108f3:1",
+      "sim_run_id": "0e22683c9bd14336b049807f3a217bf9",
+      "session_id": "343a0cbf06db4262b08398ec6ad108f3",
+      "source": "cli",
+      "goal_world_xy_m": [
+        -39.5,
+        -50.8
+      ],
+      "goal_yaw_rad": 0.0,
+      "outcome": "succeeded",
+      "success": true,
+      "reason": "nav2_and_independent_stable_pose",
+      "accepted_at_sim_s": 14.605000000000883,
+      "terminal_message_at_sim_s": 51.0,
+      "result_observed_at_sim_s": 51.17500000000773,
+      "final_pose_world_m": [
+        -39.818931579589844,
+        -51.33582305908203,
+        1.8558087348937988
+      ],
+      "final_goal_distance_m": 0.6235572973702592,
+      "actual_path_length_m": 17.80197648793793,
+      "body_speed_m_s": 0.020280387951500094,
+      "tilt_rad": 0.1450826985730294,
+      "goal_tolerance_m": 0.75,
+      "stable_hold_s": 1.0,
+      "navigation_state": "succeeded",
+      "simulated_duration_s": 36.57000000000684,
+      "wall_seconds": 154.22818214500148,
+      "measured_realtime_factor": 0.2371161968674742,
+      "recovery_motion_count": 0
+    },
+    {
+      "archive_file": "goals/0e7ac71a49e4c0210d57.json",
+      "goal_id": "343a0cbf06db4262b08398ec6ad108f3:2",
+      "sim_run_id": "0e22683c9bd14336b049807f3a217bf9",
+      "session_id": "343a0cbf06db4262b08398ec6ad108f3",
+      "source": "rviz",
+      "goal_world_xy_m": [
+        -42.986732482910156,
+        -50.57737731933594
+      ],
+      "goal_yaw_rad": -0.3883705980987372,
+      "outcome": "succeeded",
+      "success": true,
+      "reason": "nav2_and_independent_stable_pose",
+      "accepted_at_sim_s": 96.33499999998487,
+      "terminal_message_at_sim_s": 129.0,
+      "result_observed_at_sim_s": 129.11999999995507,
+      "final_pose_world_m": [
+        -42.58690643310547,
+        -51.08171081542969,
+        1.8381839990615845
+      ],
+      "final_goal_distance_m": 0.6435939289525383,
+      "actual_path_length_m": 4.619896991191975,
+      "body_speed_m_s": 0.019538635144840225,
+      "tilt_rad": 0.1702714774500249,
+      "goal_tolerance_m": 0.75,
+      "stable_hold_s": 1.0,
+      "navigation_state": "succeeded",
+      "simulated_duration_s": 32.784999999970196,
+      "wall_seconds": 137.84612326599017,
+      "measured_realtime_factor": 0.2378376643694775,
+      "recovery_motion_count": 0
+    }
+  ],
+  "invalid_waypoint": {
+    "xy": [
+      10000.0,
+      10000.0
+    ],
+    "reason": "no_global_path",
+    "goal_id_unchanged": true,
+    "original_goal_id": "343a0cbf06db4262b08398ec6ad108f3:1",
+    "received_event": {
+      "schema_version": 1,
+      "event_id": "8a507de61c6547748091d5dd52021a16",
+      "event": "waypoint_received",
+      "sim_run_id": "0e22683c9bd14336b049807f3a217bf9",
+      "session_id": "343a0cbf06db4262b08398ec6ad108f3",
+      "stamp_s": 39.255,
+      "goal_id": "343a0cbf06db4262b08398ec6ad108f3:1",
+      "request_id": "403938777fcf4bf282ebc2e692068cff",
+      "frame_id": "odom",
+      "xy": [
+        10000.0,
+        10000.0
+      ],
+      "current_supervisor_session": true
+    },
+    "rejected_event": {
+      "schema_version": 1,
+      "event_id": "aa541cb1e9614814848f7f6a7e274977",
+      "event": "waypoint_rejected",
+      "sim_run_id": "0e22683c9bd14336b049807f3a217bf9",
+      "session_id": "343a0cbf06db4262b08398ec6ad108f3",
+      "stamp_s": 39.260000000000005,
+      "goal_id": "343a0cbf06db4262b08398ec6ad108f3:1",
+      "request_id": "403938777fcf4bf282ebc2e692068cff",
+      "reason": "no_global_path",
+      "current_supervisor_session": true
+    }
+  },
+  "setup": {
+    "locomotion": "冻结 MoE 26399",
+    "global_planner": "Nav2 NavFn A*",
+    "local_controller": "Nav2 DWB",
+    "localization": "Isaac世界位姿作为odom；静态地图来自场景manifest，不是SLAM",
+    "ros_domain_id": 84,
+    "goal_tolerance_m": 0.75,
+    "stable_hold_s": 1.0,
+    "robot_radius_m": 0.15,
+    "inflation_radius_m": 0.2,
+    "voxel_world_z_bounds_m": [
+      0.0,
+      6.4
+    ],
+    "z_voxels": 16,
+    "z_resolution_m": 0.4,
+    "ground_filter": "近身可信种子、0.5m格连通平面外推；不可信回波保守保留",
+    "initial_command": [
+      "/home/zh/anaconda3/envs/isaac_sim_5/bin/python",
+      "-u",
+      "scripts/cooperative/check_ros2_nav2_lidar_navigation.py",
+      "--start",
+      "-50.25",
+      "-60.25",
+      "--goal",
+      "-39.5",
+      "-50.8",
+      "--device",
+      "cpu",
+      "--visual",
+      "preview",
+      "--realtime-factor",
+      "1.0",
+      "--max-seconds",
+      "300",
+      "--wait-for-close",
+      "--output",
+      "/home/zh/isaac/capability_research/.worktrees/grab-garbage-v37-20261101/outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110"
+    ]
+  },
+  "trace_review": {
+    "sampled_rows": 199,
+    "sample_period_sim_s_approximately": 1.0,
+    "last_sample_sim_s": 198.7899999998917,
+    "seed_failures_in_sampled_rows": 0,
+    "filter_ms_median": 4.511076011112891,
+    "filter_ms_max": 9.84815000265371,
+    "max_sampled_tilt_rad": 0.17113603636798996
+  },
+  "ros_readonly_review": {
+    "success": true,
+    "checks": {
+      "rgb_received": true,
+      "info_received": true,
+      "rgb_info_matching_exposures": true,
+      "projection_consistent": true,
+      "odom_received": true,
+      "raw_points_received": true,
+      "obstacle_points_received": true,
+      "robot_urdf_received": true,
+      "all_required_tf": true,
+      "rviz_rgb_subscribed": true,
+      "rviz_robot_description_subscribed": true
+    },
+    "caveat": "实际ROS消息、相机参数、TF和订阅检查；不是机器人碰撞或导航泛化验收。"
+  },
+  "media": {
+    "video_duration_s": 610.7,
+    "video_bytes": 4881281,
+    "video_stream": {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 660,
+      "avg_frame_rate": "10/1"
+    },
+    "video_description": "同轮Isaac与RViz双窗口原始录屏，采集时并排缩放；保留等待与较窄布局，归档时未剪辑或生成替代画面。",
+    "screenshot_description": "同轮运行后段重启RViz并调整布局后的实际截图；不是视频中的同一布局，也未合成机器人或点云。"
+  },
+  "not_validated": [
+    "真实运行中的传感器断流注入",
+    "死路回退恢复（本轮0次恢复）",
+    "100/200米导航",
+    "精确到达yaw（现有容差为pi）",
+    "整机接触和无碰撞证明",
+    "完整垃圾收集闭环",
+    "真机迁移"
+  ],
+  "limitations": [
+    "原run缺少退出report.json，离线摘要不能替代它。",
+    "单轮两目标验证，不代表任意地图/起终点都可达。",
+    "15cm圆半径不覆盖真实全机身形状。",
+    "完全遮挡近地面且处于根高容差内的低水平面，仍可能与机身离地高度变化混淆。",
+    "实时系数约0.237；录屏包含等待，不能直接把视频时长作为导航耗时。"
+  ],
+  "source_files": [
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/joint_demo.mp4",
+      "archive_href": "../../../assets/videos/paper3/nav2_reliability_20261110_joint_demo.mp4",
+      "sha256": "b0cca556042ca05b9089e289f1d4d246ae54afa11b77ebf20c2e4b6c317a3703",
+      "bytes": 4881281
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/rviz_final.png",
+      "archive_href": "rviz_final.png",
+      "sha256": "25d483e5b7b142e2c367b0c7e5bd78c04987e6ddc09740d1bc4360ca093ce61d",
+      "bytes": 242407
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/run.json",
+      "archive_href": "evidence/run.json",
+      "sha256": "4ad18a77569aa6230615c904924af9c52ef319be2316f31b95f6b495770d2e94",
+      "bytes": 3133
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/nav2_trace.jsonl",
+      "archive_href": "evidence/nav2_trace.jsonl",
+      "sha256": "14a4a148944255721aed0161613c42f5adf3c3c2cc8db04e0d8c25c8bc46cd78",
+      "bytes": 416068
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/goal_events.jsonl",
+      "archive_href": "evidence/goal_events.jsonl",
+      "sha256": "a08048e275f34fa246c9c181622997704aec393e51f6e844b440f011ee3108e2",
+      "bytes": 27293
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110_control/readonly_ros_visual_health.json",
+      "archive_href": "readonly_ros_visual_health.json",
+      "sha256": "682bf0d21443dd01838d5301a1397379c8f7555286a27beb4edf5e4fa778d047",
+      "bytes": 4796
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110_control/processes.json",
+      "archive_href": "evidence/processes.json",
+      "sha256": "6a9dcc89eaf04074303c1657861dbd170d77dbbf528bb7f0291491a90e3731da",
+      "bytes": 1726
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/goals/73ab0844151c6eb1d3d6.json",
+      "archive_href": "goals/73ab0844151c6eb1d3d6.json",
+      "sha256": "e2efe90cc6eabcc0226d9fc4dc5f95d6d430afd1cfd4e3c381a96a4e50e11c2f",
+      "bytes": 992
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_joint_acceptance_20261110/goals/0e7ac71a49e4c0210d57.json",
+      "archive_href": "goals/0e7ac71a49e4c0210d57.json",
+      "sha256": "78028613145a41b329df0ac632da94bbeb04a1d729f62cc2fd784079c2eba7bb",
+      "bytes": 1037
+    },
+    {
+      "source_repository_relative": "outputs/multiagent-grabgarbage/nav2_shutdown_smoke_20261110_v2/report.json",
+      "archive_href": "post_run_shutdown_smoke.json",
+      "sha256": "791bea5e4422a10e66c283f0364a3685cc194e7b308ed3e14907a3475973b478",
+      "bytes": 403
+    }
+  ],
+  "post_run_shutdown_fix_validation": {
+    "archive_file": "post_run_shutdown_smoke.json",
+    "success": true,
+    "scope": "empty headless Kit + real telemetry/rclpy initialization; no robots",
+    "navigation_route_repeated": false,
+    "original_run_report_reconstructed": false,
+    "note": "后续修复通过空场景Kit＋实际ROS短检查：信号停机、finally、遥测关闭、应用关闭及信号处理器恢复；未重跑完整导航路线。"
+  }
+}
