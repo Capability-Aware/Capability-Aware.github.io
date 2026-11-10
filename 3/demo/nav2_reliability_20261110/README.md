@@ -20,3 +20,5 @@
 复现：在相同资产和依赖的capability_research工作目录使用记录的提交，启动方式见 `evidence/processes.json`；再运行 `./deploy/ros2_ws/scripts/run_nav2_goal.sh -39.5 -50.8` 和 `./deploy/ros2_ws/scripts/view_lidar_navigation.sh`。本轮三者使用 `ROS_DOMAIN_ID=84`。第二目标由同轮已走轨迹选取，通过 `/navigation/waypoint` 发送，不应从视频时长推断消息时间。
 
 后续退出修复的最终v3[空场景Kit＋实际ROS短检查](post_run_shutdown_smoke.json)由外层核验进程退出码为0，finally和ROS遥测关闭完成。SDK保留默认原生快速退出，app.close没有返回；不声称关闭后信号处理器恢复通过。该检查没有机器人，未重跑完整导航；原始run的report.json仍保持缺失，未补造。
+
+后续收尾修复提交：`4f75b3abc815f18f779eedb8198c802598f9e40a`；上述两段物理导航运行仍对应 `bcf8a2070926c70885d4a7289faf69313c056c80`，不是使用修复提交重跑的结果。

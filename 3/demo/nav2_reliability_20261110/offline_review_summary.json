@@ -294,6 +294,8 @@
     "app_close_returned": false,
     "navigation_route_repeated": false,
     "original_run_report_reconstructed": false,
-    "note": "最终短检查由外层核验退出码0；finally与ROS遥测关闭完成。SDK保留默认原生快速退出，不要求app.close返回；未验证关闭后恢复信号处理器。未重跑完整导航路线。"
+    "note": "最终短检查由外层核验退出码0；finally与ROS遥测关闭完成。SDK保留默认原生快速退出，不要求app.close返回；未验证关闭后恢复信号处理器。未重跑完整导航路线。",
+    "code_commit": "4f75b3abc815f18f779eedb8198c802598f9e40a",
+    "code_commit_role": "后续收尾修复提交；物理导航运行仍对应source_code_commit，不将两个版本混写。"
   }
 }
